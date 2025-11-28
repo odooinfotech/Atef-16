@@ -1,0 +1,12 @@
+<odoo>
+	<data>
+		<record model="ir.module.category" id="f_customer_target_access">
+			<field name="name">Customer Target Management Access</field>
+		</record>
+
+		<record model="res.groups" id="f_show_target_man">
+			<field name="category_id" ref="customer_target_management.f_customer_target_access"/>
+			<field name="name"> Customer Target Management</field>
+		</record>
+	</data>
+</odoo>

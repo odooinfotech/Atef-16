@@ -1,0 +1,174 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* falak_profit_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-30 14:11+0000\n"
+"PO-Revision-Date: 2022-12-30 14:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__barcode
+msgid "Barcode"
+msgstr "باركود"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__beginv_qty
+msgid "Beg.Inv Qty"
+msgstr "كميه بداية المدة"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__beginv_bal
+msgid "Beg.Inv Total"
+msgstr "رصيد بداية المدة"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__cogs
+msgid "COGS"
+msgstr "تكلفة البضاعه المباعة"
+
+#. module: falak_profit_report
+#: model_terms:ir.ui.view,arch_db:falak_profit_report.wizard_xls_profit_form_view
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__company_id
+#: model_terms:ir.ui.view,arch_db:falak_profit_report.view_report_profitabil_search
+msgid "Company"
+msgstr "الشركة"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_product_profitability__create_uid
+msgid "Created by"
+msgstr "انشيء بواسطة"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_product_profitability__create_date
+msgid "Created on"
+msgstr "تم انشاؤه بتاريخ"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_product_profitability__display_name
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__endinv_qty
+msgid "End.Inv Qty"
+msgstr "كمية نهاية المدة"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__endinv_bal
+msgid "End.Inv Total"
+msgstr "رصيد نهاية المدة"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_product_profitability__from_date
+msgid "From "
+msgstr "من"
+
+#. module: falak_profit_report
+#: model_terms:ir.ui.view,arch_db:falak_profit_report.view_report_profitabil_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_product_profitability__id
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_product_profitability____last_update
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details____last_update
+msgid "Last Modified on"
+msgstr "اخر تعديل بتاريخ"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_product_profitability__write_uid
+msgid "Last Updated by"
+msgstr "اخر تعديل بواسطة"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_product_profitability__write_date
+msgid "Last Updated on"
+msgstr "اخر تعديل بتاريخ"
+
+#. module: falak_profit_report
+#: model:ir.actions.act_window,name:falak_profit_report.action_wizard_profitability
+#: model:ir.ui.menu,name:falak_profit_report.menuvprofit_wizard
+#: model:res.groups,name:falak_profit_report.f_profit_access_group_id
+msgid "Periodic Product Profit"
+msgstr "تقرير الربحية الدوري"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__profit
+msgid "Profit"
+msgstr "الربح"
+
+#. module: falak_profit_report
+#: model:ir.model,name:falak_profit_report.model_f_profit_details
+msgid "Profit Details"
+msgstr ""
+
+#. module: falak_profit_report
+#: model:ir.model,name:falak_profit_report.model_f_product_profitability
+msgid "Profit Report "
+msgstr "تقرير الربحية"
+
+#. module: falak_profit_report
+#. odoo-python
+#: code:addons/falak_profit_report/models/models.py:0
+#, python-format
+msgid "Profitability Report"
+msgstr "تقرير الربحية الدوري"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__exp_qty
+msgid "Purch Qty"
+msgstr "كمية المشتريات"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__exp_bal
+msgid "Purch Total"
+msgstr "رصيد المشتريات"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__rev_qty
+msgid "Rev Qty"
+msgstr "كميات الايرادات"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_profit_details__rev_bal
+msgid "Rev Total"
+msgstr "رصيد الايرادات"
+
+#. module: falak_profit_report
+#: model_terms:ir.ui.view,arch_db:falak_profit_report.wizard_xls_profit_form_view
+msgid "Run Profitability"
+msgstr "عرض"
+
+#. module: falak_profit_report
+#: model:ir.model.fields,field_description:falak_profit_report.field_f_product_profitability__to_date
+msgid "To"
+msgstr "الى"

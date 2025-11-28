@@ -1,0 +1,41 @@
+<odoo>
+	<record id="f_dates_history_search_view" model="ir.ui.view">
+		<field name="name">f.dates.history.search.view</field>
+		<field name="model">f.ship.dates.hist</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="f_date_name"
+					filter_domain="[('f_date_name', 'ilike', self)]" />
+				<field name="f_from_date"
+					filter_domain="[('f_from_date', 'ilike', self)]" />
+				<field name="f_to_date"
+					filter_domain="[('f_to_date', 'ilike', self)]" />
+				<field name="f_user_id"
+					filter_domain="[('f_user', 'ilike', self)]" />
+				<field name="f_updated_at"
+					filter_domain="[('f_updated_at', 'ilike', self)]" />
+				<group expand="1" string="Group By">
+					<filter string="User" name="f_user"
+						context="{'group_by':'f_user'}" />
+					<filter string="Date Name" name="f_date_name"
+						context="{'group_by':'f_date_name'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="f_ship_dates_history">
+		<field name="name">f_ship_dates_history_list</field>
+		<field name="model">f.ship.dates.hist</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="f_date_name" />
+				<field name="f_from_date" />
+				<field name="f_to_date" />
+				<field name="f_user_id" />
+				<field name="f_updated_at" />
+				<field name="f_shipping_id" invisible="1" />
+			</tree>
+		</field>
+	</record>
+</odoo>

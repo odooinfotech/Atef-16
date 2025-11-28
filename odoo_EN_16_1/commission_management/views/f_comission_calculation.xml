@@ -1,0 +1,89 @@
+<odoo>
+	<data>
+
+		<!-- Notes -->
+		<!-- Add Search View to search by period , sales person , calculated , 
+			commission type -->
+
+		<record model="ir.actions.act_window"
+			id="f_comm_calc_action_window">
+			<field name="name">Commission Calculation</field>
+			<field name="res_model">f.commission.calculation</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+		<menuitem name="Commission Calculation"
+			id="f_comm_calc_menue"
+			parent="commission_management.f_comm_management_main_menue"
+			action="commission_management.f_comm_calc_action_window" sequence='1' />
+
+
+		<record model="ir.ui.view" id="f_comm_calculation_tree_view">
+			<field name="name">f.comm.calculation.tree.view</field>
+			<field name="model">f.commission.calculation</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="f_comm_calc_name" />
+					<field name="f_cal_period" />
+					<field name="create_uid" />
+					<field name="create_date" />
+					<field name="f_commission_calculated_at" />
+					<field name="f_sales_persons" widget="many2many_tags" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="f_comm_calculation_form_view">
+			<field name="name">f.comm.calculation.form.view</field>
+			<field name="model">f.commission.calculation</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button name="calculate_commission" string="Calculate"
+							type="object" class="oe_highlight"
+							attrs="{'invisible':[('f_comm_state','in',('confirm','cancel','done'))]}" />
+						<button name="confirm_calculate" string="Confirm"
+							type="object" class="oe_highlight"
+							attrs="{'invisible':[('f_comm_state','in',('confirm','cancel','draft'))]}" />
+						<button name="cancel_calculate" string="Cancel"
+							type="object"
+							attrs="{'invisible':[('f_comm_state','in',('cancel'))]}" />
+						<button name="reset_to_draft" string="Reset To Draft"
+							type="object"
+							attrs="{'invisible':[('f_comm_state','in',('confirm','done'))]}" />
+						<field name="f_comm_state" widget="statusbar"
+							statusbar_visible="draft,done,confirm" />
+					</header>
+
+					<sheet>
+
+
+
+						<group>
+							<group>
+								<field name="f_comm_calc_name" />
+								<field name="f_cal_period" />
+								<field name="create_date" string="Calculation Date" />
+								<field name="create_uid" />
+								<field name="f_sales_persons" widget="many2many_tags" />
+							</group>
+							<group>
+								<field name="f_comments" />
+
+							</group>
+						</group>
+					</sheet>
+					<!-- Chatter -->
+					<div class="oe_chatter">
+						<field name="message_follower_ids" groups="base.group_user" />
+						<field name="activity_ids" />
+						<field name="message_ids" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+
+	</data>
+</odoo>

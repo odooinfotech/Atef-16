@@ -1,0 +1,25 @@
+<odoo>
+
+	<record model="ir.actions.act_window"
+		id="f_shift_action_window">
+		<field name="name">Shift</field>
+		<field name="res_model">f.shift</field>
+
+	</record>
+
+	<menuitem name="Shifts"
+		id="f_shifts" parent="mrp.menu_mrp_configuration"
+		action="falak_mrp_definition.f_shift_action_window" />
+
+	<record model="ir.ui.view" id="f_shift_tree_view">
+		<field name="name">Shifts</field>
+		<field name="model">f.shift</field>
+		<field name="arch" type="xml">
+			<tree editable="bottom">
+				<field name="f_shift" />
+				<field name="f_increment_num"/>
+			</tree>
+		</field>
+	</record>
+
+</odoo>

@@ -1,0 +1,59 @@
+<odoo>
+	<record id="f_stock_quant_package_form" model="ir.ui.view">
+        <field name="name">f.stock.quant.package.form</field>
+        <field name="model">stock.quant.package</field>
+        <field name="inherit_id" ref="stock.view_quant_package_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='pack_date']" position="after">
+                <field name="f_printed"/>
+            </xpath>
+            <xpath expr="//field[@name='location_id']" position="after">
+                <field name="f_partner" widget="many2many_tags" force_save="1"/>
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="f_print_package" string="Print" type="object"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="f_stock_quant_package_tree" model="ir.ui.view">
+        <field name="name">f.stock.quant.package.tree</field>
+        <field name="model">stock.quant.package</field>
+        <field name="inherit_id" ref="stock.view_quant_package_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <header>
+                    <button name="f_print_package" string="Print" type="object"/>
+                </header>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="f_stock_quant_package_kanban" model="ir.ui.view">
+        <field name="name">f.stock.quant.package.kanban</field>
+        <field name="model">stock.quant.package</field>
+        <field name="inherit_id" ref="stock.view_quant_package_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_kanban_record_top')]" position="after">
+                <div class="container o_kanban_card_content">
+                    <div class="row">
+                        <div>
+                            <field name="f_partner" widget="many2many_tags" force_save="1"/>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="f_stock_quant_package_search" model="ir.ui.view">
+        <field name="name">f.stock.quant.package.search</field>
+        <field name="model">stock.quant.package</field>
+        <field name="inherit_id" ref="stock.quant_package_search_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="f_partner_char" string="Customer"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

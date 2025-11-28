@@ -1,0 +1,23 @@
+<odoo>
+    <!--<record id="f_prod_identity_group_tree_view"
+        model="ir.ui.view">
+        <field name="name">f.prod.identity.group</field>
+        <field name="model">f.prod.identity</field>
+        <field name="arch" type="xml">
+            <tree string="Product Identity" editable="bottom">
+                <field name="fprodidentity_name" />
+            </tree>
+        </field>
+    </record>
+    <record id="f_prod_identity_action_window_or_prod_cust"
+		model="ir.actions.act_window">
+		<field name="name">Product Identity</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.prod.identity</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+    <menuitem name="Product Identity"
+		id="f_prod_identity_menue_or_prod_cust"
+		parent="stock.menu_stock_config_settings"
+		action="f_prod_identity_action_window_or_prod_cust" />-->
+</odoo>

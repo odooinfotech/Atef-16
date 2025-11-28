@@ -1,0 +1,47 @@
+<odoo>
+    
+    <record id="f_purchase_order_line_price_history_view_tree"
+            model="ir.ui.view">
+        <field name="name">f.purchase.order.line.price.history.view.tree</field>
+        <field name="model">f.purchase.order.line.price.history.po</field>
+        <field name="arch" type="xml">
+	        <tree create="false" default_order="purchase_order_date_order desc">
+	            <field name="order_id" readonly="1"/>
+                <field name="partner_id" readonly="1"/>
+                <field name="purchase_order_date_order" readonly="1"/>
+                <field name="product_uom_qty" readonly="1"/>
+                  <field name="product_uom" readonly="1"/> 
+                <field name="price_unit" readonly="1"/>
+                <field name="currency_id" readonly="1"/>
+                <field name="tax_id" widget="many2many_tags" readonly="1"/>
+				<button string="Set" type="object" name="f_set_price" />
+	        </tree>
+        </field>
+    </record>
+    
+    <record id="f_purchase_order_line_price_history_view_search" model="ir.ui.view">
+			<field name="name">f.purchase.order.line.price.history.view.search</field>
+			<field name="model">f.purchase.order.line.price.history.po</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="partner_id" string="Partner"
+						filter_domain="[('partner_id', 'ilike', self)]" />
+					
+					<filter name="partner_id_filter" string="Partner"
+						domain="[('partner_id', '=', context.get('partner_id'))]" />
+					
+					<field name="purchase_order_date_order" string="Date"
+						filter_domain="[('purchase_order_date_order', 'ilike', self)]" />
+					<group expand="1" string="Group By">
+
+
+						<filter string="Partner" name="partner_id_group"
+							context="{'group_by':'partner_id'}" />
+						<filter string="Date" name="purchase_order_date_order"
+							context="{'group_by':'purchase_order_date_order'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+    
+</odoo>

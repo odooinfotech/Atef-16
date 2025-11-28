@@ -1,0 +1,21 @@
+<odoo>
+	<data>
+		<record model="ir.module.category" id="f_customer_visits">
+			<field name="name">Customer Visits Management</field>
+		</record>
+
+		<record model="res.groups" id="customer_visits_admin">
+			<field name="category_id"
+				ref="customer_visits_management.f_customer_visits" />
+			<field name="name">Customer Visits Admin</field>
+			
+		</record>
+
+		<record model="res.groups" id="customer_visits_useres">
+			<field name="category_id"
+				ref="customer_visits_management.f_customer_visits" />
+			<field name="name">Customer Visits User</field>
+			
+		</record>
+	</data>
+</odoo>

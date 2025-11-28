@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_orient_product_customs_f_prod_brand,orient_product_customs.f.prod.brand,model_f_prod_brand,base.group_user,1,1,1,1
+access_orient_product_customs_f_prod_category,orient_product_customs.f.prod.category,model_f_prod_category,base.group_user,1,1,1,1
+access_orient_product_customs_f_prod_sub_category,orient_product_customs.f.prod.sub.category,model_f_prod_sub_category,base.group_user,1,1,1,1
+access_orient_product_customs_f_prod_family,orient_product_customs.f.prod.family,model_f_prod_family,base.group_user,1,1,1,1
+access_orient_product_customs_f_prod_identity,orient_product_customs.f.prod.identity,model_f_prod_identity,base.group_user,1,1,1,1
+access_orient_product_customs_f_prod_target,orient_product_customs.f.prod.target,model_f_prod_target,base.group_user,1,1,1,1
+access_orient_product_customs_f_prod_producername,orient_product_customs.f.prod.producername,model_f_prod_producername,base.group_user,1,1,1,1
+
+

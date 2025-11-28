@@ -1,0 +1,135 @@
+<odoo>
+ <data>
+   <template id="en_report_account_move_document">
+   <t t-call="web.external_layout">
+     <div class="page">
+     
+     	<center>
+                         <h3><strong><span t-esc="o.name"/></strong></h3>
+
+                    </center>
+                    <br/>
+                    <div class="f_date_info"   style="direction:ltr;text-align: right;">
+			
+			
+			<strong>Date : <span class="text-right" style="font-size:18px !important;"  t-esc="o.date" />    </strong>
+			
+		 
+			</div>
+			
+			
+				<div class="f_customer_info" style="direction:ltr;text-align: left;" >
+			<left>
+			
+			<strong>  Journal :<span  style="font-size:16px !important;"  t-esc="o.journal_id.name"  />    </strong>
+        <t t-if="o.ref">
+       <br/>   
+             <strong>  Reference  :<span  style="font-size:16px !important;"  t-esc="o.ref"  />    </strong>
+			
+			</t>
+                
+             
+       <br/>   
+             <strong>  Notes  :<span  style="font-size:16px !important;"  t-esc="o.f_note"  />    </strong>
+			
+		
+                
+                
+			</left>      
+			
+			
+			</div>
+			 
+                    
+                   <br/> 
+                    
+                    <br/>
+                    
+                     <table class="table table-sm o_main_table" style="border:1px;direction:ltr;text-align: left;"  name="journal_item_table">
+                     <thead>
+                      <tr>
+                      <th class="text-left">Account</th>
+                      <th class="text-left">Partner</th>
+                      <th class="text-center">Label</th>
+                      <th class="text-left">Currency</th>
+                      <th class="text-right">Amount Curreny</th>
+                      <th class="text-right">Debit</th>
+                      <th class="text-right">Credit</th>
+                      
+                      </tr>
+                      
+                        </thead>
+                        <tbody style="border:1px;direction:ltr;text-align: left;">
+                      <t t-set= "total_debit" t-value="0.0" ></t>
+                      <t t-set= "total_credit" t-value="0.0" ></t>
+                        <tr t-foreach="o.line_ids" t-as="line">
+                        <td  class="text-left"> <span t-field="line.account_id"/></td>
+                        <td  class="text-left"> <span t-field="line.partner_id"/></td>
+                        <td  class="text-left"> <span t-field="line.name"/></td>
+                        <td  class="text-left"> <span t-field="line.currency_id"/></td>
+                        <td  class="text-right"> <span t-field="line.amount_currency"/></td>
+                        <td  class="text-right"> <span t-field="line.debit" /></td>
+                         <t t-set= "total_debit" t-value="total_debit+line.debit" ></t>
+                        
+                        <td  class="text-right"> <span t-field="line.credit"/></td>
+                        <t t-set= "total_credit" t-value="total_credit+line.credit" ></t>
+                        
+                      
+                        
+                       
+                        
+                        </tr>
+                        
+                        
+                        
+                        </tbody>
+                     
+                     </table>
+                     <br/>
+                   
+                     <div class="totaldebt" style="direction:rtl;text-align: right;">
+			<strong>Total Debit :  <span class="text-right"   t-esc = "total_credit" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>       </strong>
+			<br/>
+			<strong>Total Credit:  <span class="text-right"  t-esc = "total_debit" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" />       </strong>
+			
+			
+                     
+                     
+                     </div>
+                    
+     </div>
+     </t>
+     </template>
+     
+     
+     
+     
+
+    <template id="en_report_account_move">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="print_journal_enteries.en_report_account_move_document"/>
+            </t>
+        </t>
+    </template>
+  
+  
+  
+         <record id="f_en_template_account_journal_entrey" model="ir.actions.report">
+             <field name="name">الانجليزية - Journal Entry / القيود</field>
+            <field name="model">account.move</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">print_journal_enteries.en_report_account_move</field>
+            <field name="report_file">print_journal_enteries.en_report_account_move</field>
+            <field name="binding_model_id" ref="account.model_account_move"/>
+            <field name="binding_type">report</field>
+        </record>
+        
+        
+        
+
+
+
+</data>
+
+</odoo>

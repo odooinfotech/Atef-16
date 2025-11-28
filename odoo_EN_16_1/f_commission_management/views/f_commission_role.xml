@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="f_commission_role_tree_view" model="ir.ui.view">
+        <field name="name">f.commission.role.tree.view</field>
+        <field name="model">f.commission.role</field>
+        <field name="arch" type="xml">
+            <tree string="Commission Role" editable="top" multi_edit="1">
+                <field name="f_name" />
+                <field name="f_sales_persons" widget="many2many_tags" />
+                <field name="f_responsible" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="f_commission_role_kanban_view" model="ir.ui.view">
+        <field name="name">f.commission.role.kanban.view</field>
+        <field name="model">f.commission.role</field>
+        <field name="arch" type="xml">
+            <kanban class="oe_background_grey o_kanban_dashboard o_emphasize_colors" create="0" group_create="false">
+                <field name="f_name"/>
+                <field name="f_sales_persons"/>
+                <field name="f_responsible"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div name="f_commission_role">
+                            <div t-attf-class="o_kanban_card_header">
+                                <div class="o_kanban_card_header_title">
+                                    <div class="o_primary" >
+                                        <field name="f_name"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container o_kanban_card_content">
+                                <div class="row">
+                                    <div class="col-6 o_kanban_primary_left">
+                                        <button class="btn btn-primary" name="f_show_progress_info" type="object">
+                                            <span>Progress Info</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="f_commission_role_action" model="ir.actions.act_window">
+        <field name="name">Commission Role</field>
+        <field name="res_model">f.commission.role</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <record id="f_commission_role_action_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">f.commission.role</field>
+        <field name="view_mode">kanban</field>
+        <field name="domain">[('f_responsible','=',uid)]</field>
+    </record>
+
+    <menuitem name="Commission Role"
+              id="f_commission_role_menu"
+              parent="f_commission_management.f_commission_config_menu"
+              action="f_commission_management.f_commission_role_action"
+              sequence="3" />
+
+    <menuitem name="Dashboard"
+              id="f_commission_role_dashboard_menu"
+              parent="f_commission_management.f_commission_management_main_menu"
+              action="f_commission_management.f_commission_role_action_dashboard"
+              sequence="1"
+              groups="f_commission_management.f_commission_salesperson"/>
+
+</odoo>

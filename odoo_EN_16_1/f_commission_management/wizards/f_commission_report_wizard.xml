@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="f_commission_report_wizard_form_view" model="ir.ui.view">
+        <field name="name">f.commission.report.wizard.form.view</field>
+        <field name="model">f.commission.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="f_commission_period_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="f_get_report_info" string="Get Report" class="oe_highlight" type="object"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="f_my_commission_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">My Commission</field>
+        <field name="res_model">f.commission.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{"default_f_team_commission": False}</field>
+    </record>
+
+    <record id="f_team_commission_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">Team Commission</field>
+        <field name="res_model">f.commission.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{"default_f_team_commission": True}</field>
+    </record>
+
+    <menuitem name="Reporting"
+              id="f_commission_reporting_menu"
+              parent="f_commission_management.f_commission_management_main_menu"
+              sequence='4'
+			  groups="f_commission_management.f_commission_salesperson"/>
+
+    <menuitem name="My Commission"
+              id="f_my_commission_menu"
+              parent="f_commission_management.f_commission_reporting_menu"
+              action="f_commission_management.f_my_commission_report_wizard_action"
+              sequence="1"
+              groups="f_commission_management.f_commission_salesperson"/>
+
+    <menuitem name="Team Commission"
+              id="f_team_commission_menu"
+              parent="f_commission_management.f_commission_reporting_menu"
+              action="f_commission_management.f_team_commission_report_wizard_action"
+              sequence="2"
+              groups="f_commission_management.f_commission_salesperson"/>
+</odoo>

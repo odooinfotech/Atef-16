@@ -1,0 +1,533 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* f_sales_price_equation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-23 11:00+0000\n"
+"PO-Revision-Date: 2024-10-23 11:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__active
+msgid "Active"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.actions.server,name:f_sales_price_equation.f_archive_product_pricing_server_action
+msgid "Archive"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_current_price
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_current_price
+msgid "C/P"
+msgstr "السعر الحالي"
+
+#. module: f_sales_price_equation
+#: model_terms:ir.ui.view,arch_db:f_sales_price_equation.f_product_pricing_form_view
+msgid "Compute"
+msgstr "احتساب"
+
+#. module: f_sales_price_equation
+#: model_terms:ir.ui.view,arch_db:f_sales_price_equation.f_product_pricing_form_view
+msgid "Confirm"
+msgstr "تاكيد"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_purchase_order_line__f_confirm_date
+msgid "Confirm Date"
+msgstr "تاريخ التاكيد"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__create_uid
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_equation__create_uid
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_type__create_uid
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__create_uid
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__create_date
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_equation__create_date
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_type__create_date
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__create_date
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_stock_valuation_adjustment_lines__f_landed_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_deference
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_deference
+msgid "Def."
+msgstr "الفرق"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_def_with_vat
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_def_with_vat
+msgid "Def. X P.E"
+msgstr "الفرق مع الضريبة"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__display_name
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_equation__display_name
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_type__display_name
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__display_name
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields.selection,name:f_sales_price_equation.selection__f_product_pricing__f_status__done
+msgid "Done"
+msgstr "منتهي"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields.selection,name:f_sales_price_equation.selection__f_product_pricing__f_status__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_equation__f_factor
+msgid "Factor"
+msgstr "معامل الضرب"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,help:f_sales_price_equation.field_f_product_pricing__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model_terms:ir.ui.view,arch_db:f_sales_price_equation.f_product_pricing_form_view
+msgid "Get Product"
+msgstr "تحضير المنتجات"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__id
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_equation__id
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_type__id
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__id
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__id
+msgid "ID"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,help:f_sales_price_equation.field_f_product_pricing__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,help:f_sales_price_equation.field_f_product_pricing__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,help:f_sales_price_equation.field_f_product_pricing__message_has_error
+#: model:ir.model.fields,help:f_sales_price_equation.field_f_product_pricing__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_product_ref
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_product_ref
+msgid "Internal Reference"
+msgstr "المرجع الداخلي"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_external_po
+msgid "Is external PO?"
+msgstr "مشتريات مستوردة؟"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_internal_po
+msgid "Is internal PO?"
+msgstr "مشتريات محلية؟"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_landed_ids
+msgid "Landed Cost"
+msgstr "التكاليف الاضافية"
+
+#. module: f_sales_price_equation
+#: model:ir.model,name:f_sales_price_equation.model_f_landed_pricing_line
+msgid "Landed Pricing Line"
+msgstr "بند تسعير التكاليف"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_landed_pricing_lines
+msgid "Landed Pricing Lines"
+msgstr "بنود تسعير التكاليف"
+
+#. module: f_sales_price_equation
+#: model_terms:ir.ui.view,arch_db:f_sales_price_equation.f_product_pricing_form_view
+msgid "Landed Products"
+msgstr "منتجات التكاليف"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_last_landed_before
+msgid "Last Landed Before"
+msgstr "اخر تكاليف قبل تاريخ"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line____last_update
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_equation____last_update
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_type____last_update
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing____last_update
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_last_purchase_before
+msgid "Last Purchase Before"
+msgstr "اخر شراء قبل"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__write_uid
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_equation__write_uid
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_type__write_uid
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__write_uid
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__write_date
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_equation__write_date
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_type__write_date
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__write_date
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_last_landed
+msgid "Latest Landed"
+msgstr "اخر تكلفة"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_last_po
+msgid "Latest PO"
+msgstr "اخر امر شراء"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_new_cost
+msgid "N/C"
+msgstr "التكلفة الجديدة"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_new_price
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_new_price
+msgid "N/P"
+msgstr "السعر الجديد"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_equation__f_name
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model_terms:ir.actions.act_window,help:f_sales_price_equation.f_pricing_equation_action
+msgid "No Equation found. Let's create one!"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,help:f_sales_price_equation.field_f_product_pricing__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,help:f_sales_price_equation.field_f_product_pricing__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_po_price
+msgid "PO/P"
+msgstr "سعر الشراء"
+
+#. module: f_sales_price_equation
+#: model:ir.actions.act_window,name:f_sales_price_equation.f_pricing_equation_action
+#: model_terms:ir.ui.view,arch_db:f_sales_price_equation.f_pricing_equation_tree_view
+msgid "Pricing Equation"
+msgstr "معادلة التسعير"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_pricing_equation_ext
+msgid "Pricing Equation Ext."
+msgstr "معادلة التسعير المستورد"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_pricing_equation_int
+msgid "Pricing Equation Int."
+msgstr "معادلة التسعير المحلي"
+
+#. module: f_sales_price_equation
+#: model:ir.model,name:f_sales_price_equation.model_f_pricing_equation
+msgid "Pricing Equation Model"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.ui.menu,name:f_sales_price_equation.f_pricing_equations_menu
+msgid "Pricing Equations"
+msgstr "معادلات التسعير"
+
+#. module: f_sales_price_equation
+#: model:ir.model,name:f_sales_price_equation.model_f_pricing_type
+msgid "Pricing Type"
+msgstr "نوع التسعير"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_product_id
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: f_sales_price_equation
+#: model:ir.actions.act_window,name:f_sales_price_equation.f_product_pricing_action
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_pricing_id
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_pricing_id
+#: model:ir.ui.menu,name:f_sales_price_equation.f_product_pricing_menu
+#: model_terms:ir.ui.view,arch_db:f_sales_price_equation.f_product_pricing_tree_view
+msgid "Product Pricing"
+msgstr "تسعير المنتج"
+
+#. module: f_sales_price_equation
+#: model:ir.model,name:f_sales_price_equation.model_f_product_pricing
+msgid "Product Pricing Model"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model,name:f_sales_price_equation.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "بند أمر الشراء"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_purchase_ids
+msgid "Purchase Orders"
+msgstr "اوامر الشراء"
+
+#. module: f_sales_price_equation
+#: model:ir.model,name:f_sales_price_equation.model_f_purchase_pricing_line
+msgid "Purchase Pricing Line Model"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_purchase_pricing_lines
+msgid "Purchase Pricing Lines"
+msgstr "بنود تسعير امر الشراء"
+
+#. module: f_sales_price_equation
+#: model_terms:ir.ui.view,arch_db:f_sales_price_equation.f_product_pricing_form_view
+msgid "Purchase Products"
+msgstr "منتجات المشتريات"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_pricing_type
+msgid "Purchase Type"
+msgstr "نوع الشراء"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_quantity
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_quantity
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields.selection,name:f_sales_price_equation.selection__f_product_pricing__f_status__ready
+msgid "Ready"
+msgstr "جاهز"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_shortcut
+msgid "Shortcuts"
+msgstr "اختصارات"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_status
+msgid "Status"
+msgstr "الحالة"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,help:f_sales_price_equation.field_f_product_pricing__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,help:f_sales_price_equation.field_f_product_pricing__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_unit_old_cost
+msgid "U/L/C"
+msgstr "تكلفة الوحدة السابقة"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_unit_latest_price
+msgid "U/L/P"
+msgstr "السعر السابق للوحدة"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_landed_pricing_line__f_unit_new_cost
+msgid "U/N/C"
+msgstr "تكلفة الوحدة الجديدة"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_purchase_pricing_line__f_unit_po_price
+msgid "U/PO/P"
+msgstr "سعر شراء الوحدة"
+
+#. module: f_sales_price_equation
+#: model:ir.model,name:f_sales_price_equation.model_stock_valuation_adjustment_lines
+msgid "Valuation Adjustment Lines"
+msgstr "بنود تعديلات التقييم "
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_warning_message_ext
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__f_warning_message_int
+msgid "Waring Message"
+msgstr "رسالة التحذير"
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_product_pricing__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,help:f_sales_price_equation.field_f_product_pricing__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: f_sales_price_equation
+#: model:ir.model.fields,field_description:f_sales_price_equation.field_f_pricing_type__f_name
+msgid "name"
+msgstr "اسم"

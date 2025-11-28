@@ -1,0 +1,1308 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* f_commission_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-01 09:29+0000\n"
+"PO-Revision-Date: 2025-06-01 09:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_commission_value_type__perc_target
+msgid "% / Target"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_commission_value_type__perc_tier
+msgid "% / Tier"
+msgstr ""
+
+#. module: f_commission_management
+#. odoo-python
+#: code:addons/f_commission_management/models/f_commission_calculation.py:0
+#, python-format
+msgid "/////////////////////////////// check_to_cash_amount: %s"
+msgstr ""
+
+#. module: f_commission_management
+#. odoo-python
+#: code:addons/f_commission_management/models/f_commission_calculation.py:0
+#, python-format
+msgid "/////////////////////////////// exclude_check: %s"
+msgstr ""
+
+#. module: f_commission_management
+#. odoo-python
+#: code:addons/f_commission_management/models/f_commission_calculation.py:0
+#: code:addons/f_commission_management/models/f_commission_calculation.py:0
+#, python-format
+msgid "/////////////////////////////// setup: %s"
+msgstr ""
+
+#. module: f_commission_management
+#. odoo-python
+#: code:addons/f_commission_management/models/f_commission_calculation.py:0
+#, python-format
+msgid "/////////////////////////////// total_amount: %s"
+msgstr ""
+
+#. module: f_commission_management
+#. odoo-python
+#: code:addons/f_commission_management/models/f_commission_calculation.py:0
+#, python-format
+msgid "/////////////////////////////// total_collections_amount: %s"
+msgstr ""
+
+#. module: f_commission_management
+#. odoo-python
+#: code:addons/f_commission_management/models/f_commission_calculation.py:0
+#, python-format
+msgid "/////////////////////////////// total_return_check_amount: %s"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_calculation_form_view
+msgid "<span class=\"o_stat_text\">Results</span>"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_role_kanban_view
+msgid "<span>Progress Info</span>"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model,name:f_commission_management.model_account_payment
+msgid "Account Payment"
+msgstr "الدفعات"
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__message_needaction
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__message_needaction
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__activity_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__activity_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__activity_exception_decoration
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__activity_exception_decoration
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__activity_state
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__activity_state
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__activity_type_icon
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__activity_type_icon
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_calculation_form_view
+msgid "Adjustment"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_calculation_form_view
+msgid "Adjustment Lines"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__f_adjustment_type
+msgid "Adjustment Type"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_aged_balance_matrix_action
+#: model:ir.model,name:f_commission_management.model_f_aged_balance_matrix
+#: model:ir.ui.menu,name:f_commission_management.f_aged_balance_matrix_menu
+msgid "Aged Balance Matrix"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model,name:f_commission_management.model_f_aged_balance_matrix_line
+msgid "Aged Balance Matrix Line"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix__f_bad_debt
+msgid "Aged Balance Period(Days)"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_collection_type__f_payment_type__all
+msgid "All"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__f_amount
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_commission_value_type__amount
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_target_type__amount
+msgid "Amount"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_commission_value_type__amount_target
+msgid "Amount / Target"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_commission_value_type__amount_tier
+msgid "Amount / Tier"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__message_attachment_count
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__message_attachment_count
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_collections_adjustment__f_type__auto
+msgid "Auto"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_is_bad_debt
+#: model:ir.model.fields,field_description:f_commission_management.field_res_partner__f_bad_debt
+#: model:ir.model.fields,field_description:f_commission_management.field_res_users__f_bad_debt
+msgid "Bad Debt"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_bad_debt_matrix
+msgid "Bad Debt Matrix"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_aged_balance_matrix_line__f_operator__between
+msgid "Between"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_calculation_form_view
+msgid "Calculate"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_calculation_form_view
+msgid "Calculate Exclude"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_calculation_form_view
+msgid "Calculate Include"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_setup_form_view
+msgid "Calculate Sales"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_is_calculated
+msgid "Calculated"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__f_calculated_at
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_commission_calculated_at
+msgid "Calculated At"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_calculated_by
+msgid "Calculated By"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__f_comments
+msgid "Calculation Comments"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_calculation_form_view
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_progress_info_wizard_form_view
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_calculation__f_state__cancel
+msgid "Cancelled"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__f_check_exclude_from
+msgid "Check Exclude From (Days)"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__f_check_exclude_to
+msgid "Check Exclude To (Days)"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__f_check_to_cash_limit_from
+msgid "Check To Cash Limit From (Days)"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__f_check_to_cash_limit_to
+msgid "Check To Cash Limit To (Days)"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__f_closed
+msgid "Closed"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_commission_type__collection
+msgid "Collection"
+msgstr "التحصيل"
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__f_collection_adjustment_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_collection_adjustment_id
+msgid "Collection Adjustment"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_setup_form_view
+msgid "Collection Info"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_collection_type_action
+#: model:ir.model,name:f_commission_management.model_f_collection_type
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_collection_type
+#: model:ir.ui.menu,name:f_commission_management.f_collection_type_menu
+msgid "Collection Type"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model,name:f_commission_management.model_f_collections_adjustment
+msgid "Collections Adjustment"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_comment
+msgid "Comment"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_account_bank_statement_line__f_commission_amount
+#: model:ir.model.fields,field_description:f_commission_management.field_account_move__f_commission_amount
+#: model:ir.model.fields,field_description:f_commission_management.field_account_payment__f_commission_amount
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_commission_amount
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__f_commission_amount
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__f_commission_amount
+msgid "Commission Amount"
+msgstr "مبلغ النسبة المحصلة"
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_kanban_view
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_setup_progress_info_kanban_view
+msgid "Commission Amount:"
+msgstr "مبلغ النسبة المحصلة:"
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_commission_calculation_action
+#: model:ir.model,name:f_commission_management.model_f_commission_calculation
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__f_commission_calculation_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__f_commission_calculation_id
+#: model:ir.ui.menu,name:f_commission_management.f_commission_calculation_menu
+msgid "Commission Calculation"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.ui.menu,name:f_commission_management.f_commission_management_main_menu
+#: model:res.groups,name:f_commission_management.f_commission_manage
+msgid "Commission Management"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.module.category,name:f_commission_management.f_commission_access
+msgid "Commission Management Access"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_account_bank_statement_line__f_commission_notes
+#: model:ir.model.fields,field_description:f_commission_management.field_account_move__f_commission_notes
+#: model:ir.model.fields,field_description:f_commission_management.field_account_payment__f_commission_notes
+msgid "Commission Notes"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__f_commission_percent
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__f_commission_percent
+msgid "Commission Percent"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_commission_period_action
+#: model:ir.model,name:f_commission_management.model_f_commission_period
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_commission_period
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report_wizard__f_commission_period_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__f_commission_period_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_progress_info_wizard__f_commission_period
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__f_commission_period
+#: model:ir.ui.menu,name:f_commission_management.f_commission_period_menu
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_period_tree_view
+msgid "Commission Period"
+msgstr "فترة التحصيل"
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_commission_report_action
+#: model:ir.model,name:f_commission_management.model_f_commission_report
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_pivot_view
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_search_view
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_tree_view
+msgid "Commission Report"
+msgstr "تقرير التحصيل"
+
+#. module: f_commission_management
+#: model:ir.model,name:f_commission_management.model_f_commission_report_wizard
+msgid "Commission Report Wizard"
+msgstr "شاشة تقرير التحصيل"
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_commission_result_action
+#: model:ir.model,name:f_commission_management.model_f_commission_result
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_commission_result
+#: model:ir.ui.menu,name:f_commission_management.f_commission_result_menu
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_result_tree_view
+msgid "Commission Result"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_commission_role_action
+#: model:ir.model,name:f_commission_management.model_f_commission_role
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_commission_role
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__f_commission_role_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_progress_info_wizard__f_commission_role
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__f_commission_role
+#: model:ir.ui.menu,name:f_commission_management.f_commission_role_menu
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_search_view
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_role_tree_view
+msgid "Commission Role"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_account_bank_statement_line__f_sales_person
+#: model:ir.model.fields,field_description:f_commission_management.field_account_move__f_sales_person
+#: model:res.groups,name:f_commission_management.f_commission_salesperson
+msgid "Commission Salesperson"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_commission_setup_action
+#: model:ir.model,name:f_commission_management.model_f_commission_setup
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__f_commission_setup_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_commission_setup_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__f_commission_setup_id
+#: model:ir.ui.menu,name:f_commission_management.f_commission_setup_menu
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_search_view
+msgid "Commission Setup"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_commission_type
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_commission_type
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__f_commission_type
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_search_view
+msgid "Commission Type"
+msgstr "فئة النسبة"
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_kanban_view
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_setup_progress_info_kanban_view
+msgid "Commission Type:"
+msgstr "فئة النسبة:"
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_commission_value
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_commission_value
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__f_commission_value
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_search_view
+msgid "Commission Value"
+msgstr "قيمة احتساب النسبة"
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_commission_value_type
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_commission_value_type
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__f_commission_value_type
+msgid "Commission Value Type"
+msgstr "طريقة احتساب النسبة"
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_kanban_view
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_setup_progress_info_kanban_view
+msgid "Commission Value Type:"
+msgstr "طريقة احتساب النسبة:"
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_kanban_view
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_setup_progress_info_kanban_view
+msgid "Commission Value:"
+msgstr "قيمة احتساب النسبة:"
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_account_move_form_view_commission_inherit
+msgid "Commissions"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.ui.menu,name:f_commission_management.f_commission_config_menu
+msgid "Configurations"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_calculation_form_view
+msgid "Confirm"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_calculation__f_state__confirm
+msgid "Confirmed"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model,name:f_commission_management.model_res_partner
+msgid "Contact"
+msgstr "كشف الارصدة"
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report_wizard__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_role__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_progress_info_wizard__create_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report_wizard__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_role__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_progress_info_wizard__create_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_collection_type__f_payment_type__custom
+msgid "Custom"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_commission_role_action_dashboard
+#: model:ir.ui.menu,name:f_commission_management.f_commission_role_dashboard_menu
+msgid "Dashboard"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_description
+msgid "Description"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__f_destination_account
+msgid "Destination Account"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report_wizard__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_role__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_progress_info_wizard__display_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_calculation__f_state__done
+msgid "Done"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_calculation__f_state__draft
+msgid "Draft"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_entry_point
+msgid "Entry Point"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_collections_adjustment__f_adjustment_type__exclude
+msgid "Exclude"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_excluded_amount
+msgid "Exclude Amount"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_account_payment__f_commission_exclude
+msgid "Exclude Commission"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_product_family_exc
+msgid "Exclude Families"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_product_identity_exc
+msgid "Exclude Identities"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_product_exc
+msgid "Exclude Products"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_total_sp_collection
+msgid "F Total Sp Collection"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_total_sp_cr
+msgid "F Total Sp Cr"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_total_sp_db
+msgid "F Total Sp Db"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__message_follower_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__message_follower_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__message_partner_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__message_partner_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_calculation__activity_type_icon
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_result__activity_type_icon
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_setup__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__f_from_value
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__f_from
+msgid "From"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_setup_form_view
+msgid "General Info"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_progress_info_wizard_form_view
+msgid "Get Info"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_wizard_form_view
+msgid "Get Report"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__has_message
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__has_message
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report_wizard__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_role__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_progress_info_wizard__id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__id
+msgid "ID"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__activity_exception_icon
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__activity_exception_icon
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_calculation__activity_exception_icon
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_result__activity_exception_icon
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_setup__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_calculation__message_needaction
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_result__message_needaction
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_setup__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_calculation__message_has_error
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_calculation__message_has_sms_error
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_result__message_has_error
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_result__message_has_sms_error
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_setup__message_has_error
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_setup__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_collections_adjustment__f_adjustment_type__include
+msgid "Include"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_included_amount
+msgid "Include Amount"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_account_bank_statement_line__f_include_commission
+#: model:ir.model.fields,field_description:f_commission_management.field_account_move__f_include_commission
+#: model:ir.model.fields,field_description:f_commission_management.field_account_payment__f_include_commission
+msgid "Include Commission"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__f_include_returned_checks
+msgid "Include Returned Checks"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__message_is_follower
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__message_is_follower
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model,name:f_commission_management.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__f_journals
+msgid "Journals"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_comm_calc_id
+msgid "Last Calculation"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report_wizard____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_role____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_progress_info_wizard____last_update
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report_wizard__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_role__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_progress_info_wizard__write_uid
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report_wizard__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_role__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_progress_info_wizard__write_date
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_aged_balance_matrix_line__f_operator__less
+msgid "Less"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_limit_to_target
+msgid "Limit To Target"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_setup_form_view
+msgid "Limit To Tier"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__message_main_attachment_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__message_main_attachment_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_collections_adjustment__f_type__manual
+msgid "Manual"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__f_matrix_id
+msgid "Matrix"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix__f_matrix_line
+msgid "Matrix Line"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_aged_balance_matrix_form_view
+msgid "Matrix Lines"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__message_has_error
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__message_has_error
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__message_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__message_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_period__f_recurring__monthly
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_recurring__monthly
+msgid "Monthly"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__my_activity_date_deadline
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__my_activity_date_deadline
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_my_commission_report_wizard_action
+#: model:ir.ui.menu,name:f_commission_management.f_my_commission_menu
+msgid "My Commission"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix__f_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__f_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__f_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__f_name
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_role__f_name
+msgid "Name"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_net_sales
+msgid "Net Sales"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__activity_calendar_event_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__activity_calendar_event_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__activity_date_deadline
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__activity_date_deadline
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__activity_summary
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__activity_summary
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__activity_type_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__activity_type_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_account_payment__f_commission_note
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_notes
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__f_notes
+msgid "Notes"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__message_needaction_counter
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__message_needaction_counter
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__message_has_error_counter
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__message_has_error_counter
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_calculation__message_needaction_counter
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_result__message_needaction_counter
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_setup__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_calculation__message_has_error_counter
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_result__message_has_error_counter
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_setup__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_account_payment__f_sales_person
+msgid "Old Field Sales Person"
+msgstr "غير مستخدم"
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__f_operator
+msgid "Operator"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__f_payment_type
+msgid "Payment Type"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_account_bank_statement_line__f_period_id
+#: model:ir.model.fields,field_description:f_commission_management.field_account_move__f_period_id
+#: model:ir.model.fields,field_description:f_commission_management.field_account_payment__f_period_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__f_period
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_commission_period_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_sales_period_id
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_search_view
+msgid "Period"
+msgstr ""
+
+#. module: f_commission_management
+#. odoo-python
+#: code:addons/f_commission_management/models/f_commission_setup.py:0
+#, python-format
+msgid "Please Select Period For Sales"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_pricelist
+msgid "Pricelist"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_commission_type__product_based
+msgid "Product Based"
+msgstr "المنتجات"
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_product_family
+msgid "Product Family"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_product_identity
+msgid "Product Identity"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_setup_form_view
+msgid "Product Info"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_product
+msgid "Product Name"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__f_total_amount
+msgid "Progress Amount"
+msgstr "قيمة التحصيل"
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_setup_progress_info_kanban_view
+msgid "Progress Amount:"
+msgstr "قيمة التحصيل:"
+
+#. module: f_commission_management
+#: model:ir.model,name:f_commission_management.model_f_progress_info_wizard
+msgid "Progress Info Wizard"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_target_type__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_period__f_recurring__quarterly
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_recurring__quarterly
+msgid "Quarterly"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__f_recurring
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_is_recurring
+msgid "Recurring"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_recurring
+msgid "Recurring Type"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.ui.menu,name:f_commission_management.f_commission_reporting_menu
+msgid "Reporting"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_calculation_form_view
+msgid "Reset To Draft"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__f_role_responsible_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_role__f_responsible
+msgid "Responsible"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__activity_user_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__activity_user_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__f_commission_role_id
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__f_commission_role_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_commission_role_ids
+msgid "Role"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__message_has_sms_error
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__message_has_sms_error
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_commission_type__sales
+msgid "Sales"
+msgstr "المبيعات"
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_setup_form_view
+msgid "Sales Info"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_sales_perc
+msgid "Sales%"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_role__f_sales_persons
+msgid "Salespersons"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__f_commission_setup_id
+msgid "Setup"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_setup_progress_info_action
+#: model:ir.model,name:f_commission_management.model_f_setup_progress_info
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_setup_progress_info_tree_view
+msgid "Setup Progress Info"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_account_move__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_account_payment__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collection_type__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report_wizard__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_role__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_progress_info_wizard__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__smart_search
+#: model:ir.model.fields,field_description:f_commission_management.field_res_partner__smart_search
+msgid "Smart Search"
+msgstr "بحث متقدم"
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__f_state
+msgid "State"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_calculation__activity_state
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_result__activity_state
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_setup__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_commission_target
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__f_commission_target
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_target
+#: model:ir.model.fields,field_description:f_commission_management.field_f_setup_progress_info__f_commission_target
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_search_view
+msgid "Target"
+msgstr "الهدف / تارجت"
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_setup_form_view
+msgid "Target Info"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_target_type
+msgid "Target Type"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_kanban_view
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_setup_progress_info_kanban_view
+msgid "Target:"
+msgstr "الهدف / تارجت:"
+
+#. module: f_commission_management
+#: model:ir.actions.act_window,name:f_commission_management.f_team_commission_report_wizard_action
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report_wizard__f_team_commission
+#: model:ir.ui.menu,name:f_commission_management.f_team_commission_menu
+msgid "Team Commission"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,help:f_commission_management.field_account_payment__f_sales_person
+msgid "The internal user in charge of this contact."
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_tier_from
+msgid "Tier From"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_setup_form_view
+msgid "Tier Info"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_tier_to
+msgid "Tier To"
+msgstr ""
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_setup_form_view
+msgid "Tier Type"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_aged_balance_matrix_line__f_to_value
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_period__f_to
+msgid "To"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_total_amount
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__f_total_amount
+msgid "Total Amount"
+msgstr "قيمة التحصيل الكلية"
+
+#. module: f_commission_management
+#: model_terms:ir.ui.view,arch_db:f_commission_management.f_commission_report_kanban_view
+msgid "Total Amount:"
+msgstr "قيمة التحصيل الكلية:"
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_total_sales
+msgid "Total Sales"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_collections_adjustment__f_type
+msgid "Type"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_calculation__activity_exception_decoration
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_result__activity_exception_decoration
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_setup__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__f_upper_limit
+msgid "Upper Limit"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_report__f_user_id
+msgid "User"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_calculation__website_message_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_result__website_message_ids
+#: model:ir.model.fields,field_description:f_commission_management.field_f_commission_setup__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_calculation__website_message_ids
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_result__website_message_ids
+#: model:ir.model.fields,help:f_commission_management.field_f_commission_setup__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_period__f_recurring__yearly
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_commission_setup__f_recurring__yearly
+msgid "Yearly"
+msgstr ""
+
+#. module: f_commission_management
+#: model:ir.model.fields.selection,name:f_commission_management.selection__f_aged_balance_matrix_line__f_operator__great
+msgid "greater"
+msgstr ""

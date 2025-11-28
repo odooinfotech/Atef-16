@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_f_product_aging,access.f.product.aging,model_f_product_aging,,1,1,1,0
+access_f_aging_details,access.f.aging.details,model_f_aging_details,,1,1,1,0

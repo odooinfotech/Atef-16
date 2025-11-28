@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+bi_export_images_product.access_export_products_with_images,access_export_products_with_images,bi_export_images_product.model_export_products_with_images,base.group_user,1,1,1,1
+bi_export_images_product.access_excel_report,access_excel_report,bi_export_images_product.model_excel_report,base.group_user,1,1,1,1

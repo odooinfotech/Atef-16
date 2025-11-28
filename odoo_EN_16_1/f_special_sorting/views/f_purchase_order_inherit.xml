@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="purchase_order_line_special_sort">
+        <field name="name">purchase.order.line.special.sort</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree" position="attributes">
+                <attribute name="default_order">id asc</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
+

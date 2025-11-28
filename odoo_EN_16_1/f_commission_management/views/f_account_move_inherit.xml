@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="f_account_move_form_view_commission_inherit" model="ir.ui.view">
+		<field name="name">f.account.move.form.view.commission.inherit</field>
+		<field name="model">account.move</field>
+		<field name="inherit_id" ref="account.view_move_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//form//sheet//notebook" position="inside">
+                <page id="f_commission_tab" name="f_commission_tab" string="Commissions" groups="f_commission_management.f_commission_manage">
+                    <group name="commissions" >
+                        <field name="f_include_commission" />
+                        <field name="f_commission_amount" />
+                        <field name="f_period_id" />
+                        <field name="f_sales_person" />
+                        <field name="f_commission_notes" />
+                    </group>
+                </page>
+			</xpath>
+		</field>
+	</record>
+</odoo>

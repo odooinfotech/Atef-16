@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <report
+                id="action_report_label_barcode"
+                string="Print Barcode"
+                model="product.wizard.label.line"
+                report_type="qweb-pdf"
+                name="products_barcode_label.report_barcode_label"
+                file="products_barcode_label.report_barcode_label"
+                menu="False"
+                paperformat="products_barcode_label.barcode_labels_report_paperformate"/>
+                
+                
+                
+                
+                 <report
+                id="action_report_label_invoices_barcode"
+                string="Print Barcode"
+                model="product.invoice.wizard.label.line"
+                report_type="qweb-pdf"
+                name="products_barcode_label.report_invoicebarcode_label"
+                file="products_barcode_label.report_invoicebarcode_label"
+                menu="False"
+                paperformat="products_barcode_label.barcode_labels_report_paperformate"/>
+                
+                
+                
+                
+    </data>
+</odoo>

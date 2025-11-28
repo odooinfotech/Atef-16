@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+		 <record id="f_product_pricelistprice_item_form_view" model="ir.ui.view">
+        <field name="model">product.pricelist.item</field>
+        <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+        <field name="arch" type="xml">
+         <xpath expr="//form//sheet//group[@name='pricelist_rule_advanced']//div" position="inside">
+          <span attrs="{'invisible':[('base', '!=', 'f_price1')]}">Price 1 - </span>
+           <span attrs="{'invisible':[('base', '!=', 'f_price2')]}">Price 2 - </span>
+            <span attrs="{'invisible':[('base', '!=', 'f_price3')]}">Price 3 - </span>
+             <span attrs="{'invisible':[('base', '!=', 'f_price4')]}">Price 4 - </span>
+              <span attrs="{'invisible':[('base', '!=', 'f_price5')]}">Price 5 - </span>
+           
+               </xpath>
+            
+           
+        </field>
+    </record>
+    </data>
+</odoo>

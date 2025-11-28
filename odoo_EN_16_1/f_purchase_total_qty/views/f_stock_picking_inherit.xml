@@ -1,0 +1,15 @@
+<odoo>
+	<data>
+		<record id="f_stock_picking_inherit_form" model="ir.ui.view">
+			<field name="name">f.stock.picking.inherit.form</field>
+			<field name="model">stock.picking</field>
+			<field name="inherit_id" ref="stock.view_picking_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//form//sheet//group//group[1]" position="inside">
+                    <field name="f_total_demand_qty" attrs="{'invisible': [('picking_type_code', '!=', 'incoming')]}"/>
+                    <field name="f_total_done_qty" attrs="{'invisible': [('picking_type_code', '!=', 'incoming'),('picking_type_code', '!=', 'internal')]}"/>
+                </xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

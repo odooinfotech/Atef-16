@@ -1,0 +1,18 @@
+<odoo>
+	<data>
+
+		<record id="f_manufacturing_palnning_seq_num"
+			model="ir.sequence">
+			<field name="name">Manufacturing Planning Sequence Number</field>
+			<field name="code">f.man.plan</field>
+			<field name="prefix">MP/%(year)s/%(month)s/</field>
+			<!-- <field name="prefix">MP/</field> -->
+			<field name="padding">4</field>
+			<field name="company_id" eval="False" />
+		</record>
+
+
+	
+
+	</data>
+</odoo>

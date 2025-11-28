@@ -1,0 +1,1989 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* falak_purchase_logistics
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-27 08:46+0000\n"
+"PO-Revision-Date: 2024-08-27 08:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_order_planning__f_state__balance/documents
+msgid " Balance/ Documents"
+msgstr "الرصيد / المستندات"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_order_planning__f_state__ready_to_be_shipped
+msgid " Ready To Be Shipped"
+msgstr "جاهز للشحن"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_report
+msgid ""
+"<span>\n"
+"\n"
+"                                Shipping Report\n"
+"                                <br/>\n"
+"                            </span>"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_report
+msgid ""
+"<span>\n"
+"                                <strong>Shipment Number:</strong>\n"
+"                                <br/>\n"
+"                            </span>"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_report
+msgid ""
+"<span>\n"
+"                                <strong>Shipment Stage:</strong>\n"
+"                                <br/>\n"
+"                            </span>"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_report
+msgid "<span>Product</span>"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_report
+msgid "<span>Qty</span>"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_report
+msgid "<span>Vendor</span>"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_shipping_ATA_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_real_port_arrival_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_real_port_arrival_date
+msgid "ATA"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_real_company_arrival_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_real_company_arrival_date
+msgid "ATAF"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_real_shipping_date
+msgid "ATD"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_real_shipping_date
+msgid "ATD "
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__message_needaction
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__message_needaction
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__message_needaction
+msgid "Action Needed"
+msgstr "الاجراء المطلوب"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__activity_ids
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__activity_ids
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__activity_ids
+msgid "Activities"
+msgstr "النشاطات"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__activity_exception_decoration
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__activity_exception_decoration
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__activity_state
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__activity_state
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__activity_type_icon
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__activity_type_icon
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_clearance_time
+msgid "Actual Clearance Time"
+msgstr "وقت التخليص الفعلي"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_search_view
+msgid "Actual Shipping Date"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_container_details_list_form
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_planning_list
+msgid "Add Plans"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_financial_users_rel__f_approval
+msgid "Approval"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__purchase_order__state__approved
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_search_inherit_customs
+msgid "Approved"
+msgstr "موافق عليه"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_order_planning__f_state__arrived
+msgid "Arrived"
+msgstr "وصل"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_order_planning__f_state__arrived_at_company
+msgid "Arrived At Company"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__message_attachment_count
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__message_attachment_count
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_bl_number
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.container_details_search_view
+msgid "B/L Number"
+msgstr " B/L رقم "
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_bill_of_lad_status
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_bill_of_lad_status
+msgid "B/L Status"
+msgstr "حالة B/L"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_bill_of_lading_type
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_bill_of_lading_type
+msgid "B/L Type"
+msgstr "نوع B/L"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_bakacha_number
+msgid "Bakacha #"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_balance_document
+msgid "Balance/Document"
+msgstr "الرصيد/المستند"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_bank_garantee
+msgid "Bank Guarantee"
+msgstr "ضمان بنكي"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_bank_guarantee_amount
+msgid "Bank Guarantee Amount"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_bill_of_lading_type__f_name
+msgid "Bill Of Lading Type Name"
+msgstr "اسم نوع بوليصة الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_f_bill_of_lading_type
+msgid "Bill Of Lading Types"
+msgstr "انواع بوليصة الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_account_bank_statement_line__f_bill_ref
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_account_move__f_bill_ref
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_account_payment__f_bill_ref
+msgid "Bill Reference"
+msgstr "الرقم المرجعي للفاتورة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__account_incoterms__f_incoterm_location_type__blank
+msgid "Blank"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_booking_no
+msgid "Booking Job #"
+msgstr "رقم الحجز"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_search_view
+msgid "Booking NO"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_ports__f_port_type__both
+msgid "Both"
+msgstr "كلاهما"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_cancelled_qty
+msgid "Cancelled Qty"
+msgstr "الكمية الملغية"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__f_class_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_financial_users_rel__f_class_id
+msgid "Classification"
+msgstr "التصنيف"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_product_product__f_classification_access
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_product_template__f_classification_access
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_classification_access
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_config_settings__f_po_access_based_class
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_users__f_classification_access
+msgid "Classification Access"
+msgstr "صلاحيات التصنيفات"
+
+#. module: falak_purchase_logistics
+#: model:ir.ui.menu,name:falak_purchase_logistics.f_classification_approval_menu
+msgid "Classification Approvals"
+msgstr "موافقات التصنيفات"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_po_classification__f_name
+msgid "Classification Name"
+msgstr "اسم التصنيف"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_po_classification
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_po_classification
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_partner__f_vendor_classifications
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_users__f_vendor_classifications
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_po_classification_settings_customs
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_res_users_customs
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_view_po_class_list_tree
+msgid "Classifications"
+msgstr "التصنيفات"
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.act_window,name:falak_purchase_logistics.f_classification_approval_action
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_classification_approval_tree_view
+msgid "Classifications Approvals"
+msgstr "موافقات التصنيفات"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_clearance_representative
+msgid "Clearance Agent"
+msgstr "مندوب التخليص"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_form
+msgid "Clearance Details"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_clearance_file_name
+msgid "Clearance File Name"
+msgstr "اسم ملف التخليص"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_clearance_period
+msgid "Clearance Period"
+msgstr "فترة التخليص"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_clearance_agent
+msgid "Clearance Representative"
+msgstr "مندوب التخليص"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_stage__f_stage_code
+msgid "Code"
+msgstr "رمز"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_commercial_inv_attach
+msgid "Commercial Invoice"
+msgstr "مرفق  الفاتورة التجارية "
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_commercial_inv_amount
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_commercial_inv_amount
+msgid "Commercial Invoice Amount"
+msgstr "مبلغ الفاتورة التجارية"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__file_name_comm_inv
+msgid "Commercial Invoice File"
+msgstr "مرفق  الفاتورة التجارية "
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__f_commercial_invoice_number
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_commercial_inv_num
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_commercial_inv_num
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.purchase_planning_search_view
+msgid "Commercial Invoice Number"
+msgstr "رقم الفاتورة التجارية"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_inherited
+msgid "Confirm Order"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_consignee
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_consignee
+msgid "Consignee"
+msgstr "المرسل اليه"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_partner__f_one_contact_person
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_users__f_one_contact_person
+msgid "Contact Person"
+msgstr "مسؤول الاتصال"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_vendor_contact_person
+msgid "Contact Person Name"
+msgstr "اسم الشخص المسؤول"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_vendor_num
+msgid "Contact Person Phone"
+msgstr "رقم الشخص المسؤول"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_package_qty
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_package_qty
+msgid "Contained QTY"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.act_window,name:falak_purchase_logistics.f_container_details_action_window
+#: model:ir.model,name:falak_purchase_logistics.model_f_container_details
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__f_container_details
+#: model:ir.ui.menu,name:falak_purchase_logistics.f_po_container
+msgid "Container Details"
+msgstr "تفاصيل الكونتينر"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_container_details_list_form
+msgid "Container Details Info"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_container_name
+msgid "Container Name"
+msgstr "اسم الكونتينر"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_container_number
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.container_details_search_view
+msgid "Container Number"
+msgstr "رقم الكونتينر"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_f_container_plans
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_container_plans
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_container_details_list_form
+msgid "Container Plans"
+msgstr "خطط الكونتينر"
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.act_window,name:falak_purchase_logistics.f_container_size_action_window
+#: model:ir.model,name:falak_purchase_logistics.model_f_container_size
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_container_size_tree_view
+msgid "Container Size"
+msgstr "حجم الكونتينر"
+
+#. module: falak_purchase_logistics
+#: model:ir.ui.menu,name:falak_purchase_logistics.f_container_size
+msgid "Container Sizes"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_container_size
+msgid "Container Type(Size)"
+msgstr "نوع الكونتينر"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_containers
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_form
+msgid "Containers"
+msgstr "الكونتينرات"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_res_country
+msgid "Country"
+msgstr "الدولة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_bill_of_lading_type__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_size__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_financial_users_rel__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_payment_terms__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_po_classification__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_ports__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_line__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_stage__create_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__create_uid
+msgid "Created by"
+msgstr "تم انشاؤه من قبل"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_bill_of_lading_type__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_size__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_financial_users_rel__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_payment_terms__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_po_classification__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_ports__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_line__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_stage__create_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__create_date
+msgid "Created on"
+msgstr "تم الإنشاء بتاريخ"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_custom_broker
+#: model:res.partner.category,name:falak_purchase_logistics.f_custom_broker_tag'
+msgid "Custom Broker"
+msgstr "المخلص الجمركي"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_order_planning__f_state__custom_clearance
+msgid "Custom Clearance"
+msgstr "التخليص الجمركي"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_clearance_file_number
+msgid "Custom File Number"
+msgstr "رقم ملف التخليص الجمركي"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_date_hour
+msgid "Data & Hour (SC)"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__f_updated_at
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_date_entered_company
+msgid "Date Entered To Company"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_date_exit_company
+msgid "Date Exist From Company"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__f_date_name
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_dates_history_search_view
+msgid "Date Name"
+msgstr "التاريخ"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_date_returned_to_port
+msgid "Date Returned To Port"
+msgstr "تاريخ العودة إلى الميناء"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__f_po_pi_date
+msgid "Date When Vendor Sent PI "
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_report
+msgid "Date:"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_deliver_date
+msgid "Deliver Date to WH"
+msgstr "تاريخ تسليم الورقة للمخازن"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_demurrage
+msgid "Demurrage"
+msgstr "التأخير"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_demurrage_amount
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__f_demurrage_amount
+msgid "Demurrage Amount"
+msgstr "مبلغ التأخير"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_dep_date
+msgid "Dep Date"
+msgstr "تاريخ الترحيل"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__f_po_date_order
+msgid ""
+"Depicts the date within which the Quotation should be confirmed and "
+"converted into a purchase order."
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_deposit_lc
+msgid "Deposit /LC"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_order_planning__f_state__deposit/lc
+msgid "Deposit/ LC"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__f_product_desc
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_product_description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_delta_company_arrival_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_delta_port_arrival_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_delta_shipping_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_delta_company_arrival_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_delta_port_arrival_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_delta_shipping_date
+msgid "Diff"
+msgstr "الفرق"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__account_incoterms__f_incoterm_location_type__discharge
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_ports__f_port_type__discharge
+msgid "Discharge"
+msgstr "تفريغ"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_bill_of_lading_type__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_size__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_financial_users_rel__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_payment_terms__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_po_classification__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_ports__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_line__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_stage__display_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_driver
+msgid "Driver"
+msgstr "السائق"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_estimated_port_arrival_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_estimated_port_arrival_date
+msgid "ETA"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_estimated_company_arrival_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_estimated_company_arrival_date
+msgid "ETAF"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_estimated_shipping_date
+msgid "ETD"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__f_vendor_email
+msgid "Email"
+msgstr "الإيميل"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_euro1
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_euro1
+msgid "Euro1"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__f_storage
+msgid "External Storage Location"
+msgstr "المخزن الخارجي"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__f_currency_id
+msgid "F Currency"
+msgstr "العملة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_po_receipt_domain
+msgid "F Po Receipt Domain"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.server,name:falak_purchase_logistics.f_on_change_ETAF_ir_actions_server
+msgid "Falak On Change shipping ETAF"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.server,name:falak_purchase_logistics.f_on_change_ship_state_ir_actions_server
+msgid "Falak On Change shipping Stage State"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_shipping_details__f_bill_of_lad_status__final_mbl_
+msgid "Final MBL"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__purchase_order__state__manage_approved
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_search_inherit_customs
+msgid "Finance Approval"
+msgstr "الموافقة المالية"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_finance_approve
+msgid "Finance Approval By"
+msgstr "الموافقة المالية بواسطة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_finance_approve_date
+msgid "Finance Approval On"
+msgstr "الموافقة المالية بتاريخ"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_inherited
+msgid "Finance Approve"
+msgstr "الموافقة المالية"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_inherited
+msgid "Finance Reject"
+msgstr "الرفض المالي"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__f_financial_approvals
+msgid "Financial Approvals"
+msgstr "الموافقات المالية"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_f_financial_users_rel
+msgid "Financial Approve Relation"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__message_follower_ids
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__message_follower_ids
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__message_partner_ids
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__message_partner_ids
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__activity_type_icon
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__activity_type_icon
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_shipping_details__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_free_days_of_demurrage
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_free_days_of_demurrage
+msgid "Free Days of Demurrage"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_freight_cost
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_freight_cost
+msgid "Freight Cost"
+msgstr "تكلفة الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__f_from_date
+msgid "From Date"
+msgstr "من تاريخ"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_form
+msgid "Get Suppliers"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.container_details_search_view
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_dates_history_search_view
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_search_view
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.purchase_planning_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__has_message
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__has_message
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_bill_of_lading_type__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_size__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_financial_users_rel__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_payment_terms__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_po_classification__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_ports__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_line__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_stage__id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__id
+msgid "ID"
+msgstr "الرقم"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__activity_exception_icon
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__activity_exception_icon
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__activity_exception_icon
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__activity_exception_icon
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_shipping_details__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__message_needaction
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__message_needaction
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_shipping_details__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__message_has_error
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__message_has_sms_error
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__message_has_error
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__message_has_sms_error
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_shipping_details__message_has_error
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_shipping_details__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_import_agent
+msgid "Import Agent"
+msgstr "مندوب الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_import_agent
+msgid "Import Representative"
+msgstr "مندوب الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__res_partner__f_vendor_location__imported
+msgid "Imported"
+msgstr "مستورد"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_account_incoterms__f_incoterm_location_type
+msgid "Incoterm Location Type"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_account_incoterms
+msgid "Incoterms"
+msgstr "الشروط التجارية"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_internal_agent
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_internal_agent
+#: model:res.partner.category,name:falak_purchase_logistics.f_internal_agent_tag'
+msgid "Internal Agent"
+msgstr "الوكيل من رويال"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__f_intarnal_referance
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_internal_ref
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_product_ref
+msgid "Internal Reference"
+msgstr "المرجع الداخلي"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_shipping_details__f_bill_of_lad_status__invoice
+msgid "Invoice"
+msgstr "فاتورة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_is_finance
+msgid "Is Finance"
+msgstr "مدير مالي؟"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__message_is_follower
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__message_is_follower
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_is_manager
+msgid "Is Manager"
+msgstr "مدير؟"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_booking_no
+msgid "Job #"
+msgstr "رقم الحجز (Job #)"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_lc_details
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__purchase_order__state__lc
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_inherited
+msgid "LC"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_shipping_lc_number
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_lc_number
+msgid "LC Number"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_bill_of_lading_type____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_size____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_financial_users_rel____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_payment_terms____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_po_classification____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_ports____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_line____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_stage____last_update
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل على"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_bill_of_lading_type__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_size__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_financial_users_rel__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_payment_terms__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_po_classification__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_ports__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_line__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_stage__write_uid
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__write_uid
+msgid "Last Updated by"
+msgstr "تاريخ آخر تحديث"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_bill_of_lading_type__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_size__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_financial_users_rel__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_payment_terms__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_po_classification__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_ports__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_line__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_stage__write_date
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__account_incoterms__f_incoterm_location_type__loading
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_ports__f_port_type__loading
+msgid "Loading"
+msgstr "تحميل"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__res_partner__f_vendor_location__local
+msgid "Local"
+msgstr "محلي"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__message_main_attachment_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__message_main_attachment_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__purchase_order__state__ready
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_search_inherit_customs
+msgid "Manage Approval"
+msgstr "الموافقة الادارية"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_manage_approve
+msgid "Manage Approval By"
+msgstr "الموافقة الادارية بواسطة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_manage_approve_date
+msgid "Manage Approval On"
+msgstr "الموافقة الادارية بتاريخ"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__f_manage_approvals
+msgid "Manage Approvals"
+msgstr "الموافقات الادارية"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_inherited
+msgid "Manage Approve"
+msgstr "الموافقة الادارية"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_inherited
+msgid "Manage Reject"
+msgstr "الرفض الاداري"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__message_has_error
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__message_has_error
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__message_ids
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__message_ids
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__f_min_amount
+msgid "Min Amount"
+msgstr "اقل قيمة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__my_activity_date_deadline
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__my_activity_date_deadline
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_size__f_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_stage__f_stage_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__f_vendor_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__activity_date_deadline
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__activity_date_deadline
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__activity_summary
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__activity_summary
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__activity_type_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__activity_type_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__purchase_order__f_require_euro__no
+msgid "No"
+msgstr "لا"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_note
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__f_note
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_notes
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_notes
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_notes
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__message_needaction_counter
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__message_needaction_counter
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الاجراءات"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__f_demurrage
+msgid "Number of Days Exceeding Container Return"
+msgstr "عدد الايام المسموح بها قبل اعادة الكونتينر"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_number_of_packages
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_number_of_packages
+msgid "Number of Packages"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_number_of_packages_calc
+msgid "Number of Packages Computed"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__f_free_days_of_demurrage
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_shipping_details__f_free_days_of_demurrage
+msgid "Number of days allowed before returning the container "
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__message_has_error_counter
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__message_has_error_counter
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__message_needaction_counter
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__message_needaction_counter
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_shipping_details__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__message_has_error_counter
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__message_has_error_counter
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_shipping_details__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_order_planning__f_state__on_port
+msgid "On Port"
+msgstr "على الميناء"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_po_line_qty
+msgid "Ordered Qty"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_shipping_details__f_bill_of_lading_type__original
+msgid "Original"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_stage__f_owner
+msgid "Owner"
+msgstr "المسؤول"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_po_pi_approval_date
+msgid "PI Approval Date"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_po_pi_date
+msgid "PI Date"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.server,name:falak_purchase_logistics.f_po_cancel_ir_actions_server
+msgid "PO Cancel"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_product_product__f_class_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_product_template__f_class_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_users__f_class_ids
+msgid "PO Classification"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_product_template_customs_classifications
+msgid "PO Classifications"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.server,name:falak_purchase_logistics.f_po_delete_ir_actions_server
+msgid "PO Delete"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_form
+msgid "PO Details"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_po_line_id
+msgid "PO Line / Description"
+msgstr "بند أمر الشراء"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_po_date_order
+msgid "PO Order Date"
+msgstr "تاريخ طلب امر الشراء"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__f_po_plan_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_po_plan_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_show_planning
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_show_planning
+msgid "PO Planning"
+msgstr "تخطيط امر الشراء"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_total_volumes
+msgid "PO Planning Volumes"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_total_weights
+msgid "PO Planning Weights"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.server,name:falak_purchase_logistics.f_polines_delete_quantities_ir_actions_server
+msgid "PO Plans Delete"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.server,name:falak_purchase_logistics.f_polines_update_quantities_ir_actions_server
+msgid "PO Plans Update"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.server,name:falak_purchase_logistics.f_po_planning_shipping_ir_actions_server
+msgid "PO Plans Update Shipping"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_po_receipt
+msgid "PO Receipt"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_invoice_form_view_bill_ref
+msgid "PO Reference"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_package_volume
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_package_volume
+msgid "Package Volume"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_packing
+msgid "Packing"
+msgstr "التعبئة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_packing_list
+msgid "Packing List"
+msgstr "قائمة التعبئة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__file_name_packinglist
+msgid "Packing List File"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_report
+msgid ""
+"Page:\n"
+"                                <span class=\"page\"/>\n"
+"                                /\n"
+"                                <span class=\"topage\"/>"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_payment_terms__f_payment_name
+msgid "Payment Term Name"
+msgstr "شرط الدفع"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_f_payment_terms
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_shipping_term
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_payment_terms
+#: model:ir.ui.menu,name:falak_purchase_logistics.f_payment_terms
+msgid "Payment Terms"
+msgstr "شروط الدفع"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__f_vendor_no
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_planned_amount
+msgid "Planned  Qty"
+msgstr "الكمية المخطط لها"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_planned_amount_price
+msgid "Planned Qty Price"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_inherited
+msgid "Planning"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_shipping_stage__f_owner__planning
+msgid "Planning Stage"
+msgstr "مراحل التخطيط"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_port_fees
+msgid "Port Fees"
+msgstr "رسوم الموانئ"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_ports__f_port_name
+msgid "Port Name"
+msgstr "اسم الميناء"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_port_of_discharge
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_port_of_discharge
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_port_of_discharge
+msgid "Port Of Discharge"
+msgstr "ميناء التفريغ"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_port_of_loading
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_port_of_loading
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_port_of_loading
+msgid "Port Of Loading"
+msgstr "ميناء التحميل"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__f_primary
+msgid "Primary"
+msgstr "الرئيسي"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_product_template
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.purchase_planning_search_view
+msgid "Product"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_prod_img
+msgid "Product Image"
+msgstr "صورة المنتج"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__f_product_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_product_name
+msgid "Product Name"
+msgstr "اسم المنتج"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_product_price
+msgid "Product Price"
+msgstr "سعر المنتج"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_product_code
+msgid "Product Vendor No."
+msgstr "كود منتج المورد"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_prod_weight
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_prod_weight
+msgid "Product Weight"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_order_planning__f_state__production
+msgid "Production"
+msgstr "انتاج"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_purchase_order
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__f_po_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_po_id
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.purchase_planning_search_view
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.act_window,name:falak_purchase_logistics.f_action_po_class_list
+#: model:ir.model,name:falak_purchase_logistics.model_f_po_classification
+msgid "Purchase Order Classifications"
+msgstr "تصنيفات اوامر الشراء"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_f_classification_approval
+msgid "Purchase Order Classifications Approvals"
+msgstr "موافقات تصنيفات امر الشراء"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_planning_list_form
+msgid "Purchase Order Info"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "بند أمر الشراء"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_f_purchase_order_planning
+#: model:ir.ui.menu,name:falak_purchase_logistics.f_po_planning
+msgid "Purchase Order Planning"
+msgstr "تخطيط امر الشراء"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_payment_terms_tree_view
+msgid "Purchase Payment Terms"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.act_window,name:falak_purchase_logistics.f_purchase_payment_term_action_window
+msgid "Purchase Paymnet Terms"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.act_window,name:falak_purchase_logistics.f_purchase_order_planning_action_window
+msgid "Purchase Planning"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.act_window,name:falak_purchase_logistics.f_purchase_ports_action_window
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_ports_tree_view
+msgid "Purchase Ports"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_f_purchase_ports
+msgid "Purchase Report"
+msgstr "تقرير الشراء"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_purchase_representative
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.purchase_planning_search_view
+msgid "Purchase Representative"
+msgstr "مندوب الشراء"
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.act_window,name:falak_purchase_logistics.f_purchase_shipping_line_action_window
+msgid "Purchase Shipping Line"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_shipping_lines_tree_view
+msgid "Purchase Shipping Lines"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:res.groups,name:falak_purchase_logistics.f_group_unlock_purchase
+msgid "Purchase Unlock"
+msgstr "الغاء قفل امر الشراء"
+
+#. module: falak_purchase_logistics
+#: model:ir.ui.menu,name:falak_purchase_logistics.menu_class_list
+msgid "Purchse Order Classifications"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_qty_in_con
+msgid "Qty In Container"
+msgstr "الكمية في الكونتينر"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__qty
+msgid "Quantity"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_ready_to_shipping_date
+msgid "RTS"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_inherited
+msgid "Ready"
+msgstr "جاهز"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_shipping_details__f_bill_of_lad_status__received
+msgid "Received"
+msgstr "مستلم"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_po_line_rec_qty
+msgid "Received Qty"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_remaining_qty
+msgid "Remaining Qty"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_partner__f_representative
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_users__f_representative
+msgid "Representative"
+msgstr "مندوب التخليص"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_require_euro
+msgid "Require Euro1 ?"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__activity_user_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__activity_user_id
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__activity_user_id
+msgid "Responsible User"
+msgstr "الشخص المسؤول"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__message_has_sms_error
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__message_has_sms_error
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_order_planning__f_taken_type__sample_test
+msgid "Sample Test"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_shipping_details__f_bill_of_lading_type__seaway_bill
+msgid "Seaway Bill"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_security_check
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_security_check
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_shipping_security_check
+msgid "Security Check"
+msgstr "فحص أمني"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_order_inherited
+msgid "Send PO by Email"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_po_classification_settings_customs
+msgid "Set Access on PO Based on Classification"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_planning_list
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_form
+msgid "Set Quantities"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_planning_list_form
+msgid "Shipment Info"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_shipment_num
+msgid "Shipment Name"
+msgstr "اسم الشحنة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_seq
+msgid "Shipment Sequence"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_order_planning__f_state__shipped
+msgid "Shipped"
+msgstr "مشحون"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_shipped_amount
+msgid "Shipped Qty"
+msgstr "الكمية المشحونة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_shipped_amount_price
+msgid "Shipped Qty Price"
+msgstr "سعر الكمية المشحونة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_con_shipping
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_shipping
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__f_shipping_id
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.purchase_planning_search_view
+msgid "Shipping"
+msgstr "الشحن"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_purchase_planning_list_form
+msgid "Shipping  Dates"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_shipping_company_agent
+msgid "Shipping Agent(Forwarder)"
+msgstr "وكيل شركة الشحن (Forwarder)"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_shipping_company
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_shipping_company
+msgid "Shipping Company"
+msgstr "شركة الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_shipping_company_agent
+msgid "Shipping Company Agent"
+msgstr "وكيل شركة الشحن"
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_form
+msgid "Shipping Dates"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_f_ship_dates_hist
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_form
+msgid "Shipping Dates History"
+msgstr "سجل تواريخ الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.act_window,name:falak_purchase_logistics.f_shipping_details_action_window
+#: model:ir.model,name:falak_purchase_logistics.model_f_shipping_details
+#: model:ir.ui.menu,name:falak_purchase_logistics.f_shipping_details
+msgid "Shipping Details"
+msgstr "تفاصيل الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.report,name:falak_purchase_logistics.f_shipping_report_action
+msgid "Shipping Details Report"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_form
+msgid "Shipping Informations"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_f_shipping_line
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_shipping_line
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_shipping_line
+msgid "Shipping Line"
+msgstr "خط الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_line__f_ship_line_name
+msgid "Shipping Line Name"
+msgstr "اسم خط الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.ui.menu,name:falak_purchase_logistics.f_shipping_line
+msgid "Shipping Lines"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_shipping_time
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_ports__f_shipping_period
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_shipping_time
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_country__f_shipping_period
+msgid "Shipping Period"
+msgstr "فترة الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.ui.menu,name:falak_purchase_logistics.f_port_of_discharge
+msgid "Shipping Ports"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_shipping_stage__f_owner__shipping
+msgid "Shipping Stage"
+msgstr "مرحلة الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.actions.act_window,name:falak_purchase_logistics.f_shipping_details_stages_action_window
+#: model:ir.model,name:falak_purchase_logistics.model_f_shipping_stage
+#: model:ir.ui.menu,name:falak_purchase_logistics.f_shipping_stages
+msgid "Shipping Stages"
+msgstr "مراحل الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.ui.menu,name:falak_purchase_logistics.f_ship_plan
+msgid "Shipping and Planning"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_account_incoterms__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_account_move__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_bill_of_lading_type__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_classification_approval__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_plans__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_size__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_financial_users_rel__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_payment_terms__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_po_classification__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_ports__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_line__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_stage__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_product_template__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_config_settings__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_country__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_partner__smart_search
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_users__smart_search
+msgid "Smart Search"
+msgstr "بحث متقدم"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_shipp_stage
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_shipp_stage
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_ship_stage
+msgid "Stage_ld"
+msgstr "المرحلة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_ship_stage
+msgid "Stage_old"
+msgstr " "
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_stat
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__state
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.purchase_planning_search_view
+msgid "Status"
+msgstr "الحالة"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__activity_state
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__activity_state
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_shipping_details__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_state
+msgid "Status_old"
+msgstr " "
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_storage
+msgid "Storage"
+msgstr "تخزين"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_storage_fees
+msgid "Storage Fees"
+msgstr "تكاليف التخزين"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_supplier_name
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_supplier_name
+msgid "Supplier Name"
+msgstr "اسم مورد الشحن"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_suppliers_names
+msgid "Suppliers Names"
+msgstr "الموردون"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_taken_type
+msgid "Taken Type"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_purchase_order_planning__f_taken_type__talach
+msgid "Talach"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_teken
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__f_teken
+msgid "Teken"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__f_shipping_details__f_bill_of_lading_type__telex
+msgid "Telex Release"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__f_title
+msgid "Title"
+msgstr "العنوان"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__f_to_date
+msgid "To Date"
+msgstr "الى تاريخ"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_total_canceled_qty
+msgid "Total Canceled"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_total_prods
+msgid "Total Products"
+msgstr "اجمالي المنتجات"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_total_quantities
+msgid "Total Quantities"
+msgstr "اجمالي الكميات"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_total_remaining_qty
+msgid "Total Remaining"
+msgstr "اجمالي الكمية المتبقية"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_total_shipped_qty
+msgid "Total Shipped"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_total_volume
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_total_volume
+msgid "Total Volume"
+msgstr "اجمالي الاحجام"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_total_volume_calc
+msgid "Total Volume Computed"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_total_volumes
+msgid "Total Volumes"
+msgstr "اجمالي الاحجام"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_total_weight
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order_line__f_total_weight
+msgid "Total Weight"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_total_weight_calc
+msgid "Total Weight Computed"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_total_weight
+msgid "Total Weight KG"
+msgstr "الوزن الاجمالي كغم"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_total_weights
+msgid "Total Weights"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__f_transport
+msgid "Transport"
+msgstr "نقل"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__f_transport
+msgid "Transport Fees"
+msgstr "تكاليف النقل"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_ports__f_port_type
+msgid "Type Loading / Discharge"
+msgstr "النوع  تحميل / تفريغ"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__activity_exception_decoration
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__activity_exception_decoration
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_shipping_details__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_res_users
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__f_user
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_ship_dates_hist__f_user_id
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_dates_history_search_view
+msgid "User"
+msgstr "المستخدم"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_financial_users_rel__f_user_id
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__validation_message
+msgid "Validation Message"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_vendor_contactperson__f_vendor_id
+msgid "Vendor"
+msgstr "المورد"
+
+#. module: falak_purchase_logistics
+#: model:ir.model,name:falak_purchase_logistics.model_f_vendor_contactperson
+msgid "Vendor Contact Person Details"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_vendor_country
+msgid "Vendor Country"
+msgstr "بلد المورد"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_purchase_order__f_vendor_domain
+msgid "Vendor Domain"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_partner__f_vendor_location
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_res_users__f_vendor_location
+msgid "Vendor Location"
+msgstr "موقع المورد"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__f_vendor_name
+msgid "Vendor Name"
+msgstr "اسم المورد"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_container_details__website_message_ids
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_purchase_order_planning__website_message_ids
+#: model:ir.model.fields,field_description:falak_purchase_logistics.field_f_shipping_details__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_container_details__website_message_ids
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__website_message_ids
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_shipping_details__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__f_po_pi_approval_date
+msgid "When should Approve PI "
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields.selection,name:falak_purchase_logistics.selection__purchase_order__f_require_euro__yes
+msgid "Yes"
+msgstr "نعم"
+
+#. module: falak_purchase_logistics
+#: model:ir.model.fields,help:falak_purchase_logistics.field_f_purchase_order_planning__f_vendor_name
+msgid "You can find a vendor by its Name, TIN, Email or Internal Reference."
+msgstr ""
+
+#. module: falak_purchase_logistics
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_container_details_list_form
+#: model_terms:ir.ui.view,arch_db:falak_purchase_logistics.f_shipping_details_form
+msgid "days"
+msgstr ""

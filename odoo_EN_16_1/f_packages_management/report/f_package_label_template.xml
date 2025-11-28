@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="f_package_label_custom_template">
+            <t t-call="web.html_container">
+                <t t-call="web.basic_layout">
+                    <div class="page">
+                        <t t-set="barcode_size" t-value="'width:80%;height:50%'"/>
+                        <t t-foreach="docs" t-as="doc">
+
+                            <div class="o_custom_label_sheet">
+                                <style>
+                                    table, tr {
+                                        width: 100%;
+                                        height: 100%;
+                                        font-size: 16px;
+                                        border: none;
+                                        text-align: center;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+                                    .page {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: grid;
+                                        place-items: center;
+                                    }
+                                    .o_custom_label_sheet {
+                                        page-break-before: always;
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+                                </style>
+
+                                <table class="table-borderless" style="width:100%; text-align: center; justify-content: center; align-items: center;">
+                                    <tr>
+                                        <td class="text-center" colspan="3">
+                                            <t t-if="doc.f_product_char">
+                                                <t t-esc="doc.f_product_char"/>
+                                            </t>
+                                        </td>
+                                    </tr>
+                                    <tr style="padding-top: 4px;">
+                                        <t t-if="doc.f_partner and doc.f_partner[0]">
+                                            <td style="text-align: left;">
+                                                <t t-esc="doc.f_partner[0].name"/>
+                                            </td>
+                                        </t>
+                                        <t t-if="doc.f_partner and doc.f_partner[0]">
+                                            <td style="text-align: right;">
+                                                <t t-esc="doc.f_partner[0].city"/>
+                                            </td>
+                                        </t>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center" colspan="3" style="padding-top: 8px;">
+                                            <t t-if="doc.name">
+                                                <div t-out="doc.name" t-options="{'widget': 'barcode', 'quiet': 0, 'symbology': 'auto', 'img_style': barcode_size}"/>
+                                                <div t-esc="doc.name" style="font-weight: bold;text-align:center;padding-top: 4px;"/>
+                                            </t>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

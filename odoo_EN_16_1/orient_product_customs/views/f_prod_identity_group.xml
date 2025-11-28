@@ -1,0 +1,15 @@
+<odoo>
+	<data>
+
+		<record id="f_prod_identity_group_tree_view"
+			model="ir.ui.view">
+			<field name="name">f.prod.identity.group</field>
+			<field name="model">f.prod.identity</field>
+			<field name="arch" type="xml">
+				<tree string="Product Identity Group" editable="bottom">
+					<field name="fprodidentity_name" />
+				</tree>
+			</field>
+		</record>
+	</data>
+</odoo>

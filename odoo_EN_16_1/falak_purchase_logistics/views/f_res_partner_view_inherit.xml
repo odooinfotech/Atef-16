@@ -1,0 +1,42 @@
+<odoo>
+	<record id="f_res_partner_customs"
+		model="ir.ui.view">
+		<field name="name">f.res.partner.customs
+		</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_partner_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='category_id']" position="after">
+				<field name="f_vendor_classifications" widget="many2many_tags" />
+				<field name="f_vendor_location" />
+				<field name="f_representative" />
+			</xpath>
+
+            <xpath expr="//form//sheet//notebook//page[@name='internal_notes']" position="after">
+                <page name="Vendor Contact Person " string="Vendor Contact Person">
+                    <field name="f_one_contact_person">
+                        <tree editable="bottom">
+                            <field name="f_vendor_name"/>
+                            <field name="f_vendor_no"/>
+                            <field name="f_vendor_email" />
+                            <field name="f_title"/>
+                            <field name="f_note"/>
+                            <field name="f_primary"/>
+                        </tree>
+                    </field>
+                </page>
+			</xpath>
+		</field>
+	</record>
+
+	<record id="f_res_partner_customs_filter" model="ir.ui.view">
+		<field name="name">f.res.partner.customs</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_res_partner_filter" />
+		<field name="arch" type="xml">
+			<xpath expr="//search//group" position="inside">
+				<filter string="Classification" name="classification_group" domain="[]" context="{'group_by': 'f_vendor_classifications'}"/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

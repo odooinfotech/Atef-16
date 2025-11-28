@@ -1,0 +1,26 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* f_branch_access_balance_report_ex
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-05 14:59+0000\n"
+"PO-Revision-Date: 2024-03-05 14:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: f_branch_access_balance_report_ex
+#: model:ir.model.fields,field_description:f_branch_access_balance_report_ex.field_f_contatc_balance_report__f_related_branch
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: f_branch_access_balance_report_ex
+#: model:ir.model,name:f_branch_access_balance_report_ex.model_f_contatc_balance_report
+msgid "Contacts Balances Report"
+msgstr "ارصدة العملاء"

@@ -1,0 +1,17 @@
+<odoo>
+
+	<record id="f_customer_type_res_partner" model="ir.ui.view">
+		<field name="name">f.customer.type.res.partner</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_partner_form" />
+		<field name="arch" type="xml">
+
+			<xpath expr="//field[@name='website']" position="after">
+				<field name="f_customer_type" />
+				<field name="f_bad_debt" />
+			</xpath>
+
+		</field>
+	</record>
+	
+</odoo>

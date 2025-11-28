@@ -1,0 +1,30 @@
+<odoo>
+    <record id="f_account_move_form_view_ex" model="ir.ui.view">
+        <field name="name">account.move.form.view.ex</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='line_ids']/tree/field[@name='amount_currency']" position="before">
+                <field name="f_manual_currency_rate"/>
+                <field name="currency_rate"/>
+
+            </xpath>
+        </field>
+    </record>
+
+    <record id="f_account_move_line_tree_view_ex" model="ir.ui.view">
+        <field name="name">account.move.tree.view.ex</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='credit']" position="after">
+                <field name="f_manual_currency_rate" optional="hide" readonly="1"/>
+                <field name="currency_rate"/>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

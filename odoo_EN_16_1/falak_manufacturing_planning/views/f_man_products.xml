@@ -1,0 +1,89 @@
+<odoo>
+	<!-- search -->
+	<record id="f_plan_prod_search_view" model="ir.ui.view">
+		<field name="name">f.plan.prod.search.view</field>
+		<field name="model">f.man.plan.products</field>
+		<field name="arch" type="xml">
+			<search>
+
+				<field name="f_product_id" filter_domain="[('f_product_id', 'ilike', self)]" />
+
+				<field name="f_man_planning_id" filter_domain="[('f_man_planning_id', 'ilike', self)]" />
+
+
+				<field name="f_mp_status" filter_domain="[('f_mp_status', 'ilike', self)]" />
+
+				<filter string="Not Done" name="not_done" domain="[('f_mp_status','!=','done')]" />
+
+				<filter string="Draft" name="draft" domain="[('f_mp_status','ilike','draft')]" />
+
+				<filter string="Running" name="running" domain="[('f_mp_status','ilike','running')]" />
+
+				<filter string="Done" name="done" domain="[('f_mp_status','ilike','done')]" />
+
+				<filter string="Cancelled" name="cancel" domain="[('f_mp_status','ilike','cancel')]" />
+
+
+				<group expand="1" string="Group By">
+
+					<filter string="Status" name="f_mp_status" context="{'group_by':'f_mp_status'}" />
+
+					<filter string="Manufacturing Plan" name="f_man_planning_id" context="{'group_by':'f_man_planning_id'}" />
+
+					<filter string="Priority" name="f_priority" context="{'group_by':'f_priority'}" />
+
+
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="f_man_demand_products_tree">
+		<field name="name">Planning Demand Products Tree</field>
+		<field name="model">f.man.plan.products</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree editable="bottom" edit="1" multi_edit="1">
+				<header>
+					<button name="create_man_order" type="object" class="oe_highlight" string="Create Manufacturing Order" />
+				</header>
+				<field name="f_increment_num_prods"/> 
+				<field name="f_priority" widget="priority" optional="hide" />
+
+				<field name="f_man_planning_id" readonly="1" optional="hide" />
+				<field name="f_product_id" options="{'no_create': True, 'no_create_edit':True}" />
+
+				<field name="f_initial_qty" readonly="1" force_save="1" optional="hide" />
+
+				<field name="f_demand_qty" optional="hide" />
+				<field name="f_shift_one_qty" optional="hide" />
+				<field name="f_shift_two_qty" optional="hide" />
+				<field name="f_shift_three_qty" optional="hide" />
+				<field name="workcenter_group_id" invisible="1"/>
+				<field name="f_work_center" optional="hide" domain="[('workcenter_group_id', '=', workcenter_group_id)]"/>
+
+				<field name="f_product_uom" readonly="1" options="{'no_create':True, 'no_create_edit':True}" optional="hide" />
+				<field name="product_uom_category_id" invisible="1" optional="hide" />
+				<field name="f_inprocess_qty" readonly="1" optional="hide" />
+				<field name="f_no_plan_qty" readonly="1" optional="hide" />
+				<field name="f_done_qty" readonly="1" optional="hide" />
+				<field name="f_remaining_qty" optional="hide" force_save="1"/>
+				<!-- 				<field name="f_current_qty" /> -->
+				<field name="f_demand_product_uom" optional="hide" />
+				<!-- 				<field name="f_shift" optional="hide" /> -->
+				<field name="f_mp_status" optional="hide" />
+			</tree>
+		</field>
+	</record>
+
+
+	<record id="f_man_demand_prod_action" model="ir.actions.act_window">
+		<field name="name">Planning Demand Products</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.man.plan.products</field>
+		<field name="view_mode">tree</field>
+		<field name="view_id" ref="f_man_demand_products_tree"></field>
+		<field name="target">current</field>
+		<field name="domain">[('f_man_planning_id','=',active_id)]</field>
+	</record>
+</odoo>

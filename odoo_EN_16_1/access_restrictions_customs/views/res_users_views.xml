@@ -1,0 +1,23 @@
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="res_users_allowed_ips_custom">
+			<field name="name">res.users.form.custom</field>
+			<field name="model">res.users</field>
+			<field name="inherit_id" ref="base.view_users_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//page[2]" position="after">
+					<page name="config_customs" string="Login / Logout Config">
+						<group name="login_times" string="Login Times">
+							<field name="login_from_hour" />
+							<field name="login_to_hour" />
+						</group>
+						<group name="logout_time" string="Auto Logout">
+							<field name="auto_logout_flag" />
+							<field name="expiration_time" />
+						</group>
+					</page>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="f_product_mrp_cost_analysis">
+        <t t-call="web.basic_layout">
+            <t t-call-assets="mrp_cost.f_assets_product_mrp_cost_report" t-js="False"/>
+            <div class="page o_f_mrp_report_page">
+                <t>
+                    <span class="text-start"><h1 class="o_f_mrp_header o_f_mrp_header1">Cost Analysis Report</h1></span>
+                </t>
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="currency" t-value="doc.cost_currency_id"/>
+                    <t t-set="tot_scrap_cost" t-value="0.0"/>
+                    <!-- Title -->
+                    <br/>
+                    <strong class="o_f_mrp_report_info">
+                        <strong t-esc="doc.display_name"/>, 1 <t t-esc="doc.uom_id.name"/>, Weight: <t t-esc="doc.weight"/> Kg
+                    </strong>
+
+                    <div><br/></div>
+                    <t t-set="total_cost_components" t-value="0.0"/>
+                    <t t-set="total_cost_operations" t-value="0.0"/>
+                    <t t-set="total_cost_overhead" t-value="0.0"/>
+
+                    <h3 class="o_f_mrp_header o_f_mrp_table_header">Cost of Components</h3>
+                    <table class="table table-sm o_f_mrp_report_table">
+                        <thead>
+                            <tr class="o_f_mrp_report_header">
+                                <th class="o_f_mrp_report_line_header"><span>Components</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Quantity</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Unit Cost</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Loss</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Coefficient</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Quantity Ratio</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Quantity Coefficient</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Total Cost</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr t-foreach="doc._f_get_comp_values()" t-as="line" class="text-muted">
+                                <t t-set="currency" t-value="doc.cost_currency_id"/>
+                                <td>
+                                    <span
+                                        class="o_f_mrp_reports_web_action" t-esc="line['component'].display_name" view-type="form"
+                                        t-att-res-id="line['component'].id"
+                                        res-model="product.product"/>
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="line['line_quantity']" t-options='{"widget": "float", "precision": 6}'/>
+                                    <span t-esc="line['line_uom']"/>
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="line['standard_price']" t-options='{"widget": "monetary", "display_currency": currency}'/>
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="line['loss_percent']" />%
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="line['coefficent_parameters']" />
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="line['quantity_ratio_percent']" />%
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="line['quantity_coefficient']" />
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="line['line_cost']" t-options='{"widget": "float", "display_currency": currency, "precision": 4}'/>
+                                    <span t-esc="currency.symbol" />
+                                    <t t-set="total_cost_components" t-value="total_cost_components + line['line_cost']"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="7" class="text-end">
+                                    <strong>Total Cost of Components</strong>
+                                </td>
+                                <td class="text-end">
+                                    <strong t-esc="total_cost_components" t-options='{"widget": "float", "display_currency": currency, "precision": 4}'/>
+                                    <span t-esc="currency.symbol" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 class="o_mrp_header o_f_mrp_table_header">Cost of Operations</h3>
+                    <table class="table table-sm o_f_mrp_report_table">
+                        <thead>
+                            <tr class="o_f_mrp_report_header">
+                                <th class="o_f_mrp_report_line_header"><span>Resource</span></th>
+                                <th class="o_f_mrp_report_line_header"><span>Operation</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Working Time</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Cost/hour</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Total Cost</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr t-foreach="doc._f_get_op_values()" t-as="line" class="text-muted">
+                                <td>
+                                    <span t-esc="line['work_center']"/>
+                                </td>
+                                <td>
+                                    <span class="o_f_mrp_reports_web_action" t-att-res-id="line['operation_line'].id" res-model="mrp.routing.workcenter" view-type="form" t-esc="line['operation_line'].name"/>
+                                </td>
+                                <td class="text-end">
+                                    <span> <t t-esc="line['second_duration']" t-options='{"widget": "float", "precision": 2}'/> Second</span>
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="line['hour_cost']" t-options='{"widget": "monetary", "display_currency": currency}'/>
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="line['operation_cost']" t-options='{"widget": "float", "display_currency": currency, "precision": 4}'/>
+                                    <span t-esc="currency.symbol" />
+                                    <t t-set="total_cost_operations" t-value="total_cost_operations + line['operation_cost']"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="text-end">
+                                    <strong>Total Cost of Operations</strong>
+                                </td>
+                                <td class="text-end">
+                                    <strong t-esc="total_cost_operations" t-options='{"widget": "float", "display_currency": currency, "precision": 4}'/>
+                                    <span t-esc="currency.symbol" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="row">
+                        <div class="col-12 offset-0">
+                            <table class="table table-sm o_f_mrp_report_table">
+                                <t t-set="total_cost_without_overhead" t-value="doc._f_get_cost_without_overhead()"/>
+                                <tr >
+                                    <td class="text-end">
+                                        <strong>Total Unit Cost Without Overhead</strong>
+                                    </td>
+                                    <td class="text-end">
+                                        <strong t-esc="total_cost_without_overhead" t-options='{"widget": "float", "display_currency": currency, "precision": 4}'/>
+                                        <span t-esc="currency.symbol" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <h3 class="o_f_mrp_header o_f_mrp_table_header">Cost of Overhead</h3>
+                    <table class="table table-sm o_f_mrp_report_table">
+                        <thead>
+                            <tr class="o_f_mrp_report_header">
+                                <th class="o_f_mrp_report_line_header"><span>Products</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>OverHeads</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Cost</span></th>
+                                <th class="text-end o_f_mrp_report_line_header"><span>Total Cost</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="doc._f_get_overhead_values()" t-as="line" class="text-muted">
+                                <td>
+                                    <span class="o_f_mrp_reports_web_action" t-att-res-id="line['product'].id" res-model="product.product" view-type="form" t-esc="line['product'].display_name"/>
+                                </td>
+                                <td class="text-end">
+                                    <span><t t-esc="line['overhead_parameters']"/> </span>
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="line['cost']" t-options='{"widget": "float", "display_currency": currency, "precision": 4}'/>
+                                    <span t-esc="currency.symbol" />
+                                </td>
+                                <td class="text-end">
+                                    <span t-esc="line['total_cost']" t-options='{"widget": "float", "display_currency": currency, "precision": 4}'/>
+                                    <span t-esc="currency.symbol" />
+                                    <t t-set="total_cost_overhead" t-value="total_cost_overhead + line['total_cost']"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="text-end">
+                                    <strong>Total Cost of Overhead</strong>
+                                </td>
+                                <td class="text-end">
+                                    <strong t-esc="total_cost_overhead" t-options='{"widget": "float", "display_currency": currency, "precision": 4}'/>
+                                    <span t-esc="currency.symbol" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="row">
+                        <div class="col-12 offset-0">
+                            <table class="table table-sm o_f_mrp_report_table">
+                                <t t-set="total_cost" t-value="total_cost_overhead + total_cost_operations + total_cost_components"/>
+                                <t t-set="overhead" t-value="doc._f_get_overhead_total()"/>
+                                <t t-set="total_cost_with_overhead" t-value="doc._f_get_cost_with_overhead()"/>
+                                <tr >
+                                    <td class="text-end">
+                                        <strong>Total Unit Cost</strong>
+                                    </td>
+                                    <td class="text-end">
+                                        <strong t-esc="total_cost" t-options='{"widget": "float", "display_currency": currency, "precision": 4}'/>
+                                        <span t-esc="currency.symbol" />
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td class="text-end">
+                                        <strong>Over Head '%' over Total Cost</strong>
+                                    </td>
+                                    <td class="text-end">
+                                        <strong t-esc="overhead" t-options='{"widget": "float", "precision": 2}'/> %
+                                    </td>
+                                </tr>
+                                <tr >
+                                    <td class="text-end">
+                                        <strong>Total Unit Cost With Overhead</strong>
+                                    </td>
+                                    <td class="text-end">
+                                        <strong t-esc="total_cost_with_overhead" t-options='{"widget": "float", "display_currency": currency, "precision": 4}'/>
+                                        <span t-esc="currency.symbol" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>

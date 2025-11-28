@@ -1,0 +1,78 @@
+
+<odoo>
+
+
+	<record model="ir.actions.act_window" id="f_po_line_action">
+		<field name="name">Purchase Order Lines</field>
+		<field name="res_model">purchase.order.line</field>
+		<field name="view_mode">tree</field>
+		<field name="context">{'search_default_received_qty': 1,'tree_view_ref':'falak_purchase_order_details.f_po_lines_list_view'}</field>
+
+	</record>
+
+
+	<menuitem name="Purchase Order Lines Details"
+		id="f_po_reporting_menu_list" parent="purchase.purchase_report_main"
+ 		action="falak_purchase_order_details.f_po_line_action" /> 
+
+	<record id="f_po_lines_list_view" model="ir.ui.view">
+		<field name="name">Purchase Order Line List</field>
+		<field name="model">purchase.order.line</field>
+		<field name="inherit_id" ref="purchase.purchase_order_line_tree" />
+
+		<field name="arch" type="xml">
+
+			<xpath expr="//tree//field[@name='name']" position="attributes">
+				<attribute name="optional">hide</attribute>
+			</xpath>
+
+			<xpath expr="//tree//field[@name='partner_id']"
+				position="attributes">
+				<attribute name="optional">hide</attribute>
+			</xpath>
+
+			<xpath expr="//tree//field[@name='date_planned']"
+				position="attributes">
+				<attribute name="optional">hide</attribute>
+			</xpath>
+
+			<xpath expr="//tree//field[@name='price_subtotal']"
+				position="attributes">
+				<attribute name="optional">hide</attribute>
+			</xpath>
+
+
+			<xpath expr="//tree//field[@name='product_qty']"
+				position="after">
+				<field name="qty_received" />
+				<field name="qty_invoiced" />
+				
+			</xpath>
+			<xpath expr="//tree//field[@name='price_unit']"
+				position="after">
+				<field name="currency_id" />				
+			</xpath>
+		</field>
+
+
+	</record>
+
+
+	<record id="f_po_line_search_inherit" model="ir.ui.view">
+		<field name="name">Purchase Order Line Search</field>
+		<field name="model">purchase.order.line</field>
+		<field name="inherit_id"
+			ref="purchase.purchase_order_line_search" />
+		<field name="arch" type="xml">
+
+			<xpath expr="//filter[@name='hide_cancelled']"
+				position="after">
+
+                    <filter name="received_qty" string="Received Qty Equal 0 " domain="[('qty_received', '=', 0)]"/>
+                    <filter name="invoiced_qty" string="Invoiced Qty Equal 0 " domain="[('qty_invoiced', '=', 0)]"/>
+
+			</xpath>
+
+		</field>
+	</record>
+</odoo> 

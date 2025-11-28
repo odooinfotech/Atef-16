@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_f_product_profitability,access.f.product.profitability,model_f_product_profitability,,1,1,1,0
+access_f_profit_details,access.f.profit.details,model_f_profit_details,,1,1,1,0

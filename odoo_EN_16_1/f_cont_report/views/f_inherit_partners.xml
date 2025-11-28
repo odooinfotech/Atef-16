@@ -1,0 +1,42 @@
+<odoo>
+	<record id="f_res_partner_tree_viewbalancereport_wizrd" model="ir.ui.view">
+		<field name="name">f.res.partner.tree.balancereportview.wizard</field>
+		<field name="model">f.partner.breif.balance.wizard</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<field name='to_date'/>
+				</group>
+				<footer>
+					<button name="get_deatils" string="Get"
+						type="object" class="btn-primary" />
+					<button name="get_general_details" string="Get General"
+						type="object" class="btn-primary" />
+					<button special="cancel" string="Cancel" class="btn-default" />
+				</footer>		
+			</form>
+		</field>
+	</record>
+
+	<record id="res_partner_view_inherit_head_update" model="ir.ui.view">
+		<field name="name">res.partner.view.inherithead.update</field>
+        <field name="model">res.partner</field>
+      	<field name="inherit_id" ref="f_header_onpartner_list_view.f_res_partner_tree_header_inherit" />
+        <field name="arch" type="xml">
+			<xpath expr="//tree//header" position="inside">
+				<button name = 'f_open_balancereport' type='object' string='Print Contact Balances'/>
+			</xpath>
+        </field>
+    </record>
+
+	<record id="f_res_partner_tree_viewbalancereport_inherit" model="ir.ui.view">
+		<field name="name">f.res.partner.tree.balancereportview.inherit</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_partner_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//tree" position="inside">
+				<field name='ref'/>
+			</xpath>
+		</field>
+	</record>
+</odoo>

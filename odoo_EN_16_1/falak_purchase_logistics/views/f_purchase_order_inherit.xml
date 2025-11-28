@@ -1,0 +1,293 @@
+<odoo>
+	<data>
+		<record id="purchase.product_normal_action_puchased"
+			model="ir.actions.act_window">
+			<field name="view_mode">tree,kanban,form,activity</field>
+		</record>
+		
+		<record id="f_po_inherit_tree" model="ir.ui.view">
+			<field name="name">f.purchse.order.tree.po</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id"
+				ref="purchase.purchase_order_view_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//tree//field[@name='user_id']" position="after">
+					<field name="f_notes" optional="hide" />
+					<field name="f_euro1" optional="hide" />
+					<field name="f_internal_agent" optional="hide" />
+					<field name="f_pi_date" optional="show" />
+					<field name ="receipt_status" optional="show" />
+				</xpath>
+			</field>
+		</record>
+		
+		<record id="f_purchase_order_inherit_tree" model="ir.ui.view">
+			<field name="name">f.purchse.order.tree</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id"
+				ref="purchase.purchase_order_kpis_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//tree//field[@name='user_id']" position="after">
+					<field name="f_notes" optional="hide" />
+					<field name="f_classification_access" invisible="1" />
+					<field name="f_po_classification" optional="hide" attrs="{'invisible': [('f_classification_access', '=', False)], 'required': [('f_classification_access', '=', True)]}"/>
+					<field name="f_euro1" optional="hide" />
+					<field name="f_internal_agent" optional="hide" />
+					<field name="f_pi_date" optional="show" />
+					<field name ="receipt_status" optional="show" />
+					<field name="f_approval_state" optional="show" widget="badge" decoration-success="f_approval_state == 'fully_approved' or f_approval_state == 'approved_mgr' or f_approval_state == 'po_confirmed'" decoration-warning="f_approval_state == 'pending_mgr' or f_approval_state == 'pending_fin'" decoration-info="f_approval_state == 'draft'" decoration-danger="f_approval_state == 'rejected_mgr' or f_approval_state == 'rejected_fin' or f_approval_state == 'cancelled'"/>
+				</xpath>
+			</field>
+		</record>
+		
+		<record id="f_purchase_order_inherited" model="ir.ui.view">
+			<field name="name">f.purchase.order.inherited</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id" ref="purchase.purchase_order_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='partner_id']"
+					position="attributes">
+					<attribute name="context">{'show_address':1}</attribute>
+					<attribute name="options">{"always_reload": True}</attribute>
+				</xpath>
+				<xpath
+					expr="//form//sheet//group//group//field[@name='partner_id']"
+					position="after">
+					<field name="f_vendor_domain" invisible="1" widget="many2many_tags" />
+					<field name="f_classification_access" invisible="1" />
+					<field name="f_po_classification" attrs="{'invisible': [('f_classification_access', '=', False)], 'readonly': [('state', 'not in', ('draft', 'sent'))], 'required': [('f_classification_access', '=', True)]}"/>
+					<field name="f_show_planning" invisible="0" />
+					<!--<field name="f_user_po_flag" invisible="1" />-->
+					<field name="f_is_manager" invisible="1" />
+					<field name="f_is_finance" invisible="1" />
+				</xpath>
+				<xpath expr="//form//sheet//group//group[2]" position="inside">
+					<field name="f_approval_state" readonly="1"/>
+				</xpath>
+				<xpath expr="//button[@name='button_done']" position="before">
+					<field name="f_planning_ids" invisible="1" />
+					<button name="f_button_ready"
+							string="Ready"
+							type="object"
+							attrs="{'invisible': ['|', ('state', 'not in', ['draft', 'sent']), ('f_show_planning', '=', True)]}" />
+					<button name="f_button_ready"
+							string="Ready"
+							type="object"
+							attrs="{'invisible': ['|', '|', ('state', 'not in', ['draft', 'sent']), ('f_show_planning', '=', False), ('f_planning_ids', '=', [])]}" />
+					<button name="f_button_manage_approve"
+							string="Manage Approve"
+							type="object"
+							attrs="{'invisible': ['|',('state', '!=', 'ready'), ('f_is_manager', '=', False)]}" />
+					<button name="f_button_manage_reject"
+							string="Manage Reject"
+							type="object"
+							attrs="{'invisible': ['|',('state', '!=', 'ready'), ('f_is_manager', '=', False)]}" />
+					<button name="f_button_finance_approve"
+							string="Finance Approve"
+							type="object"
+							attrs="{'invisible': ['|',('state', '!=', 'manage_approved'), ('f_is_finance', '=', False)]}" />
+					<button name="f_button_finance_reject"
+							string="Finance Reject"
+							type="object"
+							attrs="{'invisible': ['|',('state', '!=', 'manage_approved'), ('f_is_finance', '=', False)]}" />
+					<!--<button name="button_approve_status" string="Approve"
+						type="object"
+						attrs="{'invisible': ['|',('f_user_po_flag','=',False),('state', 'not in', 'draft')]}" />-->
+					<!--<button name="button_lc_status" string="LC" type="object"
+						attrs="{'invisible': [('state', 'not in', ['approved','fa'])]}" />-->
+					<button name="f_purchase_order_action" type="object"
+						string="Planning" style="color:#0F7078;"
+						attrs="{'invisible': [('f_show_planning', '=',False)]}" />
+				</xpath>
+				<xpath expr="//header//button[@name='print_quotation']"
+					position="replace"></xpath>
+				<xpath expr="//header//button[@id='bid_confirm']"
+					position="replace">
+				</xpath>
+				<xpath expr="//header//button[@id='draft_confirm']"
+					position="replace">
+					<button name="button_confirm" type="object"
+						states="approved"
+						string="Confirm Order"
+						id="draft_confirm" />
+				</xpath>
+				<xpath expr="//header//button[@name='button_cancel']"
+					position="attributes">
+					<attribute name="states">draft,to approve,sent,purchase,ready,manage_approved,approved</attribute>
+				</xpath>
+				<xpath expr="//header//button[@name='button_unlock']"
+					position="attributes">
+					<attribute name="groups">falak_purchase_logistics.f_group_unlock_purchase</attribute>
+				</xpath>
+				<xpath expr="//header//button[@name='button_cancel']"
+					position="before">
+					<button name="action_rfq_send"
+							states="ready,manage_approved,approved"
+							string="Send PO by Email"
+							type="object"
+							context="{'send_rfq':True}"
+							data-hotkey="g"/>
+				</xpath>
+
+				<xpath expr="//field[@name='order_line']"
+					position="attributes">
+					<attribute name="attrs">{'readonly': [('state', 'in', ('done', 'cancel','ready','manage_approved','approved'))]}</attribute>
+				</xpath>
+
+				<xpath expr="//div[@name='reminder']" position="after">
+					<field name="f_total_prods" />
+					<field name="f_total_quantities" />
+<!--					<field name="f_total_volumes" />-->
+<!--					<field name="f_total_weights" />-->
+				</xpath>
+				<xpath
+					expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='currency_id']"
+					position="after">
+					<field name="f_notes" />
+					<field name="f_manage_approval_note" />
+					<field name="f_finance_approval_note" />
+				</xpath>
+				<xpath expr="//page[@name='purchase_delivery_invoice']"
+					position="after">
+					<!--<page string="PO Approval">
+						<group>
+							<field name="f_need_financial_app" />
+							<field name="f_allow_po_approve"
+								widget="many2many_tags_avatar" />
+							<field name="f_allow_financial_po"
+								widget="many2many_tags_avatar" />
+						</group>
+						<group></group>
+					</page>-->
+				</xpath>
+				<xpath
+					expr="//form//sheet//notebook//page[@name='purchase_delivery_invoice']//group//group//field[@name='payment_term_id']"
+					position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath
+					expr="//form//sheet//notebook//page[@name='purchase_delivery_invoice']//group//group"
+					position="inside">
+					<field name="f_payment_terms" />
+					<field name="f_note" />
+					<field name="create_date" />
+					<field name="f_require_euro" />
+					<field name="f_euro1"
+						attrs="{'invisible': [('f_require_euro', '=', 'no')]}" />
+				</xpath>
+				<xpath
+					expr="//form//sheet//notebook//page[@name='purchase_delivery_invoice']//group//group//field[@name='fiscal_position_id']"
+					position="after">
+					<field name="f_internal_agent" />
+					<field name="f_port_of_loading" />
+					<field name="f_port_of_discharge" />
+					<field name="f_packing" />
+				</xpath>
+<!--				<xpath-->
+<!--					expr="//form//sheet//notebook//page[@name='products']//field[@name='order_line']//tree//field[@name='price_subtotal']"-->
+<!--					position="before">-->
+<!--					<field name="f_prod_img" widget="image" class="oe_avatar"-->
+<!--						optional="hide" options="{'preview_image': 'image_128'}" />-->
+<!--					<field name="f_product_ref" optional="hide" />-->
+<!--				</xpath>-->
+				<xpath
+					expr="//form//sheet//notebook//page[@name='products']//field[@name='order_line']//tree//field[@name='price_subtotal']"
+					position="after">
+					<field name="f_po_classification" invisible="1" widget="many2many_tags" />
+					<field name="f_show_planning" invisible="1" />
+<!--					<field name="f_package_volume" optional="hide"-->
+<!--						force_save="1" />-->
+<!--					<field name="f_package_qty" optional="hide" force_save="1" />-->
+<!--					<field name="f_number_of_packages" optional="hide"-->
+<!--						readonly="1" force_save="1" />-->
+<!--					<field name="f_total_volume" optional="hide" readonly="1"-->
+<!--						force_save="1" />-->
+<!--					<field name="f_prod_weight" optional="hide" readonly="1" />-->
+<!--					<field name="f_total_weight" optional="hide" readonly="1"-->
+<!--						force_save="1" />-->
+					<field name="f_total_shipped_qty" optional="show"
+						readonly="1" force_save="1" />
+					<field name="f_total_canceled_qty" optional="show"
+						readonly="1" force_save="1" />
+					<field name="f_total_remaining_qty" optional="show"
+						readonly="1" force_save="1" />
+					<button name="f_purchase_order_lines_action" type="object"
+						string="Planning" style="color:#0F7078;"
+						attrs="{'invisible': [('f_show_planning', '=',False)]}" />
+				</xpath>
+				<xpath
+					expr="//form//sheet//notebook//page[@name='products']//field[@name='order_line']//tree//button[@name='action_purchase_history']"
+					position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath
+					expr="//field[@name='partner_id']"
+					position="attributes">
+					<attribute name="domain">[('id', 'in', f_vendor_domain), '|', ('company_id', '=', False), ('company_id', '=', company_id)]</attribute>
+				</xpath>
+				<xpath
+					expr="//form//sheet//notebook//page[@name='products']//field[@name='order_line']//tree//field[@name='product_id']"
+					position="attributes">
+					<attribute name="domain">[('purchase_ok', '=', True), '|', ('company_id', '=', False), ('company_id', '=', parent.company_id), '|', ('f_class_id', 'in', f_po_classification), ('f_class_id', '=', False)]</attribute>
+				</xpath>
+				<xpath expr="//field[@name='name']"
+					position="after">
+					<h2 style="background-color:red;text-align: center"
+						attrs="{'invisible': [('f_show_planning', '=', False)]}">
+						<field name="validation_message" readonly="1" />
+					</h2>
+					<h2 style="background-color:red;text-align: center"
+						attrs="{'invisible': ['|','&amp;',('f_classification_access', '=', True), ('f_approval_state', 'not in', ('draft','pending_mgr','rejected_mgr','rejected_fin')), ('f_classification_access', '=', False)]}">
+						<field name="mgr_approval_message" readonly="1" />
+					</h2>
+					<h2 style="background-color:green;text-align: center"
+						attrs="{'invisible': ['|','&amp;',('f_classification_access', '=', True), ('f_approval_state', 'not in', ('approved_mgr')), ('f_classification_access', '=', False)]}">
+						<field name="mgr_approval_message" readonly="1" />
+					</h2>
+					<h2 style="background-color:red;text-align: center"
+						attrs="{'invisible': ['|','&amp;',('f_classification_access', '=', True), ('f_approval_state', 'not in', ('draft','pending_mgr','rejected_mgr','approved_mgr','pending_fin','rejected_fin')), ('f_classification_access', '=', False)]}">
+						<field name="fin_approval_message" readonly="1" />
+					</h2>
+					<h2 style="background-color:green;text-align: center"
+						attrs="{'invisible': ['|','&amp;',('f_classification_access', '=', True), ('f_approval_state', 'not in', ('fully_approved','po_confirmed')), ('f_classification_access', '=', False)]}">
+						<field name="fin_approval_message" readonly="1" />
+					</h2>
+				</xpath>
+			</field>
+		</record>
+		
+		<record id="f_purchase_order_search_inherit_customs"
+			model="ir.ui.view">
+			<field name="name">f.purchse.order.search</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id"
+				ref="purchase.view_purchase_order_filter" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="f_notes"
+						filter_domain="[('f_notes', 'ilike', self)]" />
+				</xpath>
+				<xpath expr="//filter[@name='to_approve']" position="replace">
+					<filter name="state_ready" string="Manage Approval" domain="[('state', '=', 'ready')]"/>
+					<filter name="state_manage_approved" string="Finance Approval" domain="[('state', '=', 'manage_approved')]"/>
+					<filter name="state_approved" string="Approved" domain="[('state', '=', 'approved')]"/>
+				</xpath>
+				<xpath expr="//search//group" position="inside">
+					<filter string="Classification" name="classification_group" domain="[]" context="{'group_by': 'f_po_classification'}"/>
+				</xpath>
+			</field>
+		</record>
+		<record id="f_purchase_order_search_inherit" model="ir.ui.view">
+			<field name="name">f.purchse.order.search.inherit</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id"
+				ref="purchase.purchase_order_view_search" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="f_notes"
+						filter_domain="[('f_notes', 'ilike', self)]" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,63 @@
+<odoo>
+    <data>
+
+                <record id="f_profitperidiccompany_private_access" model="ir.rule">
+			<field name="name">Custom  profit company Private Access </field>
+			<field name="model_id" ref="model_f_profit_details" />
+			<field name="domain_force">['|',('product_id.company_id', 'in', company_ids),('product_id.company_id','=', False)]
+			</field>
+		</record>
+
+
+
+        
+<record id="view_report_profitabil_tree" model="ir.ui.view">
+            <field name="name">report.pproduct.profitability.tree</field>
+            <field name="model">f.profit.details</field>
+            <field name="arch" type="xml">
+                <tree create ='false' import='false'>
+                   <field name="product_id"/>
+
+                   <field name="barcode"/>
+
+                    <field name="currency_id" invisible="1"/>
+                     <field name="rev_qty"/>
+                      <field name="rev_bal"/>
+ 					  <field name="exp_qty"/>
+                      <field name="exp_bal"/>
+                         <field name="beginv_qty"/>
+                      <field name="beginv_bal"/>
+                         <field name="endinv_qty"/>
+                      <field name="endinv_bal"/>
+                       <field name="cogs"/>
+                      <field name="profit"/>
+                    
+                    
+                </tree>
+            </field>
+        </record>  
+        
+        
+        <record id="view_report_profitabil_search" model="ir.ui.view">
+            <field name="name">report.pproduct.profitability.seacrh</field>
+            <field name="model">f.profit.details</field>
+            <field name="arch" type="xml">
+                 <search >
+                   <field name="product_id"/>
+
+                   <field name="barcode"/>
+              <group expand="1" string="Group By">
+                        <filter string="Company" name="company" context="{'group_by':'company_id'}"/>
+
+                        </group>
+                    
+                    
+                </search>
+            </field>
+        </record> 
+        
+        
+       
+        
+    </data>
+</odoo>

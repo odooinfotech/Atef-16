@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="f_product_pricing_tree_view" model="ir.ui.view">
+        <field name="name">f.product.pricing.tree.view</field>
+        <field name="model">f.product.pricing</field>
+        <field name="priority" eval="16" />
+        <field name="arch" type="xml">
+            <tree string="Product Pricing">
+                <field name="f_name"/>
+                <field name="f_pricing_type" widget="many2many_tags"/>
+                <field name="f_external_po" invisible="1"/>
+                <field name="f_internal_po" invisible="1"/>
+                <field name="f_pricing_equation_ext" attrs="{'column_invisible':[('f_external_po', '=', False)]}"/>
+                <field name="f_pricing_equation_int" attrs="{'column_invisible':[('f_internal_po', '=', False)]}"/>
+                <field name="f_landed_ids" widget="many2many_tags" attrs="{'column_invisible':[('f_external_po', '=', False)]}"/>
+                <field name="f_purchase_ids" widget="many2many_tags" attrs="{'column_invisible':[('f_internal_po', '=', False)]}"/>
+                <field name="f_status" widget="badge" decoration-success="f_status == 'done'" decoration-primary="f_status == 'ready'" decoration-muted="f_status == 'draft'"/>
+            </tree>
+        </field>
+    </record>
+    <record id="f_product_pricing_form_view" model="ir.ui.view">
+        <field name="name">f.product.pricing.form.view</field>
+        <field name="model">f.product.pricing</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="f_get_products" string="Get Product" attrs="{'invisible':[('f_status', '=', 'done')]}" class="oe_highlight" type="object"/>
+                    <button name="f_compute_prices" string="Compute" attrs="{'invisible':[('f_status', '!=', 'ready')]}" class="oe_highlight" type="object"/>
+                    <button name="f_confirm_pricing" string="Confirm" attrs="{'invisible':[('f_status', '!=', 'ready')]}" class="oe_highlight" type="object"/>
+                    <field name="f_status" widget="statusbar" statusbar_visible="draft,ready,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1 class="d-flex">
+                            <field name="f_name" readonly="1"/>
+                            <h2 style="background-color:red;text-align: center">
+                                <field name="f_warning_message_ext" readonly="1" />
+                            </h2>
+                            <h2 style="background-color:red;text-align: center">
+                                <field name="f_warning_message_int" readonly="1" />
+                            </h2>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="f_external_po" invisible="1"/>
+                            <field name="f_internal_po" invisible="1"/>
+                            <field name="f_pricing_type" attrs="{'readonly':[('f_status', '=', 'done')]}" widget="many2many_checkboxes"/>
+                            <field name="f_landed_ids" attrs="{'invisible':[('f_external_po', '=', False)],'readonly':[('f_status', '=', 'done')]}" widget="many2many_tags"/>
+                            <field name="f_purchase_ids" attrs="{'invisible':[('f_internal_po', '=', False)],'readonly':[('f_status', '=', 'done')]}" widget="many2many_tags"/>
+                            <field name="f_last_landed_before" attrs="{'invisible':[('f_external_po', '=', False)],'readonly':[('f_status', '=', 'done')]}"/>
+                            <field name="f_last_purchase_before" attrs="{'invisible':[('f_internal_po', '=', False)],'readonly':[('f_status', '=', 'done')]}" />
+                        </group>
+                        <group>
+                            <field name="f_pricing_equation_int" attrs="{'invisible':[('f_internal_po', '=', False)],'readonly':[('f_status', '=', 'done')]}"/>
+                            <field name="f_pricing_equation_ext" attrs="{'invisible':[('f_external_po', '=', False)],'readonly':[('f_status', '=', 'done')]}"/>
+                            <field name="f_shortcut" readonly="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="products_prices" string="Landed Products" attrs="{'invisible':[('f_external_po', '=', False)]}">
+                            <field name="f_landed_pricing_lines" attrs="{'readonly':[('f_status', '=', 'done')]}">
+                                <tree editable="bottom">
+                                    <field name="f_product_id"/>
+                                    <field name="f_product_ref"/>
+                                    <field name="f_quantity"/>
+                                    <field name="f_new_cost"/>
+                                    <field name="f_unit_new_cost" readonly="1" force_save="1"/>
+                                    <field name="f_unit_old_cost" attrs="{'readonly':[('f_last_landed', '!=', False)]}" force_save="1"/>
+                                    <field name="f_last_landed"/>
+                                    <field name="f_deference" readonly="1" force_save="1"/>
+                                    <field name="f_def_with_vat" readonly="1" force_save="1"/>
+                                    <field name="f_current_price" readonly="1" force_save="1"/>
+                                    <field name="f_new_price"/>
+                                    <field name="f_source"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="po_products_prices" string="Purchase Products" attrs="{'invisible':[('f_internal_po', '=', False)]}">
+                            <field name="f_purchase_pricing_lines" attrs="{'readonly':[('f_status', '=', 'done')]}">
+                                <tree editable="bottom">
+                                    <field name="f_product_id"/>
+                                    <field name="f_product_ref"/>
+                                    <field name="f_quantity"/>
+                                    <field name="f_po_price"/>
+                                    <field name="f_unit_po_price" readonly="1" force_save="1"/>
+                                    <field name="f_unit_latest_price" attrs="{'readonly':[('f_last_po', '!=', False)]}" force_save="1"/>
+                                    <field name="f_last_po"/>
+                                    <field name="f_deference" readonly="1" force_save="1"/>
+                                    <field name="f_def_with_vat" readonly="1" force_save="1"/>
+                                    <field name="f_current_price" readonly="1" force_save="1"/>
+                                    <field name="f_new_price"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="f_product_pricing_search_view" model="ir.ui.view">
+        <field name="name">f.product.pricing.search.view</field>
+        <field name="model">f.product.pricing</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <search>
+                <field name="f_name"/>
+            </search>
+        </field>
+    </record>
+    <record id="f_product_pricing_action" model="ir.actions.act_window">
+        <field name="name">Product Pricing</field>
+        <field name="res_model">f.product.pricing</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="f_product_pricing_menu" action="f_product_pricing_action"
+              parent="stock.menu_stock_warehouse_mgmt"/>
+</odoo>

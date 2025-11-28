@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="f_group_contact_balance_report" model="res.groups">
+            <field name="name">Contact Balance Report</field>
+        </record>
+        
+    </data>
+</odoo>

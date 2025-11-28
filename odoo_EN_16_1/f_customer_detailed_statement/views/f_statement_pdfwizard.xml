@@ -1,0 +1,112 @@
+<odoo>
+
+	
+	 <record id="f_partnerdeatleds_access_group_id"
+            model="res.groups">
+        <field name="name">Customer Detailed Statement </field>
+        <field name="category_id" ref="f_access_categ.f_acct_reports"/>
+
+    </record>
+    
+    
+	
+		
+	<record id="view_customerdeatls_stat_form" model="ir.ui.view">
+		<field name="name">custom.deatlsstatement.report.form</field>
+		<field name="model">f.detailed.customer</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<group>
+				<field name="period_date" />
+						<field name="from_date" />
+						<field name="partner_id" />
+
+
+
+					</group>
+					<group>
+
+						<field name="to_date" />
+
+						<field name="lang" />
+
+					</group>
+					<group>
+
+							<field name="show_customer_info" />
+							<field name="include_details" />
+
+							<field name="show_product_label" />
+								<!--<field name="include_checkdetails" />-->
+								<field name="include_check_endorsed_details" />
+						<field name="show_bounced_checks" force_save="1"/>
+								<field name="include_details_aging" />
+							<field name="include_details_aging_pay" />
+						
+					</group>
+					
+					<group>
+					<field name="f_report" />
+					</group>
+
+				</group>
+
+
+				<footer>
+					<button name="generate_salereport" string="Get"
+						type="object" class="btn-primary" />
+					<button special="cancel" string="Cancel" class="btn-default" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+
+
+
+
+	<record id="action_f_customdeatls_statem_report"
+		model="ir.actions.act_window">
+		<field name="name">Statement Reporting</field>
+		<field name="res_model">f.detailed.customer</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+
+	</record>
+	
+	
+	  <menuitem id="f_parentrepotdetails_stat_custo_menu"
+			parent="account.menu_finance_reports"
+			name="Partner Detailed Statement Report" sequence="2"
+			groups="f_customer_detailed_statement.f_partnerdeatleds_access_group_id" />
+			
+		
+		<menuitem id="f_parentrepot_deatlsstatsales_custo_menu"
+			parent="f_sale_account_report_menu.f_sale_account_report_menu" name="Partner Detailed Statement Report"
+			sequence="500"
+			groups="f_customer_detailed_statement.f_partnerdeatleds_access_group_id" />
+			
+			
+			
+	
+	
+	 <menuitem id="menu_report_partner_pdfdetailed_all" name="Partner Detailed Statement Report" action="action_f_customdeatls_statem_report" 
+	 parent="f_customer_detailed_statement.f_parentrepotdetails_stat_custo_menu"  sequence="11"/>
+
+		<menuitem id="f_repot_stat_deatcustosales_menu"
+		action="action_f_customdeatls_statem_report"
+		parent="f_customer_detailed_statement.f_parentrepot_deatlsstatsales_custo_menu"
+		name="Partner Detailed Statement Report PDF" sequence="1" />
+
+
+
+
+
+
+
+
+
+
+
+</odoo>

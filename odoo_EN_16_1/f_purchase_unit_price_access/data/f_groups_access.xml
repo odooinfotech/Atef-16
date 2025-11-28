@@ -1,0 +1,7 @@
+<odoo>
+	<data>
+		<record model="res.groups" id="f_po_account_access">
+			<field name="name">PO Account Access</field>
+		</record>
+	</data>
+</odoo>

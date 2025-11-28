@@ -1,0 +1,172 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* f_packages_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-08 11:41+0000\n"
+"PO-Revision-Date: 2024-08-08 11:41+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: f_packages_management
+#: model:ir.actions.report,print_report_name:f_packages_management.f_action_package_label_barcode
+msgid " 'Packages Labels' "
+msgstr "'باركود الطرود'"
+
+#. module: f_packages_management
+#: model_terms:ir.ui.view,arch_db:f_packages_management.f_stock_package_destination_form_view
+msgid "<strong>Where do you want to send the products ?</strong>"
+msgstr ""
+
+#. module: f_packages_management
+#: model_terms:ir.ui.view,arch_db:f_packages_management.f_stock_picking_form_inherit
+msgid "Advance Put in Pack"
+msgstr "تغليف بطرد متقدم"
+
+#. module: f_packages_management
+#: model:ir.model,name:f_packages_management.model_stock_picking_batch
+msgid "Batch Transfer"
+msgstr "الشحنة المجمعة "
+
+#. module: f_packages_management
+#: model_terms:ir.ui.view,arch_db:f_packages_management.f_stock_package_destination_form_view
+msgid "Confirm"
+msgstr "تاكيد"
+
+#. module: f_packages_management
+#: model_terms:ir.ui.view,arch_db:f_packages_management.f_stock_picking_search_inherit
+msgid "Contact"
+msgstr "جهة اتصال"
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_stock_picking_batch__f_partner
+#: model:ir.model.fields,field_description:f_packages_management.field_stock_picking_batch__f_partner_char
+#: model:ir.model.fields,field_description:f_packages_management.field_stock_quant_package__f_partner
+#: model:ir.model.fields,field_description:f_packages_management.field_stock_quant_package__f_partner_char
+#: model_terms:ir.ui.view,arch_db:f_packages_management.f_stock_picking_batch_search
+#: model_terms:ir.ui.view,arch_db:f_packages_management.f_stock_quant_package_search
+msgid "Customer"
+msgstr "الزبون"
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_product_packaging__f_delivery_packaging
+msgid "Delivery Packaging"
+msgstr "تعبئة توصيل"
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination__f_location_dest_id
+msgid "Destination location"
+msgstr "الى موقع"
+
+#. module: f_packages_management
+#: model_terms:ir.ui.view,arch_db:f_packages_management.f_stock_package_destination_form_view
+msgid "Discard"
+msgstr "الغاء"
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination__f_filtered_location
+msgid "F Filtered Location"
+msgstr ""
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination__f_move_line_ids
+msgid "F Move Line"
+msgstr ""
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination__f_picking_id
+msgid "F Picking"
+msgstr ""
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination__id
+msgid "ID"
+msgstr ""
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: f_packages_management
+#: model:ir.model,name:f_packages_management.model_stock_quant_package
+msgid "Packages"
+msgstr "الطرود "
+
+#. module: f_packages_management
+#: model:ir.actions.report,name:f_packages_management.f_action_package_label_barcode
+msgid "Print Package Barcode"
+msgstr "طباعة باركود الطرد"
+
+#. module: f_packages_management
+#: model_terms:ir.ui.view,arch_db:f_packages_management.f_stock_picking_form_inherit
+msgid "Print Packages"
+msgstr "طباعة الطرود"
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_stock_quant_package__f_printed
+msgid "Printed"
+msgstr "مطبوعة"
+
+#. module: f_packages_management
+#: model:ir.model,name:f_packages_management.model_product_packaging
+msgid "Product Packaging"
+msgstr "تعبئة المنتج"
+
+#. module: f_packages_management
+#: model:ir.model.fields,field_description:f_packages_management.field_f_stock_package_destination__smart_search
+#: model:ir.model.fields,field_description:f_packages_management.field_product_packaging__smart_search
+#: model:ir.model.fields,field_description:f_packages_management.field_stock_picking__smart_search
+#: model:ir.model.fields,field_description:f_packages_management.field_stock_picking_batch__smart_search
+#: model:ir.model.fields,field_description:f_packages_management.field_stock_quant_package__smart_search
+msgid "Smart Search"
+msgstr "بحث متقدم"
+
+#. module: f_packages_management
+#: model:ir.model,name:f_packages_management.model_f_stock_package_destination
+msgid "Stock Package Destination"
+msgstr ""
+
+#. module: f_packages_management
+#: model:ir.model,name:f_packages_management.model_stock_picking
+msgid "Transfer"
+msgstr "الشحنة"
+
+#. module: f_packages_management
+#: model_terms:ir.ui.view,arch_db:f_packages_management.f_stock_package_destination_form_view
+msgid ""
+"You are trying to put products going to different locations into the same "
+"package"
+msgstr ""

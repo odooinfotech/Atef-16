@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_f_mo_cost_analysis,f_mo_cost_analysis,model_f_mo_cost_analysis,base.group_user,1,0,0,0
+access_f_bussniess_purpose,f_bussniess_purpose,model_f_bussniess_purpose,base.group_user,1,1,1,1

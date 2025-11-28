@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="f_account_payment_form_view_commission_inherit" model="ir.ui.view">
+		<field name="name">f.account.payment.form.view.commission.inherit</field>
+		<field name="model">account.payment</field>
+		<field name="inherit_id" ref="account.view_account_payment_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//form//sheet//group" position="inside">
+				<group name="commission_group" groups="commission_management.f_show_commossion_man">
+					<field name="f_commission_exclude" />
+					<field name="f_commission_note" />
+				</group>
+			</xpath>
+		</field>
+	</record>
+</odoo>

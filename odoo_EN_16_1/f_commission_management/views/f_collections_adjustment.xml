@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="f_collections_adjustment_tree_view" model="ir.ui.view">
+        <field name="name">f.collections.adjustment.tree.view</field>
+        <field name="model">f.collections.adjustment</field>
+        <field name="arch" type="xml">
+            <tree create="0">
+                <field name="f_commission_calculation_id" />
+                <field name="f_commission_role_id" />
+                <field name="f_adjustment_type" />
+                <field name="f_type" />
+                <field name="f_amount" />
+            </tree>
+        </field>
+    </record>
+</odoo>

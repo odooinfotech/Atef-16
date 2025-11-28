@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+
+
+		<record id="view_order_form" model="ir.ui.view">
+			<field name="name">sale.order</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<xpath
+					expr="//notebook//field[@name='order_line']//tree//field[@name='price_unit']"
+					position="before">
+					<field name="f_bonus_qty" optional="show"
+						context="{ 'partner_id': parent.partner_id, 'quantity': product_uom_qty, 'pricelist': parent.pricelist_id, 'uom': product_uom, 'company_id': parent.company_id }" />
+					
+				</xpath>
+				<xpath
+					expr="//notebook//field[@name='order_line']//form//field[@name='price_unit']"
+					position="before">
+					<field name="f_bonus_qty" 
+						context="{ 'partner_id': parent.partner_id, 'quantity': product_uom_qty, 'pricelist': parent.pricelist_id, 'uom': product_uom, 'company_id': parent.company_id }" />
+					
+				</xpath>
+				
+				<xpath
+					expr="//form[1]/sheet[1]/notebook[1]/page[@name='order_lines']/field[@name='order_line']/kanban/templates/t/div/t/div/div[2]"
+					position="inside">
+					<div class="row">
+						<div class="col-12 text-muted">
+							Bonus :
+							<field name="f_bonus_qty" />
+						</div>
+					</div>
+			
+			    </xpath>
+				
+			
+			</field>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,48 @@
+<odoo>
+  <data>
+     <record id="f_locqtycostwizard_form_view" model="ir.ui.view">
+            <field name="name">f.loc.qtycost.wizard.form.view</field>
+            <field name="model">f.loc.qtycost.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <group>
+
+                            <field name="from_date"/>
+
+
+
+                            <field name="to_date"/>
+
+<field name="location_id"/>
+<field name="company_id" invisible="1"/>
+                    </group>
+
+
+
+                    <footer>
+                        <button name="f_get_cost_details" type="object" string="View"
+                                class="oe_highlight"/>
+
+
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="f_wizard_locaqtycost_report" model="ir.actions.act_window">
+            <field name="name">Products Qty-Cost/ LocationReport</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">f.loc.qtycost.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem action="f_wizard_locaqtycost_report" id="f_menuvloccostqty_wizard"
+                  name="Products Qty-Cost/ Location " parent="stock.menu_warehouse_report"
+                  sequence='400'/>
+
+
+    </data>
+</odoo>

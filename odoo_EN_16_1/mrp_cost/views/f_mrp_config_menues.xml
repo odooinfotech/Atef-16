@@ -1,0 +1,12 @@
+<odoo>
+<record model="ir.actions.act_window"
+		id="f_workcenter_action_window">
+		<field name="name">Work Center Group</field>
+		<field name="res_model">mrp.workcenter.management</field>
+
+	</record>
+
+	<menuitem name="Work Center Groups" id="f_workcenter_group"
+		parent="mrp.menu_mrp_configuration"
+		action="mrp_cost.f_workcenter_action_window" />
+</odoo>

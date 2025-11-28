@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<data>
+
+
+	
+
+<!--  <record id="view_cash_basis_report_graph" model="ir.ui.view">
+            <field name="name">cash_basis.report.graph</field>
+            <field name="model">fs.cash.basis</field>
+            <field name="arch" type="xml">
+                <graph  string="Cash Projection Report">
+					
+					<field name = "date"  /> 
+					 <field name = "type"/>
+					 <field name = "paymenttype"/>
+					<field name = "balance"  type="measure"/>
+					<field name = "cash_basis" />
+					<field name = "amount_currency"/>
+					
+             </graph>
+            </field>
+        </record> -->
+
+ <record id="view_cash_basis_report_pivot" model="ir.ui.view">
+            <field name="name">cash_basis.report.pivot</field>
+            <field name="model">fs.cash.basis</field>
+            <field name="arch" type="xml">
+                <pivot  string="Cash Projection Report">
+					
+					<field name = "date"  type="col"/> 
+					 <field name = "type" type="row"/>
+					<field name = "balance"  type="measure"/>
+<!-- 						<field name = "amount_currency"  /> -->
+					 <field name="currency_id" />
+					
+             </pivot>
+            </field>
+        </record> 
+
+
+	 <record id="view_cash_basis_report_tree" model="ir.ui.view">
+            <field name="name">cash_basis.report.tree</field>
+            <field name="model">fs.cash.basis</field>
+            <field name="arch" type="xml">
+                <tree    string="Cash Projection Report"  >
+					
+					<field name="f_company_currency" invisible="1"/>
+					<field name="move_id" invisible="1"/>
+					<field name = "date"  /> 
+					<field name = "type"  /> 
+					<field name = "label"  /> 
+					 <field name = "account_id" optional='hide'/>
+					<field name = "balance"  />
+						<field name = "acum_balance"  />
+					<field name = "paymenttype" />
+						 <field name="amount_currency" />
+					 <field name="currency_id" />
+<!-- 					<field name = "cash_basis"/> -->
+					
+                </tree>
+            </field>
+        </record>
+        
+         <record id="view_cash_basis_report_search" model="ir.ui.view">
+            <field name="name">cash_basis.report.search</field>
+            <field name="model">fs.cash.basis</field>
+            <field name="arch" type="xml">
+                <search   string="Cash Projection Report"  >
+					
+					<field name="move_id" />
+					 <field name = "account_id" />
+					  <field name = "type" />
+					 <field name = "cash_basis" />
+					  <field name = "paymenttype" />
+<!-- 					 <field name = "account_id" string="Account" context="{'group_by': 'account_id'}"/> -->
+<!-- 					<field name = "cash_basis" string="Cash Basis" context="{'group_by': 'cash_basis'}"/> -->
+					
+                </search>
+            </field>
+        </record>
+
+
+
+
+	 <record id="action_cash_basis_report" model="ir.actions.act_window">
+            <field name="name">Cash Projection Report</field>
+            <field name="res_model">fs.cash.basis</field>
+            <field name="view_mode">tree,pivot</field>
+            <field name="view_id" ref="view_cash_basis_report_tree"/>
+            <field name="search_view_id" ref="view_cash_basis_report_search"/>
+            
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Record a new Move Line
+              </p>
+            </field>
+        </record>
+
+	<menuitem action="action_cash_basis_report" id="menu_action_cash_basis_report" groups="f_cash_flow_report.f_so_po_setup_access_group_id"  name="Cash Projection Report"  parent="account.menu_finance_reports" sequence="100"/>
+
+	
+	</data>
+	</odoo>

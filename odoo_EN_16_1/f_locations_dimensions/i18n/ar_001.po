@@ -1,0 +1,235 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* f_locations_dimensions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-30 07:16+0000\n"
+"PO-Revision-Date: 2024-07-30 07:16+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__f_location_available_volume
+msgid "Available Volume"
+msgstr "الحجم المتوفر"
+
+#. module: f_locations_dimensions
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_location_suggestion_tree_view
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: f_locations_dimensions
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_location_suggestion_tree_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__f_confirmed
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__f_product_uom_qty
+msgid "Demand"
+msgstr "الطلب"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__f_dest_location
+msgid "Destination Location"
+msgstr "الى"
+
+#. module: f_locations_dimensions
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_stock_location_form_inherit_view
+msgid "Dimensions"
+msgstr "ابعاد"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_location__f_remaining_volume
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_stock_location_form_inherit_view
+msgid "Free Space"
+msgstr "الحجم المتوفر"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_packaging__f_height
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_location__f_height
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_product_packaging_form_inherit_view
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_stock_location_form_inherit_view
+msgid "Height"
+msgstr "ارتفاع"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_packaging__f_height_uom
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_location__f_height_uom
+msgid "Height UOM"
+msgstr "وحدة قياس الارتفاع"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__id
+msgid "ID"
+msgstr ""
+
+#. module: f_locations_dimensions
+#: model:ir.model,name:f_locations_dimensions.model_stock_location
+msgid "Inventory Locations"
+msgstr "مكان الجرد"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_packaging__f_length
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_location__f_length
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_product_packaging_form_inherit_view
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_stock_location_form_inherit_view
+msgid "Length"
+msgstr "الطول"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_packaging__f_length_uom
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_location__f_length_uom
+msgid "Length UOM"
+msgstr "وحدة قياس الطول"
+
+#. module: f_locations_dimensions
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_location_suggestion_tree_view
+msgid "Location Suggestion"
+msgstr "اقتراح الموقع"
+
+#. module: f_locations_dimensions
+#: model:ir.model,name:f_locations_dimensions.model_f_location_suggestion
+msgid "Location Suggestion Wizard"
+msgstr "شاشة اقتراح الموقع"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__f_move_id
+msgid "Move"
+msgstr "نقل"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__f_product_packaging
+msgid "Packaging"
+msgstr "تعبئة"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__f_parent_location
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_product__f_parent_location
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_template__f_parent_location
+msgid "Parent Location"
+msgstr "الموقع الاب"
+
+#. module: f_locations_dimensions
+#: model:ir.model,name:f_locations_dimensions.model_product_template
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__f_product_id
+msgid "Product"
+msgstr "قالب المنتج"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__f_product_locations
+msgid "Product Locations"
+msgstr "مواقع المنتج"
+
+#. module: f_locations_dimensions
+#: model:ir.model,name:f_locations_dimensions.model_product_packaging
+msgid "Product Packaging"
+msgstr "تعبئة المنتج"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__f_product_volume
+msgid "Product Volume"
+msgstr "حجم المنتج"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__f_picking_id
+msgid "Receipt"
+msgstr "استلام"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_f_location_suggestion__smart_search
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_packaging__smart_search
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_template__smart_search
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_location__smart_search
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_picking__smart_search
+msgid "Smart Search"
+msgstr "بحث متقدم"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_location__f_total_volume
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_stock_location_form_inherit_view
+msgid "Storage Capacity"
+msgstr "الحجم الكلي"
+
+#. module: f_locations_dimensions
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_view_picking_form_inherit
+msgid "Suggest Location"
+msgstr "اقتراح الموقع"
+
+#. module: f_locations_dimensions
+#: model:ir.model,name:f_locations_dimensions.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_location__f_full_volume
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_stock_location_form_inherit_view
+msgid "Used Space"
+msgstr "الحجم المستخدم"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_packaging__f_volume
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_product_packaging_form_inherit_view
+msgid "Volume"
+msgstr "الحجم"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_packaging__f_volume_uom
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_location__f_volume_uom
+msgid "Volume UOM"
+msgstr "وحدة قياس الحجم"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_packaging__f_width
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_location__f_width
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_product_packaging_form_inherit_view
+#: model_terms:ir.ui.view,arch_db:f_locations_dimensions.f_stock_location_form_inherit_view
+msgid "Width"
+msgstr "العرض"
+
+#. module: f_locations_dimensions
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_product_packaging__f_width_uom
+#: model:ir.model.fields,field_description:f_locations_dimensions.field_stock_location__f_width_uom
+msgid "Width UOM"
+msgstr "وحدة قياس العرض"

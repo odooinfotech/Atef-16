@@ -1,0 +1,34 @@
+<odoo>
+	<data>
+		<record id="f_classifications_access_purchase_order" model="ir.rule">
+			<field name="name">Falak Classifications Access Purchase Orders </field>
+			<field name="model_id" ref="purchase.model_purchase_order" />
+			<field name="perm_read" eval="True" />
+			<field name="perm_write" eval="True" />
+			<field name="perm_create" eval="True" />
+			<field name="perm_unlink" eval="True" />
+			<field name="active" eval="False" />
+			<field name="domain_force">['|',('f_po_classification.id','in',user.f_class_ids.ids),('f_po_classification','=',False)]</field>
+		</record>
+		<record id="f_classifications_access_purchase_order_shipping" model="ir.rule">
+			<field name="name">Falak Classifications Access Purchase Orders Shipping</field>
+			<field name="model_id" ref="falak_purchase_logistics.model_f_shipping_details" />
+			<field name="perm_read" eval="True" />
+			<field name="perm_write" eval="True" />
+			<field name="perm_create" eval="True" />
+			<field name="perm_unlink" eval="True" />
+			<field name="active" eval="False" />
+			<field name="domain_force">['|',('f_po_classifications','in',user.f_class_ids.ids),('f_po_classifications','=',False)]</field>
+		</record>
+		<record id="f_classifications_access_purchase_order_planning" model="ir.rule">
+			<field name="name">Falak Classifications Access Purchase Orders Planning</field>
+			<field name="model_id" ref="falak_purchase_logistics.model_f_purchase_order_planning" />
+			<field name="perm_read" eval="True" />
+			<field name="perm_write" eval="True" />
+			<field name="perm_create" eval="True" />
+			<field name="perm_unlink" eval="True" />
+			<field name="active" eval="False" />
+			<field name="domain_force">['|',('f_po_classification.id','in',user.f_class_ids.ids),('f_po_classification','=',False)]</field>
+		</record>
+	</data>
+</odoo>

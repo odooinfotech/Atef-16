@@ -1,0 +1,32 @@
+<odoo>
+
+	<record id="f_inherit_partner_credit_view" model="ir.ui.view">
+		<field name="name">f.inherit.partner.credit.view</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_partner_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='vat']" position="after">
+							  	<field name="f_balance" class="oe_inline" widget="monetary" options="{'currency_field': 'currency_id', 'field_digits': True}"/>
+
+
+			</xpath>
+		</field>
+	</record>
+
+	<!-- comment this view to prevent a long time loading issue
+and add new custom module (f_contact_balance_report) to show contacts balances
+
+<record id="f_res_partner_tree_view_inherit" model="ir.ui.view">
+		<field name="name">f.res.partner.tree.view.inherit
+		</field>
+		<field name="model">res.partner</field>
+		<field name="inherit_id" ref="base.view_partner_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='phone']" position="after">
+				<field name="f_balance" readonly="1"   />
+			</xpath>
+		</field>
+	</record>-->
+
+
+</odoo>

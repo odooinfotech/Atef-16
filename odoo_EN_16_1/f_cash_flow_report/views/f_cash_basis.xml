@@ -1,0 +1,85 @@
+<odoo>
+	<data>
+	
+
+		
+		<record id="f_cash_basis_tree_view" model="ir.ui.view">
+			<field name="name">f_cash_basis_tree</field>
+			<field name="model">f.cash.basis</field>
+			<field name="arch" type="xml">
+				<tree string="Cash Projection">
+					
+					<field name="name" />
+					<field name="is_checks" />
+
+				</tree>
+			</field>
+		</record>
+
+		<record id="f_cash_basis_form_view" model="ir.ui.view">
+			<field name="name">f_cash_basis_form</field>
+			<field name="model">f.cash.basis</field>
+			<field name="arch" type="xml">
+				<form string="Cash Projection">
+					<sheet >
+						<group>
+							<field name="name" />
+							<field name="is_checks" />
+						</group>
+					</sheet>
+				</form>
+				
+			</field>
+		</record>
+		
+		
+  <record id="cashbasis_action_form" model="ir.actions.act_window">
+            <field name="name">Cash Projection</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">f.cash.basis</field>
+            <field name="view_mode">tree,form</field>
+        
+        </record>
+        
+        <menuitem action="cashbasis_action_form"
+			id="f_cashbasis_menu" groups="f_cash_flow_report.f_so_po_setup_access_group_id" parent="account.account_account_menu"
+			name="Cash Projection" sequence="1" />
+		
+		
+		
+		
+		<record id="f_new_custom_cashbasis" model="ir.ui.view">
+			<field name="name">f_new_custom_cashbasis</field>
+			<field name="model">account.account</field>
+			<field name="inherit_id" ref="account.view_account_list" />
+			<field name="arch" type="xml">
+
+				<xpath expr="//field[@name='company_id']" position="before">
+				<field name ="f_cash_basis"/>
+				
+				
+				</xpath>
+				</field>
+		</record>
+		
+		<record id="f_new_custom_cashbasis_form" model="ir.ui.view">
+			<field name="name">f_new_custom_cashbasis.form</field>
+			<field name="model">account.account</field>
+			<field name="inherit_id" ref="account.view_account_form" />
+			<field name="arch" type="xml">
+
+				<xpath expr="//field[@name='account_type']" position="after">
+				<field name ="f_cash_basis"  options="{'no_create': True}"/>
+				
+				
+				</xpath>
+				</field>
+		</record>
+				
+
+        
+
+
+				
+	</data>
+</odoo>

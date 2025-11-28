@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="f_commission_setup_tree_view" model="ir.ui.view">
+        <field name="name">f.commission.setup.tree.view</field>
+        <field name="model">f.commission.setup</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="f_description" />
+                <field name="f_commission_type" />
+                <field name="f_commission_period_id" optional="show" />
+                <field name="f_commission_role_ids" optional="show" widget="many2many_tags" />
+                <field name="f_commission_value_type" optional="show" />
+                <field name="f_pricelist" optional="hide" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="f_commission_setup_form_view" model="ir.ui.view">
+        <field name="name">f.commission.setup.form.view</field>
+        <field name="model">f.commission.setup</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="get_total_sales" type="object" string="Calculate Sales" attrs="{'invisible' : [('f_commission_type','not in', ('sales','product_based'))]}"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="f_get_setup_adjustment" type="object" class="oe_stat_button" icon="fa-bars" attrs="{'invisible' : [('f_commission_type','!=', 'collection')]}"/>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="f_description"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="General Info" name="main_group">
+                            <field name="f_commission_type" />
+                            <field name="f_is_recurring" widget="boolean_toggle"/>
+                            <field name="f_recurring" attrs="{'invisible': [('f_is_recurring','=',False)], 'required': [('f_is_recurring','=',True)]}"/>
+                            <field name="f_commission_period_id" attrs="{'invisible': [('f_is_recurring','=',True)], 'required': [('f_is_recurring','=',False)]}"/>
+                            <field name="f_commission_role_ids" widget="many2many_tags" />
+                            <field name="f_commission_value_type" />
+                            <field name="f_commission_value" attrs="{'invisible': [('f_commission_value_type','not in',('amount','perc'))]}" />
+                            <field name="f_upper_limit" />
+                            <field name="f_is_calculated" />
+                            <field name="f_comm_calc_id" attrs="{'invisible':[('f_is_calculated','=',False)]}" />
+                        </group>
+                        <group string="Target Info" name="target_group" attrs="{'invisible': [('f_commission_value_type','not in',('perc_target','amount_target'))]}">
+                            <field name="f_target_type" attrs="{'invisible': [('f_commission_type','!=','product_based')]}"/>
+                            <field name="f_target" />
+                            <field name="f_entry_point" widget="percentage"/>
+                            <field name="f_commission_value" />
+                            <field name="f_limit_to_target" />
+                        </group>
+                        <group string="Tier Info" name="tier_group" attrs="{'invisible': [('f_commission_value_type','not in',('perc_tier','amount_tier'))]}">
+                            <field name="f_target_type" string="Tier Type" attrs="{'invisible': [('f_commission_type','!=','product_based')]}"/>
+                            <field name="f_tier_from" />
+                            <field name="f_tier_to" />
+                            <field name="f_commission_value" />
+                            <field name="f_limit_to_target" string="Limit To Tier"/>
+                        </group>
+                        <group string="Sales Info" name="sales_group" attrs="{'invisible' : [('f_commission_type','not in', ('sales','product_based'))]}" >
+                            <field name="f_sales_period_id" />
+                            <field name="f_total_sales" options="{'currency_field': 'company_currency'}" readonly='1' />
+                            <field name="f_net_sales" options="{'currency_field': 'company_currency'}" readonly='1'/>
+                            <field name="f_sales_perc" options="{'currency_field': 'company_currency'}" readonly='1' widget="percentpie" attrs="{'invisible': [('f_commission_value_type','not in',('amount_target','perc_target'))]}"/>
+                        </group>
+                        <group string="Collection Info" name="collection_group" attrs="{'invisible' : [('f_commission_type','!=', 'collection')]}">
+                            <field name="f_collection_type" />
+                            <field name="f_is_bad_debt" widget="boolean_toggle" />
+                            <field name="f_bad_debt_matrix" attrs="{'invisible': [('f_is_bad_debt','=',False)], 'required': [('f_is_bad_debt','=',True)]}" />
+                        </group>
+                        <group string="Product Info" name="product_group" attrs="{'invisible' : [('f_commission_type','!=', 'product_based')]}">
+                            <field name="f_product" attrs="{'invisible': ['|','|','|',('f_product_family', '!=', []),('f_product_identity', '!=', []),('f_commission_type', '=', 'collection'),('f_commission_type', '=', 'sales')]}" widget="many2many_tags"/>
+                            <field name="f_product_identity" attrs="{'invisible': ['|','|','|',('f_product_family', '!=', []),('f_product', '!=', []),('f_commission_type', '=', 'collection'),('f_commission_type', '=', 'sales')]}" widget="many2many_tags"/>
+                            <field name="f_product_family" attrs="{'invisible': ['|','|','|',('f_product_identity', '!=', []),('f_product', '!=', []),('f_commission_type', '=', 'collection'),('f_commission_type', '=', 'sales')]}" widget="many2many_tags"/>
+                        </group>
+                        <group string="Sales Info" name="sales_group" attrs="{'invisible' : [('f_commission_type','!=', 'sales')]}">
+                            <field name="f_product_exc" widget="many2many_tags"/>
+                            <field name="f_product_identity_exc" widget="many2many_tags"/>
+                            <field name="f_product_family_exc" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="f_commission_setup_action" model="ir.actions.act_window">
+        <field name="name">Commission Setup</field>
+        <field name="res_model">f.commission.setup</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Commission Setup"
+              id="f_commission_setup_menu"
+              parent="f_commission_management.f_commission_management_main_menu"
+              action="f_commission_management.f_commission_setup_action"
+              sequence="3"
+              groups="f_commission_management.f_commission_manage"/>
+
+</odoo>

@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+    <record id="f_sellproduct_inherited_form_view" model="ir.ui.view">
+            <field name="name">f.sellproduct.inherited.view</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+               <xpath expr="//div[@data-key='sale_management']" position="inside">
+               <h2>Restriction On sale Products</h2>
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box" title="Prevent sales if 0 or Negative Qtys.">
+                            <div class="o_setting_left_pane">
+                                <field name="f_prevent_sell" />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="f_prevent_sell"/>
+                                <div class="text-muted">
+                                   Prevent sales if 0 or Negative Products Qtys
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        
+                        
+                        
+                         <div class="row mt16 o_settings_container">
+                        <div class="col-12 col-lg-6 o_setting_box" title="Include Reserved Qtys for sale orders">
+                            <div class="o_setting_left_pane">
+                                <field name="f_include_rese_sale" />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label for="f_include_rese_sale"/>
+                                <div class="text-muted">
+                                  Include Reserved Qtys of Product in sale orders
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        
+            </xpath>
+            
+            </field>
+        </record>
+    
+  </data>
+</odoo>

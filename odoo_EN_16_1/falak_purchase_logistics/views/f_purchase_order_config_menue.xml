@@ -1,0 +1,40 @@
+<odoo>
+	<record model="ir.actions.act_window" id="f_container_size_action_window">
+		<field name="name">Container Size</field>
+		<field name="res_model">f.container.size</field>
+	</record>
+
+	<menuitem name="Container Sizes" id="f_container_size"
+		parent="purchase.menu_purchase_config"
+		action="falak_purchase_logistics.f_container_size_action_window" />
+
+	<record model="ir.actions.act_window"
+		id="f_purchase_payment_term_action_window">
+		<field name="name">Purchase Paymnet Terms</field>
+		<field name="res_model">f.payment.terms</field>
+	</record>
+
+	<menuitem name="Payment Terms" id="f_payment_terms"
+		parent="purchase.menu_purchase_config"
+		action="falak_purchase_logistics.f_purchase_payment_term_action_window" />
+
+
+	<record model="ir.actions.act_window"
+		id="f_purchase_shipping_line_action_window">
+		<field name="name">Purchase Shipping Line</field>
+		<field name="res_model">f.shipping.line</field>
+	</record>
+	
+	<menuitem name="Shipping Lines" id="f_shipping_line"
+		parent="purchase.menu_purchase_config"
+		action="falak_purchase_logistics.f_purchase_shipping_line_action_window" />
+
+	<record model="ir.actions.act_window" id="f_purchase_ports_action_window">
+		<field name="name">Purchase Ports</field>
+		<field name="res_model">f.purchase.ports</field>
+	</record>
+	
+	<menuitem name="Shipping Ports" id="f_port_of_discharge"
+		parent="purchase.menu_purchase_config"
+		action="falak_purchase_logistics.f_purchase_ports_action_window" />
+</odoo>

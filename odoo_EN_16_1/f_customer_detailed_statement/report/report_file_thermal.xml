@@ -1,0 +1,33 @@
+<odoo>
+
+
+	 <record id="f_custstatdetaild_thermalreport" model="ir.actions.report">
+        <field name="name">Thermal Customer Statement Details</field>
+        <field name="model">report.f_customer_detailed_statement.thermalfreport_detial</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">f_customer_detailed_statement.thermalfreport_detial</field>
+    </record>
+    
+     <record id="f_paperformat_statement_receipt_thermalpdf" model="report.paperformat">
+            <field name="name">Custom Thermal Customer Statement PDF</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">110</field>
+            <field name="page_width">80</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">8</field>
+            <field name="margin_bottom">2</field>
+            <field name="margin_left">2</field>
+            <field name="margin_right">2</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+            <field name="report_ids" eval="[(6,0,[ 
+                                                  ref('f_customer_detailed_statement.f_custstatdetaild_thermalreport'),
+                                                ])]"/>
+        </record>
+        
+        
+    
+
+</odoo>

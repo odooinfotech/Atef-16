@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+f.purchase.order.line.price.history.po,f.purchase.order.line.price.history.po,model_f_purchase_order_line_price_history_po,,1,1,1,1
+f.sale.order.line.price.history.s,f.sale.order.line.price.history.s,model_f_sale_order_line_price_history_s,,1,1,1,1
+f.product.price.history.p,f.product.price.history.p,model_f_product_price_history_p,,1,1,1,1
+f.product.purchase.price.history.p,f.product.purchase.price.history.p,model_f_product_purchase_price_history_p,,1,1,1,1
+f.legacy.price.history.lines,f.legacy.price.history.lines,model_f_legacy_price_history_lines,,1,1,1,1
+f.account.move.line.price.history.a,f.account.move.line.price.history.a,model_f_account_move_line_price_history_a,,1,1,1,1

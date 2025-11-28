@@ -1,0 +1,76 @@
+<odoo>
+	<data>
+		<!-- PO -->
+		<record id="f_po_delete" model="base.automation">
+			<field name="name">PO Delete</field>
+			<field name="model_id"
+				ref="model_purchase_order" />
+			<field name="state">code</field>
+			<field name="code">
+				record.f_delete_po()
+			</field>
+			<field name="trigger">on_unlink</field>
+			<field name="active" eval="True" />
+		</record>
+		<record id="f_po_cancel" model="base.automation">
+			<field name="name">PO Cancel</field>
+			<field name="model_id" ref="model_purchase_order" />
+			<field name="state">code</field>
+			<field name="code">
+				record.f_cancel_po()
+			</field>
+			<field name="trigger">on_write</field>
+			<field name="active" eval="True" />
+		</record>
+		<!--PO Plans Quantities-->
+		<record id="f_polines_update_quantities" model="base.automation">
+			<field name="name">PO Plans Update</field>
+			<field name="model_id" ref="model_f_purchase_order_planning" />
+			<field name="trigger_field_ids"
+				eval="[(6,0,[ref('falak_purchase_logistics.field_f_purchase_order_planning__f_shipped_amount'),ref('falak_purchase_logistics.field_f_purchase_order_planning__f_cancelled_qty'),ref('falak_purchase_logistics.field_f_purchase_order_planning__f_stat')])]" />
+			<field name="state">code</field>
+			<field name="code">
+				record.f_update_plan_quantities()
+			</field>
+			<field name="trigger">on_write</field>
+			<field name="active" eval="True" />
+		</record>
+
+<!--		<record id="f_polines_delete_quantities" model="base.automation">-->
+<!--			<field name="name">PO Plans Delete</field>-->
+<!--			<field name="model_id" ref="model_f_purchase_order_planning" />-->
+<!--			<field name="state">code</field>-->
+<!--			<field name="code">-->
+<!--				record.f_delete_plan_quantities()-->
+<!--			</field>-->
+<!--			<field name="trigger">on_unlink</field>-->
+<!--			<field name="active" eval="True" />-->
+<!--		</record>-->
+
+        <record id="f_po_planning_shipping" model="base.automation">
+			<field name="name">PO Plans Update Shipping</field>
+			<field name="model_id" ref="model_f_purchase_order_planning" />
+			<field name="trigger_field_ids"
+				eval="[(6,0,[ref('falak_purchase_logistics.field_f_purchase_order_planning__f_shipping')])]" />
+			<field name="state">code</field>
+			<field name="code">
+				record.f_update_plans_shipping()
+			</field>
+			<field name="trigger">on_write</field>
+			<field name="active" eval="True" />
+		</record>
+
+		<record id="f_po_line_update_remaining_qty" model="base.automation">
+			<field name="name">Recalculate Remaining Qty on PO Line</field>
+			<field name="model_id" ref="purchase.model_purchase_order_line"/>
+			<field name="trigger">on_write</field>
+			<field name="trigger_field_ids" eval="[(6,0,[ref('purchase.field_purchase_order_line__product_qty')])]"/>
+			<field name="state">code</field>
+			<field name="code">
+				record._recompute_remaining_qty()
+			</field>
+			<field name="active" eval="True"/>
+		</record>
+
+	</data>
+</odoo>

@@ -1,0 +1,127 @@
+<odoo>
+    <record model="ir.actions.act_window"
+            id="f_container_details_action_window">
+        <field name="name">Container Details</field>
+        <field name="res_model">f.container.details</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Container Details" id="f_po_container"
+              parent="falak_purchase_logistics.f_ship_plan"
+              action="falak_purchase_logistics.f_container_details_action_window"/>
+
+    <record id="container_details_search_view" model="ir.ui.view">
+        <field name="name">container.details.search.view</field>
+        <field name="model">f.container.details</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="f_container_name"
+                       filter_domain="[('f_container_name', 'ilike', self)]"/>
+                <field name="f_container_size"
+                       filter_domain="[('f_container_size', 'ilike', self)]"/>
+                <field name="f_container_number"
+                       filter_domain="[('f_container_number', 'ilike', self)]"/>
+                <field name="f_bl_number"
+                       filter_domain="[('f_bl_number', 'ilike', self)]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Container Number" name="f_container_number"
+                            context="{'group_by':'f_container_number'}"/>
+                    <filter string="B/L Number" name="f_bl_number"
+                            context="{'group_by':'f_bl_number'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="f_con_details">
+        <field name="name">fcon_deyails_list</field>
+        <field name="model">f.container.details</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="f_container_name"/>
+                <field name="f_container_number"/>
+                <field name="f_container_size"/>
+                <field name="f_qty_in_con"/>
+                <field name="f_con_shipping"/>
+                <field name="f_bl_number" optional="hide"/>
+                <field name="f_total_weight" optional="hide"/>
+                <field name="f_storage" optional="hide"/>
+                <field name="f_port_fees"/>
+                <field name="f_storage_fees"/>
+                <field name="f_transport"/>
+                <field name="f_security_check"/>
+                <field name="f_date_hour"
+                       attrs="{'invisible': [('f_security_check', '=', False)]}"/>
+                <field name="f_lc_details"/>
+                <field name="f_demurrage" optional="hide"/>
+                <field name="f_demurrage_amount" optional="hide"/>
+                <field name="f_shipping_lc_number" optional="hide"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="f_container_details_list_form">
+        <field name="name">f_container_details_list_form</field>
+        <field name="model">f.container.details</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="f_add_plan_in_container_plans"
+                            icon="fa-plus-square" data-hotkey="shift+p"
+                            string="Add Plans" type="object" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group string="Container Details Info">
+                        <group>
+                            <field name="f_container_name"/>
+                            <field name="f_container_number"/>
+                            <field name="f_container_size"/>
+                            <field name="f_bl_number"/>
+                            <field name="f_lc_details"/>
+                            <field name="f_shipping_lc_number"/>
+                            <label for="f_demurrage"/>
+                            <div name="Demurrage">
+                                <field name="f_demurrage" class="oe_inline"/>
+                                days
+                            </div>
+                        </group>
+                        <group>
+                            <field name="f_con_shipping"/>
+                            <field name="f_shipping_ATA_date"/>
+                            <field name="f_date_entered_company"/>
+                            <field name="f_date_exit_company"/>
+                            <field name="f_date_returned_to_port"/>
+                            <field name="f_security_check"/>
+                            <field name="f_date_hour"
+                                   attrs="{'invisible': [('f_security_check', '=', False)]}"/>
+                            <field name="f_deliver_date"/>
+                            <field name="f_notes"/>
+
+
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Container Plans" name="container_plans">
+                            <field name="f_container_plans">
+                                <tree editable="top" create="0">
+                                    <field name="f_po_id"/>
+                                    <field name="f_commercial_invoice_number"/>
+                                    <field name="f_product_name"/>
+                                    <field name="f_product_desc"/>
+                                    <field name="f_intarnal_referance"/>
+                                    <field name="qty" sum="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"
+                           groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+</odoo>

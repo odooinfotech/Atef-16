@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_falak_manufacturing_planning_f_manufacturing_planning,falak_manufacturing_planning.f.man.plan,model_f_man_plan,base.group_user,1,1,1,1
+access_falak_manufacturing_planning_f_man_products,falak_manufacturing_planning.f.man.plan.products,model_f_man_plan_products,base.group_user,1,1,1,1
+access_falak_manufacturing_planning_f_min_qty_prods,falak_manufacturing_planning.f.min.qty.prods,model_f_min_qty_prods,base.group_user,1,1,1,1
+access_falak_manufacturing_planning_f_mp_categ,falak_manufacturing_planning.f_mp_categ,model_f_mp_categ,base.group_user,1,1,1,1
+access_falak_manufacturing_planning_f_plan_report_wizard,falak_manufacturing_planning.f.plan.report.wizard,model_f_plan_report_wizard,base.group_user,1,1,1,1
+

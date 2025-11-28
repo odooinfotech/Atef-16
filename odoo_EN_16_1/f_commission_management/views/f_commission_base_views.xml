@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<menuitem name='Commission Management'
+              id='f_commission_management_main_menu'
+              web_icon="fa fa-calculator,#FFFFFF,#56829f"
+              />
+
+	<menuitem name="Configurations"
+              id="f_commission_config_menu"
+              parent="f_commission_management.f_commission_management_main_menu"
+              sequence='5'
+			  groups="f_commission_management.f_commission_manage"/>
+</odoo>

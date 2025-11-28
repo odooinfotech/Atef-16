@@ -1,0 +1,236 @@
+<odoo>
+	<record model="ir.actions.act_window"
+		id="f_shipping_details_stages_action_window">
+		<field name="name">Shipping Stages</field>
+		<field name="res_model">f.shipping.stage</field>
+		<field name="view_mode">tree</field>
+	</record>
+	<menuitem name="Shipping Stages" id="f_shipping_stages"
+		parent="purchase.menu_purchase_config"
+		action="falak_purchase_logistics.f_shipping_details_stages_action_window" />
+	<record model="ir.ui.view" id="f_shipping_details_stages">
+		<field name="name">f.shipping.details.stages</field>
+		<field name="model">f.shipping.stage</field>
+		<field name="arch" type="xml">
+			<tree editable="bottom">
+				<field name="f_stage_name" />
+				<field name="f_owner" />
+				<field name="f_stage_code" />
+			</tree>
+		</field>
+	</record>
+	<record model="ir.actions.act_window"
+		id="f_shipping_details_action_window">
+		<field name="name">Shipping Details</field>
+		<field name="res_model">f.shipping.details</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem name="Shipping Details" id="f_shipping_details"
+		parent="falak_purchase_logistics.f_ship_plan"
+		action="falak_purchase_logistics.f_shipping_details_action_window" />
+	<record id="f_shipping_details_search_view" model="ir.ui.view">
+		<field name="name">f.shipping.details.search.view</field>
+		<field name="model">f.shipping.details</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="f_shipment_num"
+					filter_domain="[('f_shipment_num', 'ilike', self)]" />
+				<field name="f_seq"
+					filter_domain="[('f_seq', 'ilike', self)]" />
+				<field name="f_lc_number"
+					filter_domain="[('f_lc_number', 'ilike', self)]" />
+				<field name="f_containers"
+					filter_domain="[('f_containers', 'ilike', self)]" />
+				<field name="f_suppliers_names"
+					filter_domain="[('f_suppliers_names', 'ilike', self)]" />
+				<field name="f_clearance_file_number"
+					filter_domain="[('f_clearance_file_number', 'ilike', self)]" />
+				<group expand="1" string="Group By">
+					<filter string="Actual Shipping Date"
+						name="f_real_shipping_date"
+						context="{'group_by':'f_real_shipping_date'}" />
+					<filter string="Booking NO" name="f_booking_no"
+						context="{'group_by':'f_booking_no'}" />
+					<filter string="Classification" name="classification_group"
+							domain="[]" context="{'group_by': 'f_po_classifications'}"/>
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="f_shipping_details_list">
+		<field name="name">f.shipping.details.list</field>
+		<field name="model">f.shipping.details</field>
+		<field name="arch" type="xml">
+			<tree multi_edit="1">
+				<field name="f_shipment_num" />
+				<field name="f_po_plan_id" widget="many2many_tags"
+					optional="hide" />
+				<field name="f_po_classifications" widget="many2many_tags"
+					optional="hide" />
+				<field name="f_real_shipping_date" optional="hide" />
+				<field name="f_estimated_port_arrival_date" optional="hide" />
+				<field name="f_real_port_arrival_date" optional="hide" />
+				<field name="f_delta_port_arrival_date" optional="hide"
+					readonly="1" />
+				<field name="f_estimated_company_arrival_date" optional="hide" />
+				<field name="f_real_company_arrival_date" optional="hide" />
+				<field name="f_delta_company_arrival_date" optional="hide"
+					readonly="1" />
+				<field name="f_custom_broker" optional="hide" />
+				<field name="f_booking_no" optional="hide" />
+				<field name="f_shipping_time" optional="hide"
+					widget="float_time" />
+				<field name="f_shipping_company" optional="hide" />
+				<field name="f_lc_number" optional="hide" />
+				<field name="f_clearance_period" optional="hide" />
+				<field name="f_shipping_line" optional="hide" />
+				<field name="f_shipping_company_agent" optional="hide" />
+				<field name="f_shipping_security_check" optional="hide" />
+				<field name="f_freight_cost" optional="hide" />
+				<field name="f_free_days_of_demurrage" optional="hide" />
+				<field name="f_shipp_stage" optional="hide" />
+				<field name="f_note" optional="hide" />
+				<field name="f_bill_of_lading_type" optional="hide" />
+				<field name="f_bill_of_lad_status" optional="hide" />
+				<field name="f_port_of_discharge" optional="hide" />
+				<field name="f_port_of_loading" optional="hide" />
+				<field name="f_consignee" optional="hide" />
+				<field name="f_import_agent" optional="hide" />
+				<field name="f_clearance_time" optional="hide" />
+				<field name="f_clearance_file_name" optional="hide" />
+				<field name="f_clearance_file_number" optional="hide" />
+				<field name="f_teken" optional="hide" />
+				<field name="f_security_check" optional="hide" />
+				<field name="f_bank_garantee" optional="hide" />
+				<field name="f_driver" optional="hide" />
+			</tree>
+		</field>
+	</record>
+	
+	<record model="ir.ui.view" id="f_shipping_details_form">
+		<field name="name">f.shiping.details.form</field>
+		<field name="model">f.shipping.details</field>
+		<field name="arch" type="xml">
+			<form>
+				<header>
+					<button name="f_ship_dates_history_action_window"
+						type="object" string="Shipping Dates History"
+						class="btn-primary" />
+					<button name="f_get_suppliers"
+						type="object" string="Get Suppliers"
+						class="btn-primary" />
+					<button name="f_set_quantities"
+						type="object" string="Set Quantities"
+						class="btn-primary" />
+				</header>
+				<sheet>
+				    <div name="button_box" class="oe_button_box">
+						<button groups="documents.group_documents_user"
+							name="f_action_see_documents" type="object"
+							class="oe_stat_button" icon="fa-file-text-o">
+							<div class="o_field_widget o_stat_info">
+								<span class="o_stat_value">
+									<field name="f_document_count"/>
+								</span>
+								<span class="o_stat_text">Documents</span>
+							</div>
+						</button>
+				    </div>
+					<div class="oe_title">
+						<h1>
+							<field name="f_shipment_num" />
+						</h1>
+						<h2>
+							<field name="f_seq" readonly="1" />
+						</h2>
+						<field name="f_classification_access" invisible="1" />
+						<field name="f_po_classifications" readonly="1" force_save="1" widget="many2many_tags"
+							   attrs="{'invisible': [('f_classification_access', '=', False)]}"/>
+
+					</div>
+					<group>
+						<group string="Shipping Informations">
+							<field name="f_shipping_company_agent" />
+							<field name="f_booking_no" />
+							<field name="f_shipping_line" />
+							<field name="f_import_agent" />
+							<field name="f_shipp_stage" />
+							<label for="f_shipping_time" />
+							<div name="shipping">
+								<field name="f_shipping_time" class="oe_inline" />
+								days </div>
+						</group>
+						<group string=" Shipping Dates">
+							<field name="f_real_shipping_date" />
+							<field name="f_estimated_port_arrival_date" />
+							<field name="f_real_port_arrival_date" />
+							<field name="f_delta_port_arrival_date" readonly="1" />
+							<field name="f_estimated_company_arrival_date" />
+							<field name="f_real_company_arrival_date" />
+							<field name="f_delta_company_arrival_date"
+								readonly="1" />
+						</group>
+					</group>
+					<group>
+						<group>
+							<field name="f_freight_cost" />
+							<field name="f_note" />
+							<label for="f_free_days_of_demurrage" />
+							<div name="free Days of demarrage">
+								<field name="f_free_days_of_demurrage"
+									class="oe_inline" /> days </div>
+							<field name="f_suppliers_names" />
+							<field name="f_lc_number" />
+							<field name="f_dep_date" />
+							<label for="f_clearance_period" />
+							<div name="Clearance Period">
+								<field name="f_clearance_period"
+									class="oe_inline" /> days </div>
+						</group>
+						<group>
+							<field name="f_bill_of_lading_type" />
+							<field name="f_bill_of_lad_status" />
+							<field name="f_port_of_loading" />
+							<field name="f_port_of_discharge" />
+							<field name="f_consignee" />
+<!--							<field name="f_total_volumes" readonly="1" />-->
+<!--							<field name="f_total_weights" readonly="1" />-->
+							<field name="f_shipping_security_check" />
+						</group>
+					</group>
+					<notebook>
+						<page string="PO Details">
+							<field name="f_po_plan_id" widget="many2many" />
+						</page>
+						<page string="Clearance Details">
+							<group>
+								<group>
+									<field name="f_custom_broker" />
+									<field name="f_clearance_time" />
+									<field name="f_clearance_file_number" />
+									<field name="f_clearance_representative" />
+								</group>
+								<group>
+									<field name="f_bank_garantee" />
+									<field name="f_bank_guarantee_amount"
+										attrs="{'invisible': [('f_bank_garantee', '=', False)]}" />
+									<field name="f_driver" />
+								</group>
+							</group>
+						</page>
+						<page string="Containers">
+							<field name="f_containers" widget="many2many" />
+						</page>
+					</notebook>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"
+						groups="base.group_user" />
+					<field name="activity_ids" widget="mail_activity" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+</odoo>

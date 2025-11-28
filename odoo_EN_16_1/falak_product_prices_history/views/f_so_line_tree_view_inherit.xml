@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="f_view_order_form_ph_inherit_view" model="ir.ui.view">
+		<field name="name">f.view.order.form.ph.inherit.view</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='order_line']/tree">
+
+				<field name="order_partner_id" invisible="1" />
+				<field name="f_sale_history" invisible="1" />
+			</xpath>
+			<xpath expr="//field[@name='order_line']//tree//field[@name='price_unit']" position="before">
+
+				<button name="f_open_price_history" 
+				type="object" icon="fa-history" context="{'partner_id':order_partner_id,'product_id':product_id,'f_sale_order_line_id':id}"
+				attrs="{'invisible':['|',('parent.invoice_status','=','invoiced'),('f_sale_history','=',False)]}"
+				/>
+
+				
+
+			</xpath>
+			
+		</field>
+	</record>
+	
+	<record id="falak_view_order_line_tree_inherit_EN" model="ir.ui.view">
+		<field name="name">falak.view.order.line.tree.inherit</field>
+		<field name="model">sale.order.line</field>
+		<field name="inherit_id" ref="sale.view_order_line_tree" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='name']" position="before">
+				<field name="f_sale_history" invisible="1" />
+				<field name="invoice_status" invisible="1" />
+				<button name="f_open_price_history"
+					type="object" icon="fa-history" context="{'partner_id':order_partner_id,'product_id':product_id,'f_sale_order_line_id':id}"
+					attrs="{'invisible':['|',('invoice_status','=','invoiced'),('f_sale_history','=',False)]}"
+					
+					/>
+				
+				<field name="product_id" invisible="1"/>
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

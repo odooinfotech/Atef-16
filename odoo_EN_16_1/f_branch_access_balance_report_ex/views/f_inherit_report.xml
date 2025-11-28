@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="f_contact_balance_branch_ex">
+        <field name="name">f_contact_balance_branch_ex</field>
+        <field name="model">f.contatc.balance.report</field>
+        <field name="inherit_id" ref="f_contact_balance_report.view_report_contact_balance_ar_ap_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                	<field name="f_related_branch" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

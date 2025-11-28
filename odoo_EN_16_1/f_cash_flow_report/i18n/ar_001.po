@@ -1,0 +1,439 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* f_cash_flow_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-30 12:10+0000\n"
+"PO-Revision-Date: 2022-12-30 12:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: f_cash_flow_report
+#: model:ir.model,name:f_cash_flow_report.model_account_account
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__account_id
+msgid "Account"
+msgstr "حساب"
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__amount
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__amount
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__amount
+msgid "Amount"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__amount_currency
+msgid "Amount Currency"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields.selection,name:f_cash_flow_report.selection__f_po_payment_forcaste__name__bank
+msgid "Bank"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields.selection,name:f_cash_flow_report.selection__f_po_payment_forcaste__name__cash
+msgid "Cash"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model,name:f_cash_flow_report.model_f_cash_basis
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_account_account__f_cash_basis
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__cash_basis
+msgid "Cash Basis"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model,name:f_cash_flow_report.model_fs_cash_basis_period
+msgid "Cash Basis Period Overall Report"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model,name:f_cash_flow_report.model_fs_cash_basis_period_subtype
+msgid "Cash Basis Period Subtype Report"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model,name:f_cash_flow_report.model_fs_cash_basis_period_type
+msgid "Cash Basis Period Type Report"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model,name:f_cash_flow_report.model_fs_cash_basis
+msgid "Cash Basis Report"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.actions.act_window,name:f_cash_flow_report.cashbasis_action_form
+#: model:ir.ui.menu,name:f_cash_flow_report.f_cashbasis_menu
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.f_cash_basis_form_view
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.f_cash_basis_tree_view
+msgid "Cash Projection"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.ui.menu,name:f_cash_flow_report.menu_action_cash_basisperiodsubtype_report
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodsubtype_report_graph
+msgid "Cash Projection Period Per Subtype Report"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.ui.menu,name:f_cash_flow_report.menu_action_cash_basisperiodtype_report
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodtype_report_graph
+msgid "Cash Projection Period Per Type Report"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.actions.act_window,name:f_cash_flow_report.action_cashperiod_basis_report
+#: model:ir.actions.act_window,name:f_cash_flow_report.action_cashperiodsubtype_basis_report
+#: model:ir.actions.act_window,name:f_cash_flow_report.action_cashperiodtype_basis_report
+#: model:ir.ui.menu,name:f_cash_flow_report.menu_action_cash_basisperiod_report
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiod_report_graph
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiod_report_tree
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodsubtype_report_search
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodsubtype_report_tree
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodtype_report_search
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodtype_report_tree
+msgid "Cash Projection Period Report"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.actions.act_window,name:f_cash_flow_report.action_cash_basis_report
+#: model:ir.ui.menu,name:f_cash_flow_report.menu_action_cash_basis_report
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basis_report_pivot
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basis_report_search
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basis_report_tree
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiod_report_pivot
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodsubtype_report_pivot
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodtype_report_pivot
+msgid "Cash Projection Report"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields.selection,name:f_cash_flow_report.selection__f_po_payment_forcaste__name__check
+msgid "Check"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__company_id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__company_id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__company_id
+msgid "Company"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__f_company_currency
+msgid "Company Currency"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_cash_basis__create_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_forcaste_types__create_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__create_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste_types__create_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__create_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_forcaste_types__create_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_cash_basis__create_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_forcaste_types__create_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__create_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste_types__create_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__create_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_forcaste_types__create_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__currency_id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__currency_id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__currency_id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__currency_rate
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__currency_rate
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__currency_rate
+msgid "Currency Rate"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period__date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_subtype__date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_type__date
+msgid "Date"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_cash_basis__display_name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_forcaste_types__display_name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__display_name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste_types__display_name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__display_name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_forcaste_types__display_name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__display_name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__display_name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period__display_name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_subtype__display_name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_type__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_purchase_order__f_forcasted_ids
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.f_poforapayform_view_id
+msgid "Forcaste Payment"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:res.groups,name:f_cash_flow_report.f_so_po_setup_access_group_id
+msgid "Forecasted SO/PO Report Setup "
+msgstr "تقرير التنبوء النقدي"
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__balance
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period__balance
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_subtype__balance
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_type__balance
+msgid "Functional Balance"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodsubtype_report_search
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodtype_report_search
+msgid "Group By"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_cash_basis__id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_forcaste_types__id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste_types__id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_forcaste_types__id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period__id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_subtype__id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_type__id
+msgid "ID"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_cash_basis__is_checks
+msgid "Is Checks"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__label
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__label
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__label
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_subtype__label
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodsubtype_report_search
+msgid "Label"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_cash_basis____last_update
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_forcaste_types____last_update
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste____last_update
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste_types____last_update
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount____last_update
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_forcaste_types____last_update
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount____last_update
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis____last_update
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period____last_update
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_subtype____last_update
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_type____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_cash_basis__write_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_forcaste_types__write_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__write_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste_types__write_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__write_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_forcaste_types__write_uid
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_cash_basis__write_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_forcaste_types__write_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__write_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste_types__write_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__write_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_forcaste_types__write_date
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__move_id
+msgid "Move"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_cash_basis__name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_forcaste_types__name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste_types__name
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_forcaste_types__name
+msgid "Name"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.constraint,message:f_cash_flow_report.constraint_f_cash_basis_name_uniq
+msgid "Name must be unique!"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model,name:f_cash_flow_report.model_f_po_setup_amount
+msgid "PO Forecasted Data"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.actions.act_window,name:f_cash_flow_report.f_maction_wizard_typepayment
+msgid "PO Forecasted Payment Type"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.actions.act_window,name:f_cash_flow_report.f_maction_wizard_forecastsposetuptypes
+#: model:ir.model,name:f_cash_flow_report.model_f_po_forcaste_types
+msgid "PO Forecasted Types"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__purchase_id
+msgid "PO Order"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model,name:f_cash_flow_report.model_f_po_payment_forcaste
+msgid "PO Payments Forecasts"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model,name:f_cash_flow_report.model_f_po_payment_forcaste_types
+msgid "PO payment Forecasted types"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__f_name
+msgid "Payment Method"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.actions.act_window,name:f_cash_flow_report.f_maction_wizard_forecastposetup
+#: model:ir.ui.menu,name:f_cash_flow_report.f_menuforecastspsetup
+msgid "Purchase Forecasted Setup"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.ui.menu,name:f_cash_flow_report.f_menuforecastsposetuptypes
+msgid "Purchase Forecasted Types Setup"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model,name:f_cash_flow_report.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: f_cash_flow_report
+#: model:ir.ui.menu,name:f_cash_flow_report.f_typepaymentmenuforecastsposetuptypes
+msgid "Purchase Payment Forecasted Type Setup"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model_terms:ir.actions.act_window,help:f_cash_flow_report.action_cash_basis_report
+#: model_terms:ir.actions.act_window,help:f_cash_flow_report.action_cashperiod_basis_report
+#: model_terms:ir.actions.act_window,help:f_cash_flow_report.action_cashperiodsubtype_basis_report
+#: model_terms:ir.actions.act_window,help:f_cash_flow_report.action_cashperiodtype_basis_report
+msgid "Record a new Move Line"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__type
+msgid "Reference"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.ui.menu,name:f_cash_flow_report.f_menuforecastssalesetup
+msgid "Revenue Forecasted Setup"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model,name:f_cash_flow_report.model_f_sale_setup_amount
+msgid "Sale Forecasted Data"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.actions.act_window,name:f_cash_flow_report.f_maction_wizard_forecastssalesetup
+msgid "Sale Forecasted Setup"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.actions.act_window,name:f_cash_flow_report.f_maction_wizard_forecastssalesetuptypes
+#: model:ir.model,name:f_cash_flow_report.model_f_sale_forcaste_types
+msgid "Sale Forecasted Types"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.ui.menu,name:f_cash_flow_report.f_menuforecastssalesetuptypes
+msgid "Sale Forecasted Types Setup"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_account_account__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_cash_basis__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_forcaste_types__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_payment_forcaste_types__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_forcaste_types__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_subtype__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_type__smart_search
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_purchase_order__smart_search
+msgid "Smart Search"
+msgstr "بحث متقدم"
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__acum_balance
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period__acum_balance
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_subtype__acum_balance
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_type__acum_balance
+msgid "Total Balance"
+msgstr ""
+
+#. module: f_cash_flow_report
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_po_setup_amount__type_id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_f_sale_setup_amount__type_id
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis__paymenttype
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_subtype__type
+#: model:ir.model.fields,field_description:f_cash_flow_report.field_fs_cash_basis_period_type__type
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodsubtype_report_search
+#: model_terms:ir.ui.view,arch_db:f_cash_flow_report.view_cash_basisperiodtype_report_search
+msgid "Type"
+msgstr ""

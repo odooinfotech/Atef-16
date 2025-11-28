@@ -1,0 +1,28 @@
+<odoo>
+
+
+
+
+
+
+	<record id="f_inherit_partner_creditsale_view"
+		model="ir.ui.view">
+		<field name="name">f.inherit.partner.creditsales.view</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//field[@name='partner_id']" position="after">
+				<field name="company_currency_id" invisible="1"/>
+						  	<field name="f_balance" class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency_id', 'field_digits': True}"/>
+
+
+			</xpath>
+		</field>
+	</record>
+
+
+
+
+
+
+</odoo>

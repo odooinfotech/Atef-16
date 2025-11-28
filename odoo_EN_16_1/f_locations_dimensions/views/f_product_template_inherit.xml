@@ -1,0 +1,35 @@
+<odoo>
+	<record id="f_product_template_form_inherit_view" model="ir.ui.view">
+        <field name="name">f.product.template.form.inherit.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <!--<xpath expr="//label[@for='volume']" position="before">
+                <label for="f_length" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
+                <div class="o_row" name="f_length" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
+                    <field name="f_length" string="Length" class="oe_inline"/>
+                    <field name="f_length_uom"/>
+                </div>
+
+                <label for="f_width" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
+                <div class="o_row" name="f_width" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
+                    <field name="f_width" string="Width" class="oe_inline"/>
+                    <field name="f_width_uom"/>
+                </div>
+
+                <label for="f_height" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}"/>
+                <div class="o_row" name="f_height" attrs="{'invisible':[('product_variant_count', '&gt;', 1), ('is_product_variant', '=', False)]}">
+                    <field name="f_height" string="Height" class="oe_inline"/>
+                    <field name="f_height_uom"/>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='volume']" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>-->
+            <xpath expr="//group[@name='group_general']" position="inside">
+                <field name="f_parent_location"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

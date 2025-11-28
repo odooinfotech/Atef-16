@@ -1,0 +1,35 @@
+<odoo>
+	<data>
+
+		<record model="ir.ui.view" id="f_customer_routes_tree_view">
+			<field name="name">Customer Routes</field>
+			<field name="model">f.customer.routes</field>
+			<field name="arch" type="xml">
+				<tree editable="bottom">
+					<field name="f_name" />
+					<field name="f_note" />
+					<field name="f_days" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="f_customer_routes_action"
+			model="ir.actions.act_window">
+			<field name="name">Customer Routes</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">f.customer.routes</field>
+			<field name="view_mode">tree</field>
+		</record>
+
+
+		<menuitem name="Routes" 
+ 			id="f_route" 
+ 			action="f_customer_routes_action"
+ 			parent="f_customer_visit_management" 
+ 			groups ="customer_visits_management.customer_visits_admin" /> 
+
+			
+			
+
+	</data>
+</odoo>

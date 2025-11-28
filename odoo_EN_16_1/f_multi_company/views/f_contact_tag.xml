@@ -1,0 +1,27 @@
+<odoo>
+
+
+
+		<record id="f_partnertagscompany_private_access" model="ir.rule">
+			<field name="name">Custom partner tags company Private Access </field>
+			<field name="model_id" ref="base.model_res_partner_category" />
+			<field name="domain_force">['|',('company_id', 'in', company_ids),('company_id','=', False)]
+			</field>
+		</record>
+		
+		
+
+		     <record id="f_res_partner_tag_company" model="ir.ui.view">
+        <field name="name">f_res_partner_tag_company</field>
+        <field name="model">res.partner.category</field>
+        <field name="inherit_id" ref="base.view_partner_category_form" />
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <field name="company_id"/>
+            </field>
+        </field>
+    </record>
+    
+    
+    
+</odoo>

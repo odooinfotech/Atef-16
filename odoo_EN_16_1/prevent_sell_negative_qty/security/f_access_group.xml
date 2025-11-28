@@ -1,0 +1,14 @@
+
+<odoo>
+	<data>
+		<record model="ir.module.category" id="f_minus_transactions_admin">
+			<field name="name"> Minus Transactions Admin</field>
+			<field name="sequence">106</field>
+		</record>
+		
+		<record id="f_bypass_minus_transactions" model="res.groups">
+			<field name="name">Bypass Minus Transactions Restriction</field>
+			<field name="category_id" ref="prevent_sell_negative_qty.f_minus_transactions_admin" />
+		</record>
+	</data>
+</odoo>

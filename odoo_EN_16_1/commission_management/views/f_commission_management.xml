@@ -1,0 +1,155 @@
+<odoo>
+	<data>
+
+
+		<!-- Notes -->
+		<!-- Add Search View to search by period , sales person , calculated , 
+			commission type -->
+
+
+
+		<record model="ir.actions.act_window"
+			id="f_com_management_action_window">
+			<field name="name">Commission Setup</field>
+			<field name="res_model">f.commission.management</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem name="Commission Setup"
+			id="f_comm_management_def_menue"
+			parent="commission_management.f_comm_management_main_menue"
+			action="commission_management.f_com_management_action_window"
+			sequence='2' />
+
+
+
+		<record model="ir.ui.view" id="f_comission_management_id">
+			<field name="name">f.Comission.management.id</field>
+			<field name="model">f.commission.management</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="f_commission_type" optional="show" />
+					<field name="f_description" optional="hide" />
+					<field name="f_period" optional="show" />
+					<field name="f_sales_person" optional="show" />
+					<field name="f_target_type" optional="hide" />
+					<field name="f_target" optional="show" />
+					<field name="f_entry_point" widget="percentage"
+						optional="hide" />
+					<field name="f_comm_value_type" optional="show" />
+					<field name="f_comm_value" optional="show" />
+					<field name="f_product" optional="hide" />
+					<field name="f_product_family" optional="hide" />
+					<field name="f_is_calculated" optional="hide" />
+					<field name="f_commission_amount" optional="hide" />
+					<field name="f_calculated_by" optional="hide" />
+					<field name="f_comment" optional="hide" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="f_comissiom_management_form">
+			<field name="name">f.Comission.management.form</field>
+			<field name="model">f.commission.management</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button name="get_total_sales" string="Calculate Sales" type="object"
+							class="oe_highlight" data-hotkey="w" attrs="{'invisible': [('f_commission_type', '=', 'collection')]}"/>
+						<button name="f_compute_exclude_amount" string="Calculate Exclude" type="object"
+							class="oe_highlight" attrs="{'invisible': [('f_commission_type', '!=', 'collection')]}"/>
+						<button name="f_compute_include_amount" string="Calculate Include" type="object"
+							class="oe_highlight" attrs="{'invisible': [('f_commission_type', '!=', 'collection')]}"/>
+					</header>
+					<sheet>
+						<div class="commission_description"
+							style="font-style: bold;font-size: 20px; width: 500px; height : 70px">
+							<h1>
+								<field name="f_description" required="1"
+									placeholder="Description..." />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="f_commission_type" />
+								<field name="f_period" />
+								<field name="f_sales_person" />
+								<field name="f_target_type"
+									attrs="{'invisible': [('f_commission_type', '=', 'collection')],'readonly': [('f_commission_type', '=', 'sales')]}" />
+								<field name="f_target"
+									attrs="{'invisible': [('f_commission_type', '=', 'collection')]}" />
+								<field name="f_entry_point"
+									attrs="{'invisible': ['|',('f_commission_type', '=', 'collection'),('f_commission_type', '=', 'product_based')]}"
+									widget="percentage" />
+							</group>
+							<group>
+								<field name="f_comm_value_type"
+									attrs="{'invisible': [('f_commission_type', '=', 'collection')]}" />
+								<field name="f_comm_value"
+									attrs="{'invisible': ['|',('f_commission_type', '=', 'collection'),('f_comm_value_type', '=', 'cpercentage')]}" />
+								<field name="f_comm_value"
+									attrs="{'invisible': ['|',('f_commission_type', '=', 'collection'),('f_comm_value_type', '=', 'camount')]}" />
+
+								<field name="f_product"
+									attrs="{'invisible': ['|','|','|',('f_product_family', '!=', []),('f_product_identity', '!=', []),('f_commission_type', '=', 'collection'),('f_commission_type', '=', 'sales')]}" widget="many2many_tags"/>
+								<field name="f_product_identity"
+									attrs="{'invisible': ['|','|','|',('f_product_family', '!=', []),('f_product', '!=', []),('f_commission_type', '=', 'collection'),('f_commission_type', '=', 'sales')]}" widget="many2many_tags"/>
+								<field name="f_product_family"
+									attrs="{'invisible': ['|','|','|',('f_product_identity', '!=', []),('f_product', '!=', []),('f_commission_type', '=', 'collection'),('f_commission_type', '=', 'sales')]}" widget="many2many_tags"/>
+
+								<field name="f_product_exc"
+									   attrs="{'invisible': [('f_commission_type', '!=', 'sales')]}"
+									   widget="many2many_tags"/>
+								<field name="f_product_identity_exc"
+									   attrs="{'invisible': [('f_commission_type', '!=', 'sales')]}"
+									   widget="many2many_tags"/>
+								<field name="f_product_family_exc"
+									   attrs="{'invisible': [('f_commission_type', '!=', 'sales')]}"
+									   widget="many2many_tags"/>
+
+								<field name="f_is_calculated" />
+								<field name="f_commission_amount"
+									attrs="{'invisible':[('f_is_calculated','=',False)]}" />
+								<field name="f_calculated_by"
+									attrs="{'invisible':[('f_is_calculated','=',False)]}" />
+								<field name="f_commission_calculated_at"
+									attrs="{'invisible':[('f_is_calculated','=',False)]}" />
+								<field name="f_comm_calc_id"
+									attrs="{'invisible':[('f_is_calculated','=',False)]}" />
+
+								<field name="f_whole_excluded_amount"
+									   attrs="{'invisible': [('f_commission_type', '!=', 'collection')]}"/>
+								<field name="f_retail_excluded_amount"
+									   attrs="{'invisible': [('f_commission_type', '!=', 'collection')]}"/>
+								<field name="f_whole_included_amount"
+									   attrs="{'invisible': [('f_commission_type', '!=', 'collection')]}"/>
+								<field name="f_retail_included_amount"
+									   attrs="{'invisible': [('f_commission_type', '!=', 'collection')]}"/>
+
+								<field name="f_comment" widget = "html"
+									attrs="{'invisible':[('f_is_calculated','=',False)]}" />
+							</group>
+							<group string="Sales Totals" attrs="{'invisible' : [('f_commission_type','not in', ('sales','product_based'))]}" >
+								<field name="f_total_sales"
+									   options="{'currency_field': 'company_currency'}"
+									   readonly='1' />
+								<field name="f_net_sales"
+									   options="{'currency_field': 'company_currency'}"
+									   readonly='1'/>
+								<field name="f_sales_perc"
+									   options="{'currency_field': 'company_currency'}"
+									   readonly='1' widget="percentpie"/>
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" groups="base.group_user" />
+						<field name="activity_ids" />
+						<field name="message_ids" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+	</data>
+</odoo>

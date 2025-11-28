@@ -1,0 +1,29 @@
+<odoo>
+	<data>
+		<record id="f_invoice_form_view_bill_ref" model="ir.ui.view">
+			<field name="name">invoice.dev.view.bref</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="account.view_move_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//label[@for='ref']" position="replace">
+					<label for="ref" string="PO Reference"
+						attrs="{'invisible':[('move_type', 'not in', ('in_invoice', 'in_receipt', 'in_refund'))]}" />
+				</xpath>
+				<xpath expr="//field[@name='ref']" position="after">
+					<field name="f_bill_ref" />
+				</xpath>
+			</field>
+		</record>
+		<record id="f_invoice_tree_view_bill_ref" model="ir.ui.view">
+			<field name="name">f.invoice.tree.view.bref</field>
+			<field name="model">account.move</field>
+			<field name="inherit_id" ref="account.view_in_invoice_bill_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='ref']" position="before">
+					<field name="f_bill_ref" />
+				</xpath>
+			</field>
+		</record>
+
+	</data>
+</odoo>

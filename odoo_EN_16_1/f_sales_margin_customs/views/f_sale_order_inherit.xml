@@ -1,0 +1,34 @@
+<odoo>
+	<data>
+		<record id="f_sale_order_margin_inherit" model="ir.ui.view">
+			<field name="name">f.sale.order.margin.inherit</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id"
+				ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//label[@for='margin']" position="attributes">
+					<attribute name="groups">f_sales_margin_customs.f_can_show_margins</attribute>
+				</xpath>
+                <xpath expr="//form//sheet//notebook//page[@name='order_lines']//group[1]//group[2]//div[@class='text-nowrap']" position="attributes">
+					<attribute name="groups">f_sales_margin_customs.f_can_show_margins</attribute>
+				</xpath>
+				<xpath expr="//field[@name='order_line']/tree//field[@name='margin']"
+                       position="attributes">
+                    <attribute name="groups">f_sales_margin_customs.f_can_show_margins</attribute>
+                </xpath>
+				<xpath expr="//field[@name='order_line']/tree//field[@name='margin_percent']"
+                       position="attributes">
+                    <attribute name="groups">f_sales_margin_customs.f_can_show_margins</attribute>
+                </xpath>
+				<xpath expr="//field[@name='order_line']/tree//field[@name='purchase_price']"
+                       position="attributes">
+                    <attribute name="groups">hide_product_cost.f_cost_group_id</attribute>
+                </xpath>
+				<xpath expr="//field[@name='order_line']/form//field[@name='purchase_price']"
+					   position="attributes">
+					<attribute name="groups">hide_product_cost.f_cost_group_id</attribute>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,14 @@
+<odoo>
+	<data>
+
+		<record id="f_purchase_insurance_policy_tree_view" model="ir.ui.view">
+			<field name="name">f.purchase.insurance.policy</field>
+			<field name="model">f.insurance.policy</field>
+			<field name="arch" type="xml">
+				<tree string="Insurance Policy" editable="bottom">
+					<field name="f_insuramce_name" />
+				</tree>
+			</field>
+		</record>
+	</data>
+</odoo>

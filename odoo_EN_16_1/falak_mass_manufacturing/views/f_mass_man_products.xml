@@ -1,0 +1,53 @@
+<odoo>
+	<!-- search -->
+	<record id="f_mass_prod_search_view" model="ir.ui.view">
+		<field name="name">f.mass.prod.search.view</field>
+		<field name="model">f.mass.man.products</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="f_mass_man_id"
+					filter_domain="[('f_mass_man_id', 'ilike', self)]" />
+				<field name="f_product_id"
+					filter_domain="[('f_product_id', 'ilike', self)]" />
+				<group expand="1" string="Group By">				
+					<filter string="Mass Manufacturing ID" name="f_mass_man_id"
+						context="{'group_by':'f_mass_man_id'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="f_mass_man_products_tree">
+		<field name="name">Mass Products Tree</field>
+		<field name="model">f.mass.man.products</field>
+		<field name="type">tree</field>
+		<field name="arch" type="xml">
+			<tree editable="bottom" edit="1" multi_edit="1">
+				<header>
+					<button name="create_man_order" type="object"
+						class="oe_highlight" string="Create Manufacturing Order" />
+				</header>
+				<field name="f_mass_man_id" readonly="1" optional="hide" />
+				<field name="f_product_id" 
+					options="{'no_create': True, 'no_create_edit':True}" />
+				<field name="f_quantity" />
+				<field name="product_uom_category_id" invisible="1" />
+				<field name="f_product_uom" />
+				<field name="f_work_center_group" invisible="1" />
+				<field name="f_work_center" optional="hide"/>
+				<field name="f_shift" optional="hide" readonly="1"/>
+				
+			</tree>
+		</field>
+	</record>
+
+	<record id="f_mass_man_prod_action"	model="ir.actions.act_window">
+		<field name="name">Mass Manufacturing Products</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.mass.man.products</field>
+		<field name="view_mode">tree</field>
+		<field name="view_id" ref="f_mass_man_products_tree"></field>
+		<field name="target">current</field>
+		<field name="domain">[('f_mass_man_id','=',active_id)]</field>
+	</record>
+</odoo>

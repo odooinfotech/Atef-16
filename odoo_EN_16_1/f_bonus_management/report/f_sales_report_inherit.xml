@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+
+		<template id="f_report_saleorder_document"
+			inherit_id="sale.report_saleorder_document">
+			<xpath expr="//table[1]//thead//tr//th[2]" position="after">
+				<th t-if="any(l.f_bonus_qty > 0 for l in doc.order_line)"
+					class="text-right">Bonus</th>
+			</xpath>
+			<xpath expr="//table[1]//tbody//tr//td[2]" position="after">
+				<td t-if="any(l.f_bonus_qty > 0 for l in doc.order_line)"
+					class="text-right">
+					
+						<span t-esc="'{:,.2f}'.format(line.f_bonus_qty)" />
+				</td>
+			</xpath>
+		</template>
+	</data>
+</odoo>

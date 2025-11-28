@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_f_contact_balance_customs_f_contact_balance_customs,f_contact_balance_customs.f_contact_balance_customs,model_f_contact_balance_customs_f_contact_balance_customs,base.group_user,1,1,1,1

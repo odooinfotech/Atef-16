@@ -1,0 +1,27 @@
+<odoo>
+
+
+
+
+
+
+	<record id="f_inherit_partner_creditmultipay_view" model="ir.ui.view">
+        <field name="name">f.inherit.partner.creditmultipay.view</field>
+        <field name="model">f.multi.payments</field>
+        <field name="inherit_id" ref="falak_multi_payments_base.f_multi_payments_form_view" />
+        <field name="arch" type="xml">
+ 				<xpath expr="//field[@name='f_partner_id']" position="after">
+ 				 <field name="company_currency_id" invisible="1"/>  
+ 							  	<field name="f_balance" class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency_id', 'field_digits': True}"/>
+
+ 				
+ 				</xpath>
+ 				</field>
+ 				</record>
+
+
+
+
+
+
+</odoo>

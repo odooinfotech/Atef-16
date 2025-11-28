@@ -1,0 +1,9 @@
+<odoo>
+	<record model="ir.actions.act_window" id="f_purchase_insurance_policy_action_window">
+		<field name="name">Purchase Insurance Policy</field>
+		<field name="res_model">f.insurance.policy</field>
+
+	</record>
+	<menuitem name="Insurance Policy" id="f_insurance_policy" parent="purchase.menu_purchase_config" action="f_lc_management.f_purchase_insurance_policy_action_window" />
+
+</odoo>

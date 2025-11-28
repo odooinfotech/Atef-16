@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+
+			
+
+
+		    <record id="f_contact_users_balnmce_access" model="ir.rule">
+			<field name="name">Custom  Contact Private Access -Contact Balance REport</field>
+			 <field name="model_id" ref="f_contact_balance_report.model_f_contatc_balance_report"/>
+        <field name="domain_force">
+             ['|',(('partner_id.f_allowed_users'),'in',user.id),('partner_id.f_limited_access','=',False)]
+        </field>
+		</record>
+
+
+
+  
+
+  </data>
+</odoo>

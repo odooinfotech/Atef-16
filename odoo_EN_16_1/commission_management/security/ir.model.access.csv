@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_commission_management_f_commission_management,commission_management.f.commission.management,model_f_commission_management,base.group_user,1,1,1,1
+access_commission_management_f_comm_collection_rules,commission_management.f.comm.collection.rules,model_f_comm_collection_rules,base.group_user,1,1,1,1
+access_commission_management_f_comisson_period,commission_management.f.comisson.period,model_f_comisson_period,base.group_user,1,1,1,1
+access_commission_management_f_commission_calculation,commission_management.f.commission.calculation,model_f_commission_calculation,base.group_user,1,1,1,1
+access_commission_management_f_commission_groups_setup,commission_management.f.commission.groups.setup,model_f_commission_groups_setup,base.group_user,1,1,1,1
+access_commission_management_f_calculation_logs,commission_management.f.calculation.logs,model_f_calculation_logs,base.group_user,1,1,1,1

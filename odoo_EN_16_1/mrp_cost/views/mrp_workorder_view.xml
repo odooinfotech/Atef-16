@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="mrp_production_workorder_tree_editable_view_inherit_added_custom_attributes">
+            <field name="name">mrp.production.work.order.tree.editable.added.custom.attributes</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="mrp.mrp_production_workorder_tree_editable_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="replace">
+                    <field name="name" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="operation_id" domain="['|', ('bom_id', '=', production_bom_id), ('bom_id', '=', False)]" context="{'default_workcenter_id': workcenter_id, 'default_company_id': company_id}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

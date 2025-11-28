@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window"
+			id="f_calculation_logs_action_window">
+			<field name="name">Calculation Logs</field>
+			<field name="res_model">f.calculation.logs</field>
+			<field name="view_mode">tree</field>
+		</record>
+
+		<menuitem name="Calculation Logs"
+			id="f_calculation_logs_menu"
+			parent="commission_management.f_comm_management_main_menue"
+			action="commission_management.f_calculation_logs_action_window"
+			sequence='4' />
+
+
+
+		<record model="ir.ui.view" id="f_calculation_logs_tree">
+			<field name="name">f.calculation.logs.tree</field>
+			<field name="model">f.calculation.logs</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="f_commission_setup" optional="show" />
+					<field name="f_description" />
+					<field name="f_date" optional="show" />
+					<field name="f_user" optional="show"/>
+					<field name="f_sale_person" optional="show" />
+				</tree>
+			</field>
+		</record>
+    </data>
+</odoo>

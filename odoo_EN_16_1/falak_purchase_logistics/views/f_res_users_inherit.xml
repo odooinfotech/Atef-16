@@ -1,0 +1,17 @@
+<odoo>
+	<record id="f_res_users_customs" model="ir.ui.view">
+		<field name="name">f.res.users.customs</field>
+		<field name="model">res.users</field>
+		<field name="inherit_id" ref="base.view_users_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//page[@name='preferences']" position="after">
+				<field name="f_classification_access" invisible="1"/>
+				<page name="f_one_class" string="Classifications" attrs="{'invisible': [('f_classification_access', '=', False)]}">
+					<group>
+						<field name="f_class_ids" widget="many2many_tags" />
+					</group>
+				</page>
+			</xpath>
+		</field>
+	</record>
+</odoo>

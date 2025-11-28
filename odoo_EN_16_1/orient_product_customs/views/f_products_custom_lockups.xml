@@ -1,0 +1,107 @@
+<odoo>
+
+	<record id="f_prod_family_action_window_or_prod_cust"
+		model="ir.actions.act_window">
+		<field name="name">Product Family</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.prod.family</field>
+		<field name="view_mode">tree,form</field>
+
+	</record>
+
+	<menuitem name="Product Family"
+		id="f_prod_family_menue_or_prod_cust"
+		parent="stock.menu_stock_config_settings"
+		action="f_prod_family_action_window_or_prod_cust" />
+
+
+	<record id="f_prod_cat_action_window_or_prod_cust"
+		model="ir.actions.act_window">
+		<field name="name">Product Category</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.prod.category</field>
+		<field name="view_mode">tree,form</field>
+
+	</record>
+
+	<menuitem name="Product Category"
+		id="f_prod_cat_menue_or_prod_cust"
+		parent="stock.menu_stock_config_settings"
+		action="f_prod_cat_action_window_or_prod_cust" />
+
+
+	<record id="f_prod_sub_cat_action_window_or_prod_cust"
+		model="ir.actions.act_window">
+		<field name="name">Product Sub Category</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.prod.sub.category</field>
+		<field name="view_mode">tree,form</field>
+
+	</record>
+
+	<menuitem name="Product Sub Category"
+		id="f_prod_sub_cat_menue_or_prod_cust"
+		parent="stock.menu_stock_config_settings"
+		action="f_prod_sub_cat_action_window_or_prod_cust" />
+
+
+	<record id="f_prod_brand_action_window_or_prod_cust"
+		model="ir.actions.act_window">
+		<field name="name">Product Brand</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.prod.brand</field>
+		<field name="view_mode">tree,form</field>
+
+	</record>
+
+	<menuitem name="Product Brand"
+		id="f_prod_brand_menue_or_prod_cust"
+		parent="stock.menu_stock_config_settings"
+		action="f_prod_brand_action_window_or_prod_cust" />
+
+
+	<record id="f_prod_identity_action_window_or_prod_cust"
+		model="ir.actions.act_window">
+		<field name="name">Product Identity Group</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.prod.identity</field>
+		<field name="view_mode">tree,form</field>
+
+	</record>
+
+	<menuitem name="Product Identity Group"
+		id="f_prod_identity_menue_or_prod_cust"
+		parent="stock.menu_stock_config_settings"
+		action="f_prod_identity_action_window_or_prod_cust" />
+
+
+	<record id="f_prod_producer_action_window_or_prod_cust"
+		model="ir.actions.act_window">
+		<field name="name">Product Producer Name </field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.prod.producername</field>
+		<field name="view_mode">tree,form</field>
+
+	</record>
+
+	<menuitem name="Product Producer Name"
+		id="f_prod_producer_menue_or_prod_cust"
+		parent="stock.menu_stock_config_settings"
+		action="f_prod_producer_action_window_or_prod_cust" />
+
+
+	<record id="f_prod_target_action_window_or_prod_cust"
+		model="ir.actions.act_window">
+		<field name="name">Product Target </field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.prod.target</field>
+		<field name="view_mode">tree,form</field>
+
+	</record>
+
+	<menuitem name="Product Target"
+		id="f_prod_target_menue_or_prod_cust"
+		parent="stock.menu_stock_config_settings"
+		action="f_prod_target_action_window_or_prod_cust" />
+
+</odoo>

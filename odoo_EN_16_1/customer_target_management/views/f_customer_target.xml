@@ -1,0 +1,224 @@
+<odoo>
+	<data>
+		<record id="action_calculate" model="ir.actions.server">
+			<field name="name">Calculate</field>
+			<field name="type">ir.actions.server</field>
+			<field name="model_id" ref="model_f_cust_target" />
+			<field name="binding_model_id" ref="model_f_cust_target" />
+			<field name="state">code</field>
+			<field name="code">records.f_calculate()</field>
+		</record>
+
+		<record model="ir.ui.view" id="customer_target_form_view">
+			<field name="name">Customer Target Form View</field>
+			<field name="model">f.cust.target</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<field name="f_status" widget="statusbar" clickable="True" />
+
+						<button name="f_calculate" string="Calculate" type="object"
+							class="oe_highlight" data-hotkey="w"
+							attrs="{'invisible' :  ['|',('f_status','in',('calculated','cancelled','confirmed')),('active','=',False)]}" />
+
+						<button name="get_total_sales" string="Calculate Sales" type="object"
+							class="oe_highlight" data-hotkey="w"/>
+
+						<button name="f_start" string="Start" type="object"
+							class="oe_highlight" data-hotkey="s"
+							attrs="{'invisible' :  ['|',('f_status','in',('calculated','cancelled','confirmed')),('active','=',False)]}" />
+
+						<button name="f_confirm" string="Confirm" type="object"
+							data-hotkey="w"
+							attrs="{'invisible' :['|',('f_status','in',('draft','cancelled','confirmed')),('active','=',False)]}" />
+
+						<button name="f_cancel" string="Cancel" type="object"
+							data-hotkey="w"
+							attrs="{'invisible' :['|',('f_status','in',('draft','cancelled')),('active','=',False)]}" />
+
+						<button name="f_reset_to_draft" string="Reset To Draft"
+							type="object" data-hotkey="w"
+							attrs="{'invisible' :  ['|',('f_status','in',('calculated','confirmed','draft')),('active','=',False)]}" />
+					</header>
+					<sheet>
+						<widget name="web_ribbon" title="Archived"
+							bg_color="bg-danger"
+							attrs="{'invisible': [('active', '=', True)]}" />
+
+						<widget name="web_ribbon" title="Confirmed"
+							bg_color="d-none"
+							attrs="{'invisible': [('f_status', '!=', 'confirmed')]}" />
+						<group>
+							<group string="Setup">
+							<field name="active" invisible="1" />
+								<field name="f_name"
+								 attrs="{'readonly':['|',('f_status','in',('calculated','cancelled','confirmed')),('active','=',False)]}" />
+								 <field name="f_customer"
+									options="{'no_create': True, 'no_create_edit':True}"
+									attrs="{'readonly':['|',('f_status','in',('calculated','cancelled','confirmed')),('active','=',False)]}" />
+									<field name="f_from_date"
+									attrs="{'readonly':['|',('f_status','in',('calculated','cancelled','confirmed')),('active','=',False)]}" />
+								<field name="f_to_date"
+									attrs="{'readonly':['|',('f_status','in',('calculated','cancelled','confirmed')),('active','=',False)]}" />
+								<field name="f_target_type"
+									attrs="{'readonly':['|',('f_status','in',('calculated','cancelled','confirmed')),('active','=',False)]}" />
+								<field name="f_target_amount" 
+									options="{'currency_field': 'company_currency'}"
+									attrs="{'readonly':['|',('f_status','in',('calculated','cancelled','confirmed')),('active','=',False)]}" />
+
+ 
+<!-- widget="monetary" -->
+								<field name="f_commision_value_type" invisible="1" />
+								<label for="f_commision_value" string="Commission Amount" />
+								<div class="o_row">
+									<field name="company_currency_symbol" readonly='1'
+										attrs="{'invisible' : [('f_commision_value_type','=','percent')]}" />
+									<field name="f_commision_value" 
+										attrs="{'readonly':['|',('f_status','in',('calculated','cancelled','confirmed')),('active','=',False)]}" />
+									<span 
+										attrs="{'invisible' : [('f_commision_value_type','=','fixed')]}">%</span>
+								</div>
+								<field string="Excluded Families"
+									name="f_excluded_families" widget="many2many_tags" />
+								<field string="Excluded Identities "
+									name="f_excluded_identities" widget="many2many_tags" />
+							</group>
+							<group>
+								<group string="Result">
+
+									<field name="f_is_calculated" />
+									<field name="f_commision_value_calculated"
+										
+										options="{'currency_field': 'company_currency'}" />
+									<field name="create_uid" />
+									<field name="f_comment" />
+									<field name="f_calculated_date" />
+									<field name="company_id" invisible="1" />
+									<field name="company_currency" invisible="1" />
+									
+								</group>
+							
+								<group string="Sales Totals" attrs="{'invisible' : [('f_status','not in',('draft','inprogress'))]}"
+									>
+<!-- 									attrs="{'invisible' : [('f_status','not in',('draft','inprogress'))]}" -->
+								 <field name="f_total_sales" 
+										options="{'currency_field': 'company_currency'}"
+										readonly='1' />
+									<field name="f_net_sales" 
+										options="{'currency_field': 'company_currency'}"
+										readonly='1'/>
+									<field name="f_sales_perc"  
+										options="{'currency_field': 'company_currency'}"
+										readonly='1' widget="percentpie"/> 
+<!-- 										widget="percentpie" -->
+								</group>  
+							</group>
+
+						</group>
+
+						<notebook colspan="4">
+							<page string="Excluded Products" name="ex_prods">
+								<field name="f_excluded_prods">
+									<tree>
+										<field name="name" />
+									</tree>
+
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				
+					<div class="oe_chatter">
+						<field name="message_follower_ids" groups="base.group_user" />
+						<field name="activity_ids" />
+						<field name="message_ids" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="customer_target_tree_view">
+			<field name="name">Customer Target Tree View</field>
+			<field name="model">f.cust.target</field>
+			<field name="arch" type="xml">
+				<tree multi_edit="1" sample="1">
+					<header>
+						<button name="get_total_sales" string="Calculate Sales" type="object"
+							class="oe_highlight"/>
+					</header>
+					<field name="f_name" optional="show" />
+					<field name="f_customer" optional="show" />
+					<field name="f_from_date" optional="show" />
+					<field name="f_to_date" optional="show" />
+					<field name="f_target_type" optional="show" />
+					<field name="f_target_amount" 
+						options="{'currency_field': 'company_currency'}" optional="show" />
+					<field name="f_commision_value" 
+						options="{'currency_field': 'company_currency'}" optional="show" />
+					<field name="f_is_calculated" />
+					<field name="company_currency" invisible="1" />
+					<field name="f_status" widget="badge" optional="show" />
+
+					<field name="f_total_sales" 
+						options="{'currency_field': 'company_currency'}"
+						attrs="{'readonly':True}" optional="show" />
+					<field name="f_net_sales" 
+						options="{'currency_field': 'company_currency'}"
+						attrs="{'readonly':True}" optional="show" />
+					<field name="f_sales_perc" widget="progressbar"
+						options="{'currency_field': 'company_currency'}"
+						attrs="{'readonly':True}" optional="show" />
+
+				</tree>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="customer_target_search_view">
+			<field name="name">Customer Target Search View</field>
+			<field name="model">f.cust.target</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="f_customer" />
+					<field name="f_name" />
+					<field name="f_status" />
+					<field name="f_target_type" />
+					<field name="f_is_calculated" />
+					<separator />
+					<filter string="Draft" name="draft"
+						domain="[('f_status', '=', 'draft')]" />
+					<filter string="Confirmed" name="confirmed"
+						domain="[('f_status', '=', 'confirmed')]" />
+					<separator />
+					<filter string="Calculated" name="calculated"
+						domain="[('f_status', '=', 'calculated')]" />
+					<filter string="Cancelled" name="cancelled"
+						domain="[('f_status', '=', 'cancelled')]" />
+					<separator />
+					<filter string="Archived" name="archived"
+						domain="[('active', '=',False),]" />
+					<separator />
+					<group expand="0" name="group_by" string="Group By">
+						<filter name="f_customer" string="Partner" domain="[]"
+							context="{'group_by' : 'f_customer'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+
+		<record id="customer_target_action"
+			model="ir.actions.act_window">
+			<field name="name">Customer Target</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">f.cust.target</field>
+			<field name="context">{"search_default_active_records":1}</field>
+
+			<field name="view_mode">tree,form</field>
+
+		</record>
+
+		<menuitem name="Customer Target" id="f_customer_target"
+			action="customer_target_action" sequence="10"
+			web_icon="fa fa-usd,#FFFFFF,#0d8b6e"
+			groups="customer_target_management.f_show_target_man" />
+	</data>
+</odoo>

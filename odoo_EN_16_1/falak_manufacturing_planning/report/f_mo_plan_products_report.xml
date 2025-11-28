@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="f_plan_shift_prods"
+			model="ir.actions.report">
+			<field name="name">Manufacturing Planning Products Report</field>
+			<field name="model">f.plan.report.wizard</field>
+			<field name="report_type">qweb-pdf</field>
+			<field name="report_name">falak_manufacturing_planning.report_plan_products</field>
+			<field name="report_file">falak_manufacturing_planning.report_plan_products</field>
+			<field name="print_report_name"> 'Manufacturing Planning - %s' % (object.f_plan_id) </field>
+			<field name="binding_model_id" ref="model_f_plan_report_wizard" />
+			<field name="binding_type">report</field>
+		</record>
+	</data>
+</odoo>

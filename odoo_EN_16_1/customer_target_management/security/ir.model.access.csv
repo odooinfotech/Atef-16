@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_customer_target_management_f_cust_target,customer_target_management.f_cust_target,model_f_cust_target,base.group_user,1,1,1,1

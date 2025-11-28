@@ -1,0 +1,7 @@
+<odoo>
+	<data>
+		<record id="f_shipping_workspace" model="documents.folder">
+			<field name="name">Shipping</field>
+		</record>
+	</data>
+</odoo>

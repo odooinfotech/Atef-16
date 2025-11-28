@@ -1,0 +1,32 @@
+<odoo>
+	<record id="f_product_variant_easy_edit_view_inherit" model="ir.ui.view">
+        <field name="name">f.product.variant.easy.edit.view.inherit</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_variant_easy_edit_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='volume']" position="before">
+                <label for="f_length"/>
+                <div class="o_row" name="f_length">
+                    <field name="f_length" string="Length" class="oe_inline"/>
+                    <field name="f_length_uom"/>
+                </div>
+
+                <label for="f_width"/>
+                <div class="o_row" name="f_width">
+                    <field name="f_width" string="Width" class="oe_inline"/>
+                    <field name="f_width_uom"/>
+                </div>
+
+                <label for="f_height"/>
+                <div class="o_row" name="f_height">
+                    <field name="f_height" string="Height" class="oe_inline"/>
+                    <field name="f_height_uom"/>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='volume']" position="attributes">
+                <attribute name="readonly">1</attribute>
+                <attribute name="force_save">1</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

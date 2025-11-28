@@ -1,0 +1,13 @@
+<odoo>
+    <record id="f_account_move_form_inherit" model="ir.ui.view">
+        <field name="name">f.account.move.form.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoice_line_ids']/tree" position="attributes">
+                <attribute name="default_order">id asc</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

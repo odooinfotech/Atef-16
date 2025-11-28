@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<record model="ir.sequence" id="seq_expense">
+        <field name="name">Customize Barcode sequence</field>
+        <field name="code">f.barcode.seq</field>
+        <field eval="1" name="number_next"/>
+        <field eval="1" name="number_increment"/>
+        <field eval="False" name="use_date_range"/>
+        <field eval="False" name="company_id"/>
+        <field name="padding">12</field>
+    </record>
+        
+        
+        <!-- <record model="ir.ui.view" id="f_inherit_barcode_view_poscategory_form">
+            <field name="name">f.inherit.barcode.view.poscategory.form</field>
+            <field name="model">pos.category</field>
+            <field name="inherit_id" ref="point_of_sale.product_pos_category_form_view"/>
+            <field name="arch" type="xml">
+				<field name="sequence" position="after">
+				     <field name="f_barcode_prefix" />
+				
+                                       
+				</field>
+
+
+			</field>
+			</record> -->
+			
+			
+			
+        <record id="f_barcode_manual_form" model="ir.ui.view">
+            <field name="name">f.barcode.manual.form</field>
+            <field name="model">f.barcode.manual</field>
+            <field name="arch" type="xml">
+                <form string="Generate Barcode">
+                    <group>
+                    </group>
+                    <footer>
+                        <button name="f_generate_manual_barcode" type="object" string="Generate Barcode"
+                                class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Close" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+     
+        <record id="f_action_maual_genearte" model="ir.actions.act_window">
+            <field name="name">Generate Barcode</field>
+            <field name="res_model">f.barcode.manual</field>
+            <field name="binding_view_types">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record model="ir.ui.view" id="f_inherit_barcode_view_product_form">
+            <field name="name">f.inherit.barcode.view.product.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+				<field name="barcode" position="after">
+<!-- 				     <field name="f_barcode_general_setting" invisible="1"/> -->
+					<button name="%(f_action_maual_genearte)d" type="action" string="Manually Generate Barcode" 
+                                        class="oe_link" attrs="{'invisible': [('barcode', '!=', False)]}"/><br/>
+                                       
+				</field>
+
+
+			</field>
+			</record>
+
+        <record id="f_auto_generate_product_barcode" model="ir.ui.view">
+            <field name="name">f.auto.generate.product.barcode</field>
+            <field name="model">f.barcode.auto</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+		                    </group>
+                    <footer>
+                        <button name="f_generate_auto_barcode" type="object" string="Generate Barcode" class="oe_highlight" />
+                        or
+                        <button special="cancel" string="Close" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        
+        <!--  <record id="f_auto_generate_product_barcode_id" model="ir.actions.act_window">
+            <field name="name">Generate Product Barcode</field>
+            <field name="res_model">f.barcode.auto</field>
+            <field name="binding_model_id" ref="product.model_product_product"/>
+            <field name="binding_view_types">list</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record> -->
+         
+        
+        
+
+        <act_window
+            id="f_auto_generate_product_barcode_id"
+            name="Generate Product Barcode"
+            res_model="f.barcode.auto"
+            binding_model="product.product"
+            binding_views="list"
+            view_mode="form"
+            target="new"
+            view_id ="f_auto_generate_product_barcode"/>
+
+</odoo>

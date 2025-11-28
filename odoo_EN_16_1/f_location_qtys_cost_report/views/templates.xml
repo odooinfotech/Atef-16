@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+ <record id="f_procostqtysreport_tree" model="ir.ui.view">
+        <field name="name">f.loc.qty.cost.details.report.tree</field>
+        <field name="model">f.loc.qty.cost.details</field>
+        <field name="arch" type="xml">
+            <tree  create="0" import="0" >
+                  <field name="product_id" widget="many2onebutton" />
+                <field name="qty_from_loc" />
+                <field name="cost_from_loc" />
+                <field name="cost_stan_from_loc" />
+
+
+                <field name="qty_to_loc" />
+                <field name="cost_to_loc" />
+                <field name="cost_stan_to_loc" />
+            </tree>
+        </field>
+ </record>
+
+
+
+        <record id="f_procostqtysreport_serach" model="ir.ui.view">
+        <field name="name">f.loc.qty.cost.details.report.search</field>
+        <field name="model">f.loc.qty.cost.details</field>
+        <field name="arch" type="xml">
+            <search   >
+                  <field name="product_id" />
+
+                   <group expand="1" string="Group By">
+                     <filter string="Company" name="company_id" context="{'group_by':'company_id'}"/>
+
+
+                    </group>
+
+
+
+            </search>
+        </field>
+ </record>
+
+
+
+
+    </data>
+</odoo>

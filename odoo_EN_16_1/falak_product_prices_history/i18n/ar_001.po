@@ -1,0 +1,423 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* falak_product_prices_history
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-13 08:46+0000\n"
+"PO-Revision-Date: 2024-03-13 08:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__f_account_move_line_id
+msgid "Account Move Line"
+msgstr "خط الفاتورة"
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_f_account_move_line_price_history_a
+msgid "Account Move line price history"
+msgstr "سجل اسعار خط الفاتورة"
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_history_setting_customs
+msgid "Activate Price History On Credit Note Lines"
+msgstr "تفعيل سجل الاسعار على خطوط مذكرة الائتمان"
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_history_setting_customs
+msgid "Activate Price History On Invoice Lines"
+msgstr "تفعيل سجل الاسعار على خطوط الفاتورة"
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_history_setting_customs
+msgid "Activate Price History On Purchase Order Lines"
+msgstr "تفعيل سجل الاسعار على خطوط طلبية الشراء"
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_history_setting_customs
+msgid "Activate Price History On Sales Order Lines"
+msgstr "تفعيل سجل الاسعار على خطوط طلبية المبيعات"
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_history_setting_customs
+msgid "Activate Purchase Price History On Product Views"
+msgstr ""
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_history_setting_customs
+msgid "Activate Sale Price History On Product Views"
+msgstr "تفعيل سجل الاسعار على شاشات المنتج"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__purchase_order_line_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__purchase_order_line_id
+msgid "Bill order line"
+msgstr "خط طلبية الفاتورة"
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الاعدادات"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__create_uid
+msgid "Created by"
+msgstr "انشئ بواسطة"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__create_date
+msgid "Created on"
+msgstr "انشئ بتاريخ"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_account_move_line__f_credit_note_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_res_config_settings__f_credit_note_history
+msgid "Credit Note History"
+msgstr "سجل اسعار مذكرة الائتمان"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__currency_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__f_currency_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__currency_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__currency_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__currency_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__source_order_date_order
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__f_legacy_order_date
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__source_order_date_order
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__source_order_date_order
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_account_move_line_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_product_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_product_purchase_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_purchase_order_line_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_sale_order_line_price_history_view_search
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__discount_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__f_discount
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__discount_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__discount_id
+msgid "Discount"
+msgstr "الخصم"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__display_name
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__display_name
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__display_name
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__display_name
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__display_name
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_account_move_line_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_product_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_product_purchase_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_purchase_order_line_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_sale_order_line_price_history_view_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_account_move_line__f_invoice_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_res_config_settings__f_invoice_history
+msgid "Invoice History"
+msgstr "سجل اسعار الفاتورة"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__purchase_order_date_order
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__purchase_order_date_order
+msgid "Invoice/Bill Date"
+msgstr "تاريخ الفاتورة"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__order_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__order_id
+msgid "Journal Entry"
+msgstr "قيود اليومية"
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_account_move_line
+msgid "Journal Item"
+msgstr "عناصر اليومية"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a____last_update
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines____last_update
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p____last_update
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p____last_update
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po____last_update
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s____last_update
+msgid "Last Modified on"
+msgstr "تاريخ اخر تعديل"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__write_uid
+msgid "Last Updated by"
+msgstr "اخر تعديل بواسطة"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__write_date
+msgid "Last Updated on"
+msgstr "تاريخ اخر تعديل"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__f_legacy_order_id
+msgid "Legacy Order Id"
+msgstr "رقم  الطلب\\سابق"
+
+#. module: falak_product_prices_history
+#: model:ir.actions.act_window,name:falak_product_prices_history.f_legacy_prices_action_window
+#: model:ir.ui.menu,name:falak_product_prices_history.f_legacy_prices
+msgid "Legacy Prices"
+msgstr "اسعار سابقة"
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_f_legacy_price_history_lines
+msgid "Legacy price history"
+msgstr "سجل اسعار سابقة"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__price_after_disc
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__price_after_disc
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__price_after_disc
+msgid "Net Price"
+msgstr "السعر بعد الخصم"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__order_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__order_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__order_id
+msgid "Order"
+msgstr "طلبية"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__partner_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__partner_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__partner_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__partner_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__partner_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__partner_id
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_account_move_line_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_product_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_product_purchase_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_purchase_order_line_price_history_view_search
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_sale_order_line_price_history_view_search
+msgid "Partner"
+msgstr "الزبون\\المورد"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__price_unit
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__f_price
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__price_unit
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__price_unit
+msgid "Price"
+msgstr "السعر"
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_history_setting_customs
+msgid "Price Histroy"
+msgstr "سجل الاسعار"
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_product_template
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_product_template__f_product_history
+msgid "Product History"
+msgstr "سجل اسعار المنتج"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_product_product__f_product_purchase_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_product_template__f_product_purchase_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_res_config_settings__f_product_purchase_history
+msgid "Product Purchase History"
+msgstr "سجل اسعار المشتريات للمنتج"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_product_product__f_product_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_res_config_settings__f_product_history
+msgid "Product Sale History"
+msgstr "سجل اسعار المبيعات للمنتج"
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_product_product
+msgid "Product Variant"
+msgstr "متغير المنتج "
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_purchase_order_line__f_purchase_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_res_config_settings__f_purchase_history
+msgid "Purchase History"
+msgstr "سجل اسعار طلبية الشراء"
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_purchase_order_line
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__f_purchase_order_line_id
+msgid "Purchase Order Line"
+msgstr "بند أمر الشراء"
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_product_form_inherit_view
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_product_tmp_form_inherit_view
+msgid "Purchase Price History"
+msgstr "سجل اسعار المشتريات"
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_f_purchase_order_line_price_history_po
+msgid "Purchase order line price history line"
+msgstr "خط سجل اسعار خط طلبية الشراء"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__product_uom_qty
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__f_qty
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__product_uom_qty
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__product_uom_qty
+msgid "Qty"
+msgstr "الكمية"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__product_uom_qty
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__product_uom_qty
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_res_config_settings__f_sale_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_sale_order_line__f_sale_history
+msgid "Sale History"
+msgstr "سجل اسعار طلبية المبيعات"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__f_sale_order_line_id
+msgid "Sale Order Line"
+msgstr "خط طلبية البيع"
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_product_form_inherit_view
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_product_tmp_form_inherit_view
+msgid "Sale Price History"
+msgstr "سجل اسعار المبيعات"
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_f_sale_order_line_price_history_s
+msgid "Sale order line price history"
+msgstr "سجل اسعار خط طلبية المبيعات"
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "بند أمر المبيعات"
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_account_move_line_price_history_view_tree
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_purchase_order_line_price_history_view_tree
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_sale_order_line_price_history_view_tree
+msgid "Set"
+msgstr "اختيار"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_account_move_line__smart_search
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__smart_search
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__smart_search
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__smart_search
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__smart_search
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__smart_search
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__smart_search
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_product_product__smart_search
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_product_template__smart_search
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_purchase_order_line__smart_search
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_res_config_settings__smart_search
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_sale_order_line__smart_search
+msgid "Smart Search"
+msgstr "بحث متقدم"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__source
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_legacy_price_history_lines__f_source
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__source
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__source
+msgid "Source"
+msgstr "المصدر"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__source_order_line_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__source_order_line_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__source_order_line_id
+msgid "Source order line"
+msgstr "مصدر خط الطلبية"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_account_move_line_price_history_a__tax_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_price_history_p__tax_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_sale_order_line_price_history_s__tax_id
+msgid "Tax"
+msgstr "ضريبة"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__tax_id
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__tax_id
+msgid "Taxes"
+msgstr "ضرائب"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,help:falak_product_prices_history.field_f_product_purchase_price_history_p__product_uom_qty
+#: model:ir.model.fields,help:falak_product_prices_history.field_f_purchase_order_line_price_history_po__product_uom_qty
+msgid ""
+"The optional quantity expressed by this line, eg: number of product sold. "
+"The quantity is not a legal requirement but is very useful for some reports."
+msgstr ""
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__price_unit
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__price_unit
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: falak_product_prices_history
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_product_purchase_price_history_p__product_uom
+#: model:ir.model.fields,field_description:falak_product_prices_history.field_f_purchase_order_line_price_history_po__product_uom
+msgid "Unit of Measure"
+msgstr "وحدة القياس"
+
+#. module: falak_product_prices_history
+#: model_terms:ir.ui.view,arch_db:falak_product_prices_history.f_legacy_proice_history
+msgid "WorkCenter Group"
+msgstr ""
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_f_product_price_history_p
+msgid "product line price history"
+msgstr "سعر خط بيع المنتج"
+
+#. module: falak_product_prices_history
+#: model:ir.model,name:falak_product_prices_history.model_f_product_purchase_price_history_p
+msgid "product line purchase price history"
+msgstr "سعر خط شراء المنتج"

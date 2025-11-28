@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<template id="report_mo_details_documents">
+		<t t-call="web.html_container">
+			<t t-set="docs" t-value="docs.with_context(lang=docs[0].f_user_id.lang)" />
+			<t t-call="web.external_layout">
+				<div class="page" style="text-align: center;">
+					<div>
+						<b>
+							Print Date :
+							<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')" />
+						</b>
+					</div>
+					<br />
+					<div>
+	
+						<h3>Manufacturing Orders</h3>
+						<b>
+							Production Date :
+							<span t-field="docs[0].f_order_date" />
+						</b>
+					</div>
+					<br />
+	
+					<table class="table table-sm">
+						<thead style="display:table-header-group; border: 1px solid;">
+							<tr>
+								<th style="border: 1px solid;">Product ID</th>
+								<th style="border: 1px solid;">Product Name</th>
+								<th style="border: 1px solid;">production Quantity</th>
+								<th style="border: 1px solid;">On Hand Quantity</th>
+	
+							</tr>
+						</thead>
+	
+						<tbody>
+	
+							<t t-foreach="docs.sorted(key=lambda child:(child.f_product_id.default_code))" t-as="child">
+	
+								<tr>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-field="child.f_product_id.default_code" />
+									</td>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-field="child.f_product_name" />
+									</td>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-field="child.f_production_qty" />
+	
+									</td>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-field="child.f_on_hand_qty" />
+	
+									</td>
+									
+								</tr>
+							</t>
+						</tbody>
+	
+					</table>
+					<br />
+					<br />
+					<div class="row">
+						<div class="col-6">
+							<span>Signature : ---------------------------</span>
+						</div>
+					</div>
+				</div>
+			</t>
+		</t>
+	</template>
+
+
+	<template id="report_mo_details">
+		<t t-call="web.html_container">
+			<t t-set="is_pro_forma" t-value="True"/>
+        -	<t t-set="docs" t-value="docs.with_context(proforma=True)"/>
+			<t t-call="falak_mass_manufacturing.report_mo_details_documents" t-lang="docs[0].f_user_id.lang"/>
+		</t>
+	</template>
+</odoo>

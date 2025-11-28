@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+f_lc_management_f_lc_management,f_lc_management.f.lc.management,model_f_lc_management,base.group_user,1,1,1,1
+f_lc_management_f_insurance_policy,f_lc_management.f.insurance.policy,model_f_insurance_policy,base.group_user,1,1,1,1
+
+

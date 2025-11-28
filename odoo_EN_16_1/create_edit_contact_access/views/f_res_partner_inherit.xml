@@ -1,0 +1,107 @@
+<odoo>
+	<data>
+
+		<record id="f_view_create_edit_contact_form" model="ir.ui.view">
+			<field name="name">res.partner.creation</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+
+				<xpath expr='//form' position='attributes'>
+					<attribute name="create">false</attribute>
+				</xpath>
+
+				<xpath expr='//form' position='attributes'>
+					<attribute name="edit">false</attribute>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="f_view_create_edit_contact_tree" model="ir.ui.view">
+			<field name="name">res.partner.creation.tree</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_tree" />
+			<field name="arch" type="xml">
+
+				<xpath expr='//tree' position='attributes'>
+					<attribute name="create">false</attribute>
+				</xpath>
+				<xpath expr='//tree' position='attributes'>
+					<attribute name="multi_edit">false</attribute>
+				</xpath>
+
+			</field>
+		</record>
+
+
+		<record id="f_view_create_edit_contact_kanban"
+			model="ir.ui.view">
+			<field name="name">res.partner.creation.kanban</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.res_partner_kanban_view" />
+			<field name="arch" type="xml">
+
+				<xpath expr='//kanban' position='attributes'>
+					<attribute name="create">false</attribute>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="f_view_creation_contact_form" model="ir.ui.view">
+			<field name="name">res.partner.access.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="create_edit_contact_access.f_view_create_edit_contact_form" />
+			<field name="groups_id" eval="[Command.link(ref('base.group_user'))]"/>
+			<!-- <field name="groups_id"
+				eval="[(6, 0, [ref('create_edit_contact_access.f_can_create_contact')])]" /> -->
+			<field name="arch" type="xml">
+
+				<xpath expr='//form' position='attributes'>
+					<attribute name="create">true</attribute>
+				</xpath>
+
+				<xpath expr='//form' position='attributes'>
+					<attribute name="edit">true</attribute>
+				</xpath>
+			</field>
+		</record>
+
+
+		<record id="f_view_creation_contact_tree" model="ir.ui.view">
+			<field name="name">res.partner.access.tree</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="create_edit_contact_access.f_view_create_edit_contact_tree" />
+			<field name="groups_id" eval="[Command.link(ref('base.group_user'))]"/>
+			<!-- <field name="groups_id"
+				eval="[(6, 0, [ref('create_edit_contact_access.f_can_create_contact')])]" /> -->
+			<field name="arch" type="xml">
+
+				<xpath expr='//tree' position='attributes'>
+					<attribute name="create">true</attribute>
+				</xpath>
+				<xpath expr='//tree' position='attributes'>
+					<attribute name="multi_edit">true</attribute>
+				</xpath>
+
+			</field>
+		</record>
+
+
+		<record id="f_view_creation_contact_kanban" model="ir.ui.view">
+			<field name="name">res.partner.access.kanban</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="create_edit_contact_access.f_view_create_edit_contact_kanban" />
+			<field name="groups_id" eval="[Command.link(ref('base.group_user'))]"/>
+		<!-- 	<field name="groups_id"
+				eval="[(6, 0, [ref('create_edit_contact_access.f_can_create_contact')])]" /> -->
+			<field name="arch" type="xml">
+
+				<xpath expr='//kanban' position='attributes'>
+					<attribute name="create">true</attribute>
+				</xpath>
+
+
+			</field>
+		</record>
+	</data>
+</odoo>

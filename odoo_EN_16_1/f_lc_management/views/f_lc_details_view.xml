@@ -1,0 +1,123 @@
+<odoo>
+	<!-- menu item -->
+	<record model="ir.actions.act_window"
+		id="f_lc_details_action_window">
+		<field name="name">LC Details</field>
+		<field name="res_model">f.lc.management</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<menuitem name="LC Details" id="f_po_lc_details"
+		parent="purchase.menu_purchase_root"
+		action="f_lc_management.f_lc_details_action_window" />
+	<!-- search -->
+	<record id="lc_details_search_view" model="ir.ui.view">
+		<field name="name">lc.details.search.view</field>
+		<field name="model">f.lc.management</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="f_purchase_id"
+					filter_domain="[('f_purchase_id', 'ilike', self)]" />
+
+				<field name="f_lc_name"
+					filter_domain="[('f_lc_name', 'ilike', self)]" />
+
+				<field name="f_insurance_name"
+					filter_domain="[('f_insurance_name', 'ilike', self)]" />
+
+				<field name="f_account_journal"
+					filter_domain="[('f_account_journal', 'ilike', self)]" />
+
+				<field name="f_bank_name"
+					filter_domain="[('f_bank_name', 'ilike', self)]" />
+
+				<field name="f_bank_account_no"
+					filter_domain="[('f_bank_account_no', 'ilike', self)]" />
+
+				<group expand="1" string="Group By">
+
+					<filter string="LC  Date" name="f_lc_date"
+						context="{'group_by':'f_lc_date'}" />
+
+
+				</group>
+			</search>
+		</field>
+	</record>
+	<!-- tree view -->
+	<record model="ir.ui.view" id="f_lc_details_list">
+		<field name="name">f.lc.details.list</field>
+		<field name="model">f.lc.management</field>
+		<field name="arch" type="xml">
+			<tree>
+
+				<field name="f_purchase_id" />
+				<field name="f_lc_name" />
+				<field name="f_lc_number" />
+				<field name="f_lc_date" />
+				<field name="f_lc_currency" optional="hide" />
+				<field name="f_insurance_name" />
+				<field name="f_insurance_policy" optional="hide" />
+				<field name="f_insurance_attachment" optional="hide" />
+				<field name="f_notes" optional="hide" />
+				<field name="f_account_journal" optional="hide" />
+				<field name="f_debit_account" optional="hide" />
+				<field name="f_credit_account" optional="hide" />
+				<field name="f_bank_name" optional="hide" />
+				<field name="f_bank_account_no" optional="hide" />
+
+			</tree>
+		</field>
+	</record>
+	<!-- form view -->
+
+	<record model="ir.ui.view" id="f_lc_details_list_form">
+		<field name="name">f_lc_details_list_form</field>
+		<field name="model">f.lc.management</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<div class="oe_title">
+
+						<h1>
+							<field name="f_lc_name" readonly="1" />
+						</h1>
+					</div>
+					<group string="LC Details">
+
+						<group>
+							<field name="f_purchase_id" />
+							<field name="f_lc_number" />
+							<field name="f_lc_date" />
+							<field name="f_lc_currency" />
+						</group>
+					</group>
+					<group>
+						<group string="Insurance Details">
+
+							<field name="f_insurance_name" />
+							<field name="f_insurance_policy" />
+							<field name="f_insurance_attachment" filename="file_name_insurance" />
+
+							<field name="file_name_insurance" invisible="1" />
+							<field name="f_notes" />
+							<field name="f_account_journal" />
+							<field name="f_debit_account" />
+							<field name="f_credit_account" />
+
+						</group>
+						<group string="Bank Details">
+							<field name="f_bank_name" />
+							<field name="f_bank_account_no" />
+						</group>
+					</group>
+				</sheet>
+				<div class="oe_chatter">
+					<field name="message_follower_ids" widget="mail_followers"
+						groups="base.group_user" />
+					<field name="message_ids" widget="mail_thread" />
+				</div>
+			</form>
+		</field>
+	</record>
+</odoo>
+		

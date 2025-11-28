@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<data>
+
+		<!--<template id="f_actioncustom_assets_backend" name="custom popup assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+				<script type="text/javascript" src="/allow_user_validate_stock/static/src/js/model.js"></script>	
+				
+				
+			</xpath>
+		</template>-->
+    </data>
+</odoo>

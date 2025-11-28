@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="f_commission_calculation_tree_view" model="ir.ui.view">
+        <field name="name">f.commission.calculation.tree.view</field>
+        <field name="model">f.commission.calculation</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="f_name" />
+                <field name="f_period" />
+                <field name="f_commission_role_ids" widget="many2many_tags" />
+                <field name="f_state"
+                       decoration-success="f_state == 'done'"
+                       decoration-muted="f_state == 'draft'"
+                       decoration-info="f_state == 'confirm'"
+                       decoration-danger="f_state == 'cancel'"
+                       widget="badge" />
+                <field name="f_calculated_at" />
+                <field name="f_comments" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="f_commission_calculation_form_view" model="ir.ui.view">
+        <field name="name">f.commission.calculation.form.view</field>
+        <field name="model">f.commission.calculation</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="f_calculate_commission" string="Calculate"
+                        type="object" class="oe_highlight"
+                        attrs="{'invisible':[('f_state','in',('draft','cancel','done'))]}" />
+                    <button name="f_confirm_calculate" string="Confirm"
+                        type="object" class="oe_highlight"
+                        attrs="{'invisible':[('f_state','in',('confirm','cancel','done'))]}" />
+                    <button name="f_cancel_calculate" string="Cancel"
+                        type="object"
+                        attrs="{'invisible':[('f_state','in',('cancel'))]}" />
+                    <button name="f_reset_to_draft" string="Reset To Draft"
+                        type="object"
+                        attrs="{'invisible':[('f_state','in',('draft','confirm','done'))]}" />
+                    <field name="f_state" widget="statusbar" statusbar_visible="draft,confirm,done"/>
+                    <button name="f_compute_exclude_amount" string="Calculate Exclude" type="object" class="oe_highlight"/>
+                    <button name="f_compute_include_amount" string="Calculate Include" type="object" class="oe_highlight"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="f_get_commission_result" type="object" class="oe_stat_button" icon="fa-bars">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Results</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="f_name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="f_period" />
+                            <field name="f_commission_role_ids" widget="many2many_tags"/>
+                            <field name="f_calculated_at" />
+                            <field name="f_comments" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Adjustment" name="adjustment">
+                            <field name="f_collection_adjustment_id" mode="tree" >
+                                <tree string="Adjustment Lines" editable="bottom">
+                                    <field name="f_commission_setup_id" />
+                                    <field name="f_commission_role_id" />
+                                    <field name="f_adjustment_type" />
+                                    <field name="f_type" readonly="1"/>
+                                    <field name="f_amount" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="f_commission_calculation_action" model="ir.actions.act_window">
+        <field name="name">Commission Calculation</field>
+        <field name="res_model">f.commission.calculation</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Commission Calculation"
+              id="f_commission_calculation_menu"
+              parent="f_commission_management.f_commission_management_main_menu"
+              action="f_commission_management.f_commission_calculation_action"
+              sequence="2"
+              groups="f_commission_management.f_commission_manage"/>
+
+</odoo>

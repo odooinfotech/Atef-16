@@ -1,0 +1,49 @@
+<odoo>
+	<data noupdate="1"> 
+		<record id="f_shipping_stage_deposit_lc" model="f.shipping.stage">
+			<field name="f_stage_name">Deposit/ LC</field>
+			<field name="f_owner">planning</field>
+			<field name="f_stage_code">deposit</field>
+		</record>
+		<record id="f_shipping_stage_production" model="f.shipping.stage">
+			<field name="f_stage_name">Production</field>
+			<field name="f_owner">planning</field>
+			<field name="f_stage_code">production</field>
+		</record>
+		<record id="f_shipping_stage_ready_to_shipped" model="f.shipping.stage">
+			<field name="f_stage_name">Ready to be shipped</field>
+			<field name="f_owner">planning</field>
+			<field name="f_stage_code">ready_to_shipp</field>
+		</record>
+		<record id="f_shipping_stage_shipped" model="f.shipping.stage">
+			<field name="f_stage_name">Shipped</field>
+			<field name="f_owner">shipping</field>
+			<field name="f_stage_code">shipped</field>
+		</record>
+		<record id="f_shipping_stage_arrived" model="f.shipping.stage">
+			<field name="f_stage_name">Arrived</field>
+			<field name="f_owner">shipping</field>
+			<field name="f_stage_code">arrived</field>
+		</record>
+		<record id="f_shipping_stage_custom_clearance" model="f.shipping.stage">
+			<field name="f_stage_name">Custom Clearance</field>
+			<field name="f_owner">shipping</field>
+			<field name="f_stage_code">clearance</field>
+		</record>
+		<record id="f_shipping_stage_arrived_at_company" model="f.shipping.stage">
+			<field name="f_stage_name">Arrived at company</field>
+			<field name="f_owner">shipping</field>
+			<field name="f_stage_code">arrived_company</field>
+		</record>
+		<record id="f_shipping_stage_ended" model="f.shipping.stage">
+			<field name="f_stage_name">Ended</field>
+			<field name="f_owner">shipping</field>
+			<field name="f_stage_code">done</field>
+		</record>
+		<record id="f_shipping_stage_cancel" model="f.shipping.stage">
+			<field name="f_stage_name">Canceled</field>
+			<field name="f_owner">planning</field>
+			<field name="f_stage_code">canceled</field>
+		</record>
+	</data>
+</odoo>

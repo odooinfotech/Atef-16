@@ -1,0 +1,8 @@
+<odoo>
+    <record id="f_sales_team_access_rule" model="ir.rule">
+        <field name="name">Sales Team Access Rule</field>
+        <field name="model_id" ref="sale.model_sale_order"/>
+        <field name="groups" eval="[(4, ref('f_group_sales_team_access'))]"/>
+        <field name="domain_force">[('team_id.user_id', 'in', [user.id])]</field>
+    </record>
+</odoo>

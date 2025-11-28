@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    
+     <record model="ir.module.category" id="f_aging_module_category">
+		<field name="name">Custom Aging Report Access</field>
+		<field name="sequence">109</field>
+	
+	</record> 
+        
+   <record id="f_aging_access_group_id" model="res.groups">
+			<field name="name">Admin Group</field>
+			<field name="category_id"
+				ref="f_custom_aging_report.f_aging_module_category" />
+			
+	</record>
+	
+	
+
+            
+            
+
+        
+
+        <record id="wizard_xls_aging_form_view" model="ir.ui.view">
+            <field name="name">f.product.aging.xls.form.view</field>
+            <field name="model">f.product.aging</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="date" />
+                         
+                        </group>
+                        
+                        </group>
+                        <group>
+                          <group>
+                            <field name="warehouse"  options='{"no_create": True}'/>
+                         
+                        </group>
+                        
+                        </group>
+                         <group>
+                                 <field name="f_type" />
+                            <field name="breakdown_days" />
+                         
+                        </group>
+                       
+                    
+                
+                    
+                 
+                    <footer>
+                    	<button name="get_aging_product_details" type="object" string="Run Product Aging" class="oe_highlight"/>
+                    
+                        
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_wizard_xlsaging" model="ir.actions.act_window">
+            <field name="name">Product Aging Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">f.product.aging</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem action="action_wizard_xlsaging" id="menuvagings_wizard"
+                  name="Product Aging Report" parent="stock.menu_warehouse_report" groups="f_custom_aging_report.f_aging_access_group_id" sequence='400'/>
+                    
+
+    </data>
+</odoo>

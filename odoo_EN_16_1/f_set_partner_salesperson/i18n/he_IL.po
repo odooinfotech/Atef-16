@@ -1,0 +1,31 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* f_royal_sales_customs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-12 13:39+0000\n"
+"PO-Revision-Date: 2022-12-12 13:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: f_royal_sales_customs
+#: model_terms:ir.ui.view,arch_db:f_royal_sales_customs.f_inherit_sale_image_doc
+msgid "<span>Image</span>"
+msgstr "<span>תמונה</span>"
+
+#. module: f_royal_sales_customs
+#: model:ir.model,name:f_royal_sales_customs.model_sale_order
+msgid "Sales Order"
+msgstr "הזמנת לקוח"
+
+#. module: f_royal_sales_customs
+#: model:ir.model.fields,field_description:f_royal_sales_customs.field_sale_order__f_show_image
+msgid "Show Product Image"
+msgstr ""

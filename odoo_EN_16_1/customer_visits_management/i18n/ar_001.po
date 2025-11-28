@@ -1,0 +1,469 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* customer_visits_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-16 12:29+0000\n"
+"PO-Revision-Date: 2024-04-16 12:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_tree_view
+msgid "Aging"
+msgstr ""
+
+#. module: customer_visits_management
+#: model:ir.actions.act_window,name:customer_visits_management.f_all_visits_action
+#: model:ir.ui.menu,name:customer_visits_management.f_all_visits
+msgid "All Visits"
+msgstr "جميع الزيارات"
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_form_view
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_tree_view
+msgid "Calculate Sales"
+msgstr "احتساب المبيعات"
+
+#. module: customer_visits_management
+#: model:ir.actions.server,name:customer_visits_management.f_calculate_visits_sales_ir_actions_server
+#: model:ir.cron,cron_name:customer_visits_management.f_calculate_visits_sales
+msgid "Calculate Visits Sales"
+msgstr ""
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visit_search_view
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_form_view
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_tree_view
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__f_visits__state__cancel
+msgid "Cancelled"
+msgstr "ملغية"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_checkin_latitude
+msgid "Check In Latitude"
+msgstr "خطوط العرض المسجلة"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_checkin_longitude
+msgid "Check In Longitude"
+msgstr "خطوط الطول المسجلة"
+
+#. module: customer_visits_management
+#: model:ir.model,name:customer_visits_management.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_cancel_wizard__create_uid
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_customer_routes__create_uid
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__create_uid
+msgid "Created by"
+msgstr "انشئ بواسطة"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_cancel_wizard__create_date
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_customer_routes__create_date
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__create_date
+msgid "Created on"
+msgstr "انشئ بتاريخ"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_customer
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_map
+msgid "Customer Name"
+msgstr "اسم الزبون"
+
+#. module: customer_visits_management
+#: model:ir.actions.act_window,name:customer_visits_management.f_customer_routes_action
+#: model:ir.model,name:customer_visits_management.model_f_customer_routes
+msgid "Customer Routes"
+msgstr "مسارات الزبون"
+
+#. module: customer_visits_management
+#: model:ir.ui.menu,name:customer_visits_management.f_customer_visit_management
+msgid "Customer Visit Management"
+msgstr "ادارة زيارات الزبائن"
+
+#. module: customer_visits_management
+#: model:res.groups,name:customer_visits_management.customer_visits_admin
+msgid "Customer Visits Admin"
+msgstr ""
+
+#. module: customer_visits_management
+#: model:ir.module.category,name:customer_visits_management.f_customer_visits
+msgid "Customer Visits Management"
+msgstr ""
+
+#. module: customer_visits_management
+#: model:res.groups,name:customer_visits_management.customer_visits_useres
+msgid "Customer Visits User"
+msgstr ""
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_date
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visit_search_view
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_customer_routes__f_days
+msgid "Day"
+msgstr "اليوم"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__res_partner__f_frequency_unit__days
+msgid "Days"
+msgstr "ايام"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_deference
+msgid "Deference"
+msgstr "الفرق"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_cancel_wizard__display_name
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_customer_routes__display_name
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__f_visits__state__done
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visit_search_view
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_form_view
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_tree_view
+msgid "Done"
+msgstr "مكتملة"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__f_visits__state__draft
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visit_search_view
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_res_partner__f_frequency
+#: model:ir.model.fields,field_description:customer_visits_management.field_res_users__f_frequency
+msgid "Frequency"
+msgstr ""
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_res_partner__f_frequency_unit
+#: model:ir.model.fields,field_description:customer_visits_management.field_res_users__f_frequency_unit
+msgid "Frequency Unit"
+msgstr ""
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__f_customer_routes__f_days__friday
+msgid "Friday"
+msgstr "الجمعة"
+
+#. module: customer_visits_management
+#. odoo-python
+#: code:addons/customer_visits_management/models/f_visits.py:0
+#, python-format
+msgid "From date must be the same date you entered."
+msgstr " التاريخ من يجب أن يكون نفس التاريخ الذي أدخلته."
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_cancel_wizard__id
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_customer_routes__id
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: customer_visits_management
+#: model:ir.model,name:customer_visits_management.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_cancel_wizard____last_update
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_customer_routes____last_update
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits____last_update
+msgid "Last Modified on"
+msgstr "اخر تعديل بتاريخ"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_cancel_wizard__write_uid
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_customer_routes__write_uid
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث بواسطة"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_cancel_wizard__write_date
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_customer_routes__write_date
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__write_date
+msgid "Last Updated on"
+msgstr "اخر تعديل بتاريخ"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__f_customer_routes__f_days__monday
+msgid "Monday"
+msgstr "الاثنين"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__res_partner__f_frequency_unit__months
+msgid "Months"
+msgstr ""
+
+#. module: customer_visits_management
+#: model:ir.actions.act_window,name:customer_visits_management.f_my_visits_action
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_calender
+msgid "My Visits"
+msgstr "الزيارات الخاصة بي"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_customer_routes__f_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_customer_routes__f_note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_note
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: customer_visits_management
+#: model:ir.actions.server,name:customer_visits_management.f_scheuled_action_ir_actions_server
+#: model:ir.cron,cron_name:customer_visits_management.f_scheuled_action
+msgid "Orient Visits Planning"
+msgstr ""
+
+#. module: customer_visits_management
+#. odoo-python
+#: code:addons/customer_visits_management/models/f_visits.py:0
+#, python-format
+msgid "Partner Aging Report"
+msgstr ""
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_partner_latitude
+msgid "Partner Latitude"
+msgstr "خطوط عرض الزبون"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_partner_longitude
+msgid "Partner Longitude"
+msgstr "خطوط طول الزبون"
+
+#. module: customer_visits_management
+#: model:ir.model,name:customer_visits_management.model_account_payment
+msgid "Payments"
+msgstr "الدفعات"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_reason_cancel
+msgid "Reason Of Cancel"
+msgstr "سبب الالغاء"
+
+#. module: customer_visits_management
+#: model:ir.actions.act_window,name:customer_visits_management.cancel_wizard_action
+msgid "Reason Of Cancel Wizard"
+msgstr ""
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_cancel_wizard__f_reason_cancel
+msgid "Reason of cancel"
+msgstr "سبب الالغاء"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_route
+#: model:ir.model.fields,field_description:customer_visits_management.field_res_partner__f_route
+#: model:ir.model.fields,field_description:customer_visits_management.field_res_users__f_route
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visit_search_view
+msgid "Route"
+msgstr "المسار"
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_def_kanban
+msgid "Route :"
+msgstr "المسار :"
+
+#. module: customer_visits_management
+#: model:ir.ui.menu,name:customer_visits_management.f_route
+msgid "Routes"
+msgstr "المسارات"
+
+#. module: customer_visits_management
+#: model:ir.model,name:customer_visits_management.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_sales_person
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visit_search_view
+msgid "Sales Person"
+msgstr "مندوب المبيعات"
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_def_kanban
+msgid "Sales Person :"
+msgstr "مندوب المبيعات :"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__f_customer_routes__f_days__saturday
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.cancel_wizard_form
+msgid "Save"
+msgstr "حفظ"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__sequence
+msgid "Sequence"
+msgstr "الترتيب"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__f_customer_routes__f_days__sunday
+msgid "Sunday"
+msgstr "الاحد"
+
+#. module: customer_visits_management
+#. odoo-python
+#: code:addons/customer_visits_management/models/f_visits.py:0
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_tree_view
+#, python-format
+msgid "Target"
+msgstr "الهدف"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__f_customer_routes__f_days__thursday
+msgid "Thursday"
+msgstr "الخميس"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_date_from
+msgid "Time From"
+msgstr " من الوقت"
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_def_kanban
+msgid "Time From :"
+msgstr "من الوقت :"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_date_to
+msgid "Time To"
+msgstr "الى الوقت"
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_def_kanban
+msgid "Time To :"
+msgstr "الى الوقت :"
+
+#. module: customer_visits_management
+#. odoo-python
+#: code:addons/customer_visits_management/models/f_visits.py:0
+#, python-format
+msgid "To date must be the same date you entered."
+msgstr "الى الوقت يجب أن يكون نفس التاريخ الذي أدخلته."
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visit_search_view
+msgid "Today"
+msgstr "اليوم"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_invoice_total
+msgid "Total Invoices"
+msgstr "إجمالي الفواتير"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_payments_total
+msgid "Total Payments"
+msgstr "إجمالي الدفعات"
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_def_kanban
+msgid "Total Payments :"
+msgstr "إجمالي الدفعات :"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_sales_total
+msgid "Total Sales"
+msgstr "إجمالي المبيعات"
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_my_visits_def_kanban
+msgid "Total Sales :"
+msgstr "إجمالي المبيعات :"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__f_customer_routes__f_days__tuesday
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#. module: customer_visits_management
+#: model_terms:ir.ui.view,arch_db:customer_visits_management.f_base_view_partner_form
+msgid "Update Visits"
+msgstr "تحديث الزيارات"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_account_bank_statement_line__f_visit
+#: model:ir.model.fields,field_description:customer_visits_management.field_account_move__f_visit
+#: model:ir.model.fields,field_description:customer_visits_management.field_account_payment__f_visit
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_cancel_wizard__f_visit
+#: model:ir.model.fields,field_description:customer_visits_management.field_sale_order__f_visit
+msgid "Visit"
+msgstr "الزيارة"
+
+#. module: customer_visits_management
+#: model:ir.model,name:customer_visits_management.model_f_visits
+#: model:ir.ui.menu,name:customer_visits_management.f_visits
+msgid "Visits"
+msgstr "الزيارات"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__f_customer_routes__f_days__wednesday
+msgid "Wednesday"
+msgstr "الاربعاء"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__res_partner__f_frequency_unit__weeks
+msgid "Weeks"
+msgstr "اسابيع"
+
+#. module: customer_visits_management
+#: model:ir.model.fields.selection,name:customer_visits_management.selection__res_partner__f_frequency_unit__years
+msgid "Years"
+msgstr "سنوات"
+
+#. module: customer_visits_management
+#: model:ir.model.fields,field_description:customer_visits_management.field_f_visits__f_allowed_user
+msgid "check"
+msgstr "التحقق"
+
+#. module: customer_visits_management
+#: model:ir.model,name:customer_visits_management.model_f_cancel_wizard
+msgid "f.cancel.wizard"
+msgstr ""
+
+#. module: customer_visits_management
+#: model:ir.ui.menu,name:customer_visits_management.f_my_visits
+msgid "my Visits"
+msgstr "الزيارات الخاصة بي"

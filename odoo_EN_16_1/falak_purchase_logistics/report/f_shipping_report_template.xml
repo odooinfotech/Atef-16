@@ -1,0 +1,131 @@
+<odoo>
+    <record id="f_shipping_report" model="ir.ui.view">
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <t t-name="studio_report_document">
+                <div class="page">
+                    <div class="row">
+                        <div class="col h2 text-center">
+                            <span >
+
+                                Shipping Report
+                                <br/>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <span>
+                                <strong>Shipment Number:</strong>
+                                <br/>
+                            </span>
+                            <span t-field="doc.f_shipment_num"/>
+                        </div>
+
+                        <div class="col-3"/>
+
+
+                        <div class="col-3">
+                            <span>
+                                <strong>Shipment Stage:</strong>
+                                <br/>
+                            </span>
+                            <span t-field="doc.f_shipp_stage.display_name"/>
+                        </div>
+
+
+                    </div>
+                    <br/>
+                    <br/>
+
+                    <table class="table o_report_block_table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <span>Vendor</span>
+                                </th>
+                                <th>
+                                    <span>Product</span>
+                                </th>
+                                <th>
+                                    <span>Qty</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="doc.f_po_plan_id" t-as="table_line">
+                                <td>
+                                    <span t-field="table_line.f_vendor_name.display_name"/>
+                                </td>
+                                <td>
+                                    <span t-field="table_line.display_name"/>
+                                </td>
+                                <td>
+                                    <span t-field="table_line.f_shipped_amount"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div t-attf-class="footer row">
+
+
+                            <div t-if="report_type == 'pdf'" class="text-left col-3">
+                                Page:
+                                <span class="page"/>
+                                /
+                                <span class="topage"/>
+                            </div>
+                            <div class="col-3"/>
+                            <div class="col-3"/>
+                            <div  t-if="report_type == 'pdf'" class="text-right col-3">
+                                Date:
+                                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+
+
+                            </div>
+                    </div>
+                </div>
+            </t>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" eval="False"/>
+        <field name="key">studio_customization.studio_report_docume_8d116f43-1c94-4ed3-ab36-ce0daaafac11_document
+        </field>
+        <field name="mode">primary</field>
+        <field name="model" eval="False"/>
+        <field name="name">f_shipping_report</field>
+        <field name="priority">16</field>
+        <field name="type">qweb</field>
+    </record>
+
+
+    <record id="f_shipping_report_view" model="ir.ui.view">
+        <field name="active" eval="True"/>
+        <field name="arch" type="xml">
+            <t t-name="f_shipping_report">
+                <t t-foreach="docs" t-as="doc">
+
+                   <t t-set="lang" t-value="request.env.user.lang"/>
+
+
+                    <t t-call="web.basic_layout">
+                        <t t-call="falak_purchase_logistics.f_shipping_report"/>
+                        <p style="page-break-after: always;"/>
+                    </t>
+                </t>
+            </t>
+        </field>
+        <field name="field_parent" eval="False"/>
+        <field name="groups_id" eval="[(6, 0, [])]"/>
+        <field name="inherit_id" eval="False"/>
+        <field name="key">studio_customization.studio_report_docume_8d116f43-1c94-4ed3-ab36-ce0daaafac11</field>
+        <field name="mode">primary</field>
+        <field name="model" eval="False"/>
+        <field name="name">f_shipping_report_view</field>
+        <field name="priority">16</field>
+        <field name="type">qweb</field>
+    </record>
+</odoo>

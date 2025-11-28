@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+
+
+
+	
+	
+        <record id="view_report_partner_detailed_pivot" model="ir.ui.view">
+            <field name="name">f.customer.detailed.report.pivot</field>
+            <field name="model">f.customer.detailed.report</field>
+            <field name="arch" type="xml">
+                <pivot  string="Partner Detailed Statement Analysis">
+                    <field name="partner_id" type="row"/>
+                    <field name="date" interval="month" type="col"/>
+                    <field name="balance" string="balance" type="measure"/>
+ 			 <field name="acum_balance"  invisible="1"/>
+                </pivot>
+            </field>
+        </record>
+
+        
+        <record id="view_report_partner_detailedt_tree" model="ir.ui.view">
+            <field name="name">f.customer.detailed.report.tree</field>
+            <field name="model">f.customer.detailed.report</field>
+            <field name="arch" type="xml">
+                <tree create ='false' import='false'>
+			 <field name="invoice_id" widget="many2onebutton" optional="hide"/>
+                    <field name="partner_id" optional="hide"/>
+                    <field name="product_list" optional="show"/>
+                    <field name="date" widget="date" optional="show"/>
+                    <field name="ref" optional="show"/>
+                    <field name="type" optional="show"/>
+   <field name="f_note"  optional="hide"/>
+                     <field name="currency_id" invisible="1"/>
+                     <field name="company_currency" invisible="1"/>
+                      <field name="f_initial_balance" options="{'currency_field': 'company_currency'}"  optional="show"/>
+                    <field name="debt" options="{'currency_field': 'company_currency'}" sum="debt"  optional="show"/>
+                    <field name="credit" options="{'currency_field': 'company_currency'}" sum="credit" optional="show"/>
+ 					 <field name="amount_cuurency" options="{'currency_field': 'currency_id'}" optional="hide"/>
+                    <field name="acum_balance" options="{'currency_field': 'company_currency'}" optional="show" decoration-danger="acum_balance &lt; 0"/>
+                    
+                    
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_report_partnersdetailed_form" model="ir.ui.view">
+            <field name="name">f.customer.detailed.report.form</field>
+            <field name="model">f.customer.detailed.report</field>
+            <field name="arch" type="xml">
+                <form string="Partner Detailed Statement Analysis">
+                    <group>
+                        <field name="invoice_id"/>
+                        <field name="state"/>
+                        <field name="journal_id"/>
+                        <field name="partner_id"/>
+                        <field name="date"/>
+                        <field name="balance"/>
+                        <field name="product_list"/>
+                        
+                        
+                        
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_report_partner_detailed_search" model="ir.ui.view">
+            <field name="name">f.customer.detailed.report.search</field>
+            <field name="model">f.customer.detailed.report</field>
+            <field name="arch" type="xml">
+                <search string="Partner Detailed Statement Analysis">
+                    <field name="partner_id"/>
+                    <field name="date"/>
+                    <field name="ref"/>
+                      <field name="account_type"/>
+                       <field name="type"/>
+                
+                    <field name="user_id"/>
+                    <group expand="1" string="Group By">
+                     <filter string="Type" name="type" context="{'group_by':'type'}"/>
+                      <filter string="Account Type" name="account_type" context="{'group_by':'account_type'}"/>
+                       <separator/>
+                        <filter string="Salesperson" name="User" context="{'group_by':'user_id'}"/>
+                        <filter string="Customer" name="customer" context="{'group_by':'partner_id'}"/>
+                        <separator/>
+                        <filter string="Month" name="month" context="{'group_by':'date:month'}"/>
+                        <filter string="Week" name="week" context="{'group_by':'date:week'}"/>
+                        <filter string="Day" name="day" context="{'group_by':'date:day'}"/>
+                        <filter string="Hour" name="hour" context="{'group_by':'date:hour'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+   
+
+		<!-- <record id="action_report_partner_detailed_all_partner" model="ir.actions.act_window">
+            <field name="name">Partner Detailed Statement Report</field>
+            <field name="res_model">f.customer.detailed.report</field>
+            <field name="view_mode">pivot,tree,form</field>
+            <field name="view_id" ref="view_report_partner_detailedt_tree"/>
+            <field name="context">{'search_default_partner_id': active_id}</field>
+            <field name="domain">[('partner_id','=', active_id)]</field>
+        </record> -->
+
+        
+       
+
+ 	  
+		
+
+		
+		
+		
+	
+         
+</odoo>

@@ -1,0 +1,21 @@
+<odoo>
+	<record id="f_inherit_sale_order_statement_view"
+		model="ir.ui.view">
+		<field name="name">f.inherit.sale.order.statem.view</field>
+		<field name="model">sale.order</field>
+		<field name="inherit_id" ref="sale.view_order_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//button[hasclass('oe_stat_button')]"
+				position="before">
+
+				
+
+				<button class="oe_stat_button" type="object" icon="fa-money"
+					groups="f_customer_detailed_statement.f_partnerdeatleds_access_group_id"
+					name="print_deatiledstatement" string="Detailed Statement" />
+
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

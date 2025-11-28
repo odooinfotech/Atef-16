@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="f_mrp_production_report_wizard_form" model="ir.ui.view">
+            <field name="name">f.mrp.production.report.wizard.form</field>
+            <field name="model">f.mrp.production.report.wizard</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Report Date">
+                    <group>
+                        <field name="f_Production_date"/>
+                    </group>
+                    <footer>
+                        <button name="f_set_date" string="Print" type="object"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

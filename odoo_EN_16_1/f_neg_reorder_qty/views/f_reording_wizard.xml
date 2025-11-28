@@ -1,0 +1,62 @@
+<odoo>
+
+
+
+
+
+	<record id="view_current_reorder_qtys_form" model="ir.ui.view">
+		<field name="name">custom.curren.stock.reorder.qtys.form</field>
+		<field name="model">f.stock.reorder.qtys</field>
+		<field name="arch" type="xml">
+			<form>
+					
+					
+					<group>
+
+						<group>
+							
+							<field name="location_id" />
+						</group>
+					</group>
+
+
+
+				<footer>
+					<button name="f_get_reorder_quant" string="View "
+						type="object" class="btn-primary" />
+					<button special="cancel" string="Cancel" class="btn-default" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+
+
+
+
+	<record id="action_f_stock_reorderqty_report"
+		model="ir.actions.act_window">
+		<field name="name">Current Stock</field>
+		<field name="res_model">f.stock.reorder.qtys</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+
+	</record>
+	
+	
+	
+
+		
+
+<menuitem id="menu_f_neg_reorder_qty_report_all" name="Products Less Than Re-order Rules Min Qtys" action="action_f_stock_reorderqty_report" parent="stock.menu_warehouse_report"  sequence="210"/>
+
+    <record id="f_stock_loc_qtys_rulereorderqrt_user_config" model="ir.rule">
+            <field name="name">F Show only available Locations for user </field>
+            <field name="model_id" ref="f_neg_reorder_qty.model_f_stock_reorder_qtys"/>
+            <field name="domain_force">['|',('location_id.f_limited_access','=',False),('location_id.f_allowed_users','in',user.id)]</field>
+        </record>
+
+
+
+
+</odoo>

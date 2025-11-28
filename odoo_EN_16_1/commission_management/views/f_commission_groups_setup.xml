@@ -1,0 +1,106 @@
+<odoo>
+	<data>
+		<record model="ir.actions.act_window"
+			id="f_commission_groups_setup_action_window">
+			<field name="name">Commission Groups Setup</field>
+			<field name="res_model">f.commission.groups.setup</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem name="Commission Groups Setup"
+			id="f_commission_groups_setup_menu"
+			parent="commission_management.f_comm_management_main_menue"
+			action="commission_management.f_commission_groups_setup_action_window"
+			sequence='3' />
+
+
+
+		<record model="ir.ui.view" id="f_commission_groups_setup_tree">
+			<field name="name">f.commission.groups.setup.tree</field>
+			<field name="model">f.commission.groups.setup</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="f_commission_type" optional="show" />
+					<field name="f_description" optional="hide" />
+					<field name="f_period" optional="show" />
+					<field name="f_sales_person" optional="show" widget="many2many_tags"/>
+					<field name="f_target_type" optional="hide" />
+					<field name="f_target" optional="show" />
+					<field name="f_entry_point" widget="percentage"
+						optional="hide" />
+					<field name="f_comm_value_type" optional="show" />
+					<field name="f_comm_value" optional="show" />
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="f_commission_groups_setup_form">
+			<field name="name">f.commission.groups.setup.form</field>
+			<field name="model">f.commission.groups.setup</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button name="f_post_commission_group" string="Post" type="object"
+							class="oe_highlight" attrs="{'invisible': [('f_status', '=', 'posted')]}"/>
+                        <field name="f_status" widget="statusbar"
+							statusbar_visible="draft,posted" />
+					</header>
+					<sheet>
+						<div class="commission_description"
+							style="font-style: bold;font-size: 20px; width: 500px; height : 70px">
+							<h1>
+								<field name="f_description" required="1"
+									placeholder="Description..." attrs="{'readonly': [('f_status', '=', 'posted')]}"/>
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="f_commission_type" attrs="{'readonly': [('f_status', '=', 'posted')]}"/>
+								<field name="f_period" attrs="{'readonly': [('f_status', '=', 'posted')]}"/>
+								<field name="f_sales_person" widget="many2many_tags" attrs="{'readonly': [('f_status', '=', 'posted')]}"/>
+								<field name="f_target_type"
+									attrs="{'invisible': [('f_commission_type', '=', 'collection')],'readonly': [('f_commission_type', '=', 'sales')], 'readonly': [('f_status', '=', 'posted')]}" />
+								<field name="f_target"
+									attrs="{'invisible': [('f_commission_type', '=', 'collection')], 'readonly': [('f_status', '=', 'posted')]}" />
+								<field name="f_entry_point"
+									attrs="{'invisible': ['|',('f_commission_type', '=', 'collection'),('f_commission_type', '=', 'product_based')], 'readonly': [('f_status', '=', 'posted')]}"
+									widget="percentage" />
+							</group>
+							<group>
+								<field name="f_comm_value_type"
+									attrs="{'invisible': [('f_commission_type', '=', 'collection')], 'readonly': [('f_status', '=', 'posted')]}" />
+								<field name="f_comm_value"
+									attrs="{'invisible': ['|',('f_commission_type', '=', 'collection'),('f_comm_value_type', '=', 'cpercentage')], 'readonly': [('f_status', '=', 'posted')]}" />
+								<field name="f_comm_value"
+									attrs="{'invisible': ['|',('f_commission_type', '=', 'collection'),('f_comm_value_type', '=', 'camount')], 'readonly': [('f_status', '=', 'posted')]}" />
+
+								<field name="f_product"
+									attrs="{'invisible': ['|','|','|',('f_product_family', '!=', []),('f_product_identity', '!=', []),('f_commission_type', '=', 'collection'),('f_commission_type', '=', 'sales')], 'readonly': [('f_status', '=', 'posted')]}" widget="many2many_tags"/>
+								<field name="f_product_identity"
+									attrs="{'invisible': ['|','|','|',('f_product_family', '!=', []),('f_product', '!=', []),('f_commission_type', '=', 'collection'),('f_commission_type', '=', 'sales')], 'readonly': [('f_status', '=', 'posted')]}" widget="many2many_tags"/>
+								<field name="f_product_family"
+									attrs="{'invisible': ['|','|','|',('f_product_identity', '!=', []),('f_product', '!=', []),('f_commission_type', '=', 'collection'),('f_commission_type', '=', 'sales')], 'readonly': [('f_status', '=', 'posted')]}" widget="many2many_tags"/>
+
+								<field name="f_product_exc"
+									   attrs="{'invisible': [('f_commission_type', '!=', 'sales')], 'readonly': [('f_status', '=', 'posted')]}"
+									   widget="many2many_tags"/>
+								<field name="f_product_identity_exc"
+									   attrs="{'invisible': [('f_commission_type', '!=', 'sales')], 'readonly': [('f_status', '=', 'posted')]}"
+									   widget="many2many_tags"/>
+								<field name="f_product_family_exc"
+									   attrs="{'invisible': [('f_commission_type', '!=', 'sales')], 'readonly': [('f_status', '=', 'posted')]}"
+									   widget="many2many_tags"/>
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" groups="base.group_user" />
+						<field name="activity_ids" />
+						<field name="message_ids" />
+					</div>
+				</form>
+			</field>
+		</record>
+
+	</data>
+</odoo>

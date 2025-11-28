@@ -1,0 +1,48 @@
+<odoo>
+	<record id="f_stock_location_form_inherit_view" model="ir.ui.view">
+        <field name="name">f.stock.location.form.inherit.view</field>
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group" position="inside">
+                <group string="Dimensions">
+                    <label for="f_length" />
+                    <div class="o_row" name="f_length" >
+                        <field name="f_length" string="Length" class="oe_inline"/>
+                        <field name="f_length_uom"/>
+                    </div>
+
+                    <label for="f_width" />
+                    <div class="o_row" name="f_width" >
+                        <field name="f_width" string="Width" class="oe_inline"/>
+                        <field name="f_width_uom"/>
+                    </div>
+
+                    <label for="f_height" />
+                    <div class="o_row" name="f_height" >
+                        <field name="f_height" string="Height" class="oe_inline"/>
+                        <field name="f_height_uom"/>
+                    </div>
+
+                    <label for="f_total_volume" />
+                    <div class="o_row" name="f_total_volume" >
+                        <field name="f_total_volume" string="Storage Capacity" class="oe_inline" readonly="1" force_save="1"/>
+                        <field name="f_volume_uom"/>
+                    </div>
+
+                    <label for="f_remaining_volume" />
+                    <div class="o_row" name="f_remaining_volume" >
+                        <field name="f_remaining_volume" string="Free Space" class="oe_inline" readonly="1" force_save="1"/>
+                        <field name="f_volume_uom" readonly="1"/>
+                    </div>
+
+                    <label for="f_full_volume" />
+                    <div class="o_row" name="f_full_volume" >
+                        <field name="f_full_volume" string="Used Space" class="oe_inline" readonly="1" force_save="1"/>
+                        <field name="f_volume_uom" readonly="1"/>
+                    </div>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,65 @@
+<odoo>
+
+
+	<record id="f_transfer_type_po_inherit" model="ir.ui.view">
+		<field name="name">f.po.type.virtual.inherited</field>
+		<field name="model">purchase.order</field>
+		<field name="inherit_id" ref="purchase.purchase_order_form"/>
+		<field name="arch" type="xml">
+
+			  <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='currency_id']" position="after">
+    <field name="f_virtual_pick" readonly="1"/>
+  </xpath>
+
+		</field>
+	</record>
+
+
+
+
+
+
+<record id="f_transfer_type_virtual_inherit" model="ir.ui.view">
+		<field name="name">f.transfer.type.virtual.inherited</field>
+		<field name="model">stock.picking.type</field>
+		<field name="inherit_id" ref="stock.view_picking_type_form"/>
+		<field name="arch" type="xml">
+               <xpath expr="//field[@name='show_reserved']" position="after">
+					<field name="f_virtual_operation"/>
+				<field name="f_virtual_pick" attrs="{'invisible': [('f_virtual_operation', '=', False)]}"/>
+			   </xpath>
+
+		</field>
+	</record>
+
+
+
+
+    <record id="f_transfer_type_virtual_po_inherit" model="ir.ui.view">
+		<field name="name">f.transfer.type.virtual.po.inherited</field>
+		<field name="model">stock.picking</field>
+		<field name="inherit_id" ref="stock.view_picking_form"/>
+		<field name="arch" type="xml">
+                  <xpath expr="//form//field[@name='picking_type_code']" position="after">
+                        <field name="f_virtual_operation" invisible="1"/>
+					    <field name="f_create_po_done" invisible="1"/>
+                  </xpath>
+               <xpath expr="//form//header" position="inside">
+
+  <button name="f_create_draft_po_order" attrs="{'invisible': ['|',('f_virtual_operation', '=', False),'&amp;',('f_create_po_done','=',True),('f_virtual_po','!=',False)]}" string="New Purchase Order" type="object" class="oe_highlight"/>  
+  </xpath>
+
+
+
+
+
+			 <xpath expr="//form[1]/sheet[1]/group[1]/group[1]" position="inside">
+    <field name="f_virtual_po" readonly="1"/>
+  </xpath>
+
+		</field>
+	</record>
+
+
+
+</odoo>

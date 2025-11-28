@@ -1,0 +1,11 @@
+<odoo>
+
+	<menuitem name='Commission Management'
+		id='f_comm_management_main_menue'
+		web_icon="fa fa-calculator,#FFFFFF,#56829f" groups="commission_management.f_show_commossion_man"/>
+
+	<menuitem name="Configurations" id="f_comm_config_menue"
+		parent="commission_management.f_comm_management_main_menue" sequence='4'/>
+
+
+</odoo>

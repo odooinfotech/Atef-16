@@ -1,0 +1,6 @@
+<odoo>
+    <record id="f_group_sales_team_access" model="res.groups">
+        <field name="name">View My Team Orders</field>
+        <field name="category_id" ref="base.module_category_sales_management"/>
+    </record>
+</odoo>

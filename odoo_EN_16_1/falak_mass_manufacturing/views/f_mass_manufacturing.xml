@@ -1,0 +1,114 @@
+<odoo>
+	<data>
+		<!-- search -->
+		<record id="f_mass_man_search_view" model="ir.ui.view">
+			<field name="name">f.mass.man.search.view</field>
+			<field name="model">f.mass.man</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="f_mass_man_name"
+						filter_domain="[('f_mass_man_name', 'ilike', self)]" />
+					<field name="f_responsible"
+						filter_domain="[('f_responsible', 'ilike', self)]" />
+					<field name="f_note"
+						filter_domain="[('f_note', 'ilike', self)]" />
+					<group expand="1" string="Group By">
+
+						<filter string="Archived" name="active"
+							domain="[('active', '=', False)]" />
+
+
+						<filter string="Date" name="f_date"
+							context="{'group_by':'f_date'}" />
+						<filter string="Responsible" name="f_responsible"
+							context="{'group_by':'f_responsible'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<!-- tree view -->
+		<record model="ir.ui.view" id="f_mass_man_list">
+			<field name="name">f.mass.man.list</field>
+			<field name="model">f.mass.man</field>
+			<field name="arch" type="xml">
+				<tree  delete="0">
+					<field name="f_mp_status" widget="badge"
+						decoration-success="f_mp_status == 'done'"
+						decoration-danger="f_mp_status == 'cancel'"
+						decoration-muted="f_mp_status == 'draft'" />
+					<field name="f_mass_man_name" optional="show" />
+					<field name="f_responsible" optional="show" />
+					<field name="f_date" optional="show" />
+					<field name="f_note" optional="hide" />
+					<field name="f_work_center" optional="hide" />
+					<field name="f_shift" optional="hide" />
+					<field name="f_plan_products" widget="many2many_tags"
+						optional="hide" />
+				</tree>
+			</field>
+		</record>
+		<!-- form view -->
+
+		<record model="ir.ui.view" id="f_mass_man_form">
+			<field name="name">f_mass_man_form</field>
+			<field name="model">f.mass.man</field>
+			<field name="arch" type="xml">
+				<form delete="0">
+					<header>
+						<field name="f_mp_status" widget="statusbar" options="{'clickable': '1'}" />
+					</header>
+					<field name="active" invisible="1" />
+
+					<sheet>
+						<div name="button_box" class="oe_button_box">
+							<button class="oe_stat_button" type="object"
+								name="action_view_man_qty" icon="fa-cubes">
+								<div class="o_field_widget o_stat_info">
+									<span class="o_stat_value">
+										<field string="Demands Qty" name="f_man_qty_count" />
+									</span>
+									<span class="o_stat_text">
+										Products
+									</span>
+								</div>
+							</button>
+							<button class="oe_stat_button" type="object"
+								name="action_view_man_order" icon="fa-cubes">
+								<div class="o_field_widget o_stat_info">
+									<span class="o_stat_value">
+										<field string="Man Orders" name="f_man_order_count" />
+									</span>
+									<span class="o_stat_text">
+										Orders
+									</span>
+								</div>
+							</button>
+						</div>
+						<div class="oe_title">
+							<h1>
+								<field name="f_mass_man_name" readonly="1" />
+							</h1>
+						</div>
+						<group>
+							<group>
+								<field name="f_shift" />
+								<field name="f_note" />
+							</group>
+							<group>
+								<field name="f_responsible" widget="many2one_avatar_user" />
+								<field name="f_date" />
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"
+							groups="base.group_user" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

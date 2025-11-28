@@ -1,0 +1,16 @@
+<odoo>
+	<data>
+
+		<record model="ir.module.category" id="f_access_sale_margin">
+			<field name="name">Margin Access</field>
+			<field name="sequence">110</field>
+		</record>
+
+
+
+		<record model="res.groups" id="f_can_show_margins">
+			<field name="name">Margin Access</field>
+			<field name="category_id" ref="f_sales_margin_customs.f_access_sale_margin" />
+		</record>
+	</data>
+</odoo>

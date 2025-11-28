@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-inherit="stock_barcode.MainComponent" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('fixed-bottom')]//div[hasclass('o_action_buttons')]//button[2]" position="after">
+            <button t-if="env.model.displayPutInPackButton" t-on-click="advancePutInPack"
+                    class="o_put_in_pack btn btn-secondary text-uppercase">
+                <i class="fa fa-cube me-1"/> Advance Put in Pack
+            </button>
+            <button t-if="env.model.displayPutInPackButton" t-on-click="FPrintPackages"
+                    class="o_put_in_pack btn btn-secondary text-uppercase">
+                <i class="fa fa-cube me-1"/> Print Packages
+            </button>
+        </xpath>
+    </t>
+
+</templates>

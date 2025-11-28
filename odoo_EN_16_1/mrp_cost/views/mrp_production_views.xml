@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="mrp_production_form_view_inherited_custom_fields_added" model="ir.ui.view">
+            <field name="name">mrp.production.view.inherited.custom.fields.added</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='company_id']" position="before">
+                    <field name="workcenter_id" force_save="1" options="{'no_create':True, 'no_open':True, 'no_quick_create':True}"/>
+                    <label for="total_cost_over_head_percent"/>
+                    <div>
+                        <field name="total_cost_over_head_percent" force_save="1" class="oe_inline" style="vertical-align:baseline"/> %
+                    </div>
+                    <field name='resource_calendar_id'/>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="BOM OverHeads-Products" name="bom_overheads"
+                        attrs="{'invisible': [('state', '!=', 'done')]}">
+                        <field name="mrp_bom_overhead_ids" widget="one2many">
+                            <tree string="OverHead Products" editable="bottom" create="0" delete="0" edit="0">
+                                <field name="product_id" readonly="1" force_save="1"
+                                    options="{'no_quick_create':True,'no_create_edit':True,'no_open': True,}"/>
+                                <field name="overhead_parameters"  readonly="1" force_save="1"/>
+                                <field name="overhead_cost"  readonly="1" force_save="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page name="timesheet"  string="Timesheets">
+                        <field name='cost_visible' invisible="1" />
+                        <field name="timesheet_ids" mode="tree" string="Timesheet Empolyee Activities">
+                            <tree editable="bottom">
+                                <field name="employee_id" widget="many2one_avatar_employee"/>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                                <field name='total_time' widget="timesheet_uom"/>
+                                <field name="work_cost" attrs="{'column_invisible': [('parent.cost_visible', '=', False)]}" t-options="{'widget': 'float', 'precision': 2}"/>
+                                <field name="total_work_cost" attrs="{'column_invisible': [('parent.cost_visible', '=', False)]}" t-options="{'widget': 'float', 'precision': 2}"/>
+                            </tree>
+                        </field>
+                        <group>
+                            <group class="oe_subtotal_footer oe_right" attrs="{'invisible': [('cost_visible', '=', False)]}" name="employee_total_time">
+                                <span>
+                                    <label class="font-weight-bold" for="total_cost" string="Total Cost"/>
+                                </span>
+                                <field name="total_cost" nolabel="1"/>
+                                <span>
+                                    <label class="font-weight-bold" for="effective_hours" string="Hours Spent"/>
+                                </span>
+                                <field name="effective_hours" widget="timesheet_uom" nolabel="1"/>
+                                <div class="oe_clear"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_barcode_label">
+		<t t-foreach="docs" t-as="doc">
+			<t t-set="data" t-value="doc._get_values()" />
+			<t t-foreach="data" t-as="line">
+				<t t-call="web.basic_layout">
+					<div style="direction:ltr;">
+						<span style="font-size:1px;">v</span>
+							 <style>
+						table, tr {border:hidden;}
+						td, th {border:hidden;}
+						</style>
+
+						<table style="width:90%;position:fixed;direction:ltr;top:2px;padding:5px;">
+
+
+							<tr>
+								<td class="text-center" style="width:90%;font-weight: bold;font-size:9px;left:5px;height: 33px;">
+									<t t-esc="line['product_id'][:80]" />
+								</td>
+								<td rowspan="2" style="text-align:center;font-size:9px;-webkit-transform: rotate(90deg);vertical-align: bottom;">
+									<t t-esc="context_timestamp(datetime.datetime.now()).strftime('%m%y')" />
+								</td>
+
+							</tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+							<tr>
+								<td class="text-center" style="width:90%;left:5px">
+
+									<t t-esc="line['price']" t-options="{'widget': 'float', 'precision': 2}" />
+									<t t-esc="request.env.company.currency_id.symbol" />
+								</td>
+								<!-- text-align:end; rowspan="2"  right:80px;top:40px;-webkit-transform: rotate(90deg);  -->
+								<td rowspan="2" style="font-weight: bold;text-align:center;font-size:11px;-webkit-transform: rotate(90deg);vertical-align: bottom;">
+									
+								</td>
+
+
+							</tr>
+							<tr>
+								<td class="text-center" style="width:90%;left:5px;">
+									<t t-set="barcode_size" t-value="'width:50.5mm;height:5.5mm'" />
+									<t t-set="table_style" t-value="'width:100%;height:30mm;'" />
+									<t t-set="padding_page" t-value="'padding: 2mm'" />
+
+									<t t-if="line['barcode']">
+										<!-- `quiet=0` to remove the left and right margins on the barcode -->
+										<div t-out="line['barcode']" style="padding:0;direction:ltr;" t-options="{'widget': 'barcode', 'quiet': 0, 'symbology': 'auto', 'img_style': barcode_size}" />
+                                          
+                                        <div t-esc="line['barcode']" style="font-weight: bold;text-align:center;font-size:11px;" />
+
+									</t>
+								</td>
+                              
+
+							</tr>
+
+						</table>
+
+
+					</div>
+
+
+				</t>
+			</t>
+		</t>
+	</template>
+	
+	
+	<template id="report_invoicebarcode_label">
+		<t t-foreach="docs" t-as="doc">
+			<t t-set="data" t-value="doc._get_values()" />
+			<t t-foreach="data" t-as="line">
+				<t t-call="web.basic_layout">
+					<div style="direction:ltr;">
+						<span style="font-size:1px;">v</span>
+					  <style>
+						table, tr {border:hidden;}
+						td, th {border:hidden;}
+						</style>
+						<table style="width:90%;position:fixed;direction:ltr;top:2px;padding:5px;">
+
+
+							<tr>
+								<td class="text-center" style="width:90%;font-weight: bold;font-size:9px;left:5px;height: 33px;">
+									<t t-esc="line['product_id'][:80]" />
+								</td>
+								<td rowspan="2" style="text-align:center;font-size:9px;-webkit-transform: rotate(90deg);vertical-align: bottom;">
+									<t t-esc="context_timestamp(datetime.datetime.now()).strftime('%m%y')" />
+								</td>
+
+							</tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                            </tr>
+							<tr>
+								<td class="text-center" style="width:90%;left:5px">
+
+									<t t-esc="line['price']" t-options="{'widget': 'float', 'precision': 2}" />
+									<t t-esc="request.env.company.currency_id.symbol" />
+								</td>
+								<!-- text-align:end; rowspan="2"  right:80px;top:40px;-webkit-transform: rotate(90deg);  -->
+								<td rowspan="2" style="font-weight: bold;text-align:center;font-size:11px;-webkit-transform: rotate(90deg);vertical-align: bottom;">
+									
+								</td>
+
+
+							</tr>
+							<tr>
+								<td class="text-center" style="width:90%;left:5px;">
+									<t t-set="barcode_size" t-value="'width:50.5mm;height:5.5mm'" />
+									<t t-set="table_style" t-value="'width:100%;height:30mm;'" />
+									<t t-set="padding_page" t-value="'padding: 2mm'" />
+
+									<t t-if="line['barcode']">
+										<!-- `quiet=0` to remove the left and right margins on the barcode -->
+										<div t-out="line['barcode']" style="padding:0;direction:ltr;" t-options="{'widget': 'barcode', 'quiet': 0, 'symbology': 'auto', 'img_style': barcode_size}" />
+                                          
+                                        <div t-esc="line['barcode']" style="font-weight: bold;text-align:center;font-size:11px;" />
+
+									</t>
+								</td>
+                              
+
+							</tr>
+
+						</table>
+
+
+					</div>
+
+
+				</t>
+			</t>
+		</t>
+	</template>
+	
+	
+
+</odoo>

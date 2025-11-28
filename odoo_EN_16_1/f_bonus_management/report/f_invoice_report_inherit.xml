@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+
+         <!-- review_hijaz_upgrade-->
+
+        <template id="f_bouns_report_invoice_document_16"
+                  inherit_id="account.report_invoice_document">
+
+
+            <xpath expr="/t/t/div/div/table" position="before">
+                <t t-set="display_bouns" t-value="any(l.f_bonus_qty for l in o.invoice_line_ids)"/>
+            </xpath>
+
+            <xpath expr="/t/t/div/div/table/thead/tr/th[2]" position="after">
+                <th t-if="display_bouns" class="text-end">Bonus</th>
+            </xpath>
+            <xpath expr="/t/t/div/div/table/tbody/t[3]/tr/t[1]/td[2]" position="after">
+                <td t-if="display_bouns" class="text-end">
+                    <span t-esc="'{:,.2f}'.format(line.f_bonus_qty)"/>
+                </td>
+            </xpath>
+
+        </template>
+    </data>
+</odoo>

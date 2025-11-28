@@ -1,0 +1,902 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* falak_manufacturing_planning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-10 09:26+0000\n"
+"PO-Revision-Date: 2024-01-10 09:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: falak_manufacturing_planning
+#: model:ir.actions.report,print_report_name:falak_manufacturing_planning.f_plan_shift_prods
+msgid " 'Manufacturing Planning - %s' % (object.f_plan_id) "
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_no_plan_qty
+msgid " In Process Qty"
+msgstr "الكمية قيد التنفيذ"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow "
+"icon\" title=\"Arrow\"/>"
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_form
+msgid ""
+"<i class=\"fa fa-long-arrow-right mx-2 oe_edit_only\" aria-label=\"Arrow icon\" title=\"Arrow\"/>\n"
+"\t\t\t\t\t\t\t\t\t<i class=\"fa fa-long-arrow-right mx-2 oe_read_only\" aria-label=\"Arrow icon\" title=\"Arrow\" attrs=\"{'invisible': [('f_date_start', '=', False), ('f_date_end', '=', False)]}\"/>"
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_mrp_setting_customs
+msgid "<span class=\"o_form_label\">Plan Manufacturing Location</span>"
+msgstr "موقع تخطيط التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_form
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"\t\t\t\t\t\t\t\t\t\tMan Orders\n"
+"\t\t\t\t\t\t\t\t\t</span>"
+msgstr "اوامر التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_form
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"\t\t\t\t\t\t\t\t\t\tPlanned Products\n"
+"\t\t\t\t\t\t\t\t\t</span>"
+msgstr "المنتجات"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "<span>Signature : ---------------------------</span>"
+msgstr "<span>التوقيع : ---------------------------</span>"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "<strong>Batch Number:</strong>"
+msgstr "رقم الوجبة :"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "<strong>Dates:</strong>"
+msgstr "الفترة :"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_plan_gantt_view
+msgid "<strong>End Date:</strong>"
+msgstr "تاريخ الانتهاء :"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "<strong>Manufacturing Planning : </strong>"
+msgstr "خطة التصنيع :"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "<strong>Responsible:</strong>"
+msgstr "المسؤول :"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "<strong>Shift:</strong>"
+msgstr "الوردية :"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_plan_gantt_view
+msgid "<strong>Start Date:</strong>"
+msgstr "تاريخ البدء :"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "<strong>Work center:</strong>"
+msgstr "خط الانتاج :"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__active
+msgid "Active"
+msgstr "فعال"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__activity_ids
+msgid "Activities"
+msgstr "الانشطة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ايقونة نوع النشاط"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_mrp_production__f_actual_production_date
+msgid "Actual Production Date"
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_mrp_production__workcenter_id
+msgid ""
+"Allow users to pass specific workcenter and\n"
+"                                    replace Related BOM work center from the header automatically\n"
+"                                    "
+msgstr ""
+"اسمح للمستخدمين بتمرير مركز عمل محدد واستبدال مركز عمل BOM ذي الصلة من الرأس"
+" تلقائيًا"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_search_view
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_batch_number
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_mrp_production__f_batch_num
+msgid "Batch Number"
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model:ir.model,name:falak_manufacturing_planning.model_mrp_bom
+msgid "Bill of Material"
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_planning_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan__f_mp_status__cancel
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan_products__f_mp_status__cancel
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_plan_prod_search_view
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__product_uom_category_id
+msgid "Category"
+msgstr "الفئة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model,name:falak_manufacturing_planning.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan_products__product_uom_category_id
+msgid ""
+"Conversion between Units of Measure can only occur if they belong to the "
+"same category. The conversion will be made based on the ratios."
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_demand_products_tree
+msgid "Create Manufacturing Order"
+msgstr "انشاء امر تصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__create_uid
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__create_uid
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_min_qty_prods__create_uid
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_mp_categ__create_uid
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard__create_uid
+msgid "Created by"
+msgstr "تم انشاؤه من قبل"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__create_date
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__create_date
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_min_qty_prods__create_date
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_mp_categ__create_date
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard__create_date
+msgid "Created on"
+msgstr "تم انشاؤه بتاريخ"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_stock_warehouse_orderpoint__f_available_qty
+msgid ""
+"Current quantity of products.\n"
+"In a context with a single Stock Location, this includes goods stored at this Location, or any of its children.\n"
+"In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
+"stored in the Stock Location of the Warehouse of this Shop, or any of its children.\n"
+"Otherwise, this includes goods stored in any Stock Location with 'internal' type."
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard__f_date_to
+msgid "Date To"
+msgstr "الى تاريخ"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_form
+msgid "Dates Period"
+msgstr "الفترة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_mrp_bom__f_default_bom
+msgid "Default Bill Of Material"
+msgstr "قائمة المواد الافتراضية"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_mrp_setting_customs
+msgid "Default Location"
+msgstr "الموقع الافتراضي"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan_products__f_product_uom
+msgid "Default unit of measure used for all stock operations."
+msgstr "وحدة القياس الافتراضية المستخدمة لجميع عمليات المخزون"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_view_planning_kanban
+msgid "Delete"
+msgstr "حذف"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_demand_qty
+msgid "Demand / Planning Qty"
+msgstr "الطلب / التخطيط الكمية"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_demand_product_uom
+msgid "Demand Unit of Measure"
+msgstr "وحدة قياس الطلب"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_form
+msgid "Demands Qty"
+msgstr "الكمية المطلوبة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__display_name
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__display_name
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_min_qty_prods__display_name
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_mp_categ__display_name
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan__f_mp_status__done
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan_products__f_mp_status__done
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_plan_prod_search_view
+msgid "Done"
+msgstr "جاهز"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_done_qty
+msgid "Done Qty"
+msgstr "الكمية الجاهزة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan__f_mp_status__draft
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan_products__f_mp_status__draft
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_plan_prod_search_view
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_view_planning_kanban
+msgid "Dropdown Menu"
+msgstr "القائمة المنسدلة"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_view_planning_kanban
+msgid "Edit"
+msgstr "تعديل"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_date_end
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan_products__f_priority__3
+msgid "Excellent"
+msgstr "ممتاز"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون الزبائن"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard__f_date_from
+msgid "From Date"
+msgstr "من تاريخ"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan_products__f_priority__5
+msgid "Full"
+msgstr "كامل"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_form
+msgid "Get Minimum Quantities"
+msgstr "احصل على الحد الأدنى من الكميات"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_min_qty_for_prod_wizard_form
+msgid "Get Products"
+msgstr "الحصول على المنتجات"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan_products__f_priority__1
+msgid "Good"
+msgstr "جيد"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_search_view
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_plan_prod_search_view
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__has_message
+msgid "Has Message"
+msgstr "لدية رسالة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__id
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__id
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_min_qty_prods__id
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_mp_categ__id
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard__id
+msgid "ID"
+msgstr "الرقم"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__activity_exception_icon
+msgid "Icon"
+msgstr "الايقونة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثناء"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده، فستتطلب الرسائل الجديدة انتباهك"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan__message_has_error
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، فستحتوي بعض الرسائل على خطأ في التسليم"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_initial_qty
+msgid "Initial Quantity"
+msgstr "الكمية الاولية"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__message_is_follower
+msgid "Is Follower"
+msgstr "هو متابع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_product_product__f_is_manufactured
+msgid "Is Man?"
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan____last_update
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products____last_update
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_min_qty_prods____last_update
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_mp_categ____last_update
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard____last_update
+msgid "Last Modified on"
+msgstr "اخر تعديل بتاريخ"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__write_uid
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__write_uid
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_min_qty_prods__write_uid
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_mp_categ__write_uid
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث من قبل"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__write_date
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__write_date
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_min_qty_prods__write_date
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_mp_categ__write_date
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard__write_date
+msgid "Last Updated on"
+msgstr "اخر تحديث بتاريخ"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_min_qty_prods__f_mrp_location
+msgid "Location"
+msgstr "الموقع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model,name:falak_manufacturing_planning.model_f_plan_report_wizard
+msgid "MO Planning Products Report"
+msgstr "تقرير منتجات خطة التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.actions.act_window,name:falak_manufacturing_planning.f_action_mp_category
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_mp_categ__f_categ_name
+#: model:ir.ui.menu,name:falak_manufacturing_planning.f_menu_mp_categ
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_mp_categ_tree
+msgid "MP Category"
+msgstr "فئة التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_mrp_categ
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_min_qty_prods__f_mrp_categ
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_product_product__f_mrp_categ
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_product_template__f_mrp_categ
+msgid "MRP Category"
+msgstr "فئة التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_form
+msgid "Man Orders"
+msgstr "اوامر التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_stock_warehouse_orderpoint__f_mrp_categ
+msgid "Manufacturing Category"
+msgstr "فئة التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_res_config_settings__f_mrp_location
+msgid "Manufacturing Default Location"
+msgstr "الموقع الافتراضي للتصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_man_order_count
+msgid "Manufacturing Order"
+msgstr "امر  التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_mrp_production__f_man_plan_id
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_plan_prod_search_view
+msgid "Manufacturing Plan"
+msgstr "خطة التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model,name:falak_manufacturing_planning.model_f_mp_categ
+msgid "Manufacturing Plan Category"
+msgstr "فئة تخطيط التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_man_planning_name
+msgid "Manufacturing Plan Name"
+msgstr "اسم خطة التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model,name:falak_manufacturing_planning.model_f_man_plan_products
+msgid "Manufacturing Plan Products"
+msgstr "منتجات خطة التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.actions.act_window,name:falak_manufacturing_planning.f_man_planning_action_window
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_man_planning_id
+#: model:ir.ui.menu,name:falak_manufacturing_planning.f_mrp_planning
+msgid "Manufacturing Planning"
+msgstr "تخطيط التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model,name:falak_manufacturing_planning.model_f_man_plan
+msgid "Manufacturing Planning Process"
+msgstr "عملية تخطيط التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.actions.report,name:falak_manufacturing_planning.f_plan_shift_prods
+msgid "Manufacturing Planning Products Report"
+msgstr "تقرير اوامر تصنيع التابعة للتخطيط"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_search_view
+msgid "Manufacturing Planning Start Date"
+msgstr "تاريخ بدء تخطيط التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_man_qty_count
+msgid "Manufacturing Quantity"
+msgstr "كمية التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_stock_warehouse_orderpoint__f_min_qty_id
+msgid "Min Qty"
+msgstr "الحد الأدنى للكمية"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model,name:falak_manufacturing_planning.model_stock_warehouse_orderpoint
+msgid "Minimum Inventory Rule"
+msgstr "قاعدة إعادة الطلب"
+
+#. module: falak_manufacturing_planning
+#: model:ir.actions.act_window,name:falak_manufacturing_planning.action_reorder_registers
+msgid "Minimum Quantities"
+msgstr "الحد الادنى للكميات"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model,name:falak_manufacturing_planning.model_f_min_qty_prods
+msgid "Minimum Quantities For Products"
+msgstr "الحد الأدنى للكميات من المنتجات"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_mrp_production
+msgid "Mrp Production"
+msgstr "انتاج التصنيع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي لنشاط التالي"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan_products__f_priority__0
+msgid "Normal"
+msgstr "طبيعي"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_plan_prod_search_view
+msgid "Not Done"
+msgstr "غير جاهزة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_note
+msgid "Note"
+msgstr "الملاحظات"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_increment_num_prods
+msgid "Number"
+msgstr "رقم"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الاجراءات"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي تحتوي على خطأ في التسليم"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_product_product__f_mrp_category
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_product_template__f_mrp_category
+msgid "Old Field Categ"
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan__f_mp_status__onhold
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan_products__f_mp_status__onhold
+msgid "On Hold"
+msgstr "قيد الانتظار"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.view_reorder_prod_tree_register
+msgid "Plan"
+msgstr "التخطيط"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_inprocess_qty
+msgid "Plan In Process Qty"
+msgstr "كميات التخطيط قيد التنفيذ "
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard__f_plan_id
+msgid "Planning"
+msgstr "التخطيط"
+
+#. module: falak_manufacturing_planning
+#: model:ir.actions.act_window,name:falak_manufacturing_planning.f_man_demand_prod_action
+msgid "Planning Demand Products"
+msgstr "تخطيط منتجات الطلب"
+
+#. module: falak_manufacturing_planning
+#: model:ir.actions.act_window,name:falak_manufacturing_planning.f_planning_products_action_window
+#: model:ir.ui.menu,name:falak_manufacturing_planning.f_mrp_prod
+msgid "Planning Products"
+msgstr "منتجات التخطيط"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_planning_wizard_form
+msgid "Print"
+msgstr "طباعة"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_form
+msgid "Print MO Plan Products"
+msgstr "طباعة تخطيط اوامر الانتاج"
+
+#. module: falak_manufacturing_planning
+#: model:ir.actions.act_window,name:falak_manufacturing_planning.f_action_print_mo_products
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_planning_wizard_form
+msgid "Print MO Products"
+msgstr "طباعة اوامر الانتاج"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_priority
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_plan_prod_search_view
+msgid "Priority"
+msgstr "الأولوية"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model,name:falak_manufacturing_planning.model_product_template
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_product_id
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "Product"
+msgstr "المنتج"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model,name:falak_manufacturing_planning.model_product_product
+msgid "Product Variant"
+msgstr "متغير المنتج "
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.constraint,message:falak_manufacturing_planning.constraint_f_man_plan_products_prod_uniq
+msgid "Product is already added !"
+msgstr "المنتج تم اضافته مسبقاً !"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model,name:falak_manufacturing_planning.model_mrp_production
+msgid "Production Order"
+msgstr "أمر الانتاج"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_plan_products
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_stock_warehouse_orderpoint__f_available_qty
+msgid "Quantity On Hand"
+msgstr "الكمية في اليد"
+
+#. module: falak_manufacturing_planning
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.view_reorder_prod_tree_register
+msgid "ReOrder Products"
+msgstr "إعادة ترتيب المنتجات"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_remaining_qty
+msgid "Remaining Qty"
+msgstr "الكمية المتبقية"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_responsible
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_man_plan_search_view
+msgid "Responsible"
+msgstr "المسؤول"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan__f_mp_status__running
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan_products__f_mp_status__running
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_plan_prod_search_view
+msgid "Running"
+msgstr "قيد العمل"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_mrp_production__f_shift
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "Shift"
+msgstr "الوردية"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_shift_one_qty
+msgid "Shift 1 Qty"
+msgstr "الوردية 1"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_first_employee
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_first_responsible
+msgid "Shift 1 Responsible"
+msgstr "مسؤول الوردية 1"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_shift_two_qty
+msgid "Shift 2 Qty"
+msgstr "الوردية 2"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_sec_employee
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_sec_responsible
+msgid "Shift 2 Responsible"
+msgstr "مسؤول الوردية 2"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_shift_three_qty
+msgid "Shift 3 Qty"
+msgstr "الوردية 3"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_third_employee
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_third_responsible
+msgid "Shift 3 Responsible"
+msgstr "مسؤول الوردية 3"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard__f_shift
+msgid "Shift Number"
+msgstr "رقم الوردية"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_date_start
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_mp_status
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_mp_status
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.f_plan_prod_search_view
+msgid "Status"
+msgstr "الحالة"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء المسجل"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_product_uom
+msgid "Unit of Measure"
+msgstr "وحدة القياس"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_user
+msgid "User"
+msgstr "المستخدم"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan_products__f_priority__4
+msgid "Very Excellent"
+msgstr "ممتاز جدا"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields.selection,name:falak_manufacturing_planning.selection__f_man_plan_products__f_priority__2
+msgid "Very Good"
+msgstr "جيد جدا"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,help:falak_manufacturing_planning.field_f_man_plan__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصالات الموقع"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan_products__f_work_center
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_plan_report_wizard__f_work_center
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_mrp_production__workcenter_id
+#: model_terms:ir.ui.view,arch_db:falak_manufacturing_planning.report_plan_products
+msgid "Work Center"
+msgstr "خط الانتاج"
+
+#. module: falak_manufacturing_planning
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_man_plan__f_mrp_wcg
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_f_min_qty_prods__f_mrp_wcg
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_product_product__f_mrp_wcg
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_product_template__f_mrp_wcg
+#: model:ir.model.fields,field_description:falak_manufacturing_planning.field_stock_warehouse_orderpoint__f_mrp_wcg
+msgid "Work Center Group"
+msgstr "مجموعة خط الانتاج"

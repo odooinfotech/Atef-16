@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<data>
+
+
+	
+
+  <record id="view_cash_basisperiodtype_report_graph" model="ir.ui.view">
+            <field name="name">cash_basisperidtype.report.graph</field>
+            <field name="model">fs.cash.basis.period.type</field>
+            <field name="arch" type="xml">
+                <graph  string="Cash Projection Period Per Type Report">
+					
+					<field name = "date"  /> 
+					<field name = "type"  /> 
+					<field name = "balance"  type="measure"/>
+				
+					
+             </graph>
+            </field>
+        </record> 
+
+ <record id="view_cash_basisperiodtype_report_pivot" model="ir.ui.view">
+            <field name="name">cash_basisperiodtype.report.pivot</field>
+            <field name="model">fs.cash.basis.period.type</field>
+            <field name="arch" type="xml">
+                <pivot  string="Cash Projection Report">
+					
+					<field name = "date"  type="col"/> 
+					<field name = "type"  type="row"/> 
+					<field name = "balance"  type="measure"/>
+					
+             </pivot>
+            </field>
+        </record> 
+
+
+	 <record id="view_cash_basisperiodtype_report_tree" model="ir.ui.view">
+            <field name="name">cash_basisperiodtype.report.tree</field>
+            <field name="model">fs.cash.basis.period.type</field>
+            <field name="arch" type="xml">
+                <tree    string="Cash Projection Period Report"  >
+					
+					<field name = "date"  /> 
+					<field name = "type"  />
+					<field name = "balance"  />
+					
+						<field name = "acum_balance"  />
+					
+                </tree>
+            </field>
+        </record>
+        
+         <record id="view_cash_basisperiodtype_report_search" model="ir.ui.view">
+            <field name="name">cash_basisperiodtype.report.search</field>
+            <field name="model">fs.cash.basis.period.type</field>
+            <field name="arch" type="xml">
+                <search   string="Cash Projection Period Report"  >
+					
+				<field name = "type"  />
+				<group expand ='1' string='Group By'>
+				
+				 <filter string="Type" name="type_name" context="{'group_by':'type'}"/>
+					</group>
+                </search>
+            </field>
+        </record>
+
+
+
+
+	 <record id="action_cashperiodtype_basis_report" model="ir.actions.act_window">
+            <field name="name">Cash Projection Period Report</field>
+            <field name="res_model">fs.cash.basis.period.type</field>
+            <field name="view_mode">tree,pivot,graph</field>
+             <field name="context">{'search_default_type_name':1}</field>
+            <field name="view_id" ref="view_cash_basisperiodtype_report_tree"/>
+            <field name="search_view_id" ref="view_cash_basisperiodtype_report_search"/>
+            
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Record a new Move Line
+              </p>
+            </field>
+        </record>
+
+	<menuitem action="action_cashperiodtype_basis_report" id="menu_action_cash_basisperiodtype_report" groups="f_cash_flow_report.f_so_po_setup_access_group_id"  name="Cash Projection Period Per Type Report"  parent="account.menu_finance_reports" sequence="102"/>
+
+	
+	</data>
+	</odoo>

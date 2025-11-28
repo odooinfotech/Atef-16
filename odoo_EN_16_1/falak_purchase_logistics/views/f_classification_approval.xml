@@ -1,0 +1,30 @@
+<odoo>
+	<record id="f_classification_approval_tree_view" model="ir.ui.view">
+		<field name="name">f.classification.approval.tree.view</field>
+		<field name="model">f.classification.approval</field>
+		<field name="arch" type="xml">
+			<tree string="Classifications Approvals" editable="bottom">
+				<field name="f_class_id" />
+				<field name="f_currency_id" invisible="1"/>
+				<field name="f_min_amount" widget="monetary" options="{'currency_field': 'f_currency_id'}" />
+				<field name="f_manage_approvals"
+					widget="many2many_tags_avatar"/>
+                <field name="f_financial_approvals"
+					widget="many2many_tags_avatar"/>
+			</tree>
+		</field>
+	</record>
+
+	<record id="f_classification_approval_action"
+		model="ir.actions.act_window">
+		<field name="name">Classifications Approvals</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.classification.approval</field>
+		<field name="view_mode">tree</field>
+		<field name="target">current</field>
+	</record>
+
+	<menuitem id="f_classification_approval_menu"
+		name="Classification Approvals" action="f_classification_approval_action"
+		parent="purchase.menu_purchase_config" />
+</odoo>

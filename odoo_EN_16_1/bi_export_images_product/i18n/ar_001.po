@@ -1,0 +1,135 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* bi_export_images_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-12 06:45+0000\n"
+"PO-Revision-Date: 2024-03-12 06:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bi_export_images_product
+#: model_terms:ir.ui.view,arch_db:bi_export_images_product.export_products_with_images_form_view
+#: model_terms:ir.ui.view,arch_db:bi_export_images_product.view_excel_report
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_excel_report__create_uid
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images__create_uid
+msgid "Created by"
+msgstr "انشيء بواسطة"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_excel_report__create_date
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images__create_date
+msgid "Created on"
+msgstr "تاريخ الانشاء"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_excel_report__display_name
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_excel_report__file
+msgid "Download File"
+msgstr "تنزيل الملف"
+
+#. module: bi_export_images_product
+#: model_terms:ir.ui.view,arch_db:bi_export_images_product.export_products_with_images_form_view
+msgid "Export"
+msgstr "تصدير"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images__is_export_extra_product_images
+msgid "Export Extra Product Images"
+msgstr "تصدير صور المنتج الاضافية"
+
+#. module: bi_export_images_product
+#: model:res.groups,name:bi_export_images_product.module_export_images_product
+msgid "Export Product Images"
+msgstr "تصدير صور المنتج"
+
+#. module: bi_export_images_product
+#: model:ir.model,name:bi_export_images_product.model_export_products_with_images
+msgid "Export Products Images"
+msgstr "تصدير صور المنتجات"
+
+#. module: bi_export_images_product
+#: model_terms:ir.ui.view,arch_db:bi_export_images_product.export_products_with_images_form_view
+msgid "Export Products With Images"
+msgstr "تصدير المنتجات مع صور"
+
+#. module: bi_export_images_product
+#: model:ir.actions.act_window,name:bi_export_images_product.export_products_with_images_menu
+msgid "Export Products with Images"
+msgstr "تصدير المنتجات مع صور"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_excel_report__file_name
+msgid "File Name"
+msgstr "اسم الملف"
+
+#. module: bi_export_images_product
+#: model_terms:ir.ui.view,arch_db:bi_export_images_product.view_excel_report
+msgid "Genrated xls File"
+msgstr "تم انشاء ملف xls"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_excel_report__id
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_excel_report____last_update
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images____last_update
+msgid "Last Modified on"
+msgstr "تاريخ اخر تعديل"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_excel_report__write_uid
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث بواسطة"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_excel_report__write_date
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images__write_date
+msgid "Last Updated on"
+msgstr "تاريخ اخر تحديث"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images__is_only_image_into_zip_file
+msgid "Only Image into Zip File"
+msgstr "الصور فقط في ملف مضغوط"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images__product_ids
+msgid "Product"
+msgstr "منتج"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images__is_product_with_image_imformation
+msgid "Product Image with Information"
+msgstr "صورة المنتج مع معلومات"
+
+#. module: bi_export_images_product
+#: model:ir.model.fields,field_description:bi_export_images_product.field_excel_report__smart_search
+#: model:ir.model.fields,field_description:bi_export_images_product.field_export_products_with_images__smart_search
+msgid "Smart Search"
+msgstr "البحث الذكي"
+
+#. module: bi_export_images_product
+#: model:ir.model,name:bi_export_images_product.model_excel_report
+msgid "excel.report"
+msgstr ""

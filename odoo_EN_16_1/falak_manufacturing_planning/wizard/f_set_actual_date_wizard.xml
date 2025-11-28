@@ -1,0 +1,24 @@
+<odoo>
+	<record model="ir.ui.view" id="f_set_actual_date_wizard_form">
+		<field name="name">f.set.actual.date.wizard.form</field>
+		<field name="model">f.set.actual.date.wizard</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="f_actual_date" />
+						
+					</group>
+				</sheet>
+
+				<footer>
+					<button name="f_set_date" string="Set Date"
+						type="object" class="oe_highlight" />
+
+				</footer>
+			</form>
+
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,27 @@
+<odoo>
+    <template id="f_report_invoice_template_image_inherit"
+              inherit_id="account.report_invoice_document">
+
+        <xpath expr="/t/t/div/div/table/thead/tr/th[1]" position="after">
+            <t t-if="o.f_show_image">
+                <th>
+                    <span>Image</span>
+                </th>
+            </t>
+        </xpath>
+
+        <xpath expr="/t/t/div/div/table/tbody/t/tr/t/td[1]" position="after">
+            <t t-if="o.f_show_image">
+                <td>
+                    <img t-if="line.f_product_image_128" t-att-src="image_data_uri(line.f_product_image_128)" class="float-left" alt="Logo"/>
+                    <!--<span t-field="line.f_product_image_128" t-options-widget="&quot;image&quot;"/>-->
+                </td>
+            </t>
+        </xpath>
+
+    </template>
+
+
+</odoo>
+
+

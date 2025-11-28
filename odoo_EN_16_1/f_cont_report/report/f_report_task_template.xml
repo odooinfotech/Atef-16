@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_contactdetails_documents">
+		<t t-call="web.html_container">
+			<t t-call="web.basic_layout">
+				<div class="page">
+					<div class="col-12 text-center">
+						<h4>تقرير أرصدة الزبائن</h4>
+					</div>
+					<table class="table table-sm" style='direction:rtl;text-align:right;'>
+						<thead style="display:table-header-group; border: 1px solid;">
+							<tr>
+								<th style="border: 1px solid;">الرقم</th>
+								<th style="border: 1px solid;">الاسم</th>
+								<th style="border: 1px solid;">الهاتف</th>
+								<th style="border: 1px solid;">العنوان</th>
+								<th style="border: 1px solid;">الرصيد</th>
+								<th style="border: 1px solid;">الرصيد المستحق</th>
+								<th style="border: 1px solid;">العملة</th>
+								<th style="border: 1px solid;">الرصيد معادل</th>
+								<th style="border: 1px solid;">شيكات راجعة</th>
+								<th style="border: 1px solid;">شيكات غير محصلة</th>
+							</tr>
+						</thead>
+						<tbody style='direction:rtl;text-align:right;'>
+							<t t-set='sum_balance_x' t-value="0"/>
+							<t t-set='docs' t-value="request.env['f.partner.breif.balance.report'].search([('id', 'in', data['report_ids_values'])])"/>
+							<t t-foreach="docs" t-as="child">
+								<t t-set='partner' t-value="request.env['res.partner'].search([('id', '=',child.partner_id.id )])"/>
+								<t t-set='currency' t-value="env.company.currency_id"/>
+								<tr>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-esc="child.ref" />
+									</td>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-esc="partner.name" />
+									</td>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-esc="child.mobile" />
+									</td>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-esc="partner.city" />
+									</td>
+									<td class="text-left" style="border: 1px solid;">
+										<t t-if='partner.property_purchase_currency_id'>
+											<span t-esc="child.balance*(partner.property_purchase_currency_id.rate)" t-options="{'widget': 'monetary', 'display_currency': partner.property_purchase_currency_id}"/>
+										</t>
+										<t t-else=''>
+											<span t-esc="child.balance" t-options="{'widget': 'monetary', 'display_currency': currency}"/>
+										</t>
+									</td>
+									<td class="text-left" style="border: 1px solid;">
+											<span t-esc="child.due_balance" t-options="{'widget': 'monetary', 'display_currency': currency}"/>
+
+										</td>
+									<t t-set='sum_balance_x' t-value="sum_balance_x+child.balance"/>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-esc="partner.property_purchase_currency_id.name" />
+									</td>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-esc="child.currency_balance" t-options="{'widget': 'monetary', 'display_currency': currency}"/>
+									</td>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-esc="child.check_returned" t-options="{'widget': 'monetary', 'display_currency': currency}"/>
+									</td>
+									<td class="text-left" style="border: 1px solid;">
+										<span t-esc="child.check_undercollected" t-options="{'widget': 'monetary', 'display_currency': currency}"/>
+									</td>
+								</tr>
+							</t>
+						</tbody>
+
+					</table>
+					<div style='direction:rtl;text-align:right;margin:140px;'>
+						<strong> إجمالي الرصيد :  <t t-esc ='sum_balance_x' t-options="{'widget': 'monetary', 'display_currency': currency}"/></strong>
+					</div>
+				</div>
+			</t>
+		</t>
+	</template>
+
+	<template id="report_contact_details">
+		<t t-call="web.html_container">
+			<t t-call="f_cont_report.report_contactdetails_documents" />
+		</t>
+	</template>
+</odoo>
+

@@ -1,0 +1,64 @@
+<odoo>
+	<data>
+		<record id="f_on_change_ship_state" model="base.automation">
+			<field name="name">Falak On Change shipping Stage State</field>
+			<field name="model_id" ref="falak_purchase_logistics.model_f_shipping_details" />
+			<field name="trigger_field_ids"
+				eval="[(6,0,[ ref('falak_purchase_logistics.field_f_shipping_details__f_shipp_stage')])]" />
+			<field name="state">code</field>
+			<field name="code">
+                record.f_change_planning_state()
+            </field>
+			<field name="trigger">on_create_or_write</field>
+			<field name="active" eval="True" />
+		</record>
+		<record id="f_on_change_ETAF" model="base.automation">
+			<field name="name">Falak On Change shipping ETAF</field>
+			<field name="model_id" ref="falak_purchase_logistics.model_f_shipping_details" />
+			<field name="trigger_field_ids"
+				eval="[(6,0,[ ref('falak_purchase_logistics.field_f_shipping_details__f_estimated_company_arrival_date')])]" />
+			<field name="state">code</field>
+			<field name="code">
+                record.f_onchange_ETAF()
+            </field>
+			<field name="trigger">on_create_or_write</field>
+			<field name="active" eval="True" />
+		</record>
+<!--		<record id="f_on_change_ATD" model="base.automation">
+			<field name="name">Falak On Change shipping ATD</field>
+			<field name="model_id" ref="falak_purchase_logistics.model_f_shipping_details" />
+			<field name="trigger_field_ids"
+				eval="[(6,0,[ ref('falak_purchase_logistics.field_f_shipping_details__f_real_shipping_date')])]" />
+			<field name="state">code</field>
+			<field name="code">
+                record.f_onchange_ATD()
+            </field>
+			<field name="trigger">on_create_or_write</field>
+			<field name="active" eval="True" />
+		</record>-->
+		<!-- <record id="f_on_change_ETD_plan" model="base.automation">
+			<field name="name">Falak On Change ETD in Plan</field>
+			<field name="model_id" ref="falak_purchase_logistics.model_f_purchase_order_planning" />
+			<field name="trigger_field_ids"
+				eval="[(6,0,[ ref('falak_purchase_logistics.field_f_purchase_order_planning__f_estimated_shipping_date')])]" />
+			<field name="state">code</field>
+			<field name="code">
+                record.f_onchange_ETD()
+            </field>
+			<field name="trigger">on_create_or_write</field>
+			<field name="active" eval="True" />
+		</record> -->
+<!--		<record id="f_on_change_shipped_qty" model="base.automation">-->
+<!--			<field name="name">Falak On Change Shipped Qty Plan</field>-->
+<!--			<field name="model_id" ref="falak_purchase_logistics.model_f_purchase_order_planning" />-->
+<!--			<field name="trigger_field_ids"-->
+<!--				eval="[(6,0,[ ref('falak_purchase_logistics.field_f_purchase_order_planning__f_shipped_amount')])]" />-->
+<!--			<field name="state">code</field>-->
+<!--			<field name="code">-->
+<!--                record.f_onchange_shipped_qty()-->
+<!--            </field>-->
+<!--			<field name="trigger">on_create_or_write</field>-->
+<!--			<field name="active" eval="True" />-->
+<!--		</record>-->
+	</data>
+</odoo>

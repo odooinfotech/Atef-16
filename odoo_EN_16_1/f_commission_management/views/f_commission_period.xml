@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="f_commission_period_tree_view" model="ir.ui.view">
+        <field name="name">f.commission.period.tree.view</field>
+        <field name="model">f.commission.period</field>
+        <field name="arch" type="xml">
+            <tree string="Commission Period" editable="top" multi_edit="1">
+                <field name="f_name" />
+                <field name="f_from" />
+                <field name="f_to" />
+                <field name="f_recurring" />
+                <field name="f_closed" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="f_commission_period_action" model="ir.actions.act_window">
+        <field name="name">Commission Period</field>
+        <field name="res_model">f.commission.period</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem name="Commission Period"
+              id="f_commission_period_menu"
+              parent="f_commission_management.f_commission_config_menu"
+              action="f_commission_management.f_commission_period_action"
+              sequence="2" />
+
+</odoo>

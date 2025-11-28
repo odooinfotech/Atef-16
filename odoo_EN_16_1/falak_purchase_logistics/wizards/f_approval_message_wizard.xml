@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="f_approval_message_wizard_form_view" model="ir.ui.view">
+        <field name="name">f.approval.message.wizard.form.view</field>
+        <field name="model">f.approval.message.wizard</field>
+        <field name="arch" type="xml">
+            <form create="False">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="f_message" />
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Done" name="f_reject_purchase" type="object" class="oe_highlight"/>
+                    <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

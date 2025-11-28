@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="mrp_cost_structure_overheads_table_addedinherit" inherit_id="mrp_account_enterprise.mrp_cost_structure">
+        <xpath expr="//t[@t-foreach='lines']" position="inside">
+            <!-- OverHead Cost Structure table of MRP BOM-->
+            <t t-if="line['overheads_data']">
+                <h3 class="o_mrp_header o_mrp_table_header">Cost of OverHeads</h3>
+                <table class="table table-sm o_mrp_report_table">
+                    <thead>
+                        <tr class="o_mrp_report_header">
+                            <th class="o_mrp_report_line_header"><span>Products</span></th>
+                            <th class="text-left o_mrp_report_line_header"><span>OverHeads</span></th>
+                            <th class="text-right o_mrp_report_line_header"><span>Cost</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="line['overheads_data']" t-as="over_head_line" class="text-muted">
+                            <tr  class="text-muted">
+                                <td>
+                                    <span   class="o_mrp_reports_web_action" 
+                                        t-esc="over_head_line.get('product_id').display_name" view-type="form"
+                                        t-att-res-id="over_head_line.get('product_id').id"
+                                        res-model="product.product"/>
+                                </td>
+                                <td class="text-left">
+                                    <t t-if="over_head_line.get('overhead_parameters') == 'percent'">
+                                        <span class="text-left o_mrp_report_line_header">Percent(%)</span>
+                                    </t>
+                                    <t t-if="over_head_line.get('overhead_parameters') == 'amount_div_by_final_qty'">
+                                        <span class="text-left o_mrp_report_line_header">Amount/ Final QTY</span>
+                                    </t>
+                                    <t t-if="over_head_line.get('overhead_parameters') == 'amount_div_by_duration'">
+                                        <span class="text-left o_mrp_report_line_header">Amount/ Duration</span>
+                                    </t>
+                                </td>
+                                <td class="text-right">
+                                    <span t-esc="over_head_line.get('overhead_cost')" t-options='{"widget": "monetary", "display_currency": currency}'/>
+                                </td>
+                            </tr>
+                        </t>
+                        <t t-if="line['total_overhead_cost']">
+                            <tr>
+                                <td class="text-left o_mrp_report_line_header"/>
+                                <td class="text-left o_mrp_report_line_header">
+                                    <strong>Total Cost of OverHeads</strong>
+                                </td>
+                                <td class="text-right o_mrp_report_line_header">
+                                    <strong t-esc="line['total_overhead_cost']" t-options='{"widget": "monetary", "display_currency": currency}'/>
+                                </td>
+                            </tr>
+                            <tr t-if="not line['qty_by_byproduct_w_costshare'] and line['mo_qty'] &gt; 1">
+                                <td class="text-left o_mrp_report_line_header"/>
+                                <td class="text-left o_mrp_report_line_header">
+                                    <strong>Total Cost of OverHeads per unit (in <t t-esc="line['product'].uom_id.name"/>)</strong>
+                                </td>
+                                <td class="text-right o_mrp_report_line_header">
+                                    <span t-esc="line['total_overhead_cost'] / line['mo_qty']" t-options='{"widget": "monetary", "display_currency": currency}'/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </t>
+            <!-- Cost Structure table of Employee-->
+            <t t-if="line['timesheet_line_records']">
+                <h3 class="o_mrp_header o_mrp_table_header">Employee TimeSheet</h3>
+                <table class="table table-sm o_mrp_report_table">
+                    <thead>
+                        <tr class="o_mrp_report_header">
+                            <th class="o_mrp_report_line_header"><span>Employee</span></th>
+                            <th class="text-right o_mrp_report_line_header"><span>Start Date</span></th>
+                            <th class="text-right o_mrp_report_line_header"><span>End Date</span></th>
+                            <th class="text-right o_mrp_report_line_header"><span>Total Time</span></th>
+                            <th class="text-right o_mrp_report_line_header"><span>Cost</span></th>
+                            <th class="text-right o_mrp_report_line_header"><span>Total Cost</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                         <tr t-foreach="line['timesheet_line_records']" t-as="timesheet_line">
+                            <td>
+                                <t t-if="timesheet_line.employee_id">
+                                    <span t-esc="timesheet_line.employee_id.name"/>
+                                </t>
+                            </td>
+                            <td class="text-right">
+                                <t t-if="timesheet_line.start_date">
+                                    <span t-esc="timesheet_line.start_date.date()"/>
+                                </t>
+                            </td>
+                            <td class="text-right">
+                                <t t-if="timesheet_line.end_date">
+                                    <span t-esc="timesheet_line.end_date.date()"/>
+                                </t>
+                            </td>
+                            <td class="text-right">
+                                <t t-if="timesheet_line">
+                                    <span t-esc="timesheet_line.total_time" t-options="{'widget': 'float_time'}"/>
+                                </t>
+                            </td>
+                            <td class="text-right">
+                                <t t-if="timesheet_line">
+                                    <span t-esc="timesheet_line.work_cost" t-options="{'widget': 'float', 'precision': 2 }"/>
+                                </t>
+                            </td>
+                            <td class="text-right">
+                                <t t-if="timesheet_line">
+                                    <span t-esc="timesheet_line.total_work_cost" t-options="{'widget': 'float', 'precision': 2 }"/>
+                                </t>
+                            </td>
+                        </tr>
+                        <tr t-if="line['emp_timesheet_grand_total_time']">
+                            <td colspan="5" class="text-right">
+                                <strong>Total Time Spend</strong>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="line['emp_timesheet_grand_total_time']" t-options="{'widget': 'float_time'}"/>
+                            </td>
+                        </tr>
+                        <tr t-if="line['emp_timesheet_total_cost']">
+                            <td colspan="5" class="text-right">
+                                <strong>Total Cost of Employee TimeSheet</strong>
+                            </td>
+                            <td class="text-right">
+                                <strong t-esc="line['emp_timesheet_total_cost']" t-options="{'widget': 'float', 'precision': 2 }"/>
+                            </td>
+                        </tr>
+                        <tr t-if="line['emp_timesheet_total_cost'] and (not line['qty_by_byproduct_w_costshare'] and line['mo_qty'] &gt; 1)">
+                            <td colspan="5" class="text-right">
+                                <strong>Total Cost of Employee TimeSheet per unit (in <t t-esc="line['product'].uom_id.name"/>)</strong>
+                            </td>
+                            <td class="text-right">
+                                <span t-esc="line['emp_timesheet_total_cost'] / line['mo_qty']" t-options="{'widget': 'float', 'precision': 2 }"/>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </t>
+        </xpath>
+
+        <xpath expr="//t[@t-foreach='lines']" position="inside">
+            <table class="table table-sm o_mrp_report_table">
+                <tr t-if="line['total_all_costs']">
+                    <td class="text-right">
+                        <strong>Total of All Costs:</strong>
+                    </td>
+                    <td class="text-right">
+                        <span style="font-weight: bold;" t-esc="line['total_all_costs']" t-options='{"widget": "monetary", "display_currency": currency}'/>
+                    </td>
+                </tr>
+                <tr t-if="line['overhead_percent_total_cost']">
+                    <td class="text-right">
+                        <strong>OverHead <t t-esc="line['total_overhead_cost_percent']" />  % Total Cost (in <t t-esc="line['product'].uom_id.name"/>)</strong>
+                    </td>
+                    <td class="text-right">
+                        <strong t-esc="line['overhead_percent_total_cost']" t-options='{"widget": "monetary", "display_currency": currency}'/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right">
+                        <strong>Total of All Costs per unit (in <t t-esc="line['product'].uom_id.name"/>)</strong>
+                    </td>
+                    <!-- Remark. currently client not request to by product functionality so commented the  below code. -->
+                    <!-- <t t-if="line['total_cost_share_percent']">
+                        <td class="text-right">
+                            <span t-esc="(line['total_all_cost_per_unit'] - ((line['total_all_cost_per_unit'] * line['total_cost_share_percent']) / 100)) / line['mo_qty']" t-options='{"widget": "monetary", "display_currency": currency}'/>
+                        </td>
+                    </t> -->
+                    <!-- <t t-if="not line['total_cost_share_percent']"> -->
+                        <td class="text-right">
+                            <span t-esc="line['total_all_cost_per_unit'] / line['mo_qty']" t-options='{"widget": "monetary", "display_currency": currency}'/>
+                        </td>
+                    <!-- </t> -->
+                </tr>
+            </table>
+        </xpath>
+    </template>
+</odoo>

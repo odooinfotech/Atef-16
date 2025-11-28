@@ -1,0 +1,10 @@
+<odoo>
+	<!-- This is a group for access on cost field  -->
+	<data>
+		<record id="f_bom_cost_group_id" model="res.groups">
+			<field name="name">BOM Cost Group</field>
+			<field name="category_id"
+				ref="hide_product_cost.f_inventory_module_category" />
+		</record>
+	</data>
+</odoo>

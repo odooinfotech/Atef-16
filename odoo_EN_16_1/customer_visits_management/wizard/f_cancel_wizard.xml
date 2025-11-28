@@ -1,0 +1,28 @@
+<odoo>
+		<record model="ir.ui.view" id="cancel_wizard_form">
+			<field name="name">Reason Of Cancel Wizard</field>
+			<field name="model">f.cancel.wizard</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form>
+					<group>
+						<field name="f_visit" invisible="1"/>
+						<field name="f_reason_cancel" />
+					</group>
+				</form>
+				<footer>
+					<button name="save" string="Save" type="object" class="oe_highlight"/>
+				
+				</footer>
+			</field>
+		</record>
+		
+			<record id="cancel_wizard_action" model="ir.actions.act_window">
+			<field name="name">Reason Of Cancel Wizard</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">f.cancel.wizard</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="cancel_wizard_form"></field>
+			<field name="target">new</field>
+		</record>
+</odoo>

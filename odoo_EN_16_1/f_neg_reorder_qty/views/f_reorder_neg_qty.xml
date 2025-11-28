@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+
+
+        
+        <record id="view_f_neg_reorder_qty_report_tree" model="ir.ui.view">
+            <field name="name">f.neg_reorder.qty.report.tree</field>
+            <field name="model">f.neg_reorder.qty.report</field>
+            <field name="arch" type="xml">
+                <tree create ='false' import='false'>
+                    <field name="product_id"/>
+                  
+                      <field name="barcode"/>
+                     <field name="default_code" />
+                       <field name="location_id"/>
+                    <field name="quantity"/>
+                    <field name="product_min_qty"/>
+                     <field name="shortage"/>
+                  
+            
+                    
+                    
+                </tree>
+            </field>
+        </record>
+        
+        
+          <record id="view_f_neg_reorder_qty_report_pivot" model="ir.ui.view">
+            <field name="name">f.neg.reorder.qty.report.fpivot</field>
+            <field name="model">f.neg_reorder.qty.report</field>
+            <field name="arch" type="xml">
+                <pivot string="Products Less Than Reording Min Qtys">
+                     <field name="product_id" type="row"/>
+                  
+           
+                       <field name="location_id" type="col"/>
+                    <field name="quantity" type="measure"/>
+                    <field name="product_min_qty" type="measure"/>
+                        
+                        
+                        
+                </pivot>
+            </field>
+        </record>
+        
+        
+
+        <record id="view_f_neg_reorder_qty_report_form" model="ir.ui.view">
+            <field name="name">f.neg_reorder.qty.report.form</field>
+            <field name="model">f.neg_reorder.qty.report</field>
+            <field name="arch" type="xml">
+                <form string="Products Less Than Reording Min Qtys">
+                    <group>
+                     <field name="product_id"/>
+                  
+                      <field name="barcode"/>
+                     <field name="default_code" />
+                       <field name="location_id"/>
+                    <field name="quantity"/>
+                    <field name="product_min_qty"/>
+                        
+                        
+                        
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_f_neg_reorder_qty_reportsearch" model="ir.ui.view">
+            <field name="name">f.neg_reorder.qty.report.search</field>
+            <field name="model">f.neg_reorder.qty.report</field>
+            <field name="arch" type="xml">
+                <search string="Products Less Than Reording Min Qtys">
+                     <field name="product_id"/>
+                      <field name="barcode"/>
+                     <field name="default_code" />
+                       <field name="location_id"/>
+                  
+                    <group expand="1" string="Group By">
+                     <filter string="Product" name="product_id" context="{'group_by':'product_id'}"/>
+                      <filter string="Location" name="location_id" context="{'group_by':'location_id'}"/>
+                       <filter string="Shortage" name="shortage" context="{'group_by':'shortage'}"/>
+                     
+           
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_f_neg_reorder_qty_report_all" model="ir.actions.act_window">
+            <field name="name">Products Less Than Re-order Rules Min Qtys</field>
+            <field name="res_model">f.neg_reorder.qty.report</field>
+            <field name="view_mode">tree,form,pivot</field>
+            <field name="context">{}</field>
+        </record>
+        
+       
+
+ 
+
+          
+         
+</odoo>

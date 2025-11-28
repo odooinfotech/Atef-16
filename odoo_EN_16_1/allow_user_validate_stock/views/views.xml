@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	
+	<record model="ir.module.category" id="f_inventoryadjvalid_module_category">
+		<field name="name">Custom Inventory Validate Group</field>
+		<field name="sequence">105</field>
+	
+	</record>      
+		<record id="f_adminadjvalid_group_id" model="res.groups">
+			<field name="name">Inventory/Adj Validate and Cancel </field>
+			<field name="category_id"
+				ref="allow_user_validate_stock.f_inventoryadjvalid_module_category" />
+		</record>
+		
+		<record id="f_admintransfvalid_group_id" model="res.groups">
+			<field name="name">Inventory/Transfer Validate  </field>
+			<field name="category_id"
+				ref="allow_user_validate_stock.f_inventoryadjvalid_module_category" />
+		</record>
+		
+		
+</odoo>

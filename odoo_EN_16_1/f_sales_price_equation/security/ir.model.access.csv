@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_f_pricing_equation,f.pricing.equation,model_f_pricing_equation,base.group_user,1,1,1,1
+access_f_product_pricing,f.product.pricing,model_f_product_pricing,base.group_user,1,1,1,1
+access_f_landed_pricing_line,f.landed.pricing.line,model_f_landed_pricing_line,base.group_user,1,1,1,1
+access_f_purchase_pricing_line,f.purchase.pricing.line,model_f_purchase_pricing_line,base.group_user,1,1,1,1
+access_f_pricing_type,f.pricing.type,model_f_pricing_type,base.group_user,1,1,1,1

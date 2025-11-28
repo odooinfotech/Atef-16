@@ -1,0 +1,14 @@
+  <odoo>  
+    <record id="f_inherit_customersearch_ref" model="ir.ui.view">
+        <field name="name">f.ref.customersearch.form.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search//field[@name='name']" position="after">
+                 <field name="smart_search" string="Smart Search"/>
+			  </xpath>
+        </field>
+    </record>
+    
+
+</odoo>

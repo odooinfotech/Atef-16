@@ -1,0 +1,15 @@
+<odoo>
+	<data>
+		<record id="f_calculate_target_sales" model="ir.cron">
+			<field name="name">Calculate Target Sales</field>
+			<field name="interval_number">1</field>
+			<field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+			<field name="doall" eval="False" />
+			<field name="model_id" ref="customer_target_management.model_f_cust_target"/>
+			<field name="user_id" ref="base.user_root"/>
+			<field name="code">model.get_total_sales()</field>
+			<field name="state">code</field>
+		</record>
+	</data>
+</odoo>

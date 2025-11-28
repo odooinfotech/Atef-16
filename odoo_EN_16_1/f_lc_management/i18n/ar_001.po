@@ -1,0 +1,334 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* f_lc_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-26 13:00+0000\n"
+"PO-Revision-Date: 2022-12-26 13:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_account_journal
+msgid "Account Journal"
+msgstr "دفتر يومية الحساب"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__message_needaction
+msgid "Action Needed"
+msgstr "الاجراء المطلوب"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_purchase_order__f_pi_approval_date
+msgid "Approval Date"
+msgstr "تاريخ الموافقة"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_bank_account_no
+msgid "Bank Account Number"
+msgstr "رقم الحساب البنكي"
+
+#. module: f_lc_management
+#: model_terms:ir.ui.view,arch_db:f_lc_management.f_lc_details_list_form
+msgid "Bank Details"
+msgstr "تفاصيل البنك"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_bank_name
+msgid "Bank Name"
+msgstr "البنك"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_purchase_order__f_pi_confirmed_attach
+msgid "Confirmed PI Attachment"
+msgstr " PI  مرفق المؤكدة"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_insurance_policy__create_uid
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__create_uid
+msgid "Created by"
+msgstr "تم الإنشاء بواسطة"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_insurance_policy__create_date
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__create_date
+msgid "Created on"
+msgstr "تم الإنشاء بتاريخ"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_credit_account
+msgid "Credit Account"
+msgstr "الحساب الدائن"
+
+#. module: f_lc_management
+#: model:ir.model.fields,help:f_lc_management.field_purchase_order__f_pi_date
+msgid "Date When Vendor Sent PI "
+msgstr "تاريخ ارسال المورد ل PI"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_debit_account
+msgid "Debit Account"
+msgstr "الحساب المدين"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_insurance_policy__display_name
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_purchase_order__f_delivery_date
+msgid "Expected Delivery Date"
+msgstr "تاريخ الوصل المتوقع"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون العملاء"
+
+#. module: f_lc_management
+#: model_terms:ir.ui.view,arch_db:f_lc_management.lc_details_search_view
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__has_message
+msgid "Has Message"
+msgstr "لديه رسائل"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_insurance_policy__id
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__id
+msgid "ID"
+msgstr "الرقم"
+
+#. module: f_lc_management
+#: model:ir.model.fields,help:f_lc_management.field_f_lc_management__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم التحقق من ذلك، فإن الرسائل الجديدة تتطلب انتباهك."
+
+#. module: f_lc_management
+#: model:ir.model.fields,help:f_lc_management.field_f_lc_management__message_has_error
+#: model:ir.model.fields,help:f_lc_management.field_f_lc_management__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، فستحتوي بعض الرسائل على خطأ في التسليم"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_insurance_attachment
+msgid "Insurance Attachment"
+msgstr "مرفق التأمين"
+
+#. module: f_lc_management
+#: model_terms:ir.ui.view,arch_db:f_lc_management.f_lc_details_list_form
+msgid "Insurance Details"
+msgstr "تفاصيل التأمين"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_insurance_name
+msgid "Insurance Name"
+msgstr "اسم التأمين"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_insurance_policy
+#: model:ir.ui.menu,name:f_lc_management.f_insurance_policy
+#: model_terms:ir.ui.view,arch_db:f_lc_management.f_purchase_insurance_policy_tree_view
+msgid "Insurance Policy"
+msgstr "سياسة التأمين"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_insurance_policy__f_insuramce_name
+msgid "Insurance Policy Name"
+msgstr "اسم سياسة التأمين"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__message_is_follower
+msgid "Is Follower"
+msgstr "لديه متابعون"
+
+#. module: f_lc_management
+#: model_terms:ir.ui.view,arch_db:f_lc_management.lc_details_search_view
+msgid "LC  Date"
+msgstr "تاريخ L/C"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_lc_currency
+msgid "LC Currency"
+msgstr "العملة"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_lc_date
+msgid "LC Date"
+msgstr "التاريخ "
+
+#. module: f_lc_management
+#: model:ir.actions.act_window,name:f_lc_management.f_lc_details_action_window
+#: model:ir.ui.menu,name:f_lc_management.f_po_lc_details
+#: model_terms:ir.ui.view,arch_db:f_lc_management.f_lc_details_list_form
+msgid "LC Details"
+msgstr "الاعتمادات"
+
+#. module: f_lc_management
+#: model:ir.model,name:f_lc_management.model_f_lc_management
+msgid "LC Management"
+msgstr "ادارة LC"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_lc_name
+msgid "LC Name"
+msgstr "اسم LC"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_lc_number
+msgid "LC Number"
+msgstr "رقم LC"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_insurance_policy____last_update
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل على"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_insurance_policy__write_uid
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_insurance_policy__write_date
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__write_date
+msgid "Last Updated on"
+msgstr "تاريخ آخر تحديث"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_notes
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الاجراءات"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: f_lc_management
+#: model:ir.model.fields,help:f_lc_management.field_f_lc_management__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: f_lc_management
+#: model:ir.model.fields,help:f_lc_management.field_f_lc_management__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي تحتوي على خطأ في التسليم"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_purchase_order__f_offer_validity
+msgid "Offer Validity"
+msgstr "صلاحية عرض السعر"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_purchase_order__f_pi_attachment
+msgid "PI Attachment"
+msgstr "مرفق PI"
+
+#. module: f_lc_management
+#: model_terms:ir.ui.view,arch_db:f_lc_management.f_purchase_order_inherit
+msgid "PI Details"
+msgstr "تفاصيل PI"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_purchase_order__f_pi_date
+msgid "PI Issue Date"
+msgstr "تاريخ PI"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_purchase_order__f_pi_number
+msgid "PI Reference"
+msgstr "مرجع PI"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_purchase_order__f_pi_amount
+msgid "PI Value (Total Amount)"
+msgstr "قيمة PI"
+
+#. module: f_lc_management
+#: model:ir.actions.act_window,name:f_lc_management.f_purchase_insurance_policy_action_window
+msgid "Purchase Insurance Policy"
+msgstr "وثيقة تأمين المشتريات"
+
+#. module: f_lc_management
+#: model:ir.model,name:f_lc_management.model_purchase_order
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__f_purchase_id
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_purchase_order__f_volume_cbm
+msgid "Volume CBM"
+msgstr "الحجم"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_f_lc_management__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: f_lc_management
+#: model:ir.model.fields,help:f_lc_management.field_f_lc_management__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصالات الموقع"
+
+#. module: f_lc_management
+#: model:ir.model.fields,field_description:f_lc_management.field_purchase_order__f_weight
+msgid "Weight Kg"
+msgstr "الوزن كغم"
+
+#. module: f_lc_management
+#: model:ir.model.fields,help:f_lc_management.field_purchase_order__f_pi_approval_date
+msgid "When should Approve PI "
+msgstr "متى يجب الموافقة على PI"
+
+#. module: f_lc_management
+#: model:ir.model,name:f_lc_management.model_f_insurance_policy
+msgid "f.insurance.policy"
+msgstr ""

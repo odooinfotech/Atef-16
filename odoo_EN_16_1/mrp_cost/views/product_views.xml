@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_template_form_view_custom_fields_added" model="ir.ui.view">
+            <field name="name">product.template.view.form.inherit.custom.fields.added</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='options']" position="inside">
+                    <span class="d-inline-block">
+                        <field name="is_overhead"/>
+                        <label for="is_overhead"/>
+                    </span>
+                </xpath>
+                <xpath expr="//header" position="inside">
+                    <field name="f_bom_set" invisible="1"/>
+                    <button groups="mrp_cost.f_bom_cost_group_id" name="f_action_cost_analysis" type="object"
+                        class="oe_stat_button" string="MRP Cost Analysis" attrs="{'invisible': [('f_bom_set', '=', False)]}" >
+                    </button>
+                </xpath>
+                
+                <xpath expr="//div[@name='standard_price_uom']" position="after">
+                    
+                        <field name="f_bom_set" invisible="1"/>
+                        <label for="f_bom_cost" attrs="{'invisible': [('f_bom_set', '=', False)]}" groups="mrp_cost.f_bom_cost_group_id"/>
+                        <div name="bom_cost_uom" attrs="{'invisible': [('f_bom_set', '=', False)]}" groups="mrp_cost.f_bom_cost_group_id">
+                            <field name="f_bom_cost" class="oe_inline" widget="monetary" options="{'currency_field': 'cost_currency_id', 'field_digits': True}"/>
+                            <button name="compute_bom_cost"
+                             string="Update BoM Cost" type="object"
+                             help="Update the BoM Cost."/>
+                        </div>
+                    
+                </xpath>
+                
+                <xpath expr="//group[@name='group_lots_and_weight']//div[hasclass('o_row')]" position="inside">
+                     <button name="button_bom_weight"
+                             string="Update BoM with new weight" type="object"
+                             class="oe_link oe_read_only pt-0"
+                             help="Update the BoM Lines quantity with the latest weight."/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="product_template_tree_view_custom_fields_added" model="ir.ui.view">
+            <field name="name">product.template.view.tree.inherit.custom.fields.added</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="inside">
+                    <button name="compute_bom_cost"
+                             string="Update BoM Cost" type="object"
+                             help="Update the BoM Cost."/>
+                </xpath>
+                <xpath expr="//field[@name='standard_price']" position="after">
+                    <field name="f_bom_cost" class="oe_inline" widget="monetary" options="{'currency_field': 'cost_currency_id', 'field_digits': True}" groups="mrp_cost.f_bom_cost_group_id"/>
+                </xpath>
+            </field>
+        </record>
+        
+        
+    </data>
+</odoo>

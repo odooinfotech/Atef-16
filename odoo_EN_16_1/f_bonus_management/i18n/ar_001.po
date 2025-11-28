@@ -1,0 +1,119 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* f_bonus_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-08 12:39+0000\n"
+"PO-Revision-Date: 2022-01-08 12:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: f_bonus_management
+#: model_terms:ir.ui.view,arch_db:f_bonus_management.f_bouns_report_invoice_document
+#: model_terms:ir.ui.view,arch_db:f_bonus_management.f_report_saleorder_document
+msgid "Bonus"
+msgstr "بونص"
+
+#. module: f_bonus_management
+#: model_terms:ir.ui.view,arch_db:f_bonus_management.view_order_form
+msgid "Bonus :"
+msgstr "البونص"
+
+#. module: f_bonus_management
+#: model:ir.model.fields,field_description:f_bonus_management.field_account_invoice_report__f_bonus_qty
+#: model:ir.model.fields,field_description:f_bonus_management.field_account_move_line__bonus_qty
+#: model:ir.model.fields,field_description:f_bonus_management.field_account_move_line__f_bonus_qty
+#: model:ir.model.fields,field_description:f_bonus_management.field_sale_order_line__f_bonus_qty
+msgid "Bonus Qty"
+msgstr "كمية البونص"
+
+#. module: f_bonus_management
+#: model:ir.model.fields,field_description:f_bonus_management.field_max_bonus_qty__create_uid
+msgid "Created by"
+msgstr "انشيء بواسطة"
+
+#. module: f_bonus_management
+#: model:ir.model.fields,field_description:f_bonus_management.field_max_bonus_qty__create_date
+msgid "Created on"
+msgstr "انشيء بتاريخ"
+
+#. module: f_bonus_management
+#: model:ir.model.fields,field_description:f_bonus_management.field_max_bonus_qty__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: f_bonus_management
+#: model:ir.model.fields,field_description:f_bonus_management.field_max_bonus_qty__id
+msgid "ID"
+msgstr ""
+
+#. module: f_bonus_management
+#: model:ir.model,name:f_bonus_management.model_account_invoice_report
+msgid "Invoices Statistics"
+msgstr "إحصائيات الفواتير"
+
+#. module: f_bonus_management
+#: model:ir.model,name:f_bonus_management.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: f_bonus_management
+#: model:ir.model.fields,field_description:f_bonus_management.field_max_bonus_qty____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: f_bonus_management
+#: model:ir.model.fields,field_description:f_bonus_management.field_max_bonus_qty__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: f_bonus_management
+#: model:ir.model.fields,field_description:f_bonus_management.field_max_bonus_qty__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: f_bonus_management
+#: model:ir.model.fields,field_description:f_bonus_management.field_max_bonus_qty__qty
+#: model:ir.model.fields,field_description:f_bonus_management.field_product_product__max_bonus_ids
+#: model:ir.model.fields,field_description:f_bonus_management.field_product_template__max_bonus_ids
+msgid "Max Bonus"
+msgstr "اعلى قيمة للبونص"
+
+#. module: f_bonus_management
+#: model:ir.model,name:f_bonus_management.model_max_bonus_qty
+#: model:ir.model.fields,field_description:f_bonus_management.field_sale_order_line__max_bonus_qty
+msgid "Max Bonus Qty"
+msgstr "اعلى كمية للبونص"
+
+#. module: f_bonus_management
+#: model_terms:ir.ui.view,arch_db:f_bonus_management.inherited_product_template_form_view
+msgid "Max Bonus Quantity"
+msgstr "اعلى كمية للبونص"
+
+#. module: f_bonus_management
+#: model:ir.model.fields,field_description:f_bonus_management.field_max_bonus_qty__product_tmpl_id
+msgid "Product"
+msgstr "اسم المنتج"
+
+#. module: f_bonus_management
+#: model:ir.model,name:f_bonus_management.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+
+#. module: f_bonus_management
+#: model:ir.model,name:f_bonus_management.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "بند أمر المبيعات"
+
+#. module: f_bonus_management
+#: model:ir.model.fields,field_description:f_bonus_management.field_account_invoice_report__total_qty
+msgid "Total Qty"
+msgstr "الكمية الكلية"

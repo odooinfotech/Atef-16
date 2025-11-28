@@ -1,0 +1,50 @@
+<odoo>
+	<record id="f_product_packaging_form_inherit_view" model="ir.ui.view">
+        <field name="name">f.product.packaging.form.inherit.view</field>
+        <field name="model">product.packaging</field>
+        <field name="inherit_id" ref="product.product_packaging_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group" position="inside">
+                <group>
+                    <label for="f_length" />
+                    <div class="o_row" name="f_length" >
+                        <field name="f_length" string="Length" class="oe_inline"/>
+                        <field name="f_length_uom"/>
+                    </div>
+
+                    <label for="f_width" />
+                    <div class="o_row" name="f_width" >
+                        <field name="f_width" string="Width" class="oe_inline"/>
+                        <field name="f_width_uom"/>
+                    </div>
+
+                    <label for="f_height" />
+                    <div class="o_row" name="f_height" >
+                        <field name="f_height" string="Height" class="oe_inline"/>
+                        <field name="f_height_uom"/>
+                    </div>
+
+                    <label for="f_volume" />
+                    <div class="o_row" name="f_volume" >
+                        <field name="f_volume" string="Volume" class="oe_inline" readonly="1" force_save="1"/>
+                        <field name="f_volume_uom"/>
+                    </div>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!--<record id="f_product_packaging_tree2_inherit_view" model="ir.ui.view">
+        <field name="name">f.product.packaging.tree2.inherit.view</field>
+        <field name="model">product.packaging</field>
+        <field name="inherit_id" ref="product.product_packaging_tree_view2" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='barcode']" position="after">
+                <field name="f_length" optional="show"/>
+                <field name="f_width" optional="show"/>
+                <field name="f_height" optional="show"/>
+                <field name="f_volume" optional="show"/>
+            </xpath>
+        </field>
+    </record>-->
+</odoo>

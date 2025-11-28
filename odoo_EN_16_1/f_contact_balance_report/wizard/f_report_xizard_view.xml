@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<odoo>
+
+
+    <record id="f_res_dbalancereport_wizrd" model="ir.ui.view">
+        <field name="name">f.partner.allb.balance.wizardview.wizard</field>
+        <field name="model">f.partner.allb.balance.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name='to_date'/>
+                </group>
+                <footer>
+                    <button name="get_deatils" string="View"
+                            type="object" class="btn-primary"/>
+
+                    <button special="cancel" string="Cancel" class="btn-default"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="f_action_report_contact_balance" model="ir.actions.act_window">
+        <field name="name">Contacts Balances</field>
+         <field name="type">ir.actions.act_window</field>
+        <field name="res_model">f.partner.allb.balance.wizard</field>
+        <field name="view_mode">form</field>
+         <field name="view_id" ref="f_res_dbalancereport_wizrd"/>
+        <field name="target">new</field>
+    </record>
+
+
+    <menuitem id="f_menu_action_report_contact_balance" name="Contacts Balances"
+			  action="f_action_report_contact_balance" parent="contacts.menu_contacts"
+			  groups="f_contact_balance_report.f_group_contact_balance_report"
+			  sequence="290"
+		 />
+
+	<menuitem id="f_accmenu_action_report_contact_balance" name="Contacts Balances"
+		action="f_action_report_contact_balance" parent="account.menu_finance_reports"
+			  groups="f_contact_balance_report.f_group_contact_balance_report"
+		  sequence="800"
+		 />
+
+	<menuitem id="f_salemenu_action_report_contact_balance" name="Contacts Balances"
+		action="f_action_report_contact_balance" parent="f_sale_account_report_menu.f_sale_account_report_menu"
+			  groups="f_contact_balance_report.f_group_contact_balance_report"
+		  sequence="800"
+		 />
+
+
+
+    
+
+
+
+
+    
+
+
+</odoo>

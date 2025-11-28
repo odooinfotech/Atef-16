@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_f_customer_detailed_report,access.f.customer.detailed.report,model_f_customer_detailed_report,,1,1,1,1
+access_f_detailed_customer,access.f_detailed_customer,model_f_detailed_customer,,1,1,1,1
+access_f_detailed_customer_thermal,access.f_detailed_customer_thermal,model_f_detailed_customer_thermal,,1,1,1,1

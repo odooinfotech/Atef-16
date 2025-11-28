@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<odoo>
+	<record id="f_planning_wizard_form" model="ir.ui.view">
+		<field name="name">f.plan.report.wizard.form</field>
+		<field name="model">f.plan.report.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Print MO Products">
+				<group>
+					<field name="f_plan_id" invisible="1" />
+
+					<group>
+						<field name="f_date_from" />
+						<field name="f_shift" />
+
+					</group>
+					<group>
+
+						<field name="f_date_to" />
+						<field name="f_work_center" />
+
+					</group>
+				</group>
+
+				<footer>
+					<button name="generate_report" type="object" string="Print" class="btn-primary" />
+					<button string="Cancel" class="btn-secondary" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="f_action_print_mo_products" model="ir.actions.act_window">
+		<field name="name">Print MO Products</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.plan.report.wizard</field>
+		<field name="view_mode">form</field>
+		<field name="view_id" ref="f_planning_wizard_form" />
+		<field name="target">new</field>
+		<field name="context">{'default_f_plan_id':active_id}</field>
+	</record>
+
+</odoo>

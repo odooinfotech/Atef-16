@@ -1,0 +1,273 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* orient_product_customs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-06 18:54+0000\n"
+"PO-Revision-Date: 2022-02-06 18:54+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_product__fprodtarget
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_template__fprodtarget
+msgid " Product Target"
+msgstr "الفئة المستهدفة"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_template__barcode
+msgid "Barcode"
+msgstr "باركود"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_product__fprodbrand
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_template__fprodbrand
+msgid "Brand"
+msgstr "العلامة التجارية"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_brand__fprodbrand_name
+msgid "Brand Name"
+msgstr "العلامة التجارية"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_sub_category__fprodcategory
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_product__fprodcategory
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_template__fprodcategory
+msgid "Category"
+msgstr "التصنيف"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_category__fprodcategory_name
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_sub_category__fprodsubcategory_name
+msgid "Category Name"
+msgstr "التصنيف"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_brand__create_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_category__create_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_family__create_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_identity__create_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_producername__create_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_sub_category__create_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_target__create_uid
+msgid "Created by"
+msgstr "تم انشاؤه من قبل"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_brand__create_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_category__create_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_family__create_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_identity__create_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_producername__create_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_sub_category__create_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_target__create_date
+msgid "Created on"
+msgstr "تم انشاؤه "
+
+#. module: orient_product_customs
+#: model_terms:ir.ui.view,arch_db:orient_product_customs.f_product_template_form_or_prod_cust
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_brand__display_name
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_category__display_name
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_family__display_name
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_identity__display_name
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_producername__display_name
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_sub_category__display_name
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_target__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_product__fexternalid
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_template__fexternalid
+msgid "External Id"
+msgstr "الرقم الخارجي"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_brand__id
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_category__id
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_family__id
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_identity__id
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_producername__id
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_sub_category__id
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_target__id
+msgid "ID"
+msgstr "الرقم"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_brand____last_update
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_category____last_update
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_family____last_update
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_identity____last_update
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_producername____last_update
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_sub_category____last_update
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_target____last_update
+msgid "Last Modified on"
+msgstr "اخر تعديل"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_brand__write_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_category__write_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_family__write_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_identity__write_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_producername__write_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_sub_category__write_uid
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_target__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث من قبل"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_brand__write_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_category__write_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_family__write_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_identity__write_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_producername__write_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_sub_category__write_date
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_target__write_date
+msgid "Last Updated on"
+msgstr "اخر تحديث"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_product__fproducername
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_template__fproducername
+msgid "Producer Name"
+msgstr "الشركة المصنعة"
+
+#. module: orient_product_customs
+#: model:ir.actions.act_window,name:orient_product_customs.f_prod_brand_action_window_or_prod_cust
+#: model:ir.ui.menu,name:orient_product_customs.f_prod_brand_menue_or_prod_cust
+#: model_terms:ir.ui.view,arch_db:orient_product_customs.f_prod_brand_tree_view_or_customs
+msgid "Product Brand"
+msgstr "العلامة التجارية للمنتج"
+
+#. module: orient_product_customs
+#: model:ir.actions.act_window,name:orient_product_customs.f_prod_cat_action_window_or_prod_cust
+#: model:ir.ui.menu,name:orient_product_customs.f_prod_cat_menue_or_prod_cust
+#: model_terms:ir.ui.view,arch_db:orient_product_customs.f_prod_cat_tree_view_or_customs
+msgid "Product Category"
+msgstr "تصنيف المنتج"
+
+#. module: orient_product_customs
+#: model:ir.actions.act_window,name:orient_product_customs.f_prod_family_action_window_or_prod_cust
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_product__fprodfamily
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_template__fprodfamily
+#: model:ir.ui.menu,name:orient_product_customs.f_prod_family_menue_or_prod_cust
+#: model_terms:ir.ui.view,arch_db:orient_product_customs.f_prod_family_tree_view_or_customs
+msgid "Product Family"
+msgstr "عائلة المنتج"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_family__fprodfamily_name
+msgid "Product Family Name"
+msgstr "عائلة المنتج"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_product__fprodidentity
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_template__fprodidentity
+msgid "Product Identity"
+msgstr "مجموعة المنتج"
+
+#. module: orient_product_customs
+#: model:ir.actions.act_window,name:orient_product_customs.f_prod_identity_action_window_or_prod_cust
+#: model:ir.ui.menu,name:orient_product_customs.f_prod_identity_menue_or_prod_cust
+#: model_terms:ir.ui.view,arch_db:orient_product_customs.f_prod_identity_group_tree_view
+msgid "Product Identity Group"
+msgstr "مجموعة المنتج"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_identity__fprodidentity_name
+msgid "Product Identity Name"
+msgstr "مجموعة المنتج"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_producername__fprodproducer_name
+#: model:ir.ui.menu,name:orient_product_customs.f_prod_producer_menue_or_prod_cust
+#: model_terms:ir.ui.view,arch_db:orient_product_customs.f_prod_producer_name_tree_view_or_customs
+msgid "Product Producer Name"
+msgstr "الشركة المصنعة"
+
+#. module: orient_product_customs
+#: model:ir.actions.act_window,name:orient_product_customs.f_prod_producer_action_window_or_prod_cust
+msgid "Product Producer Name "
+msgstr "الشركة المصنعة"
+
+#. module: orient_product_customs
+#: model:ir.actions.act_window,name:orient_product_customs.f_prod_sub_cat_action_window_or_prod_cust
+#: model:ir.ui.menu,name:orient_product_customs.f_prod_sub_cat_menue_or_prod_cust
+#: model_terms:ir.ui.view,arch_db:orient_product_customs.f_prod_sub_cat_tree_view_or_customs
+msgid "Product Sub Category"
+msgstr "التصنيف الفرعي للمنتج"
+
+#. module: orient_product_customs
+#: model:ir.ui.menu,name:orient_product_customs.f_prod_target_menue_or_prod_cust
+#: model_terms:ir.ui.view,arch_db:orient_product_customs.f_prod_target_tree_view_or_customs
+msgid "Product Target"
+msgstr "الفئة المستهدفة"
+
+#. module: orient_product_customs
+#: model:ir.actions.act_window,name:orient_product_customs.f_prod_target_action_window_or_prod_cust
+msgid "Product Target "
+msgstr "الفئة المستهدفة"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_target__fprodtarget_name
+msgid "Product Target Name"
+msgstr "الفئة المستهدفة"
+
+#. module: orient_product_customs
+#: model:ir.model,name:orient_product_customs.model_product_template
+msgid "Product Template"
+msgstr "نموذج المنتج"
+
+#. module: orient_product_customs
+#: model:ir.model.fields,field_description:orient_product_customs.field_f_prod_category__fprodsubcategory
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_product__fprodsubcategory
+#: model:ir.model.fields,field_description:orient_product_customs.field_product_template__fprodsubcategory
+msgid "Sub Category"
+msgstr "التصنيف الفرعي"
+
+#. module: orient_product_customs
+#: model:ir.model,name:orient_product_customs.model_f_prod_brand
+msgid "f.prod.brand"
+msgstr ""
+
+#. module: orient_product_customs
+#: model:ir.model,name:orient_product_customs.model_f_prod_category
+msgid "f.prod.category"
+msgstr ""
+
+#. module: orient_product_customs
+#: model:ir.model,name:orient_product_customs.model_f_prod_family
+msgid "f.prod.family"
+msgstr ""
+
+#. module: orient_product_customs
+#: model:ir.model,name:orient_product_customs.model_f_prod_identity
+msgid "f.prod.identity"
+msgstr ""
+
+#. module: orient_product_customs
+#: model:ir.model,name:orient_product_customs.model_f_prod_producername
+msgid "f.prod.producername"
+msgstr ""
+
+#. module: orient_product_customs
+#: model:ir.model,name:orient_product_customs.model_f_prod_sub_category
+msgid "f.prod.sub.category"
+msgstr ""
+
+#. module: orient_product_customs
+#: model:ir.model,name:orient_product_customs.model_f_prod_target
+msgid "f.prod.target"
+msgstr ""

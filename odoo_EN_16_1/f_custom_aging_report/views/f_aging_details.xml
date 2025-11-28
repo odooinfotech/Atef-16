@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+		<record id="view_report_aging_custom_tree" model="ir.ui.view">
+            <field name="name">report.pproduct.f.aging.details.tree</field>
+            <field name="model">f.aging.details</field>
+            <field name="arch" type="xml">
+                <tree create ='false' import='false'>
+                   <field name="product_id"/>
+                    <field name="barcode"/>
+                     <field name="default_code"/>
+                      <field name="total_cost" sum="tcost"/>
+ 		       <field name="on_hand_quantity" sum="tcostqty"/>
+                      <field name="days" sum="tcostda"/>
+                         <field name="cost0" sum="tcostzr"/>
+                      <field name="days1" sum="tcosdone"/>
+                         <field name="cost1" sum="tcostone"/>
+                      <field name="days2" sum="tcostdtw"/>
+                       <field name="cost2" sum="tcostwo"/>
+                      <field name="days3" sum="tcostdth"/>
+                       <field name="cost3" sum="tcostthir"/>
+                        <field name="days4" sum="tcostdfth"/>
+                       <field name="cost4" sum="tcostfth"/>
+                        <field name="days5" sum="tcostdfif"/>
+                       <field name="cost5" sum="tcostfit"/>
+                       <field name="days6" sum="tcostdsx"/>
+                       <field name="cost6" sum="tcostsix"/>
+                       
+                    
+                    
+                </tree>
+            </field>
+        </record>  
+        
+        
+        <record id="view_report_aging_custom_search" model="ir.ui.view">
+            <field name="name">report.pproduct.f.aging.details.seacrh</field>
+            <field name="model">f.aging.details</field>
+            <field name="arch" type="xml">
+                <search >
+                   <field name="product_id"/>
+                   <field name="barcode"/>
+              <group expand="1" string="Group By">
+                        <filter string="Company" name="company" context="{'group_by':'company_id'}"/>
+                    
+                        </group>
+                    
+                    
+                </search>
+            </field>
+        </record> 
+        
+        
+       
+        
+    </data>
+</odoo>

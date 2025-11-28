@@ -1,0 +1,15 @@
+<odoo>
+	<data>
+		<record id="f_res_country_inherit" model="ir.ui.view">
+			<field name="name">f.res_country_form_inherit</field>
+			<field name="model">res.country</field>
+			<field name="inherit_id"
+				ref="base.view_country_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='code']" position="after">
+					<field name="f_shipping_period" />
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

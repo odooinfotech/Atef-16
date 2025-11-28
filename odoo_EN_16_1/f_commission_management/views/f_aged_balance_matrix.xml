@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="f_aged_balance_matrix_tree_view" model="ir.ui.view">
+        <field name="name">f.aged.balance.matrix.tree.view</field>
+        <field name="model">f.aged.balance.matrix</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="f_name" />
+                <field name="f_bad_debt" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="f_aged_balance_matrix_form_view" model="ir.ui.view">
+        <field name="name">f.aged.balance.matrix.form.view</field>
+        <field name="model">f.aged.balance.matrix</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="f_name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="f_bad_debt" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Matrix Lines" name="f_matrix_line">
+                            <field name="f_matrix_line" widget="one2many" mode="tree">
+                                <tree editable="bottom" string="Matrix Lines">
+                                    <field name="f_matrix_id" invisible="1" />
+                                    <field name="f_operator" />
+                                    <field name="f_from_value" />
+                                    <field name="f_to_value" />
+                                    <field name="f_commission_percent" widget="percentage" />
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="f_aged_balance_matrix_action" model="ir.actions.act_window">
+        <field name="name">Aged Balance Matrix</field>
+        <field name="res_model">f.aged.balance.matrix</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Aged Balance Matrix"
+              id="f_aged_balance_matrix_menu"
+              parent="f_commission_management.f_commission_config_menu"
+              action="f_commission_management.f_aged_balance_matrix_action"
+              sequence="4" />
+
+</odoo>

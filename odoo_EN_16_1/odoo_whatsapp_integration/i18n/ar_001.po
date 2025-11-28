@@ -1,0 +1,579 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* odoo_whatsapp_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-13 09:15+0000\n"
+"PO-Revision-Date: 2024-03-13 09:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,body_html:odoo_whatsapp_integration.whatsapp_invoice_template
+msgid ""
+"\n"
+"            <div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"        <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                <div>\n"
+"                    Hello *<t t-out=\"object.partner_id.name or ''\"></t>*\n"
+"                </div>\n"
+"                <div>\n"
+"                    Here is your invoice *<t t-out=\"object.name\"></t>* with amount *<t t-out=\"format_amount(object.amount_total, object.currency_id)\"></t>*\n"
+"                    from <t t-out=\"object.company_id.name\"></t>.\n"
+"                </div>\n"
+"                <div>\n"
+"                    <t t-if=\"object.payment_state in ('paid')\">\n"
+"                        This invoice is already paid. Amount due is *<t t-out=\"format_amount(object.amount_residual, object.currency_id)\"></t>*\n"
+"                    </t>\n"
+"                    <t t-else=\"\">\n"
+"                        Please remit payment at your earliest convenience. Amount due is *<t t-out=\"format_amount(object.amount_residual, object.currency_id)\"></t>*\n"
+"                    </t>\n"
+"                </div>\n"
+"                The invoice date is <t t-out=\"object.invoice_date\"></t>\n"
+"                <div>\n"
+"                    Your order details are as follows:\n"
+"                    <br>\n"
+"                    <t t-foreach=\"object\" t-as=\"each\">\n"
+"                        <t t-foreach=\"each.invoice_line_ids\" t-as=\"id\">\n"
+"                            *Product: <t t-out=\"id.product_id.name\"></t>* <br>\n"
+"                             *Qty: <t t-out=\"id.quantity\"></t>*<br>\n"
+"                             *Price:<t t-out=\"id.price_unit\"></t>*<br>\n"
+"                        </t>\n"
+"                    </t>\n"
+"                </div>\n"
+"                If you have any questions, please feel free to contact us.\n"
+"        \n"
+"        "
+msgstr ""
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,body_html:odoo_whatsapp_integration.whatsapp_purchase_template
+msgid ""
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"             <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"             <div>\n"
+"                Hello *<t t-out=\"object.partner_id.name or ''\"></t>*,\n"
+"             </div>\n"
+"             <t t-if=\"object.state in ('draft', 'sent')\">\n"
+"                This is about Request For Quotation (RFQ) *<t t-out=\"object.name\"></t>* with amount *<t t-out=\"format_amount(object.amount_total, object.currency_id)\"></t>*\n"
+"                <div>\n"
+"                    We are expecting receipt of products on <t t-out=\"object.date_planned\"></t>\n"
+"                </div>\n"
+"                <div>\n"
+"                    Quotation details are as follows: <br>\n"
+"                    <t t-foreach=\"object\" t-as=\"each\">\n"
+"                        <t t-foreach=\"each.order_line\" t-as=\"id\">\n"
+"                            *Product: <t t-out=\"id.product_id.name\"></t>* <br>\n"
+"                             *Qty: <t t-out=\"id.product_qty\"></t>*<br>\n"
+"                             *Price:<t t-out=\"id.price_subtotal\"></t>*<br>\n"
+"                        </t>\n"
+"                    </t>\n"
+"                </div>\n"
+"             </t>\n"
+"             <t t-else=\"\">\n"
+"                <div>\n"
+"                    Your Purchase Order Number *<t t-out=\"object.name\"></t>* with amount *<t t-out=\"format_amount(object.amount_total, object.currency_id)\"></t>* is Confirmed.\n"
+"                </div>\n"
+"                <div>\n"
+"                    Order confirmation date and time is <t t-out=\"object.date_approve\"></t>\n"
+"                </div>\n"
+"                <div>\n"
+"                    Order details are as follows: <br>\n"
+"                    <t t-foreach=\"object\" t-as=\"each\">\n"
+"                        <t t-foreach=\"each.order_line\" t-as=\"id\">\n"
+"                            *Product: <t t-out=\"id.product_id.name\"></t>* <br>\n"
+"                             *Qty: <t t-out=\"id.product_qty\"></t>*<br>\n"
+"                             *Price:<t t-out=\"id.price_subtotal\"></t>*<br>\n"
+"                        </t>\n"
+"                    </t>\n"
+"                </div>\n"
+"             </t>\n"
+"            <div>\n"
+"                We are expecting receipt of products on or before scheduled date <br/>\n"
+"                If you have any questions, please feel free to contact us.\n"
+"            </div>\n"
+"        \n"
+"        "
+msgstr ""
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,body_html:odoo_whatsapp_integration.whatsapp_sales_template
+msgid ""
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"         <div>\n"
+"            Hello *<t t-out=\"object.partner_id.name or ''\"></t>*,\n"
+"         </div>\n"
+"         <t t-if=\"object.state in ('draft', 'sent')\">\n"
+"            Your Quotation *<t t-out=\"object.name or ''\"></t>* with amount *<t t-out=\"format_amount(object.amount_total, object.currency_id)\"></t>* is ready.\n"
+"            <div>\n"
+"                Your quotation date and time is \"<t t-out=\"object.date_order\"></t>\"\n"
+"            </div>\n"
+"            <div>\n"
+"                Quotation details are as follows: <br>\n"
+"                <t t-foreach=\"object\" t-as=\"each\">\n"
+"                    <t t-foreach=\"each.order_line\" t-as=\"id\">\n"
+"                        *Product: <t t-out=\"id.product_id.name\"></t>* <br>\n"
+"                         *Qty: <t t-out=\"id.product_uom_qty\"></t>*<br>\n"
+"                         *Price:<t t-out=\"id.price_subtotal\"></t>*<br>\n"
+"                    </t>\n"
+"                </t>\n"
+"            </div>\n"
+"            <div>\n"
+"                If you have any questions, please feel free to contact us.\n"
+"            </div>\n"
+"         </t>\n"
+"         <t t-else=\"\">\n"
+"            <div>\n"
+"                Your Sale Order Number *<t t-out=\"object.name or ''\"></t>* with amount *<t t-out=\"format_amount(object.amount_total, object.currency_id)\"></t>* is Confirmed.\n"
+"            </div>\n"
+"            <div>\n"
+"                Your order date and time is \"<t t-out=\"object.date_order\"></t>\"\n"
+"            </div>\n"
+"            <div>\n"
+"                Your order details are as follows: <br>\n"
+"                <t t-foreach=\"object\" t-as=\"each\">\n"
+"                    <t t-foreach=\"each.order_line\" t-as=\"id\">\n"
+"                        *Product: <t t-out=\"id.product_id.name\"></t>* <br>\n"
+"                         *Qty: <t t-out=\"id.product_uom_qty\"></t>*<br>\n"
+"                         *Price:<t t-out=\"id.price_subtotal\"></t>*<br>\n"
+"                    </t>\n"
+"                </t>\n"
+"            </div>\n"
+"            <div>\n"
+"                If you have any questions, please feel free to contact us.\n"
+"            </div>\n"
+"         </t>\n"
+"        \n"
+"        "
+msgstr ""
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,body_html:odoo_whatsapp_integration.whatsapp_inventory_template
+msgid ""
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px;\">\n"
+"         <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"         <div>\n"
+"            Hello *<t t-out=\"object.partner_id.name or ''\"></t>*,\n"
+"         </div>\n"
+"         <div>\n"
+"             <t t-if=\"object.state in ('draft')\">\n"
+"                We have received your order *<t t-out=\"object.name\"></t>*. It will be shipped soon\n"
+"                <div>\n"
+"                    Order details are as follows: <br>\n"
+"                    <t t-foreach=\"object\" t-as=\"each\">\n"
+"                        <t t-foreach=\"each.move_ids_without_package\" t-as=\"id\">\n"
+"                            *Product: <t t-out=\"id.product_id.name\"></t>* <br>\n"
+"                             *Qty: <t t-out=\"id.product_uom_qty\"></t>*<br>\n"
+"                        </t>\n"
+"                    </t>\n"
+"                </div>\n"
+"             </t>\n"
+"             <t t-if=\"object.state in ('assigned')\">\n"
+"                Your order *<t t-out=\"object.name\"></t>* is ready. It will be shipped soon\n"
+"                <div>\n"
+"                    Order details are as follows: <br>\n"
+"                    <t t-foreach=\"object\" t-as=\"each\">\n"
+"                        <t t-foreach=\"each.move_ids_without_package\" t-as=\"id\">\n"
+"                            *Product: <t t-out=\"id.product_id.name\"></t>* <br>\n"
+"                             *Qty: <t t-out=\"id.product_uom_qty\"></t>*<br>\n"
+"                        </t>\n"
+"                    </t>\n"
+"                </div>\n"
+"             </t>\n"
+"             <t t-if=\"object.state in ('confirmed')\">\n"
+"                Your order *<t t-out=\"object.name\"></t>* is ready. It will be shipped soon\n"
+"                <div>\n"
+"                    Order details are as follows: <br>\n"
+"                    <t t-foreach=\"object\" t-as=\"each\">\n"
+"                        <t t-foreach=\"each.move_ids_without_package\" t-as=\"id\">\n"
+"                            *Product: <t t-out=\"id.product_id.name\"></t>* <br>\n"
+"                             *Qty: <t t-out=\"id.product_uom_qty\"></t>*<br>\n"
+"                        </t>\n"
+"                    </t>\n"
+"                </div>\n"
+"             </t>\n"
+"             <t t-if=\"object.state in ('done')\">\n"
+"                Your order *<t t-out=\"object.name\"></t>* is shipped.\n"
+"                <div>\n"
+"                    Order details are as follows: <br>\n"
+"                    <t t-foreach=\"object\" t-as=\"each\">\n"
+"                        <t t-foreach=\"each.move_ids_without_package\" t-as=\"id\">\n"
+"                            *Product: <t t-out=\"id.product_id.name\"></t>* <br>\n"
+"                             *Qty: <t t-out=\"id.quantity_done\"></t>*<br>\n"
+"                        </t>\n"
+"                    </t>\n"
+"                </div>\n"
+"             </t>\n"
+"         </div>\n"
+"         <div>\n"
+"            If you have any questions, please feel free to contact us.\n"
+"         </div>\n"
+"            </p>\n"
+"        \n"
+"        "
+msgstr ""
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.res_config_settings_view_form_whatsapp
+msgid "Activate to unable Custom Whatsapp Message button"
+msgstr "قم بالتنشيط لعدم القدرة على ارسال رسالة واتس اب المخصصة"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.res_config_settings_view_form_whatsapp
+msgid "Activate to unable Direct Whatsapp Message button"
+msgstr "قم بالتنشيط لعدم القدرة على ارسال رسالة واتس اب المباشرة"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.view_portal_share_form_inherit
+msgid "Add a note"
+msgstr "اضافة ملاحظة"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_contact_wizard
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_multiple_message_wizard_form
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_wizard
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.res_config_settings_view_form_whatsapp
+msgid "Click to enable Custom whatsapp message feature"
+msgstr "انقر لتفعيل ميزة رسائل الواتس اب المخصصة"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.res_config_settings_view_form_whatsapp
+msgid "Click to enable direct whatsapp message feature"
+msgstr "انقر لتفعيل ميزة رسائل الواتس اب المباشرة"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model,name:odoo_whatsapp_integration.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model,name:odoo_whatsapp_integration.model_res_partner
+msgid "Contact"
+msgstr "جهة اتصال"
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,subject:odoo_whatsapp_integration.whatsapp_contacts_template
+msgid "Contact Message Template"
+msgstr "قالب رسالة جهة الاتصال"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_multiple_contact__mobile
+msgid "Contact Number"
+msgstr "رقم جهة الاتصال"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_display_error_message__create_uid
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard__create_uid
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_contact__create_uid
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_multiple_contact__create_uid
+msgid "Created by"
+msgstr "انشيء بواسطة"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_display_error_message__create_date
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard__create_date
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_contact__create_date
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_multiple_contact__create_date
+msgid "Created on"
+msgstr "تاريخ الانشاء"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_res_config_settings__group_send_sms_custom
+msgid "Custom WhatsApp Message"
+msgstr "رسالة واتس اب مخصصة"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_res_config_settings__group_send_sms
+msgid "Direct WhatsApp Message"
+msgstr "رسالة واتس اب مباشرة"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_demo_inventory_order
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_demo_invoice_order
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_demo_purchase_order
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_demo_sale
+msgid "Direct Whatsapp Message"
+msgstr "رسالة واتس اب مباشرة"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_display_error_message__display_name
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard__display_name
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_contact__display_name
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_multiple_contact__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_display_error_message__id
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard__id
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_contact__id
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_multiple_contact__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,subject:odoo_whatsapp_integration.whatsapp_inventory_template
+msgid "Inventory Template"
+msgstr "قالب المخزون"
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,subject:odoo_whatsapp_integration.whatsapp_invoice_template
+msgid "Invoice Template"
+msgstr "قالب الفاتورة"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model,name:odoo_whatsapp_integration.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_display_error_message____last_update
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard____last_update
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_contact____last_update
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_multiple_contact____last_update
+msgid "Last Modified on"
+msgstr "تاريخ اخر تعديل"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_display_error_message__write_uid
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard__write_uid
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_contact__write_uid
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_multiple_contact__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث بواسطة"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_display_error_message__write_date
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard__write_date
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_contact__write_date
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_multiple_contact__write_date
+msgid "Last Updated on"
+msgstr "تاريخ اخر تحديث"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields.selection,name:odoo_whatsapp_integration.selection__portal_share__share_type__mail
+msgid "Mail"
+msgstr "بريد"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_display_error_message__name
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard__message
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_contact__message
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_multiple_contact__message
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.view_portal_share_form_inherit
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.warn_message_wizard
+msgid "Message"
+msgstr "رسالة"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard__mobile_number
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_contact__mobile_number
+msgid "Mobile"
+msgstr "هاتف شخصي"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_portal_share__mobile_number
+msgid "Mobile Number"
+msgstr "رقم الهاتف الشخصي"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.warn_message_wizard
+msgid "OK"
+msgstr ""
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.res_config_settings_view_form_whatsapp
+msgid "Odoo WhatsApp Integration"
+msgstr ""
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_portal_share__partner_id
+msgid "Partner"
+msgstr "شريك"
+
+#. module: odoo_whatsapp_integration
+#. odoo-python
+#: code:addons/odoo_whatsapp_integration/models/inventory_fun.py:0
+#: code:addons/odoo_whatsapp_integration/models/invoice_fun.py:0
+#: code:addons/odoo_whatsapp_integration/models/purchase_fun.py:0
+#: code:addons/odoo_whatsapp_integration/models/sale_fun.py:0
+#, python-format
+msgid "Please Select Orders of Unique Customers"
+msgstr "الرجاء تحديد طلبات العملاء الفريدين"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model,name:odoo_whatsapp_integration.model_portal_share
+msgid "Portal Sharing"
+msgstr "مشاركة البوابة "
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model,name:odoo_whatsapp_integration.model_purchase_order
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,subject:odoo_whatsapp_integration.whatsapp_purchase_template
+msgid "Purchase Template"
+msgstr "قالب الشراء"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_multiple_contact__partner_id
+msgid "Recipient"
+msgstr "المستلم"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard__user_id
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard_contact__user_id
+msgid "Recipient Name"
+msgstr "اسم المستلم"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model,name:odoo_whatsapp_integration.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,subject:odoo_whatsapp_integration.whatsapp_sales_template
+msgid "Sales template"
+msgstr "قالب البيع"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.view_portal_share_form_inherit
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_contact_wizard
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_multiple_message_wizard_form
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_wizard
+msgid "Send"
+msgstr "ارسال"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_demo_inventory_order
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_demo_invoice_order
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_demo_purchase_order
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_demo_sale
+msgid "Send Custom Whatsapp Message"
+msgstr "إرسال رسالة واتس اب مخصصة"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_button
+msgid "Send WhatsApp Message"
+msgstr "ارسال رسالة واتس اب"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_wizard
+msgid "Send Whatsapp Message"
+msgstr "ارسال رسالة واتس اب"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_portal_share__share_type
+msgid "Share With"
+msgstr "مشاركة مع"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model,name:odoo_whatsapp_integration.model_stock_picking
+msgid "Transfer"
+msgstr "الشحنة"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard__template_id
+msgid "Use template"
+msgstr "استخدم القالب"
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,name:odoo_whatsapp_integration.whatsapp_sales_template
+msgid "Whats App Sale template"
+msgstr "قالب البيع للواتس اب"
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,name:odoo_whatsapp_integration.whatsapp_contacts_template
+msgid "Whats app Contact template"
+msgstr "قالب جهة الاتصال للواتس اب"
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,name:odoo_whatsapp_integration.whatsapp_inventory_template
+msgid "Whats app Inventory template"
+msgstr "قالب الجرد للواتس اب "
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,name:odoo_whatsapp_integration.whatsapp_invoice_template
+msgid "Whats app Invoice template"
+msgstr "قالب الفاتورة للواتس اب"
+
+#. module: odoo_whatsapp_integration
+#: model:mail.template,name:odoo_whatsapp_integration.whatsapp_purchase_template
+msgid "Whats app Purchase template"
+msgstr "قالب الشراء للواتس اب"
+
+#. module: odoo_whatsapp_integration
+#: model:res.groups,name:odoo_whatsapp_integration.group_send_sms_custom
+msgid "WhatsApp Custom SMS"
+msgstr "واتس اب مخصص الرسائل القصيرة"
+
+#. module: odoo_whatsapp_integration
+#: model:res.groups,name:odoo_whatsapp_integration.group_send_sms
+msgid "WhatsApp Direct SMS"
+msgstr "واتساب مباشر الرسائل القصيرة"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields.selection,name:odoo_whatsapp_integration.selection__portal_share__share_type__whatsapp
+msgid "Whatsapp"
+msgstr "واتس اب"
+
+#. module: odoo_whatsapp_integration
+#. odoo-python
+#: code:addons/odoo_whatsapp_integration/models/contacts_fun.py:0
+#: code:addons/odoo_whatsapp_integration/models/inventory_fun.py:0
+#: code:addons/odoo_whatsapp_integration/models/invoice_fun.py:0
+#: code:addons/odoo_whatsapp_integration/models/purchase_fun.py:0
+#: code:addons/odoo_whatsapp_integration/models/sale_fun.py:0
+#: model:ir.actions.server,name:odoo_whatsapp_integration.action_whatsapp_message
+#: model:ir.actions.server,name:odoo_whatsapp_integration.action_whatsapp_message_inventory
+#: model:ir.actions.server,name:odoo_whatsapp_integration.action_whatsapp_message_invoice
+#: model:ir.actions.server,name:odoo_whatsapp_integration.action_whatsapp_message_purchase
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.res_config_settings_view_form_whatsapp
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_contact_wizard
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_multiple_message_wizard_form
+#, python-format
+msgid "Whatsapp Message"
+msgstr "رسالة واتس اب"
+
+#. module: odoo_whatsapp_integration
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_contact_wizard
+#: model_terms:ir.ui.view,arch_db:odoo_whatsapp_integration.whatsapp_wizard
+msgid "Whatsapp Number"
+msgstr "رقم الواتس اب"
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model,name:odoo_whatsapp_integration.model_display_error_message
+msgid "display.error.message"
+msgstr ""
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model.fields,field_description:odoo_whatsapp_integration.field_whatsapp_wizard__model
+msgid "mail.template.model_id"
+msgstr ""
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model,name:odoo_whatsapp_integration.model_whatsapp_wizard
+msgid "whatsapp.wizard"
+msgstr ""
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model,name:odoo_whatsapp_integration.model_whatsapp_wizard_contact
+msgid "whatsapp.wizard.contact"
+msgstr ""
+
+#. module: odoo_whatsapp_integration
+#: model:ir.model,name:odoo_whatsapp_integration.model_whatsapp_wizard_multiple_contact
+msgid "whatsapp.wizard.multiple.contact"
+msgstr ""

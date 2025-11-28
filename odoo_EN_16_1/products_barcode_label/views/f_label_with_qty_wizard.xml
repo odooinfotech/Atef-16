@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+            
+            
+
+    <record id="barcode_wizard_label" model="ir.ui.view">
+        <field name="name">Barcode</field>
+        <field name="model">product.wizard.label</field>
+        <field name="arch" type="xml">
+            <form string="Barcode">
+                <field name="picking_moves_ids" nolabel="1">
+                    <tree editable="top" create="0">
+                        <field name="product_id" options="{'no_create': True, 'no_open': True}" force_save="1"/>
+                        <field name="quantity"/>
+                    </tree>
+                </field>
+                <footer>
+                    <button string='Print' name="print_barcode_from_wizard" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_barcode_wizard_label" model="ir.actions.act_window">
+        <field name="name">Customize Products Template Labels</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.wizard.label</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    
+
+    
+    
+    
+      <act_window
+            id="action_barcode_wizard_label"
+            name="Customize Products Template Labels"
+            res_model="product.wizard.label"
+            binding_model="product.template"
+            view_mode="form"/>
+
+</odoo>

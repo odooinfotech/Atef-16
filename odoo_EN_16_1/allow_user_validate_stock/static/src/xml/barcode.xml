@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<templates id="template" xml:space="preserve">
+
+
+
+   <t t-name="barcodefalak" t-inherit="stock_barcode.stock_barcode_lines_template" t-inherit-mode="extension" owl="1">
+      <xpath expr="//button[3]" position="replace"> 
+            <button  class="o_line_button o_remove_unit btn btn-primary ml-2 ml-sm-4">
+                        - 1
+                    </button>
+    </xpath>
+    
+     <xpath expr="//button[2]" position="replace"> 
+         <!--   <button  class="o_line_button o_remove_unit btn btn-primary ml-2 ml-sm-4">
+                        - 1
+                    </button> -->
+    </xpath>
+    
+    
+			<xpath expr="//span[@t-if ='line.theoretical_qty']" position="replace"> 
+<!-- 			<span class="barco" groups="nc_customs.f_adminprodqty_group_id"> -->
+ <t t-if="hasuserAccess">
+			 <span  t-esc="'/ ' + line.theoretical_qty"/>
+			 </t>
+<!-- 			<t t-if="widget.groups.f_adminprodqty_group_id"/> -->
+
+			           
+			    </xpath>
+			    
+    
+   </t>
+    
+    
+        
+        
+        
+    </templates>

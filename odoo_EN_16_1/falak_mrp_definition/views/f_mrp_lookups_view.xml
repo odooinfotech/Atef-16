@@ -1,0 +1,14 @@
+<odoo>
+	<data>
+		<record id="f_work_center_group_tree_view" model="ir.ui.view">
+			<field name="name">mrp.workcenter.management.tree.view</field>
+			<field name="model">mrp.workcenter.management</field>
+			<field name="arch" type="xml">
+				<tree string="WorkCenter Group" editable="bottom">
+					<field name="name" />
+				</tree>
+			</field>
+		</record>
+
+	</data>
+</odoo>

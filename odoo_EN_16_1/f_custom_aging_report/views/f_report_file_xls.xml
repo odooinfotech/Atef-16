@@ -1,0 +1,16 @@
+<odoo>
+
+
+
+
+
+
+     	 <record id="f_aging_details_report_xls" model="ir.actions.report">
+        <field name="name">Product Aging Details</field>
+        <field name="model">f.product.aging</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">f_custom_aging_report.freport_detial_xls</field>
+             	<field name="report_file">f_product_aging</field>
+    </record>
+
+</odoo>

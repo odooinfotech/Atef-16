@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="f_internal_purchase" model="f.pricing.type">
+            <field name="f_name">Internal Purchase</field>
+        </record>
+        <record id="f_external_purchase" model="f.pricing.type">
+            <field name="f_name">External Purchase</field>
+        </record>
+    </data>
+</odoo>

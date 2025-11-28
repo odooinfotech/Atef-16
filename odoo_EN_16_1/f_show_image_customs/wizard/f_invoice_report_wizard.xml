@@ -1,0 +1,30 @@
+<odoo>
+    <record id="f_invoice_report_wizard_form_view" model="ir.ui.view">
+        <field name="name">f.invoice.report.wizard.form.view</field>
+        <field name="model">f.invoice.report.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="f_show_image" />
+                    </group>
+                </group>
+
+                <footer>
+                    <button name="f_print_invoice_report" type="object" string="Print" class="oe_highlight"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="f_invoice_report_wizard_action" model="ir.actions.act_window">
+        <field name="name">Invoice Orders Report Wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">f.invoice.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

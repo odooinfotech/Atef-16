@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE xml>
+<odoo>
+    <data>
+        <record id="export_products_with_images_form_view" model="ir.ui.view">
+            <field name="name">Export Products With Images</field>
+            <field name="model">export.products.with.images</field>
+            <field name="arch" type="xml">
+                <form string="Export Products With Images">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="is_product_with_image_imformation" attrs="{'invisible': [('is_only_image_into_zip_file','!=',False)]}"/>
+                                <field name="is_only_image_into_zip_file" attrs="{'invisible': [('is_product_with_image_imformation','!=',False)]}"/>
+                                <field name="is_export_extra_product_images" attrs="{'invisible':True}"/>
+                            </group>
+                        </group>
+                        <footer>
+                           <button name="action_export" string="Export" class="oe_highlight" type="object"/>
+                            <button string="Cancel" class="btn-default" special="cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_excel_report" model="ir.ui.view">
+            <field name="name">view.excel.report</field>
+            <field name="model">excel.report</field>
+            <field name="arch" type="xml">
+                <form string="Genrated xls File">
+                    <group>
+                        <field name="file" readonly="1" filename="file_name"/>
+                        <field name="file_name" invisible="1"/>
+                    </group>
+                    <footer>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="export_products_with_images_menu" model="ir.actions.act_window">
+            <field name="name">Export Products with Images</field>
+            <field name="res_model">export.products.with.images</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="groups_id" eval="[(4, ref('bi_export_images_product.module_export_images_product'))]"/>
+            <field name="binding_model_id" ref="product.model_product_template" />
+            <field name="binding_type">action</field>
+        </record>
+
+    </data>
+</odoo>

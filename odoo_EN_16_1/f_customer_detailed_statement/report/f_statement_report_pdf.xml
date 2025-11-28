@@ -1,0 +1,685 @@
+<odoo>
+    <template id="freport_detial_pdf">
+
+        <t t-call="web.basic_layout">
+
+            <!--   <t t-set="o" t-value="o.with_context(lang=lang)"/> -->
+
+            <table style='width:99%;border:hidden;'>
+
+
+                <td class='text-right' style='border:hidden;'>
+                    <div t-if="data['show_customer_info']">
+
+                        <span t-esc="partner_name"/>
+                    </div>
+                    <div t-if="data['show_customer_info']">
+
+                        <span t-esc="partner_city"/>
+                    </div>
+
+                    <div t-if="data['show_customer_info']">
+                        <span t-esc="partner_ref"/>
+                    </div>
+
+
+                    <div t-if="data['show_customer_info']">
+                        <span t-esc="partner.mobile"/>
+
+                    </div>
+
+                    <div t-if="data['show_customer_info']">
+                        <span t-esc="partner.contact_address_complete"/>
+
+                    </div>
+                </td>
+
+
+                <td class='align-center' style='border:hidden;'>Partner Statement</td>
+
+                <td class='text-left' style='width:30%;border:hidden;'>
+                    <div t-if="data['show_customer_info']">
+                        Report Date:
+                        <span t-esc="report_date"/>
+                    </div>
+                    <div t-if="data['show_customer_info']">
+                        Period:
+                        <span t-esc="data['f_date']"/>
+                        To
+                        <span t-esc="data['to_date']"/>
+                    </div>
+                </td>
+
+
+            </table>
+
+            <br/>
+            <div class="page" style="font-size:12px">
+
+
+                <table style='width:99%;border:hidden;background-color:#93AFB8 !important;'>
+
+                    <tr style='border:hidden;'>
+                        <td>
+                            <span
+                                    style="font-weight: bold;font-size:14px !important;color:#040d5c !important; ">
+                                Initial Balance:
+                                <span t-esc="data['opening_balance']"
+                                      t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </span>
+                        </td>
+                        <td>
+                            <span
+                                    style="font-weight: bold;font-size:14px !important;color:#040d5c !important; ">
+                                Debt:
+                                <span t-esc="data['debt']"
+                                      t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </span>
+                        </td>
+                        <td>
+                            <span
+                                    style="font-weight: bold;font-size:14px !important;color:#040d5c !important; ">
+                                Credit:
+                                <span t-esc="data['credit']"
+                                      t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </span>
+                        </td>
+                        <td>
+                            <span
+                                    style="font-weight: bold;font-size:14px !important;color:#040d5c !important; ">
+                                Balance:
+                                <span t-esc="data['balance']"
+                                      t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </span>
+                        </td>
+                        <!--<td>
+                            <span
+                                style="font-weight: bold;font-size:14px !important;color:#040d5c !important; ">
+                                Balance with B.Checks:
+                                <span t-esc="data['sum_endorsed_checks']+data['balance']"
+                                    t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" />
+                            </span>
+                        </td>-->
+                    </tr>
+                    <tr>
+                    </tr>
+                </table>
+                <br/>
+
+                <t t-set="xtt" t-value="data['opening_balance']"/>
+
+                <table
+                        style="width:98.5%;border:1;border-collapse: collapse;"
+                        class="table table-condensed">
+                    <thead>
+
+                        <th style="border: 1px solid black;background-color:#d2dee2 !important;">Date</th>
+                        <th style="border: 1px solid black;background-color:#d2dee2 !important;">Ref</th>
+                        <t t-if="data['f_report'] == 'pdf'">
+                            <th style="width:25%;border: 1px solid black;background-color:#d2dee2 !important;">Type</th>
+                        </t>
+                        <t t-if="data['f_report'] == 'pdf'">
+                            <th style="border: 1px solid black;background-color:#d2dee2 !important;">Amount Currency
+                            </th>
+                        </t>
+                        <th style="border: 1px solid black;background-color:#d2dee2 !important;">Debt</th>
+                        <th style="border: 1px solid black;background-color:#d2dee2 !important;">Credit</th>
+
+                        <th style="border: 1px solid black;background-color:#d2dee2 !important;">Balance</th>
+                        <t t-if="data['f_report'] == 'pdf'">
+                            <th style="width:25%;border: 1px solid black;background-color:#d2dee2 !important;">Notes
+                            </th>
+                        </t>
+
+                    </thead>
+
+                    <t t-foreach="doc_ids.with_context(lang=lang)" t-as="o">
+                        <tbody style="border: 1px solid black; !important;">
+
+                            <tr>
+                                <td style="border: 1px solid black;">
+                                    <span t-field="o.f_report_date"
+                                          t-options='{"format": "dd/MM/yyyy"}'/>
+                                </td>
+
+                                <td style="border: 1px solid black;">
+                                    <span t-field="o.ref"/>
+                                </td>
+
+
+                                <t t-if="data['f_report'] == 'pdf'">
+                                    <td style="border: 1px solid black;">
+
+
+                                        <span t-field="o.sudo().type"/>
+
+                                    </td>
+                                </t>
+
+                                <t t-if="data['f_report'] == 'pdf'">
+                                    <td style="border: 1px solid black;">
+                                        <span t-esc="o.amount_cuurency"
+                                              t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                                    </td>
+                                </t>
+
+
+                                <td style="border: 1px solid black;">
+                                    <t t-if='o.debt != 0'>
+                                        <span t-esc="o.debt"
+                                              t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </t>
+                                    <t t-else=''>
+
+                                    </t>
+                                </td>
+                                <td style="border: 1px solid black;">
+                                    <t t-if='o.credit != 0'>
+                                        <span t-esc="o.credit"
+                                              t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </t>
+                                    <t t-else=''>
+
+                                    </t>
+                                </td>
+
+
+                                <t t-if="o.acum_balance  &lt; 0 ">
+                                    <td style="border: 1px solid black;color:red;">
+                                        <span t-esc="o.acum_balance"
+                                              t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                </t>
+
+                                <t t-else="">
+                                    <td style="border: 1px solid black;">
+                                        <span t-esc="o.acum_balance"
+                                              t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                    </td>
+                                </t>
+
+
+                                <t t-if="data['f_report'] == 'pdf'">
+                                    <td name="note_col" style="border: 1px solid black;">
+                                        <t t-if="not o.f_note">
+                                            <span t-esc="o.sudo().invoice_id.ref"/>
+                                        </t>
+                                        <t t-else=''>
+                                            <span t-esc="o.f_note"/>
+                                        </t>
+                                    </td>
+                                </t>
+
+
+                            </tr>
+                        </tbody>
+
+
+                        <thead style="width:98.5%;border: 1px solid #ddd;"
+                               t-if="data['include_checkdetails'] and o.sudo().invoice_id.returned_check_id ">
+                            <th style="padding:0px;" width="4%;">Check State</th>
+                            <th style="padding:0px;" width="4%;">Check No.</th>
+                            <th style="padding:0px;" width="40%;">Source Check Payment</th>
+
+                        </thead>
+
+                        <tbody style="width:98.5%;border: 1px solid #ddd;background-color: #f2f2f2;"
+                               t-if="data['include_checkdetails'] and o.sudo().invoice_id.returned_check_id">
+                            <tr style="height:5px;border: 1px solid #ddd;background-color: #f2f2f2;">
+
+                                <td style="padding:0px;">
+                                    <span>Returned Check</span>
+                                </td>
+                                <td style="padding:0px;">
+                                    <span t-field="o.sudo().invoice_id.check_number"/>
+                                </td>
+                                <td style="padding:0px;">
+                                    <span t-field="o.sudo().invoice_id.returned_check_id"/>
+                                </td>
+
+                            </tr>
+                        </tbody>
+
+
+                        <thead style="width:98.5%;border: 1px solid #ddd;"
+                               t-if="data['include_checkdetails'] and o.sudo().payment_id.check_number">
+                            <th style="padding:0px;" width="4%;">Check No.</th>
+                            <th style="padding:0px;" width="40%;">Due Date</th>
+
+                        </thead>
+
+                        <tbody style="width:98.5%;border: 1px solid #ddd;background-color: #f2f2f2;"
+                               t-if="data['include_checkdetails'] and o.sudo().payment_id.check_number">
+                            <tr style="height:5px;border: 11px solid #ddd;background-color: #f2f2f2;">
+
+                                <td style="padding:0px;">
+                                    <span t-field="o.sudo().payment_id.check_number"/>
+                                </td>
+                                <td style="padding:0px;">
+                                    <span t-field="o.sudo().payment_id.due_date"/>
+                                </td>
+
+                            </tr>
+                        </tbody>
+
+
+                        <style>
+                            thead , th {border-top: 1px solid #ddd;border-bottom: 1px solid
+                            #ddd;border-left:hidden;border-right:hidden;}
+                            tbody, tr {border-top: 1px solid #ddd;border-bottom: 1px solid
+                            #ddd;border-left:hidden;border-right:hidden;}
+                            td {border-top: 1px solid #ddd;border-bottom: 1px solid
+                            #ddd;border-left:hidden;border-right:hidden;}
+
+                        </style>
+
+                        <thead class="prodetils" style="width:98.5%;font-size:9.5px;"
+                               t-if="data['include_details'] and o.sudo().journal_id.type  in ('sale','purchase')  and o.sudo().invoice_id.invoice_line_ids and not o.sudo().invoice_id.returned_check_id ">
+                            <th style="padding:1.5px;" class='text-start'>#</th>
+                            <th style="padding:1.5px;">Internal.Ref</th>
+                            <th style="padding:1.5px;">Product</th>
+
+                            <th style="padding:1.5px;">QTY</th>
+                            <th style="padding:1.5px;">Price</th>
+                            <th style="padding:1.5px;">Disc%</th>
+                            <th style="padding:1.5px;">Total</th>
+                            <th style="padding:1.5px;" name='new_col2'></th>
+                            <t t-set="xz" t-value="1"/>
+                            <t t-set="xzy" t-value="1"/>
+                            <t t-set="xs" t-value="1"/>
+                            <t t-set="xzs" t-value="1"/>
+                            <t t-set="xx" t-value="1"/>
+                            <t t-set="yy" t-value="1"/>
+                        </thead>
+
+                        <tbody class="prodetilstd" style="font-size:9.5px;width:98.5%;background-color: #f2f2f2;"
+                               t-if="data['include_details'] and o.sudo().journal_id.type  in ('sale','purchase')  and o.sudo().invoice_id.invoice_line_ids and not o.sudo().invoice_id.returned_check_id ">
+                            <tr t-foreach="o.sudo().invoice_id.invoice_line_ids"
+                                t-as="l" style="font-size:9.5px;height:5px;background-color: #f2f2f2;">
+                                <t t-if='l.product_id  and l.name '>
+
+
+                                    <td style="padding:0px;" class='text-start'>
+                                        <span t-esc="xzy"/>
+                                    </td>
+                                    <td style="padding:0px;">
+
+                                        <span t-field="l.product_id.default_code"/>
+                                    </td>
+                                    <td style="padding:0px;">
+                                        <t t-if="data['show_product_label']">
+                                            <span t-field="l.name"/>
+                                        </t>
+                                        <t t-else="">
+                                            <span t-field="l.product_id.name"/>
+                                        </t>
+
+                                    </td>
+
+                                    <td style="padding:0px;">
+                                        <span t-esc="'{0:.2f}'.format(l.quantity)"/>
+                                    </td>
+                                    <td style="padding:0px;">
+                                        <span t-esc="'{0:.2f}'.format(l.price_unit)"/>
+                                    </td>
+
+                                    <td name="disc_col" style="padding:0px;">
+                                        <span t-field="l.discount"/>
+                                    </td>
+
+
+                                    <td style="padding:0px;">
+                                        <span t-esc="l.price_total"
+                                              t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                                    </td>
+                                    <t t-set="xzy" t-value="xzy+1"/>
+                                    <td name='new_coltd1' style="padding:0px;"></td>
+
+
+                                </t>
+                                <t t-if='not(l.product_id) and l.name'>
+
+
+                                    <td style="padding:0px;" class='text-start'>
+                                        <span t-esc="xs"/>
+                                    </td>
+                                    <td style="padding:0px;"></td>
+                                    <td style="padding:0px;">
+                                        <span t-field="l.name"/>
+                                    </td>
+
+                                    <td style="padding:0px;">
+                                        <span t-esc="'{0:.2f}'.format(l.quantity)"/>
+                                    </td>
+                                    <td style="padding:0px;">
+                                        <span t-esc="'{0:.2f}'.format(l.price_unit)"/>
+                                    </td>
+
+                                    <td name="disc_col" style="padding:0px;">
+                                        <span t-field="l.discount"/>
+                                    </td>
+
+                                    <td style="padding:0px;">
+                                        <span t-esc="l.price_total"
+                                              t-options="{'widget': 'monetary', 'display_currency': o.currency_id}"/>
+                                    </td>
+                                    <t t-set="xs" t-value="xs+1"/>
+
+                                    <td name='new_coltd1' style="padding:0px;"></td>
+
+                                </t>
+                            </tr>
+
+                        </tbody>
+
+
+                    </t>
+
+                    <tbody>
+                        <td colspan="4">
+                            <strong>Debt and Credit balances in selected interval</strong>
+                        </td>
+                        <td style="color:#040d5c !important;background-color:#AFC6CE !important; ">
+                            <span t-esc="data['debt']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td style="color:#040d5c !important;background-color:#AFC6CE !important; ">
+                            <span t-esc="data['credit']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+
+                        <td style="color:#040d5c !important;background-color:#AFC6CE !important; ">
+                            <span t-esc="data['balance']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </td>
+                        <td></td>
+                    </tbody>
+
+                </table>
+
+                <br/>
+                <table class='balance_deatils' style='width:99%;border:hidden;'>
+
+                    <td class='text-right' style='border:hidden;color:#5C5D6F;'>
+                        <strong>Current Balance :
+                            <span t-esc="data['total_balance']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </strong>
+                    </td>
+                    <td class='align-center' style='border:hidden;color:#5C5D6F;'>
+                        <strong>Current Un-Collected Checks :
+                            <span t-esc="data['sum_endorsed_checks']"
+                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                        </strong>
+                    </td>
+                    <t t-if="data['show_bounced_checks']">
+                        <td class='align-center' style='border:hidden;color:#5C5D6F;'>
+                            <strong>Current Bounced Checks :
+                                <span t-esc="data['sum_bounced_checks']"
+                                      t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                            </strong>
+                        </td>
+                    </t>
+                </table>
+                <br/>
+
+
+                <div class='aging_details'>
+                    <t t-if="data['include_details_aging']">
+                        <t t-if="data['aging_values']">
+                            <div class="col-12 text-center">
+                                <h5>Current Aging Details</h5>
+                            </div>
+                            <table style="width:98.5%;border:1;"
+                                   class="table table-condensed">
+                                <thead style="color:#040d5c !important;background-color:#AFC6CE !important; ">
+                                    <tr>
+                                        <th>0-30</th>
+                                        <th>31-60</th>
+                                        <th>61-90</th>
+                                        <th>91-120</th>
+                                        <th>121-150</th>
+                                        <th>151-180</th>
+                                        <th>OLder than 180</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    <tr>
+                                        <td>
+                                            <span t-esc="data['aging_values'][3]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['aging_values'][4]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['aging_values'][5]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['aging_values'][6]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['aging_values'][7]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['aging_values'][8]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['aging_values'][9]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                        </t>
+                    </t>
+
+                </div>
+
+
+                <!-- payable aging -->
+
+                <div class='paya_aging_details'>
+                    <t t-if="data['include_details_aging_pay']">
+                        <t t-if="data['payable_aging_values']">
+                            <div class="col-12 text-center">
+                                <h5>Current Payable Aging Details</h5>
+                            </div>
+                            <table style="width:98.5%;border:1;"
+                                   class="table table-condensed">
+                                <thead style="color:#040d5c !important;background-color:#AFC6CE !important; ">
+                                    <tr>
+                                        <th>0-30</th>
+                                        <th>31-60</th>
+                                        <th>61-90</th>
+                                        <th>91-120</th>
+                                        <th>121-150</th>
+                                        <th>151-180</th>
+                                        <th>OLder than 180</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    <tr>
+                                        <td>
+                                            <span t-esc="data['payable_aging_values'][3]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['payable_aging_values'][4]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['payable_aging_values'][5]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['payable_aging_values'][6]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['payable_aging_values'][7]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['payable_aging_values'][8]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['payable_aging_values'][9]"
+                                                  t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}"/>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                        </t>
+                    </t>
+
+                </div>
+
+
+                <!-- end payable aging-->
+                <t t-if="data['include_check_endorsed_details']">
+                    <t t-if="data['checks_end_values']">
+                        <br/>
+
+                        <div class="col-12 text-center">
+                            <h5>Checks Details</h5>
+                        </div>
+                        <t t-set="xxr" t-value="0.0"/>
+                        <table style="width:98.5%;border:1;"
+                               class="table table-condensed">
+                            <thead style="color:#040d5c !important;background-color:#AFC6CE !important; ">
+                                <tr>
+                                    <th>Due Date</th>
+                                    <th>Payment #</th>
+                                    <th>Bank</th>
+                                    <th>Check #</th>
+                                    <th>Check state</th>
+                                    <th>Payment Date</th>
+                                    <th>Amount Currency</th>
+                                    <th>Currency</th>
+                                    <th>Account No</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="data['checks_end_values']" t-as="s">
+                                    <tr>
+                                        <td>
+                                            <span t-esc="data['checks_end_values'][s]['date']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="data['checks_end_values'][s]['name']"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="data['checks_end_values'][s]['bank']"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="data['checks_end_values'][s]['check_no']"/>
+                                        </td>
+
+                                        <td>
+                                            <t t-if="data['checks_end_values'][s]['check_state'] == 'bounced'">
+                                                <span>Bounced</span>
+                                            </t>
+                                            <t t-if="data['checks_end_values'][s]['check_state'] == 'endorsed'">
+                                                <span>Endorsed</span>
+                                            </t>
+                                            <t t-if="data['checks_end_values'][s]['check_state'] == 'in_check_box'">
+                                                <span>In CheckBox</span>
+                                            </t>
+                                            <t t-if="data['checks_end_values'][s]['check_state'] == 'under_collection'">
+                                                <span>Under Collection</span>
+                                            </t>
+                                        </td>
+
+
+                                        <td>
+                                            <t t-esc="data['checks_end_values'][s]['pay_date']"
+                                            />
+                                        </td>
+
+
+                                        <td>
+                                            <t t-esc="data['checks_end_values'][s]['amount']"
+                                               t-options="{'widget': 'monetary', 'display_currency': data['checks_end_values'][s]['currency_id']}"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="data['checks_end_values'][s]['currency_name']"
+                                            />
+                                        </td>
+
+                                        <td>
+                                            <t t-esc="data['checks_end_values'][s]['account_number']"
+                                            />
+                                        </td>
+
+
+                                    </tr>
+                                </t>
+
+
+                            </tbody>
+
+                        </table>
+
+
+                    </t>
+                </t>
+
+                <br/>
+
+                <div class="footer">
+                    <div class="text-center">
+
+
+                        <ul class="list-inline">
+
+                            <li>Page:
+                                <span class="page"/>
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </t>
+
+
+    </template>
+
+
+    <template id="freport_detial">
+       <!-- Hijaz Upgrade review  -->
+
+       <t t-call="web.html_container">
+            <t t-set="lang" t-value="data['lang']"/>
+            <t t-call="f_customer_detailed_statement.freport_detial_pdf" t-lang="lang"/>
+
+        </t>
+    </template>
+
+
+</odoo>
+
+

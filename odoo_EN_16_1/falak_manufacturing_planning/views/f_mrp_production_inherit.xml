@@ -1,0 +1,68 @@
+<odoo>
+	<data>
+		<!-- Manufacturing Planning Menu -->
+		<record model="ir.actions.act_window" id="f_man_planning_action_window">
+			<field name="name">Manufacturing Planning</field>
+			<field name="res_model">f.man.plan</field>
+			<field name="view_mode">tree,gantt,form</field>
+		</record>
+
+		<menuitem name="Manufacturing Planning" id="f_mrp_planning" parent="mrp.mrp_planning_menu_root" action="falak_manufacturing_planning.f_man_planning_action_window" />
+
+		<record model="ir.actions.act_window" id="f_planning_products_action_window">
+			<field name="name">Planning Products</field>
+			<field name="res_model">f.man.plan.products</field>
+			<field name="context">{'create':False,'edit':False}</field>
+			<field name="view_mode">tree</field>
+
+		</record>
+
+		<menuitem name="Planning Products" id="f_mrp_prod" parent="mrp.mrp_planning_menu_root" action="falak_manufacturing_planning.f_planning_products_action_window" />
+
+		<!-- tree view -->
+		<record id="f_man_order_inherit_tree" model="ir.ui.view">
+			<field name="name">f.mrp.production.tree</field>
+			<field name="model">mrp.production</field>
+			<field name="inherit_id" ref="mrp.mrp_production_tree_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//tree" position="attributes">
+					<attribute name="default_order">f_actual_production_date desc</attribute>
+				</xpath>
+				
+				<!--<xpath expr="//tree//field[@name='date_planned_start']" position="after">
+					<field name="f_actual_production_date" />
+				</xpath>-->
+
+				<xpath expr="//tree//field[@name='product_id']" position="after">
+
+					<field name="f_man_plan_id" />
+					<field name="f_shift" />
+					<field name="workcenter_id" />
+					<field name="f_batch_num" />
+				</xpath>
+			</field>
+		</record>
+
+		<!-- form view -->
+
+		<record id="f_man_order_inherit_form" model="ir.ui.view">
+			<field name="name">f.mrp.production.form</field>
+			<field name="model">mrp.production</field>
+			<field name="inherit_id" ref="mrp.mrp_production_form_view" />
+			<field name="arch" type="xml">
+
+				<xpath expr="//field[@name='user_id']" position="before">
+					<field name="f_actual_production_date" />          
+				</xpath>
+				<xpath expr="//form//sheet//group//group//field[@name='company_id']" position="after">
+
+					<field name="f_man_plan_id" />
+					<field name="f_shift" />
+					<field name="workcenter_id" />
+					<field name="f_batch_num" />
+
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

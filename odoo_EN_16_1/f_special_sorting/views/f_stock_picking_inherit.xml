@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.ui.view" id="stock_picking_special_sort">
+        <field name="name">stock.picking.special.sort</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='move_ids_without_package']/tree" position="attributes">
+                <attribute name="default_order">id asc</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="stock_picking_special_sort_detailed_operation">
+        <field name="name">stock.picking.special.sort.detailed.operation</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_stock_move_line_detailed_operation_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="default_order">id asc</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

@@ -1,0 +1,22 @@
+<odoo>
+	<record id="f_product_packaging_form_view_inherit" model="ir.ui.view">
+        <field name="name">f.product.packaging.form.view.inherit</field>
+        <field name="model">product.packaging</field>
+        <field name="inherit_id" ref="product.product_packaging_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='group_product']" position="inside">
+                <field name="f_delivery_packaging"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="f_product_packaging_tree2_view_inherit" model="ir.ui.view">
+        <field name="name">f.product.packaging.tree2.view.inherit</field>
+        <field name="model">product.packaging</field>
+        <field name="inherit_id" ref="product.product_packaging_tree_view2" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='barcode']" position="after">
+                <field name="f_delivery_packaging" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,974 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* f_customer_detailed_statement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-01 11:35+0000\n"
+"PO-Revision-Date: 2024-02-01 11:35+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "0-30"
+msgstr "30-0"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "121-150"
+msgstr "150-121"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "151-180"
+msgstr "180-151"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "181-240"
+msgstr "240-181"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "240-360"
+msgstr "360-240"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "31-60"
+msgstr "60-31"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "61-90"
+msgstr "90-61"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "91-120"
+msgstr "120-91"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "91-180"
+msgstr "180-91"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "<span>Bounced</span>"
+msgstr "<span>راجع الى الصندوق</span>"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "<span>Endorsed</span>"
+msgstr "<span>مجير</span>"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "<span>In CheckBox</span>"
+msgstr "<span>في الصندوق</span>"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "<span>Returned Check</span>"
+msgstr "<span>شيك راجع</span>"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "<span>Under Collection</span>"
+msgstr "<span>قيد التحصيل</span>"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "<strong>Debt and Credit balances in selected interval </strong>"
+msgstr "<strong>محصلة المدين والدائن في الفترة المختارة </strong>"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__account_type
+msgid "Account"
+msgstr "حساب"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Account No"
+msgstr "رقم الحساب"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__account_type
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_search
+msgid "Account Type"
+msgstr "نوع الحساب"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Aging Details"
+msgstr "تفاصيل التعمير"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__amount_cuurency
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Amount Currency"
+msgstr "العملة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__apr
+msgid "Apr"
+msgstr "شهر 4"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__lang__ar_001
+msgid "Arabic"
+msgstr "عربي"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__aug
+msgid "Aug"
+msgstr "شهر 8"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Balance"
+msgstr "الرصيد"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Balance :"
+msgstr "الرصيد :"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Balance:"
+msgstr "الرصيد :"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Bank"
+msgstr "البنك"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__beg_bal
+msgid "Beg. Balance"
+msgstr "رصيد افتتاحي"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__f_initial_balance
+msgid "Beginning Balance"
+msgstr "الرصيد الافتتاحي"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_customerdeatls_stat_form
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Check #"
+msgstr "رقم الشيك"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Check No."
+msgstr "رقم الشيك"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Check State"
+msgstr "حالة الشيك"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "Check state"
+msgstr "حالة الشيك"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Checks Details"
+msgstr "تفاصيل الشيكات"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__company_id
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__company_currency
+msgid "Company Currency"
+msgstr "عملة الشركة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__create_uid
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer_thermal__create_uid
+msgid "Created by"
+msgstr "انشئ بواسطة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__create_date
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer_thermal__create_date
+msgid "Created on"
+msgstr "انشئ في"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__credit
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Credit"
+msgstr "دائن"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__balance
+msgid "Credit Payment"
+msgstr "دفعة ذمم"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Credit:"
+msgstr "دائن"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__currency_id
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Currency"
+msgstr "العملة"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "Current Aging Details"
+msgstr "تفاصيل التعمير الحالي"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "Current Balance :"
+msgstr "الرصيد الحالي :"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "Current Bounced Checks :"
+msgstr "الشيكات الراجعة من البنك"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "Current Payable Aging Details"
+msgstr "تفاصيل التعمير الحالي  لذمم الموردين"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "Current Un-Collected Checks :"
+msgstr "الشيكات الغير محصله الحاليه :"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_search
+msgid "Customer"
+msgstr "زبون"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__out_refund
+msgid "Customer Credit Note"
+msgstr " إشعار دائن للعميل "
+
+#. module: f_customer_detailed_statement
+#: model:res.groups,name:f_customer_detailed_statement.f_partnerdeatleds_access_group_id
+msgid "Customer Detailed Statement "
+msgstr "كشف الحساب التفصيلي"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model,name:f_customer_detailed_statement.model_f_customer_detailed_report
+msgid "Customer Detailed statement "
+msgstr "كشف حساب تفصيلي"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__out_invoice
+msgid "Customer Invoice"
+msgstr "فاتورة عميل"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__inbound
+msgid "Customer Receipt"
+msgstr "سند قبض"
+
+#. module: f_customer_detailed_statement
+#: model:ir.actions.report,name:f_customer_detailed_statement.f_custstatdetaild_report
+msgid "Customer Statement Details"
+msgstr "كشف حساب تفصيلي"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model,name:f_customer_detailed_statement.model_f_detailed_customer
+msgid "Customer Statement Wizard"
+msgstr "كشف حساب الزبون"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__date
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_search
+msgid "Day"
+msgstr "يوم"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__debt
+msgid "Debit"
+msgstr "مدين"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Debt"
+msgstr "مدين"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Debt:"
+msgstr "مدين"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__dec
+msgid "Dec"
+msgstr "شهر 12"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.f_inherit_partner_statement_view
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.f_inherit_sale_order_statement_view
+msgid "Detailed Statement"
+msgstr "كشف حساب"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Disc%"
+msgstr "خصم %"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__display_name
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__display_name
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer_thermal__display_name
+msgid "Display Name"
+msgstr "الاسم"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__state__done
+msgid "Done"
+msgstr "مكتمل"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__employee_name
+msgid "Employee"
+msgstr "موظف"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__lang__en_us
+msgid "English"
+msgstr "الانجليزية"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_bank_statement_line__f_exclude_entry
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_move__f_exclude_entry
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_payment__f_exclude_entry
+msgid "Exclude Entry"
+msgstr "استثناء القيود"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__feb
+msgid "Feb"
+msgstr "شهر 2"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__from_date
+msgid "From Date"
+msgstr "من تاريخ"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_customerdeatls_stat_form
+msgid "Get"
+msgstr "عرض"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__lang__he_il
+msgid "Hebrew / עִבְרִי"
+msgstr "العبرية"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_search
+msgid "Hour"
+msgstr "ساعة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__id
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__id
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer_thermal__id
+msgid "ID"
+msgstr ""
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__include_details_aging
+msgid "Include Aging Details"
+msgstr "اظهار تفاصيل التعمير"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__include_checkdetails
+msgid "Include Check Details"
+msgstr "اظهار تفاصيل الشيكات"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__include_details
+msgid "Include Invoice Details"
+msgstr "اظهار تفاصيل الفاتورة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__include_check_endorsed_details
+msgid "Include Not Colleted Check Details"
+msgstr "اظهار تفاصيل الشيكات الغير محصلة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__include_details_aging_pay
+msgid "Include Payable Aging Details"
+msgstr "اظهار تفاصيل التعمير ذمم الوردين"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Initial Balance:"
+msgstr "الرصيد الافتتاحي :"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Internal.Ref"
+msgstr "المرجع الداخلي"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__invoice_id
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_bank_statement_line__invoice_product_list
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_move__invoice_product_list
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_payment__invoice_product_list
+msgid "Invoice Product list"
+msgstr "قائمة المنتجات"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__jan
+msgid "Jan"
+msgstr "شهر 1"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model,name:f_customer_detailed_statement.model_account_move
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__entry
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model,name:f_customer_detailed_statement.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__journal_id
+msgid "Journals"
+msgstr "دفاتر اليومية"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__jul
+msgid "Jul"
+msgstr "شهر 7"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__jun
+msgid "Jun"
+msgstr "شهر 6"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__lang
+msgid "Language"
+msgstr "اللغة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report____last_update
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer____last_update
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer_thermal____last_update
+msgid "Last Modified on"
+msgstr "تاريخ اخر تعديل"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__f_last_upadeton
+msgid "Last Update On"
+msgstr "تاريخ اخر تعديل"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__write_uid
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer_thermal__write_uid
+msgid "Last Updated by"
+msgstr "اخر تعديل بواسطة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__write_date
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer_thermal__write_date
+msgid "Last Updated on"
+msgstr "تاريخ اخر تعديل"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__lastyear
+msgid "Last Year"
+msgstr "السنه الماضية"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__f_report__exl
+msgid "List"
+msgstr "قائمة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__mar
+msgid "Mar"
+msgstr "شهر 3"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__may
+msgid "May"
+msgstr "شهر 5"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_search
+msgid "Month"
+msgstr "شهر"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.f_view_account_move_filter_inherit
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.f_view_account_noteinovicesfilter_inherit
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_bank_statement_line__f_note
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_move__f_note
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_payment__f_note
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__f_note
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__nov
+msgid "Nov"
+msgstr "شهر 11"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "OLder than 180"
+msgstr "أكبر من 180"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "OLder than 360"
+msgstr "اكبر من 360"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__oct
+msgid "Oct"
+msgstr "شهر 10"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__f_report__pdf
+msgid "PDF"
+msgstr ""
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__pos_order
+msgid "POS Order"
+msgstr "طلبات نقط البيع"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__pos_paym
+msgid "POS Payment"
+msgstr "دفعات نقطة البيع"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "Page: <span class=\"page\"/>"
+msgstr ""
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__state__paid
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__partner_id
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__partner_id
+msgid "Partner"
+msgstr "زبون\\مورد"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model,name:f_customer_detailed_statement.model_res_partner
+msgid "Partner Balance Report  Wizard"
+msgstr "جهة اتصال "
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_pivot
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_search
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partnersdetailed_form
+msgid "Partner Detailed Statement Analysis"
+msgstr "كشف خساب تفصيلي تحليلي"
+
+#. module: f_customer_detailed_statement
+#: model:ir.ui.menu,name:f_customer_detailed_statement.f_parentrepot_deatlsstatsales_custo_menu
+#: model:ir.ui.menu,name:f_customer_detailed_statement.f_parentrepotdetails_stat_custo_menu
+#: model:ir.ui.menu,name:f_customer_detailed_statement.menu_report_partner_pdfdetailed_all
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Partner Detailed Statement Report"
+msgstr "كشف حساب تفصيلي "
+
+#. module: f_customer_detailed_statement
+#: model:ir.ui.menu,name:f_customer_detailed_statement.f_repot_stat_deatcustosales_menu
+msgid "Partner Detailed Statement Report PDF"
+msgstr "كشف حساب تفصيلي pdf "
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_bank_statement_line__f_partner_ref
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_move__f_partner_ref
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_move_line__f_partner_ref
+msgid "Partner Ref"
+msgstr "المرجع"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "Partner Statement"
+msgstr "كشف حساب"
+
+#. module: f_customer_detailed_statement
+#. odoo-python
+#: code:addons/f_customer_detailed_statement/models/f_statement_pdfwizard.py:0
+#, python-format
+msgid "Partner Statement Report"
+msgstr "كشف حساب الزبون"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__payment_id
+msgid "Payment"
+msgstr "دفعة"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Payment #"
+msgstr "رقم الدفعة"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+msgid "Payment Date"
+msgstr "تاريخ القبض"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Period:"
+msgstr "الفترة :"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__state__posted
+msgid "Posted"
+msgstr "مرحل"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Price"
+msgstr "السعر"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Product"
+msgstr "المنتج"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__product_list
+msgid "Product List"
+msgstr "قائمة المنتجات"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__in_receipt
+msgid "Purchase Receipt"
+msgstr "إيصال الشراء"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "QTY"
+msgstr "الكمية"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__ref
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Ref"
+msgstr "المرجع"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Report Date:"
+msgstr "تاريخ الطباعة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__f_report
+msgid "Report Type"
+msgstr "نوع التقرير"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__f_report_date
+msgid "Reporting Date"
+msgstr "التاريخ"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__amount_total
+#: model:ir.model.fields,help:f_customer_detailed_statement.field_f_customer_detailed_report__amount_total
+msgid "Sale Order Amount"
+msgstr "المبلغ"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model,name:f_customer_detailed_statement.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__out_receipt
+msgid "Sales Receipt"
+msgstr " إيصال المبيعات "
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__user_id
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_search
+msgid "Salesperson"
+msgstr "مندوب المبيعات"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__period_date
+msgid "Select Period "
+msgstr "الفترة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__sep
+msgid "Sep"
+msgstr "شهر 9"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__show_customer_info
+msgid "Show  Customer Info in Detailed Statement "
+msgstr "اظهار معلومات العميل"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__show_bounced_checks
+msgid "Show Bounced Checks Balance"
+msgstr "اظهار الشيكات الراجعة من البنك"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__show_product_label
+msgid "Show Product Desc Instead of Product  Name in Detailed Statement "
+msgstr "اظهار الوصف بدل اسم المنتج في كشف الحساب"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_move__smart_search
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_account_move_line__smart_search
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__smart_search
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__smart_search
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer_thermal__smart_search
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_report_f_customer_detailed_statement_freport_detial__smart_search
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_report_f_customer_detailed_statement_thermalfreport_detial__smart_search
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_res_partner__smart_search
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_sale_order__smart_search
+msgid "Smart Search"
+msgstr "بحث متقدم"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Source Check Payment"
+msgstr "دفعة الشيك المصدر"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: f_customer_detailed_statement
+#. odoo-python
+#: code:addons/f_customer_detailed_statement/models/f_partner_inherit.py:0
+#: code:addons/f_customer_detailed_statement/models/f_sale_order_inherit.py:0
+#: model:ir.model,name:f_customer_detailed_statement.model_report_f_customer_detailed_statement_freport_detial
+#, python-format
+msgid "Statement Report"
+msgstr "كشف حساب"
+
+#. module: f_customer_detailed_statement
+#: model:ir.actions.act_window,name:f_customer_detailed_statement.action_f_customdeatls_statem_report
+msgid "Statement Reporting"
+msgstr ""
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__f_report__breif_exl
+msgid "Summary List"
+msgstr "قائمة مختصرة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__f_report__breif_pdf
+msgid "Summary PDF "
+msgstr " PDF مختصر"
+
+#. module: f_customer_detailed_statement
+#. odoo-python
+#: code:addons/f_customer_detailed_statement/models/f_statement_pdfwizard.py:0
+#, python-format
+msgid "Summary Partner Statement  Report"
+msgstr ""
+
+#. module: f_customer_detailed_statement
+#: model:ir.actions.report,name:f_customer_detailed_statement.f_custstatdetaild_thermalreport
+msgid "Thermal Customer Statement Details"
+msgstr "كشف حساب تفصيلي\\مندوب مبيعات"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model,name:f_customer_detailed_statement.model_report_f_customer_detailed_statement_thermalfreport_detial
+msgid "Thermal Statement Report"
+msgstr "كشف حساب\\مندوب مبيعات"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model,name:f_customer_detailed_statement.model_f_detailed_customer_thermal
+msgid "Thermla Customer Statement Wizard"
+msgstr ""
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__year
+msgid "This Financial Year "
+msgstr "السنه الحالية"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "To"
+msgstr "الى"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_detailed_customer__to_date
+msgid "To Date"
+msgstr "الى تاريخ"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Total"
+msgstr "الاجمالي"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__acum_balance
+msgid "Total Balance"
+msgstr "الرصيد الكلي"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__check_bounce
+msgid "Total Check Bounce"
+msgstr "مجموع الشيكات المرتجعة"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields,field_description:f_customer_detailed_statement.field_f_customer_detailed_report__type
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.freport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_search
+msgid "Type"
+msgstr "نوع"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.thermalfreport_detial_pdf
+msgid "Un-Collected Checks :"
+msgstr "الشيكات الغير محصلة :"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__in_invoice
+msgid "Vendor Bill"
+msgstr "فاتورة المورد"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__in_refund
+msgid "Vendor Credit Note"
+msgstr " إشعار المورد الدائن "
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_customer_detailed_report__type__outbound
+msgid "Vendor Payment"
+msgstr "سند صرف"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_search
+msgid "Week"
+msgstr "اسبوع"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailed_pivot
+msgid "balance"
+msgstr "الرصيد"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailedt_tree
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_thermaldetailedt_tree
+msgid "credit"
+msgstr "دائن"
+
+#. module: f_customer_detailed_statement
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_detailedt_tree
+#: model_terms:ir.ui.view,arch_db:f_customer_detailed_statement.view_report_partner_thermaldetailedt_tree
+msgid "debt"
+msgstr "مدين"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__period_date__balance_zero
+msgid "last Zero Balance"
+msgstr "اخر رصيد 0"
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__account_type__payable
+msgid "payable"
+msgstr ""
+
+#. module: f_customer_detailed_statement
+#: model:ir.model.fields.selection,name:f_customer_detailed_statement.selection__f_detailed_customer__account_type__receivable
+msgid "receivable"
+msgstr ""

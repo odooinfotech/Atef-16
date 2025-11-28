@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_f_sale_setup_amount,f_sale_setup_amount,model_f_sale_setup_amount,,1,1,1,1
+access_f_po_setup_amount,f_po_setup_amount,model_f_po_setup_amount,,1,1,1,1
+access_fs_cash_basis,fs_cash_basis,model_fs_cash_basis,,1,1,1,1
+access_f_cash_basis,f_cash_basiss,model_f_cash_basis,,1,1,1,1
+access_f_sale_forcaste_types,f_sale_forcaste_types,model_f_sale_forcaste_types,,1,1,1,1
+access_f_po_forcaste_types,f_po_forcaste_types,model_f_po_forcaste_types,,1,1,1,1
+access_fs_cash_basis_period,fs_cash_basis_period,model_fs_cash_basis_period,,1,1,1,1
+access_fs_cash_basis_period_subtype,fs_fs_cash_basis_period_subtype,model_fs_cash_basis_period_subtype,,1,1,1,1
+access_fs_cash_basis_period_type,fs_cash_basis_period_type,model_fs_cash_basis_period_type,,1,1,1,1
+access_f_po_payment_forcaste,f_po_payment_forcaste,model_f_po_payment_forcaste,,1,1,1,1
+access_f_po_payment_forcaste_types,f_po_payment_forcaste_types,model_f_po_payment_forcaste_types,,1,1,1,1

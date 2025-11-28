@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+  
+  
+  <record id="f_view_productbussniesspurpose_list" model="ir.ui.view">
+	<field name="name">f.productbussniesspurpose.tree</field>
+	<field name="model">f.bussniess.purpose</field>
+	<field eval="8" name="priority"/>
+	<field name="arch" type="xml">
+	
+		<tree editable="top" string="Purpose">
+			<field name="f_name"/>
+			
+		</tree>
+	</field>
+</record>
+  
+  
+  <record id="f_productbussniesspurpose_list" model="ir.actions.act_window">
+	<field name="name">Products Business Purpose</field>
+	<field name="type">ir.actions.act_window</field>
+	<field name="res_model">f.bussniess.purpose</field>
+	<field name="view_mode">tree,form</field>
+	<field name="target">current</field>
+</record>
+  
+  <menuitem id="menu_productbussniesspurpose_list" 
+          name="Business Purpose" 
+          action="f_productbussniesspurpose_list" 
+          parent="stock.menu_stock_config_settings"/>
+          
+          
+  
+  
+   <record id="f_view_bussnisseproduct_podetails_form" model="ir.ui.view">
+			<field name="name">f_view_busssinissproductpodetails_form_</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_only_form_view" />
+			<field name="arch" type="xml">
+				  <xpath expr="//field[@name='barcode']" position="after">
+				 <field name="f_bussniess_purop"/>
+				  </xpath>
+				  </field>
+				  </record>
+  </data>
+</odoo>

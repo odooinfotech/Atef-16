@@ -1,0 +1,30 @@
+<odoo>
+	<openerp>
+		<data>
+			<!-- Add last price,product price flag in Inventory settings -->
+			<record id="f_po_classification_settings_customs" model="ir.ui.view">
+				<field name="name">f.po.classification.settings.customs</field>
+				<field name="model">res.config.settings</field>
+				<field name="inherit_id" ref="purchase.res_config_settings_view_form_purchase" />
+				<field name="arch" type="xml">
+					<xpath expr="//div[@data-key='purchase']" position="inside">
+						<h2>Classifications</h2>
+						<div class="row mt16 o_settings_container" name="f_purchase_classification_setting_container">
+							<div class="col-12 col-lg-6 o_setting_box" id="f_classification_access">
+								<div class="o_setting_left_pane">
+									<field name="f_po_access_based_class"/>
+								</div>
+								<div class="o_setting_right_pane">
+									<label for="f_po_access_based_class"/>
+									<div class="text-muted">
+										Set Access on PO Based on Classification
+									</div>
+								</div>
+							</div>
+						</div>
+		            </xpath>
+				</field>
+			</record>
+		</data>
+	</openerp>
+</odoo>

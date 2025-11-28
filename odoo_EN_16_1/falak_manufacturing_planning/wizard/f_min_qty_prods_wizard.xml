@@ -1,0 +1,24 @@
+<odoo>
+	<record model="ir.ui.view" id="f_min_qty_for_prod_wizard_form">
+		<field name="name">Minimum Quantities For Products</field>
+		<field name="model">f.min.qty.prods</field>
+		<field name="type">form</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="f_mrp_location" />
+						
+					</group>
+				</sheet>
+
+				<footer>
+					<button name="get_products" string="Get Products"
+						type="object" class="oe_highlight" />
+
+				</footer>
+			</form>
+
+		</field>
+	</record>
+</odoo>

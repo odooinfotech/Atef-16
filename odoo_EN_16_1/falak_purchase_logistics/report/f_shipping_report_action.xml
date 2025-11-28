@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="f_shipping_report_action" model="ir.actions.report" >
+    <field name="attachment" eval="False"/>
+    <field name="attachment_use" eval="False"/>
+    <field name="binding_model_id" ref="falak_purchase_logistics.model_f_shipping_details"/>
+    <field name="binding_type">report</field>
+    <field name="binding_view_types">list,form</field>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+    <field name="model">f.shipping.details</field>
+    <field name="multi" eval="False"/>
+    <field name="name">Shipping Details Report</field>
+    <field name="paperformat_id" eval="False"/>
+    <field name="report_name">falak_purchase_logistics.f_shipping_report_view</field>
+    <field name="report_type">qweb-pdf</field>
+  </record>
+</odoo>

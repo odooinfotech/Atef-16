@@ -1,0 +1,35 @@
+<odoo>
+	<data>
+
+		<record model="ir.actions.act_window"
+			id="period_record_management_action_window">
+			<field name="name">Periods</field>
+			<field name="res_model">f.comisson.period</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+
+		<menuitem name="Periods" id="period_menue"
+			parent="commission_management.f_comm_config_menue"
+			action="commission_management.period_record_management_action_window" />
+
+
+
+		<record model="ir.ui.view" id="Period_id">
+			<field name="name">Period.id</field>
+			<field name="model">f.comisson.period</field>
+			<field name="arch" type="xml">
+				<tree editable="bottom"> 
+					<field name="f_name"/>
+					<field name="f_from" />
+					<field name="f_to" />
+					<field name="f_colsed" />
+
+				</tree>
+			</field>
+		</record>
+
+	
+	</data>
+
+</odoo>

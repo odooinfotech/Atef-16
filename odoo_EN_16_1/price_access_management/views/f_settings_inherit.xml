@@ -1,0 +1,59 @@
+<odoo>
+	<openerp>
+		<data>
+			<!-- Add Restrict edit price flag in sales settings -->
+			<record id="f_sales_setting_customs" model="ir.ui.view">
+				<field name="name">sale.setting.prices</field>
+				<field name="model">res.config.settings</field>
+				<field name="inherit_id"
+					ref="sale.res_config_settings_view_form" />
+				<field name="arch" type="xml">
+					<xpath expr="//div[@id='pricing_setting_container']"
+						position="inside">
+						<div class="col-12 col-lg-6 o_setting_box" id="f_editing"
+							title="Restrict Prices Editing">
+
+							<div class="o_setting_left_pane">
+								<field name="f_restrict_price" />
+							</div>
+							<div class="o_setting_right_pane">
+								<label for="f_restrict_price" />
+								<div class="text-muted">
+									Restrict Price Editing
+								</div>
+							</div>
+						</div>
+					</xpath>
+				</field>
+			</record>
+
+
+
+
+			<!-- Add Restrict edit price flag in invoices settings -->
+
+			<record id="f_invoices_setting_customs" model="ir.ui.view">
+				<field name="name">invoice.setting.prices</field>
+				<field name="model">res.config.settings</field>
+				<field name="inherit_id"
+					ref="account.res_config_settings_view_form" />
+				<field name="arch" type="xml">
+
+					<xpath expr="//div[@id='show_sale_receipts']"
+						position="inside">
+						<br></br>
+						<div class="o_setting_left_pane">
+							<field name="f_restrict_price" />
+						</div>
+						<div class="o_setting_right_pane">
+							<label for="f_restrict_price" string="Restrict Edit Prices" />
+							<div class="text-muted">
+								Restrict Price Editing
+							</div>
+						</div>
+					</xpath>
+				</field>
+			</record>
+		</data>
+	</openerp>
+</odoo>

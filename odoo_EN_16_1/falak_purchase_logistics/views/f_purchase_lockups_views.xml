@@ -1,0 +1,49 @@
+<odoo>
+	<data>
+		<record id="f_container_size_tree_view"
+			model="ir.ui.view">
+			<field name="name">f.container.size</field>
+			<field name="model">f.container.size</field>
+			<field name="arch" type="xml">
+				<tree string="Container Size" editable="bottom">
+					<field name="f_name" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="f_purchase_payment_terms_tree_view"
+			model="ir.ui.view">
+			<field name="name">f.purchase.payment.terms</field>
+			<field name="model">f.payment.terms</field>
+			<field name="arch" type="xml">
+				<tree string="Purchase Payment Terms" editable="bottom">
+					<field name="f_payment_name" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="f_purchase_shipping_lines_tree_view"
+			model="ir.ui.view">
+			<field name="name">f.purchase.shipping.lines</field>
+			<field name="model">f.shipping.line</field>
+			<field name="arch" type="xml">
+				<tree string="Purchase Shipping Lines" editable="bottom">
+					<field name="f_ship_line_name" />
+				</tree>
+			</field>
+		</record>
+
+		<record id="f_purchase_ports_tree_view"
+			model="ir.ui.view">
+			<field name="name">f.purchase.ports.name</field>
+			<field name="model">f.purchase.ports</field>
+			<field name="arch" type="xml">
+				<tree string="Purchase Ports" editable="bottom">
+					<field name="f_port_name" />
+					<field name="f_port_type" />
+					<field name="f_shipping_period" />
+				</tree>
+			</field>
+		</record>
+	</data>
+</odoo>

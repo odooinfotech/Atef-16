@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="action_report_man_orders_products"
+			model="ir.actions.report">
+			<field name="name">Manufacturing Order Products Report</field>
+			<field name="model">f.report.man.orders.products</field>
+			<field name="report_type">qweb-pdf</field>
+			<field name="report_name">falak_mass_manufacturing.report_mo_details</field>
+			<field name="report_file">falak_mass_manufacturing.report_mo_details</field>
+			<field name="print_report_name"> Manufacturing Orders </field>
+			<field name="binding_model_id" ref="model_f_report_man_orders_products" />
+			<field name="binding_type">report</field>
+		</record>
+	</data>
+</odoo>

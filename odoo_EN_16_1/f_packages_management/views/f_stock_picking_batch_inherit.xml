@@ -1,0 +1,52 @@
+<odoo>
+	<record id="f_stock_picking_batch_form" model="ir.ui.view">
+        <field name="name">f.stock.picking.batch.form</field>
+        <field name="model">stock.picking.batch</field>
+        <field name="inherit_id" ref="stock_picking_batch.stock_picking_batch_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='scheduled_date']" position="after">
+                <field name="f_partner" widget="many2many_tags" force_save="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="f_stock_picking_batch_kanban" model="ir.ui.view">
+        <field name="name">f.stock.picking.batch.kanban</field>
+        <field name="model">stock.picking.batch</field>
+        <field name="inherit_id" ref="stock_picking_batch.stock_picking_batch_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//kanban//templates//t//div//div[hasclass('o_kanban_record_top')]" position="after">
+                <div class="o_kanban_card_content">
+                    <field name="f_partner" widget="many2many_tags" force_save="1"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="f_stock_picking_batch_kanban_barcode" model="ir.ui.view">
+        <field name="name">f.stock.picking.batch.kanban.barcode</field>
+        <field name="model">stock.picking.batch</field>
+        <field name="inherit_id" ref="stock_barcode_picking_batch.stock_barcode_batch_picking_view_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//kanban//templates//t//div//div[hasclass('o_kanban_record_top')]" position="after">
+                <div class="o_kanban_card_content">
+                    <field name="f_partner" widget="many2many_tags" force_save="1"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="f_stock_picking_batch_search" model="ir.ui.view">
+        <field name="name">f.stock.picking.batch.search</field>
+        <field name="model">stock.picking.batch</field>
+        <field name="inherit_id" ref="stock_picking_batch.stock_picking_batch_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="f_partner_char" string="Customer"/>
+            </xpath>
+            <xpath expr="//search//group//filter[@name='user']" position="after">
+                <filter string="Customer" name="f_partner_char_group" domain="[]" context="{'group_by': 'f_partner_char'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

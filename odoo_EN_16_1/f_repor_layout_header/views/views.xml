@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+<template id="f_custom_layout_report" inherit_id="web.external_layout_standard">
+	    <xpath expr="//div[@class='col-3 mb4']" position="replace">
+
+       <div class="col-12 text-center mb4">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="max-height: 100px;" alt="Logo"/>
+                </div>
+
+
+
+
+
+
+		</xpath>
+
+
+</template>
+  </data>
+</odoo>

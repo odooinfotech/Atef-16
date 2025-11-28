@@ -1,0 +1,15 @@
+<odoo>
+	<data>
+
+		<record id="f_prod_brand_tree_view_or_customs"
+			model="ir.ui.view">
+			<field name="name">prod_brand_tree</field>
+			<field name="model">f.prod.brand</field>
+			<field name="arch" type="xml">
+				<tree string="Product Brand" editable="bottom">
+					<field name="fprodbrand_name" />
+				</tree>
+			</field>
+		</record>
+	</data>
+</odoo>

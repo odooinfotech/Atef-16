@@ -1,0 +1,21 @@
+<odoo>
+
+	<record id="f_view_sale_order_form_line_image_inherit" model="ir.ui.view">
+		<field name="name">f.view.sale.order.form.line.image.inherit</field>
+		<field name="inherit_id" ref="sale.view_order_form" />
+		<field name="model">sale.order</field>
+		<field name="arch" type="xml">
+
+			<xpath expr="//field[@name='order_line']/tree/field[@name='product_template_id']"
+				position="after">
+				<field name="f_product_image_128" widget="image"
+					options="{'zoom': true, 'zoom_delay': 1000, 'size': (80, 80)}" optional="show" />
+			</xpath>
+			<xpath expr="//header" position="inside">
+				<button string="Print Order" type="action"
+						name="%(f_show_image_customs.f_sales_report_wizard_action)d" />
+			</xpath>
+		</field>
+	</record>
+
+</odoo>

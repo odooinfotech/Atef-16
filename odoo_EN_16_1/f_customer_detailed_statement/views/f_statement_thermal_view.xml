@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+
+
+	
+	
+
+
+        
+        <record id="view_report_partner_thermaldetailedt_tree" model="ir.ui.view">
+            <field name="name">f.customer.detailedthermal.report.tree</field>
+            <field name="model">f.customer.detailed.report</field>
+            <field name="arch" type="xml">
+                <tree create ='false' import='false'>
+                    <field name="partner_id" optional="hide"/>
+                    <field name="product_list" optional="hide"/>
+                    <field name="date" widget="date" optional="show"/>
+                    <field name="ref" optional="show"/>
+                    <field name="type" optional="hide"/>
+                     <field name="currency_id" invisible="1"/>
+                     <field name="company_currency" invisible="1"/>
+                       <field name="f_initial_balance" options="{'currency_field': 'company_currency'}"  optional="show"/>
+                    <field name="debt" options="{'currency_field': 'company_currency'}" sum="debt"  optional="hide"/>
+                    <field name="credit" options="{'currency_field': 'company_currency'}" sum="credit" optional="hide"/>
+ 					 <field name="amount_cuurency" options="{'currency_field': 'currency_id'}" optional="hide"/>
+                    <field name="acum_balance" options="{'currency_field': 'company_currency'}" optional="show"/>
+                    
+                    
+                </tree>
+            </field>
+        </record>
+
+       
+
+       
+   
+
+        
+       
+    
+</odoo>

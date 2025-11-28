@@ -1,0 +1,41 @@
+<odoo>
+    <data>
+        <record id="f_cont_report"   model="ir.actions.report">
+            <field name="name">Contact Balance Report</field>
+            <field name="model">report.f_cont_report.report_contact_details</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">f_cont_report.report_contact_details</field>
+
+        </record>
+
+        <record id="f_cont_general_report"   model="ir.actions.report">
+            <field name="name">Contact General Balance Report</field>
+            <field name="model">report.f_cont_report.report_contact_general_details</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">f_cont_report.report_contact_general_details</field>
+
+        </record>
+
+
+         <record id="f_paperformat_contact_balances_pdf" model="report.paperformat">
+            <field name="name">Custom Customer Balances PDF</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="page_height">297</field>
+            <field name="page_width">210</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">1</field>
+            <field name="margin_right">1</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">90</field>
+            <field name="report_ids" eval="[(6,0,[
+                                                  ref('f_cont_report.f_cont_report'),
+                                                ])]"/>
+        </record>
+
+
+    </data>
+</odoo>

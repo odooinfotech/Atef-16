@@ -1,0 +1,8 @@
+<odoo>
+  <data>
+   
+    <menuitem name="Accounting Reports" id="f_sale_account_report_menu" parent="sale.sale_menu_root"
+         sequence="700"   />
+
+  </data>
+</odoo>

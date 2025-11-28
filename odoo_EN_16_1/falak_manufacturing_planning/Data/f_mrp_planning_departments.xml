@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="f_mrp_planning_department" model="hr.department">
+            <field name="name">MRP Responsible Department</field>
+            
+        </record>
+        
+    </data>
+</odoo>

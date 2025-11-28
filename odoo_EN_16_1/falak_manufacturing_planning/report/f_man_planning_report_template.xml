@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<template id="falak_manufacturing_planning.report_plan_products">
+			<t t-call="web.html_container">
+				<t t-call="web.basic_layout">
+					<div class="page">
+						<h2 class="mt16">
+							<t>
+								<strong>Manufacturing Planning : </strong>
+
+
+								<span t-esc="f_plan_id" />
+							</t>
+						</h2>
+						
+						<div class="row mt-4 mb-4" id="informations">
+						    <div class="col-12">
+								<div class="row">
+							        <div class="col-4">
+							            <strong>Dates:</strong>
+							            <span t-esc="f_date_from" />
+							            <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon" title="Arrow" />
+							            <span t-esc="f_date_to" />
+							        </div>
+							
+							        <div class="col-4">
+							            <strong>Batch Number:</strong>
+							            <strong><span t-esc="f_batch_number" /></strong>
+							        </div>
+							
+							        <div class="col-4" t-if="f_responsible">
+							            <strong>Responsible:</strong>
+							            <strong><span t-esc="f_responsible" /></strong>
+							        </div>
+								</div>
+								<div class="row">
+							        <div class="col-4" t-if="f_shift">
+							            <strong>Shift:</strong>
+							            <strong><span t-esc="f_shift" /></strong>
+							        </div>
+							
+							        <div class="col-4" t-if="f_work_center">
+							            <strong>Work center:</strong>
+							            <strong><span t-esc="f_work_center" /></strong>
+							        </div>
+							
+							        <div class="col-4" t-if="f_note">
+							            <strong><span t-esc="f_note" t-options="{'widget': 'html'}" /></strong>
+							        </div>
+							    </div>
+						    </div>
+						
+						    
+						</div>
+						<br />
+
+						<!-- planning products -->
+						<h3>Products</h3>
+						<table class="table table-sm">
+							<thead>
+								<tr>
+
+									<th>Product</th>
+									<th>Quantity</th>
+									<th t-if="not f_work_center">Work Center</th>
+									<th t-if="not f_shift"> Shift</th>
+								</tr>
+							</thead>
+							<tbody>
+								<t t-set="rec" t-value="request.env['mrp.production'].search([('id','in',mo_orders),('f_shift','=',f_shift)])" />
+
+								<t t-foreach="rec" t-as="child">
+									<t>
+
+										<tr>
+
+											<td>
+												<t t-esc="child.product_id.name" />
+											</td>
+											<td>
+												<t t-esc="child.product_qty" />
+
+											</td>
+
+											<td t-if="not f_work_center and child.workcenter_id">
+												<t t-esc="child.workcenter_id.name" />
+
+
+											</td>
+
+											<td t-if="not f_shift">
+												<t t-esc="child.f_shift.f_shift" />
+											</td>
+										</tr>
+									</t>
+								</t>
+							</tbody>
+						</table>
+						<div class="row">
+							<div class="col-6">
+								<span>Signature : ---------------------------</span>
+							</div>
+						</div>
+					</div>
+				</t>
+			</t>
+		</template>
+	</data>
+</openerp>

@@ -1,0 +1,30 @@
+<odoo>
+	<data>
+
+		<record model="ir.module.category" id="f_access_prices">
+			<field name="name">Access Prices Management</field>
+		</record>
+
+	
+
+		<record model="res.groups" id="f_can_edit_invoices">
+			<field name="category_id"
+				ref="price_access_management.f_access_prices" />
+			<field name="name">Edit Prices In Invoices</field>
+		</record>
+
+
+		<record model="res.groups" id="f_can_edit_sales">
+			<field name="category_id"
+				ref="price_access_management.f_access_prices" />
+			<field name="name">Edit Prices in Sales</field>
+		</record>
+		<record model="res.groups" id="f_readonly_sales_prices">
+			<field name="category_id"
+				ref="price_access_management.f_access_prices" />
+			<field name="name">Readonly Prices in Sales</field>
+		</record>
+
+
+	</data>
+</odoo>

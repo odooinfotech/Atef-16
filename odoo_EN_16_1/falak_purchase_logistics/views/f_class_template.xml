@@ -1,0 +1,30 @@
+<odoo>
+	<record id="f_view_po_class_list_tree" model="ir.ui.view">
+		<field name="name">f.po.class.tree</field>
+		<field name="model">f.po.classification</field>
+		<field eval="8" name="priority" />
+		<field name="arch" type="xml">
+			<tree string="Classifications" editable="bottom">
+				<field name="f_name" />
+				<!--<field name="f_po_approval" widget="many2many_tags_avatar"
+					groups="purchase.group_purchase_manager" />
+				<field name="f_financial_po_approval"
+					widget="many2many_tags_avatar"
+					groups="purchase.group_purchase_manager" />-->
+			</tree>
+		</field>
+	</record>
+
+	<record id="f_action_po_class_list"
+		model="ir.actions.act_window">
+		<field name="name">Purchase Order Classifications</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">f.po.classification</field>
+		<field name="view_mode">tree</field>
+		<field name="target">current</field>
+	</record>
+
+	<menuitem id="menu_class_list"
+		name="Purchse Order Classifications" action="f_action_po_class_list"
+		parent="purchase.menu_purchase_config" />
+</odoo>

@@ -1,0 +1,282 @@
+<odoo>
+	<data>
+		<!-- Kanban View -->
+		<record id="f_view_planning_kanban" model="ir.ui.view">
+			<field name="name">Plan Kanban View</field>
+			<field name="model">f.man.plan</field>
+			<field name="arch" type="xml">
+				<kanban class="o_kanban_small_column"
+					js_class="project_project_kanban" sample="1" edit="true"
+					quick_create="true">
+					<templates>
+						<t t-name="kanban-box">
+							<div
+								class="o_kanban_record oe_kanban_global_click o_kanban_record_has_image_fill"
+								color="x_color">
+
+
+								<div class="o_kanban_record_details">
+									<div class="o_kanban_record_top"
+										name="studio_auto_kanban_top">
+										<div class="o_kanban_record_headings"
+											name="studio_auto_kanban_headings">
+
+											<field name="f_man_planning_name" nolabel="1" />
+
+											<strong class="o_kanban_record_title"
+												name="studio_auto_kanban_title">
+
+												<field name="f_responsible" />
+											</strong>
+										</div>
+
+										<div class="o_dropdown_kanban dropdown">
+											<a role="button" class="dropdown-toggle o-no-caret btn"
+												data-toggle="dropdown" data-display="static" href="#"
+												aria-label="Dropdown Menu" title="Dropdown Menu">
+												<span class="fa fa-ellipsis-v" />
+											</a>
+											<div class="dropdown-menu" role="menu">
+												<a t-if="widget.editable" role="menuitem" type="edit"
+													class="dropdown-item">Edit</a>
+												<a t-if="widget.deletable" role="menuitem" type="delete"
+													class="dropdown-item">Delete</a>
+											</div>
+										</div>
+									</div>
+									<div class="o_kanban_record_bottom"
+										name="studio_auto_kanban_bottom">
+										<div class="oe_kanban_bottom_left"
+											name="studio_auto_kanban_bottom_left">
+											<field name="f_date_start" />
+											<field name="f_date_end" />
+											<field name="f_note" />
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+
+		<!-- Gantt View -->
+		<record id="f_plan_gantt_view" model="ir.ui.view">
+			<field name="name">plan.view.gantt</field>
+			<field name="model">f.man.plan</field>
+			<field name="arch" type="xml">
+				<gantt date_start="f_date_start" date_stop="f_date_end"
+					default_group_by="f_responsible" default_scale="week"
+					color="f_responsible" scales="day,week,month,year"
+					precision="{'day': 'hour:full', 'week': 'day:full', 'month': 'day:full', 'year': 'day:full'}"
+					thumbnails="{'f_responsible': 'image_128'}">
+					<field name="f_responsible" />
+					<templates>
+						<div t-name="gantt-popover" class="container-fluid">
+							<div class="row no-gutters">
+								<div class="col">
+									<ul class="pl-1 mb-0">
+										<li>
+											<strong>Start Date:</strong>
+											<t
+												t-esc="userTimezoneStartDate.format('YYYY-MM-DD hh:mm:ss A')" />
+										</li>
+										<li>
+											<strong>End Date:</strong>
+											<t t-esc="f_date_end.format('YYYY-MM-DD hh:mm:ss A')" />
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</templates>
+				</gantt>
+			</field>
+		</record>
+
+
+		<!-- search -->
+		<record id="f_man_plan_search_view" model="ir.ui.view">
+			<field name="name">f.man.plan.search.view</field>
+			<field name="model">f.man.plan</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="f_man_planning_name"
+						filter_domain="[('f_man_planning_name', 'ilike', self)]" />
+
+					<!--<field name="f_planning_order_for" filter_domain="[('f_planning_order_for', 
+						'ilike', self)]" /> -->
+					<field name="f_responsible"
+						filter_domain="[('f_responsible', 'ilike', self)]" />
+
+					<field name="f_note"
+						filter_domain="[('f_note', 'ilike', self)]" />
+
+
+					<group expand="1" string="Group By">
+
+
+						<filter string="Archived" name="active"
+							domain="[('active', '=', False)]" />
+
+
+						<filter string="Manufacturing Planning Start Date"
+							name="f_date_start" context="{'group_by':'f_date_start'}" />
+
+						<filter string="Responsible" name="f_responsible"
+							context="{'group_by':'f_responsible'}" />
+
+
+						<!-- <filter string="Planning Order For" name="f_planning_order_for" 
+							context="{'group_by':'f_planning_order_for'}" /> -->
+
+
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<!-- tree view -->
+		<record model="ir.ui.view" id="f_man_plan_list">
+			<field name="name">f.man.plan.list</field>
+			<field name="model">f.man.plan</field>
+			<field name="arch" type="xml">
+				<tree >
+					<field name="f_mp_status" widget="badge"
+						decoration-success="f_mp_status == 'done'"
+						decoration-primary=" f_mp_status == 'running'"
+						decoration-danger="f_mp_status == 'cancel'"
+						decoration-muted="f_mp_status == 'draft'"
+						decoration-info="f_mp_status == 'onhold'" />
+					<field name="f_man_planning_name" optional="show" />
+					<field name="f_mrp_categ" optional="hide" />
+					<field name="f_mrp_wcg" optional="hide" />
+					<field name="f_batch_number" optional="hide" />
+					<field name="f_responsible" optional="show" />
+					<field name="f_date_start" optional="show" />
+					<field name="f_date_end" optional="show" />
+					<field name="f_note" optional="hide" />
+					<field name="f_first_responsible" invisible="1"/>
+					<field name="f_sec_responsible" invisible="1"/>
+					<field name="f_third_responsible" invisible="1"/>
+					<field name="f_first_employee" optional="hide"/>
+					<field name="f_sec_employee" optional="hide"/>
+					<field name="f_third_employee" optional="hide"/>
+					<field name="f_plan_products" widget="many2many_tags"
+						optional="hide" />
+				</tree>
+			</field>
+		</record>
+		<!-- form view -->
+
+		<record model="ir.ui.view" id="f_man_plan_form">
+			<field name="name">f_man_plan_form</field>
+			<field name="model">f.man.plan</field>
+			<field name="arch" type="xml">
+				<form >
+					<header>
+						<field name="f_mp_status" widget="statusbar" options="{'clickable': '1'}" />
+
+						<button name="f_get_min_qty_products"
+							string="Get Minimum Quantities" type="object"
+							style="color:#008784;" />
+
+
+
+						<button name="%(falak_manufacturing_planning.f_action_print_mo_products)d"
+							string="Print MO Plan Products" type="action"
+							style="color:#008784;" />
+							
+							
+						<!-- <button name="compute_analyze_quantities" -->
+						<!-- string="Analyze Quantities" type="object" style="color:#008784;" 
+							/> -->
+
+
+					</header>
+					<field name="active" invisible="1" />
+
+					<sheet>
+						<div name="button_box" class="oe_button_box">
+
+							<button class="oe_stat_button" type="object"
+								name="action_view_man_qty" icon="fa-cubes">
+								<div class="o_field_widget o_stat_info">
+									<span class="o_stat_value">
+										<field string="Demands Qty" name="f_man_qty_count" />
+									</span>
+									<span class="o_stat_text">
+										Planned Products
+									</span>
+								</div>
+							</button>
+
+
+							<button class="oe_stat_button" type="object"
+								name="action_view_man_order" icon="fa-cubes">
+								<div class="o_field_widget o_stat_info">
+									<span class="o_stat_value">
+										<field string="Man Orders" name="f_man_order_count" />
+									</span>
+									<span class="o_stat_text">
+										Man Orders
+									</span>
+								</div>
+							</button>
+						</div>
+						<div class="oe_title">
+
+							<h1>
+								<field name="f_man_planning_name" readonly="1" />
+							</h1>
+						</div>
+						<group>
+							<group>
+
+								<field name="f_mrp_categ" />
+								<field name="f_mrp_wcg" />
+								<field name="f_note" />
+							</group>
+							<group>
+
+								<field name="f_responsible" widget="many2one_avatar_user" />
+
+								<label for="f_date_start" string="Dates Period" />
+								<div name="dates" class="o_row">
+									<field name="f_date_start" widget="daterange"
+										options='{"related_end_date": "f_date_end"}' />
+									<i class="fa fa-long-arrow-right mx-2 oe_edit_only"
+										aria-label="Arrow icon" title="Arrow" />
+									<i class="fa fa-long-arrow-right mx-2 oe_read_only"
+										aria-label="Arrow icon" title="Arrow"
+										attrs="{'invisible': [('f_date_start', '=', False), ('f_date_end', '=', False)]}" />
+									<field name="f_date_end" widget="daterange"
+										options='{"related_start_date": "f_date_start"}' />
+								</div>
+								<field name="f_batch_number" />
+
+							</group>
+							<group>
+								<field name="f_department_id" invisible="1"/>
+								<field name="f_first_employee" domain="[('department_id', '=', f_department_id)]"/>
+								<field name="f_sec_employee" domain="[('department_id', '=', f_department_id)]"/>
+								<field name="f_third_employee" domain="[('department_id', '=', f_department_id)]"/>
+								<field name="f_first_responsible" invisible="1"/>
+								<field name="f_sec_responsible" invisible="1"/>
+								<field name="f_third_responsible" invisible="1"/>
+							</group>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"
+							groups="base.group_user" />
+						<field name="activity_ids" widget="mail_activity" />
+						<field name="message_ids" widget="mail_thread" />
+					</div>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

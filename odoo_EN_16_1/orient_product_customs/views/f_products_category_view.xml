@@ -1,0 +1,33 @@
+<odoo>
+	<data>
+
+		<!-- **********************************Product Category Views*********************************** -->
+		<!-- Tree View Definition for product Category -->
+		<record id="f_prod_cat_tree_view_or_customs" model="ir.ui.view">
+			<field name="name">prod_cat_tree</field>
+			<field name="model">f.prod.category</field>
+			<field name="arch" type="xml">
+				<tree string="Product Category" editable="bottom">
+
+					<field name="fprodcategory_name" />
+					<field name="fprodsubcategory"  widget="many2many_tags" />
+				</tree>
+			</field>
+		</record>
+
+
+		<!-- **********************************Product Sub Category Views*********************************** -->
+		<!-- Tree View Definition for prod Sub category -->
+		<record id="f_prod_sub_cat_tree_view_or_customs"
+			model="ir.ui.view">
+			<field name="name">prod_sub_cat_tree</field>
+			<field name="model">f.prod.sub.category</field>
+			<field name="arch" type="xml">
+				<tree string="Product Sub Category" editable="bottom">
+					<field name="fprodsubcategory_name" />
+					<field name="fprodcategory" />
+				</tree>
+			</field>
+		</record>
+	</data>
+</odoo>

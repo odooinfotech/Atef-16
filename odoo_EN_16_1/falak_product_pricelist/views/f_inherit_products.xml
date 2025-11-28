@@ -1,0 +1,46 @@
+<odoo>
+	<record id="f_productprices_extras_form_view_id"
+		model="ir.ui.view">
+		<field name="name">f_productprices_extras_form_view</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id"
+			ref="product.product_template_only_form_view" />
+		<field name="arch" type="xml">
+			<xpath expr="//page[@name='inventory']" position="after">
+				<page name="product_price_info" string="Pricing ">
+					<form>
+						<group>
+
+							<group>
+								<field name="f_price1" style="width:30%" />
+								<field name="f_price2" style="width:30%" />
+								<field name="f_price3" style="width:30%" />
+								<field name="f_price4" style="width:30%" />
+								<field name="f_price5" style="width:30%" />
+							</group>
+						</group>
+					</form>
+				</page>
+			</xpath>
+		</field>
+	</record>
+
+
+	<record id="f_productprices_extras_tree_view_id"
+		model="ir.ui.view">
+		<field name="name">f_productprices_extras_tree_view</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id"
+			ref="product.product_template_tree_view" />
+		<field name="arch" type="xml">
+
+			<xpath expr="//field[@name='list_price']" position="after">
+				<field name="f_price1" optional="hide" />
+				<field name="f_price2" optional="hide" />
+				<field name="f_price3" optional="hide" />
+				<field name="f_price4" optional="hide" />
+				<field name="f_price5" optional="hide" />
+			</xpath>
+		</field>
+	</record>
+</odoo>

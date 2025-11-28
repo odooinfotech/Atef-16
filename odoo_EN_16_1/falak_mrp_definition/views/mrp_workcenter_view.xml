@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_workcenter_view_inherit_alt" model="ir.ui.view">
+        <field name="name">mrp.workcenter.inherited.form.alt</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_workcenter_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="workcenter_group_id"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="mrp_workcenter_tree_view_inherit_alt" model="ir.ui.view">
+        <field name="name">mrp.workcenter.inherited.tree.alt</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_workcenter_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='alternative_workcenter_ids']" position="after">
+                <field name="workcenter_group_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

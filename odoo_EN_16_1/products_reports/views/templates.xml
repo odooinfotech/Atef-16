@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+    <record id="f_comapny_name" model="ir.ui.view">
+        <field name="name">f.company.name</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form" />
+        <field name="arch" type="xml">
+            <field name="favicon" position="before">
+                <field name="f_company_name"/>
+            </field>
+        </field>
+    </record>
+    </data>
+</odoo>

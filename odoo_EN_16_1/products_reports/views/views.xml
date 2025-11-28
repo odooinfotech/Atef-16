@@ -1,0 +1,177 @@
+<odoo>
+	<data>
+
+
+		<template id="report_product_labels_document">
+
+			<div>
+				<table>
+					<td class="text-left"
+						style="text-align:left;width:22%;font-size:11.603px;">
+						<span t-esc="request.env.company.f_company_name"></span>
+					</td>
+					<td class="text-left"
+						style="text-align:left;width:7%;font-size:19.903px;">
+						<span t-field="product.lst_price"
+							t-options="{'widget': 'monetary', 'display_currency': product.company_id.currency_id}"></span>
+					</td>
+				</table>
+
+
+				<div class="text-center" style="font-size:13.452px;">
+					<span t-field="product.display_name"></span>
+				</div>
+				<div>
+					<t t-if="product.barcode">
+						<img alt="Barcode" t-if="len(product.barcode) == 13"
+							t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', quote_plus(product.barcode or ''), 600, 150)"
+							style="margin-left:-8mm;width:120%;height:60px;" />
+						<img alt="Barcode" t-elif="len(product.barcode) == 8"
+							t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', quote_plus(product.barcode or ''), 600, 150)"
+							style="margin-left:-8mm;width:120%;height:60px;" />
+						<img alt="Barcode" t-else=""
+							t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', quote_plus(product.barcode or ''), 600, 150)"
+							style="margin-left:-8mm;width:120%;height:60px;" />
+						
+					</t>
+                </div>
+                <div class="text-center" style="font-size:11.603px;">
+<span t-field="product.barcode" />
+				</div>
+
+
+
+			</div>
+
+
+		</template>
+
+
+		<template id="report_product_labels">
+			<t t-foreach="docs" t-as="product">
+				<t t-call="web.basic_layout">
+					<div class="page">
+						<t t-call="products_reports.report_product_labels_document" />
+						<p style="page-break-after: always;" />
+
+					</div>
+				</t>
+			</t>
+		</template>
+
+
+
+
+
+		<template id="report_product_produt_labels_document">
+
+			<div>
+				<table>
+					<td class="text-left"
+						style="text-align:left;width:22%;font-size:11.603px;">
+						<span t-esc="request.env.company.f_company_name"></span>
+					</td>
+					<td class="text-left"
+						style="text-align:left;width:7%;font-size:19.903px;">
+						<span t-field="product.lst_price"
+							t-options="{'widget': 'monetary', 'display_currency': product.company_id.currency_id}"></span>
+					</td>
+				</table>
+
+
+			<div class="text-center" style="font-size:13.452px;">
+					<span t-field="product.display_name"></span>
+				</div>
+				<div>
+					<t t-if="product.barcode">
+						<img alt="Barcode" t-if="len(product.barcode) == 13"
+							t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', quote_plus(product.barcode or ''), 600, 150)"
+							style="margin-left:-8mm;width:120%;height:60px;" />
+						<img alt="Barcode" t-elif="len(product.barcode) == 8"
+							t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', quote_plus(product.barcode or ''), 600, 150)"
+							style="margin-left:-8mm;width:120%;height:60px;" />
+						<img alt="Barcode" t-else=""
+							t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', quote_plus(product.barcode or ''), 600, 150)"
+							style="margin-left:-8mm;width:120%;height:60px;" />
+						
+					</t>
+                </div>
+                <div class="text-center" style="font-size:11.603px;">
+<span t-field="product.barcode" />
+				</div>
+
+
+
+			</div>
+
+
+		</template>
+
+
+		<template id="report_product_prod_labels">
+			<t t-foreach="docs" t-as="product">
+				<t t-call="web.basic_layout">
+					<div class="page">
+						<t
+							t-call="products_reports.report_product_produt_labels_document" />
+						<p style="page-break-after: always;" />
+
+					</div>
+				</t>
+			</t>
+		</template>
+
+
+
+
+		<record id="product_template_rep" model="ir.actions.report">
+			<field name="name">Customize Products Template Labels</field>
+			<field name="model">product.template</field>
+			<field name="report_type">qweb-pdf</field>
+			<field name="report_name">products_reports.report_product_labels</field>
+			<field name="report_file">products_reports.report_product_labels</field>
+			<field name="binding_model_id"
+				ref="product.model_product_template" />
+			<field name="binding_type">report</field>
+		</record>
+
+		<record id="product_product_rep" model="ir.actions.report">
+			<field name="name">Customize Products Labels</field>
+			<field name="model">product.product</field>
+			<field name="report_type">qweb-pdf</field>
+			<field name="report_name">products_reports.report_product_prod_labels</field>
+			<field name="report_file">products_reports.report_product_prod_labels</field>
+			<field name="binding_model_id"
+				ref="product.model_product_product" />
+			<field name="binding_type">report</field>
+		</record>
+
+
+        
+
+
+		<record id="barcode_labels_report_paperformate"
+			model="report.paperformat">
+			<field name="name">Falak labels Report Paperformate</field>
+			<field name="default" eval="True" />
+			<field name="format">custom</field>
+			<field name="page_height">30</field>
+			<field name="page_width">70</field>
+			<field name="orientation">Portrait</field>
+			<field name="margin_top">0</field>
+			<field name="margin_bottom">0</field>
+			<field name="margin_left">0</field>
+			<field name="margin_right">0</field>
+			<field name="header_line" eval="False" />
+			<field name="header_spacing">0</field>
+			<field name="dpi">90</field>
+			<field name="report_ids"
+				eval="[(6,0,[ref('products_reports.product_product_rep'),ref('products_reports.product_template_rep')])]" />
+		</record>
+
+
+	</data>
+
+</odoo>
+
+

@@ -1,0 +1,820 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrp_cost
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-31 07:39+0000\n"
+"PO-Revision-Date: 2024-01-31 07:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "% Total Cost (in"
+msgstr "التكلفة الإجمالية"
+
+#. module: mrp_cost
+#: model:ir.model.fields.selection,name:mrp_cost.selection__mrp_bom_line__coefficent_parameters__percentage_with_co
+msgid "% with Co."
+msgstr ""
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"%s %s has Quantity Coefficient and the Coefficient is not Only Co., please "
+"check it!"
+msgstr "%s %s لديه معامل الكمية والمعامل ليس only co ارجو الفحص"
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"%s %s has Quantity Ratio (%%) and the Coefficient is not %% with Co., please"
+" check it!"
+msgstr "%s %s لديه نسبة الكمية والمعامل ليس with co ارجو الفحص"
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"%s %s has not Quantity Coefficient or Quantity Ratio (%%) and the "
+"Coefficient is not False, please check it!"
+msgstr ""
+"%s %s ليس لديه معامل الكمية ولا نسبة الكمية والمعامل ليس فارغ ارجو الفحص"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<span class=\"text-left o_mrp_report_line_header\">Amount/ Duration</span>"
+msgstr "المبلغ / المدة"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid ""
+"<span class=\"text-left o_mrp_report_line_header\">Amount/ Final QTY</span>"
+msgstr "المبلغ / الكمية النهائية"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<span class=\"text-left o_mrp_report_line_header\">Percent(%)</span>"
+msgstr "نسبه مئويه(٪)"
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                                                            Operation (%s) unarchived "
+
+
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                                                            العملية (%s) تم الغاء ارشفة   "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                                                    Operation (%s) archived "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                                                    تم أرشفة العملية (%s) "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                                                A new operation (%s) has been added "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                                                تمت إضافة عملية جديدة (%s) "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                                            Component (%s) deleted "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"تم حذف المكون (%s) "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                                            Operation (%s) deleted "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                                            تم حذف العملية (%s) "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                                    A new component (%s) has been added "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                                    تمت إضافة مكون جديد (%s) "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        The %s operation Employee Capacity has been changed from\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        to \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        تم تغيير سعة الموظف للعملية %s من\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        إلى \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        The %s operation default duration has been changed from\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        to \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        تم تغيير المدة الافتراضية للعملية %s من\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        إلى \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        The %s product coefficient parameters has been changed from\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        to \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        تم تغيير معامل المنتج %s من\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        إلى \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        The %s product loss has been changed from\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        to \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        تم تغيير خسارة المنتج %s من\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        إلى \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        The %s product quantity coefficient has been changed from\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        to \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        تم تغيير معامل كمية المنتج %s من\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        إلى \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        The %s product quantity has been changed from\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        to \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        تم تغيير كمية المنتج %s من\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        إلى \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        The %s product quantity ratio has been changed from\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        to \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+msgstr ""
+"<span style='font-weight: bold; font-size: 16px;'>&#8226;</span>\n"
+"                        تم تغيير نسبة كمية المنتج %s من\n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        إلى \n"
+"                        <span style='color: blue;'>%s</span>\n"
+"                        "
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<span>Cost</span>"
+msgstr "التكلفة"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<span>Employee</span>"
+msgstr "الموظف"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<span>End Date</span>"
+msgstr "تاريخ الانتهاء"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<span>OverHeads</span>"
+msgstr "التكاليف الاضافية"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<span>Products</span>"
+msgstr "المنتجات"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<span>Start Date</span>"
+msgstr "تاريح البدء"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<span>Total Cost</span>"
+msgstr "التكلفة الاجمالية"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<span>Total Time</span>"
+msgstr "الوقت الاجمالي"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<strong>Total Cost of Employee TimeSheet</strong>"
+msgstr "التكلفة الإجمالية لجدول دوام الموظف"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<strong>Total Cost of OverHeads</strong>"
+msgstr "التكلفة الاجمالية للتكاليف الاضافية"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<strong>Total Time Spend</strong>"
+msgstr "إجمالي الوقت المنقضي"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "<strong>Total of All Costs:</strong>"
+msgstr "إجمالي جميع التكاليف:"
+
+#. module: mrp_cost
+#: model:ir.model.fields,help:mrp_cost.field_mrp_production__workcenter_id
+msgid ""
+"Allow users to pass specific workcenter and\n"
+"                                    replace Related BOM work center from the header automatically\n"
+"                                    "
+msgstr ""
+"اسمح للمستخدمين بتمرير مركز عمل محدد واستبدال مركز عمل BOM ذي الصلة من الرأس"
+" تلقائيًا"
+
+#. module: mrp_cost
+#: model:ir.model.fields.selection,name:mrp_cost.selection__mrp_bom_overhead__overhead_parameters__amount_div_by_duration
+msgid "Amount/ Duration"
+msgstr "المبلغ / المدة"
+
+#. module: mrp_cost
+#: model:ir.model.fields.selection,name:mrp_cost.selection__mrp_bom_overhead__overhead_parameters__amount_div_by_final_qty
+msgid "Amount/ Final QTY"
+msgstr "المبلغ / الكمية النهائية"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_production__timesheet_ids
+msgid "Associated Timesheets"
+msgstr "الجداول الزمنية المرتبطة"
+
+#. module: mrp_cost
+#: model:ir.model.fields,help:mrp_cost.field_mrp_bom_line__loss_percent
+msgid "BOM Componenets Loss %"
+msgstr "خسارة مكونات قائمة المواد %"
+
+#. module: mrp_cost
+#: model:res.groups,name:mrp_cost.f_bom_cost_group_id
+msgid "BOM Cost Group"
+msgstr ""
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_product_product__f_bom_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_product_template__f_bom_cost
+msgid "BOM Expected Cost"
+msgstr "تكلفة قائمة المواد المتوقعة"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_production_form_view_inherited_custom_fields_added
+msgid "BOM OverHeads-Products"
+msgstr "التكاليف الاضافية لقائمة المواد للمنتجات"
+
+#. module: mrp_cost
+#: model:ir.model,name:mrp_cost.model_report_mrp_report_bom_structure
+msgid "BOM Overview Report"
+msgstr "تقرير النظرة العامة لقائمة المواد "
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_product_product__f_bom_set
+#: model:ir.model.fields,field_description:mrp_cost.field_product_template__f_bom_set
+msgid "BOM is set"
+msgstr "لديه قائمة مواد"
+
+#. module: mrp_cost
+#: model:ir.model,name:mrp_cost.model_mrp_bom
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__bom_id
+msgid "Bill of Material"
+msgstr "قائمة المواد"
+
+#. module: mrp_cost
+#: model:ir.model,name:mrp_cost.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr "بند قائمة المواد"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__bom_id
+msgid "BoM"
+msgstr "قائمة المواد"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_line__coefficent_parameters
+msgid "Coefficent"
+msgstr "معامل"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__work_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__overhead_cost
+msgid "Cost"
+msgstr "التكلفة"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "Cost of OverHeads"
+msgstr "تكلفة التكاليف الاضافية"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__create_uid
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__create_uid
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__create_uid
+msgid "Created by"
+msgstr "تم انشاؤه من قبل"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__create_date
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__create_date
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__create_date
+msgid "Created on"
+msgstr "تم انشاؤه بتاريخ"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_bom_form_view_custom_fields_added
+msgid "Custom Operations"
+msgstr "عمليات مخصصة"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom__f_default_bom
+msgid "Default Bill Of Material"
+msgstr "قائمة المواد الافتراضية"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__display_name
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__display_name
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__time_cycle
+msgid "Duration"
+msgstr "المدة"
+
+#. module: mrp_cost
+#: model:ir.model.fields,help:mrp_cost.field_mrp_operation_workcenter__time_cycle
+msgid "Duration (in minutes)"
+msgstr "المدة في الدقائق"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom__cost_visible
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_production__cost_visible
+msgid "Employee Cost Visibility"
+msgstr "رؤية تكلفة الموظف"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "Employee TimeSheet"
+msgstr "جدول دوام الموظف"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__end_date
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: mrp_cost
+#: model:ir.model,name:mrp_cost.model_hr_timesheet_line
+msgid "HR TIME MANAGEMENT"
+msgstr "إدارة وقت الموارد البشرية"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_production__effective_hours
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_production_form_view_inherited_custom_fields_added
+msgid "Hours Spent"
+msgstr "الساعات المقضية"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__id
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__id
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__id
+msgid "ID"
+msgstr "الرقم"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_product_product__is_overhead
+#: model:ir.model.fields,field_description:mrp_cost.field_product_template__is_overhead
+msgid "Is Overhead?"
+msgstr "هل هو تكلفة اضافية ؟"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_line__is_supplementary_product
+msgid "Is Supplementary Product?"
+msgstr "هل المنتج تكميلي؟"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line____last_update
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead____last_update
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter____last_update
+msgid "Last Modified on"
+msgstr "اخر تعديل بتاريخ"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__write_uid
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__write_uid
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث من قبل"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__write_date
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__write_date
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__write_date
+msgid "Last Updated on"
+msgstr "اخر تحديث بتاريخ"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_line__loss_percent
+msgid "Loss %"
+msgstr "الخسارة ٪"
+
+#. module: mrp_cost
+#: model:ir.model,name:mrp_cost.model_mrp_bom_overhead
+msgid "MRP BOM Overhead"
+msgstr "التكاليف الاضافية لقائمة مواد التصنيع"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_production__mrp_bom_overhead_ids
+msgid "MRP BOM Overheads"
+msgstr "التكاليف الاضافية لقائمة مواد التصنيع"
+
+#. module: mrp_cost
+#: model:ir.model,name:mrp_cost.model_report_mrp_account_enterprise_mrp_cost_structure
+msgid "MRP Cost Structure Report"
+msgstr "تقرير بنية التكلفة في نظام تخطيط متطلبات المواد"
+
+#. module: mrp_cost
+#: model:ir.model,name:mrp_cost.model_mrp_operation_workcenter
+msgid "MRP Operation Workcenter"
+msgstr "مركز عمليات التصنيع"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__mrp_production_id
+msgid "MRP Production"
+msgstr "انتاج التصنيع"
+
+#. module: mrp_cost
+#: model:ir.model.fields.selection,name:mrp_cost.selection__mrp_bom_line__coefficent_parameters__only_co
+msgid "Only Co."
+msgstr ""
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__operation_id
+msgid "Operation"
+msgstr "العملية"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom__operation_workcenter_ids
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_bom_form_view_custom_fields_added
+msgid "Operation Workcenter"
+msgstr "مركز العمليات"
+
+#. module: mrp_cost
+#: model:ir.model.constraint,message:mrp_cost.constraint_mrp_operation_workcenter_operation_workcenter
+msgid "Operation and Workcenter combinations must be different per company."
+msgstr "يجب أن تكون مجموعات التشغيل ومركز العمل مختلفة لكل شركة"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom__total_cost_over_head_percent
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_production__total_cost_over_head_percent
+msgid "Over Head '%' over Total Cost"
+msgstr "التكلفة الاضافية % على التكلفية الاجمالية"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_bom_form_view_custom_fields_added
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "OverHead"
+msgstr "التكلفة الاضافية"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_bom_form_view_custom_fields_added
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_production_form_view_inherited_custom_fields_added
+msgid "OverHead Products"
+msgstr "منتجات التكاليف الاضافية"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom__overhead_line_ids
+msgid "Overhead Lines"
+msgstr "بنود التكلفة الاضافية"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__overhead_parameters
+msgid "Overheads"
+msgstr "التكاليف الاضافية"
+
+#. module: mrp_cost
+#: model:ir.model.fields.selection,name:mrp_cost.selection__mrp_bom_overhead__overhead_parameters__percent
+msgid "Percent(%)"
+msgstr "النسبة المئوية %"
+
+#. module: mrp_cost
+#: model:ir.model,name:mrp_cost.model_product_template
+msgid "Product"
+msgstr ""
+
+#. module: mrp_cost
+#: model:ir.model,name:mrp_cost.model_product_product
+msgid "Product Variant"
+msgstr ""
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__production_id
+msgid "Production"
+msgstr "الانتاج"
+
+#. module: mrp_cost
+#: model:ir.model,name:mrp_cost.model_mrp_production
+msgid "Production Order"
+msgstr "أمر الانتاج"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__product_id
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom__product_qty
+msgid "Quantity"
+msgstr ""
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_line__quantity_coefficient
+msgid "Quantity Coefficient"
+msgstr "معامل الكمية"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_line__quantity_ratio_percent
+msgid "Quantity Ratio (%)"
+msgstr "نسبة الكمية (٪)"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__start_date
+msgid "Sart Date"
+msgstr "تاريخ البداية"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__smart_search
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom__smart_search
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_line__smart_search
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom_overhead__smart_search
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__smart_search
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_production__smart_search
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_routing_workcenter__smart_search
+#: model:ir.model.fields,field_description:mrp_cost.field_product_product__smart_search
+#: model:ir.model.fields,field_description:mrp_cost.field_product_template__smart_search
+#: model:ir.model.fields,field_description:mrp_cost.field_report_mrp_account_enterprise_mrp_cost_structure__smart_search
+#: model:ir.model.fields,field_description:mrp_cost.field_report_mrp_report_bom_structure__smart_search
+msgid "Smart Search"
+msgstr "بحث متقدم"
+
+#. module: mrp_cost
+#: model:ir.model.fields,help:mrp_cost.field_mrp_operation_workcenter__bom_id
+msgid "The Bill of Material this operation is linked to"
+msgstr "قائمة المواد المرتبطة بهذه العملية"
+
+#. module: mrp_cost
+#. odoo-python
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#: code:addons/mrp_cost/models/mrp_bom.py:0
+#, python-format
+msgid ""
+"The total of the component quantity ratio is greater than 100. Please check "
+"it!"
+msgstr "مجموع نسبة الكمية اكبر من 100 ارجو الفحص"
+
+#. module: mrp_cost
+#: model:ir.model.fields,help:mrp_cost.field_mrp_bom__product_qty
+msgid ""
+"This should be the smallest quantity that this product can be produced in. "
+"If the BOM contains operations, make sure the work center capacity is "
+"accurate."
+msgstr ""
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_production_form_view_inherited_custom_fields_added
+msgid "Timesheet Empolyee Activities"
+msgstr "أنشطة الموظفين في سجل الدوام"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_production_form_view_inherited_custom_fields_added
+msgid "Timesheets"
+msgstr "الدوام"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__total_work_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_production_form_view_inherited_custom_fields_added
+msgid "Total Cost"
+msgstr "التكلفة الاجمالية"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "Total Cost of Employee TimeSheet per unit (in"
+msgstr "التكلفة الإجمالية للجدول الزمني للموظف لكل وحدة"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "Total Cost of OverHeads per unit (in"
+msgstr "التكلفة الاجمالية للتكاليف الاضافية لكل وحدة"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_bom_form_view_custom_fields_added
+msgid "Total Quantity Ratio"
+msgstr ""
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom__total_quantity_ratio_percent
+msgid "Total Quantity Ratio (%)"
+msgstr ""
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_hr_timesheet_line__total_time
+msgid "Total Work Time"
+msgstr "إجمالي وقت العمل"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_production__total_cost
+msgid "Total cost"
+msgstr "التكلفة الاجمالية"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.mrp_cost_structure_overheads_table_addedinherit
+msgid "Total of All Costs per unit (in"
+msgstr "إجمالي كل التكاليف لكل وحدة"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.product_template_form_view_custom_fields_added
+msgid "Update BoM Cost"
+msgstr "تحديث تكلفة قائمة المواد"
+
+#. module: mrp_cost
+#: model:ir.actions.server,name:mrp_cost.compute_bom_cost_cron_ir_actions_server
+#: model:ir.cron,cron_name:mrp_cost.compute_bom_cost_cron
+msgid "Update BoM Cost for Products"
+msgstr "تحديث تكلفة قائمة المواد للمنتج"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.product_template_form_view_custom_fields_added
+msgid "Update BoM with new weight"
+msgstr "تحديث قائم المواد بوزن جديد"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.product_template_form_view_custom_fields_added
+msgid "Update the BoM Cost."
+msgstr "تحديث تكلفة قائمة المواد"
+
+#. module: mrp_cost
+#: model_terms:ir.ui.view,arch_db:mrp_cost.product_template_form_view_custom_fields_added
+msgid "Update the BoM Lines quantity with the latest weight."
+msgstr "تحديث كمية خطوط قائمة المواد بآخر وزن"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_bom__weight
+msgid "Weight"
+msgstr "الوزن"
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_operation_workcenter__workcenter_id
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_production__workcenter_id
+msgid "Work Center"
+msgstr "مركز العمل"
+
+#. module: mrp_cost
+#: model:ir.actions.act_window,name:mrp_cost.f_workcenter_action_window
+msgid "Work Center Group"
+msgstr "مجموعة مركز العمل"
+
+#. module: mrp_cost
+#: model:ir.ui.menu,name:mrp_cost.f_workcenter_group
+msgid "Work Center Groups"
+msgstr "مجموعات مركز العمل"
+
+#. module: mrp_cost
+#: model:ir.model,name:mrp_cost.model_mrp_routing_workcenter
+msgid "Work Center Usage"
+msgstr "استخدام مركز العمل "
+
+#. module: mrp_cost
+#: model:ir.model.fields,field_description:mrp_cost.field_mrp_production__resource_calendar_id
+msgid "Working Hours"
+msgstr "ساعات العمل"

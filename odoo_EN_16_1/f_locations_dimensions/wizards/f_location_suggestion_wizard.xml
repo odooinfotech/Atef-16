@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="f_location_suggestion_tree_view" model="ir.ui.view">
+        <field name="name">f.location.suggestion.tree.view</field>
+        <field name="model">f.location.suggestion</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Location Suggestion" editable="bottom">
+                <header>
+                    <button string="Confirm" name="f_confirm_location_suggestion" type="object" class="oe_highlight"/>
+                    <button string="Cancel" class="btn btn-secondary" special="cancel"/>
+                </header>
+                <field name="f_default_code" />
+                <field name="f_product_id" />
+                <field name="f_parent_location" invisible="1"/>
+                <field name="f_product_uom_qty" />
+                <field name="f_product_packaging" />
+                <field name="f_product_locations" force_save="1"/>
+                <field name="f_dest_location" />
+                <field name="f_product_volume" readonly="1" force_save="1"/>
+                <field name="f_location_available_volume" />
+            </tree>
+        </field>
+    </record>
+</odoo>

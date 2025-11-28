@@ -1,0 +1,26 @@
+<odoo>
+
+
+    <record id="f_inherit_partner_creditaccount_view" model="ir.ui.view">
+        <field name="name">f.inherit.partner.creditaccount.view</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='ref']" position="after">
+                <field name="company_currency_id" invisible="1"/>
+              				  	<field name="f_balance" class="oe_inline" widget="monetary" options="{'currency_field': 'company_currency_id', 'field_digits': True}" attrs="{'invisible' : [('move_type', '=', 'entry')]}"/>
+
+
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='aml_tab']/field[@name='line_ids']/tree[1]/field[@name='partner_id']"
+                   position="after">
+                <field name="f_balance"/>
+            </xpath>
+
+
+        </field>
+    </record>
+
+
+</odoo>

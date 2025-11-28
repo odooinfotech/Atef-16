@@ -1,0 +1,30 @@
+<odoo>
+
+	<record model="ir.actions.act_window"
+		id="f_com_coll_rules_action">
+		<field name="name">Collection Rules</field>
+		<field name="res_model">f.comm.collection.rules</field>
+		<field name="view_mode">tree</field>
+	</record>
+
+	<menuitem name="Collection Rules"
+		id="f_comm_coll_rules_def_menue"
+		parent="commission_management.f_comm_config_menue"
+		action="commission_management.f_com_coll_rules_action" />
+
+
+	<record model="ir.ui.view" id="f_comm_col_rules">
+		<field name="name">f_comm_col_rules</field>
+		<field name="model">f.comm.collection.rules</field>
+		<field name="arch" type="xml">
+			<tree editable="bottom">
+				<field name="f_customer_type" />
+				<field name="f_operator" />
+				
+				<field name="f_debit_from" />
+				<field name="f_debit_to" />
+				<field name="f_collection_com" />
+			</tree>
+		</field>
+	</record>
+</odoo>

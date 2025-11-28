@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+
+
+        
+        <record id="view_moanalysisicost_report_tree" model="ir.ui.view">
+            <field name="name">f.mo.cost.analysis.report.tree</field>
+            <field name="model">f.mo.cost.analysis</field>
+            <field name="arch" type="xml">
+                <tree create ='false' import='false'>
+                 <field name="date_planned_start"/>
+                    <field name="mo_id"/>
+                      <field name="mo_product"/>
+                    <field name="product_id"/>
+                     
+                      <field name="qty"/>
+                       <field name="cost"/> 
+                     <field name="total_cost" />
+                     <field name="f_bussniess_purop"/>
+                      
+              
+                  
+            
+                    
+                    
+                </tree>
+            </field>
+        </record>
+        
+
+        
+        
+
+        <record id="view_f_moanalysisicost_report_form" model="ir.ui.view">
+            <field name="name">f.mo.cost.analysis.form</field>
+            <field name="model">f.mo.cost.analysis</field>
+            <field name="arch" type="xml">
+                <form create ='false'>
+                    <group>
+                    <field name="date_planned_start"/>
+                    <field name="mo_id"/>
+                      <field name="mo_product"/>
+                    <field name="product_id"/>
+                     
+                      <field name="qty"/>
+                       <field name="cost"/> 
+                     <field name="total_cost" />
+                     <field name="f_bussniess_purop"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_f_moanalysisicost_reportsearch" model="ir.ui.view">
+            <field name="name">f.mo.cost.analysis.search</field>
+            <field name="model">f.mo.cost.analysis</field>
+            <field name="arch" type="xml">
+                <search >
+                    <field name="mo_id"/>
+                      <field name="mo_product"/>
+                    <field name="product_id"/>
+                     
+                    
+                     <field name="f_bussniess_purop"/>
+                  
+               
+                  
+                    <group expand="1" string="Group By">
+                     <filter string="Component Product" name="product_id" context="{'group_by':'product_id'}"/>
+                      <filter string="MO Order" name="mo_id" context="{'group_by':'mo_id'}"/>
+                      <filter string="Product" name="mo_product" context="{'group_by':'mo_product'}"/>
+                     
+           
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_f_f_moanalysisicost_report_all" model="ir.actions.act_window">
+            <field name="name">MO Cost Analysis Report</field>
+            <field name="res_model">f.mo.cost.analysis</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+        </record>
+        
+       
+
+ 
+<menuitem id="menu_f_moanalysisicost_report_all" name="MO Cost Analysis Report" action="action_f_f_moanalysisicost_report_all" parent="account.menu_finance_reports"  sequence="500"/>
+
+          
+         
+</odoo>

@@ -1,0 +1,247 @@
+<odoo>
+    <record model="ir.actions.act_window"
+            id="f_purchase_order_planning_action_window">
+        <field name="name">Purchase Planning</field>
+        <field name="res_model">f.purchase.order.planning</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Shipping and Planning" id="f_ship_plan"
+              parent="purchase.menu_purchase_root"/>
+
+    <menuitem name="Purchase Order Planning" id="f_po_planning"
+              parent="f_ship_plan"
+              action="f_purchase_order_planning_action_window"/>
+
+    <record id="purchase_planning_search_view" model="ir.ui.view">
+        <field name="name">po.planning.search.view</field>
+        <field name="model">f.purchase.order.planning</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="f_product_name"
+                       filter_domain="[('f_product_name', 'ilike', self)]"/>
+                <field name="f_vendor_contact_person"
+                       filter_domain="[('f_vendor_contact_person', 'ilike', self)]"/>
+                <field name="f_vendor_name"
+                       filter_domain="[('f_vendor_name', 'ilike', self)]"/>
+                <field name="f_po_id"
+                       filter_domain="[('f_po_id', 'ilike', self)]"/>
+                <field name="f_clearance_agent"
+                       filter_domain="[('f_clearance_agent', 'ilike', self)]"/>
+                <field name="f_import_agent"
+                       filter_domain="[('f_import_agent', 'ilike', self)]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Shipping" name="f_shipping"
+                            context="{'group_by':'f_shipping'}"/>
+                    <filter string="Purchase Order" name="f_po_id"
+                            context="{'group_by':'f_po_id'}"/>
+                    <filter string="Product" name="f_product_name"
+                            context="{'group_by':'f_product_name'}"/>
+                    <filter string="Purchase Representative"
+                            name="f_purchase_representative"
+                            context="{'group_by':'f_purchase_representative'}"/>
+                    <filter string="Status"
+                            name="f_stat"
+                            context="{'group_by':'f_stat'}"/>
+                    <filter string="Commercial Invoice Number"
+                            name="f_commercial_inv_num"
+                            context="{'group_by':'f_commercial_inv_num'}"/>
+                    <filter string="Classification" name="classification_group"
+                            domain="[]" context="{'group_by': 'f_po_classification'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="f_purchase_planning_list">
+        <field name="name">f.purchase.planning.list</field>
+        <field name="model">f.purchase.order.planning</field>
+        <field name="arch" type="xml">
+            <tree editable="top" multi_edit="1">
+                <header>
+                    <button name="f_add_plan"
+                            string="Add Plans" type="object"
+                            class="btn btn-primary"/>
+                    <button name="f_set_quantities"
+                            type="object" string="Set Quantities"
+                            class="btn-primary"/>
+                </header>
+                <field name="id" invisible="1"/>
+                <field name="f_po_id"/>
+                <field name="f_product_name" optional="show" readonly="1"/>
+                <field name="f_po_line_id"/>
+                <field name="f_po_line_qty" optional="hide"/>
+                <field name="f_po_line_rec_qty" optional="hide"/>
+                <field name="f_planned_amount" optional="hide"/>
+                <field name="f_shipped_amount" optional="hide"/>
+                <field name="f_remaining_qty" optional="hide"/>
+                <field name="f_cancelled_qty" optional="hide"/>
+                <field name="f_vendor_name" optional="show" readonly="1"/>
+                <field name="f_product_code" optional="show"/>
+                <field name="f_vendor_country" optional="hide" readonly="1"/>
+                <field name="f_vendor_contact_person" optional="show"
+                       readonly="1"/>
+                <field name="f_classification_access" invisible="1" />
+                <field name="f_po_classification" optional="show"
+                       readonly="1" attrs="{'invisible': [('f_classification_access', '=', False)]}"/>
+                <field name="f_vendor_num" optional="show" readonly="1"/>
+                <field name="f_clearance_agent" optional="show" readonly="1"/>
+                <field name="f_import_agent" optional="show" readonly="1"/>
+                <field name="f_po_receipt" optional="show"/>
+                <field name="f_po_receipt_domain" invisible="1"/>
+
+
+                <field name="f_product_price" optional="hide" readonly="1"/>
+                <field name="f_notes" optional="hide"/>
+                <field name="f_stat" optional="hide"/>
+                <button name="f_open_form_view" type="object"
+                        class="oe_stat_button" icon="fa-external-link"/>
+                <field name="f_shipping" optional="hide"/>
+                <field name="f_shipped_amount_price" optional="hide" sum="1"/>
+                <field name="f_estimated_shipping_date" optional="hide"/>
+                <field name="f_ready_to_shipping_date" optional="hide"/>
+                <field name="f_real_shipping_date" optional="hide"/>
+                <field name="f_delta_shipping_date" optional="hide"/>
+                <field name="f_estimated_port_arrival_date" optional="hide"/>
+                <field name="f_real_port_arrival_date" optional="hide"/>
+                <field name="f_delta_port_arrival_date" optional="hide"/>
+                <field name="f_estimated_company_arrival_date" optional="hide"/>
+                <field name="f_real_company_arrival_date" optional="hide"/>
+                <field name="f_delta_company_arrival_date" optional="hide"/>
+                <field name="f_booking_no" optional="hide"/>
+                <field name="f_freight_cost" optional="hide"/>
+                <field name="f_free_days_of_demurrage" optional="hide"/>
+                <field name="f_bill_of_lading_type" optional="hide"/>
+                <field name="f_bill_of_lad_status" optional="hide"/>
+                <field name="f_port_of_discharge" optional="hide"/>
+                <field name="f_port_of_loading" optional="hide"/>
+                <field name="f_consignee" optional="hide"/>
+                <field name="f_po_pi_date" optional="hide"/>
+                <field name="f_po_pi_approval_date" optional="hide"/>
+                <field name="f_purchase_representative" optional="hide"/>
+                <field name="f_internal_agent" optional="hide"/>
+                <field name="f_euro1" optional="hide"/>
+                <field name="f_balance_document" optional="hide"/>
+                <field name="f_commercial_inv_num" optional="hide"/>
+                <field name="f_commercial_inv_amount" optional="hide"/>
+                <field name="f_deposit_lc" optional="hide"/>
+                <field name="f_balance_document" optional="hide"/>
+<!--                <field name="f_package_volume" optional="hide"/>-->
+<!--                <field name="f_package_qty" optional="hide"/>-->
+<!--                <field name="f_number_of_packages" readonly="1" optional="hide"-->
+<!--                       force_save="1"/>-->
+<!--                <field name="f_total_volume" readonly="1" optional="hide"-->
+<!--                       force_save="1"/>-->
+<!--                <field name="f_prod_weight" readonly="1" optional="hide"/>-->
+<!--                <field name="f_total_weight" readonly="1" optional="hide"-->
+<!--                       force_save="1"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="f_purchase_planning_list_form">
+        <field name="name">f_purchase_planning_list_form</field>
+        <field name="model">f.purchase.order.planning</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Purchase Order Info">
+                            <field name="f_po_id"/>
+                            <field name="f_po_line_id"/>
+                            <field name="f_vendor_name"/>
+                            <field name="f_product_code"/>
+                            <field name="f_vendor_country"/>
+                            <field name="f_classification_access" invisible="1" />
+                            <field name="f_po_classification" readonly="1" attrs="{'invisible': [('f_classification_access', '=', False)]}"/>
+                            <field name="f_po_pi_date"/>
+                            <field name="f_po_pi_approval_date"/>
+                            <field name="f_purchase_representative"/>
+                            <field name="f_internal_agent" readonly="1"/>
+                            <field name="f_vendor_contact_person" readonly="1"
+                                   force_save="1"/>
+                            <field name="f_vendor_num" readonly="1"
+                                   force_save="1"/>
+                            <field name="f_notes"/>
+                            <field name="f_stat"/>
+                        </group>
+                        <group string="Shipping  Dates">
+                            <field name="f_estimated_shipping_date"/>
+                            <field name="f_ready_to_shipping_date"/>
+                            <field name="f_real_shipping_date" readonly="1"/>
+                            <field name="f_delta_shipping_date"/>
+                            <field name="f_estimated_port_arrival_date"
+                                   readonly="1"/>
+                            <field name="f_real_port_arrival_date" readonly="1"/>
+                            <field name="f_delta_port_arrival_date" readonly="1"/>
+                            <field name="f_estimated_company_arrival_date"/>
+                            <field name="f_real_company_arrival_date"
+                                   readonly="1"/>
+                            <field name="f_delta_company_arrival_date"
+                                   readonly="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Shipment Info">
+                            <field name="f_shipping"/>
+                            <field name="f_shipp_stage" readonly="1"/>
+                            <field name="f_import_agent"/>
+                            <field name="f_clearance_agent"/>
+                            <field name="f_product_name" readonly="1"/>
+                            <field name="f_product_description"/>
+                            <field name="f_internal_ref"/>
+                            <field name="f_product_price" readonly="1"/>
+                            <field name="f_po_line_qty" readonly="1"/>
+                            <field name="f_po_line_rec_qty" readonly="1"/>
+                            <field name="f_planned_amount"/>
+                            <field name="f_shipped_amount"/>
+                            <field name="f_remaining_qty"/>
+                            <field name="f_cancelled_qty"/>
+<!--                            <field name="f_package_volume"/>-->
+<!--                            <field name="f_package_qty"/>-->
+<!--                            <field name="f_number_of_packages" readonly="1"-->
+<!--                                   force_save="1"/>-->
+<!--                            <field name="f_total_volume" readonly="1"-->
+<!--                                   force_save="1"/>-->
+<!--                            <field name="f_prod_weight" readonly="1"/>-->
+<!--                            <field name="f_total_weight" readonly="1"-->
+<!--                                   force_save="1"/>-->
+                            <field name="f_shipped_amount_price" readonly="1"/>
+                            <field name="f_shipping_term" readonly="1"/>
+                            <field name="f_shipping_time" readonly="1"/>
+                            <field name="f_shipping_company" readonly="1"/>
+                            <field name="f_shipping_company_agent" readonly="1"/>
+                            <field name="f_shipping_line" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="f_booking_no" readonly="1"/>
+                            <field name="f_freight_cost"/>
+                            <field name="f_free_days_of_demurrage" readonly="1"/>
+                            <field name="f_bill_of_lading_type" readonly="1"/>
+                            <field name="f_bill_of_lad_status" readonly="1"/>
+                            <field name="f_port_of_loading" readonly="1"/>
+                            <field name="f_port_of_discharge" readonly="1"/>
+                            <field name="f_consignee" readonly="1"/>
+                            <field name="f_commercial_inv_num"/>
+                            <field name="f_commercial_inv_amount"/>
+                            <field name="f_euro1" readonly="1"/>
+                            <field name="f_deposit_lc"/>
+                            <field name="f_balance_document"/>
+                            <field name="f_teken"/>
+                            <field name="f_taken_type"
+                                   attrs="{'invisible': [('f_teken', '=', False)]}"/>
+                            <field name="f_bakacha_number"
+                                   attrs="{'invisible': [('f_teken', '=', False)]}"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"
+                           groups="base.group_user"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+</odoo>

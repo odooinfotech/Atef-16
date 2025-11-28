@@ -1,0 +1,254 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* f_cont_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-05-15 11:19+0000\n"
+"PO-Revision-Date: 2024-05-15 11:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_report__currency_balance
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_general_balance_report__general_balance
+msgid " Balance"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model,name:f_cont_report.model_report_f_cont_report_report_contact_details
+msgid "Balance Details"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model,name:f_cont_report.model_report_f_cont_report_report_contact_general_details
+msgid "Balance General Details"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model,name:f_cont_report.model_f_partner_breif_balance_report
+msgid "Balance Report Details"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model,name:f_cont_report.model_f_partner_breif_balance_wizard
+msgid "Balance Report Wizard Details"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_report__balance
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_general_balance_report__balance
+msgid "Based Balance"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.f_res_partner_tree_viewbalancereport_wizrd
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: f_cont_report
+#: model:ir.model,name:f_cont_report.model_res_partner
+msgid "Contact"
+msgstr "كشف الارصدة"
+
+#. module: f_cont_report
+#: model:ir.actions.report,name:f_cont_report.f_cont_report
+msgid "Contact Balance Report"
+msgstr "تقرير كشف ارصدة الزبائن"
+
+#. module: f_cont_report
+#: model:ir.actions.report,name:f_cont_report.f_cont_general_report
+msgid "Contact General Balance Report"
+msgstr "تقرير كشف ارصدة الزبائن العام"
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_wizard__to_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_report__display_name
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_wizard__display_name
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_general_balance_report__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model,name:f_cont_report.model_f_partner_general_balance_report
+msgid "General Balance Report Details"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.f_res_partner_tree_viewbalancereport_wizrd
+msgid "Get"
+msgstr "عرض"
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.f_res_partner_tree_viewbalancereport_wizrd
+msgid "Get General"
+msgstr "عرض العام"
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_report__id
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_wizard__id
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_general_balance_report__id
+msgid "ID"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_report____last_update
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_wizard____last_update
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_general_balance_report____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_report__mobile
+msgid "Mobile"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_report__partner_id
+msgid "Parner"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_general_balance_report__partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.res_partner_view_inherit_head_update
+msgid "Print Contact Balances"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_report__ref
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_general_balance_report__ref
+msgid "Ref"
+msgstr "المرجع"
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_report__check_returned
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_general_balance_report__check_returned
+msgid "Returned Checks"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_report__smart_search
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_wizard__smart_search
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_general_balance_report__smart_search
+#: model:ir.model.fields,field_description:f_cont_report.field_report_f_cont_report_report_contact_details__smart_search
+#: model:ir.model.fields,field_description:f_cont_report.field_report_f_cont_report_report_contact_general_details__smart_search
+#: model:ir.model.fields,field_description:f_cont_report.field_res_partner__smart_search
+msgid "Smart Search"
+msgstr "بحث متقدم"
+
+#. module: f_cont_report
+#. odoo-python
+#: code:addons/f_cont_report/models/f_inherit_partners.py:0
+#, python-format
+msgid "Summary Partner Balance  Report"
+msgstr ""
+
+#. module: f_cont_report
+#: model:ir.model.fields,field_description:f_cont_report.field_f_partner_breif_balance_report__check_undercollected
+msgid "Un-collected Checks"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contact_general_details_documents
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "إجمالي الرصيد :"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contact_general_details_documents
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "الاسم"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contact_general_details_documents
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "الرصيد"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contact_general_details_documents
+msgid "الرصيد العام"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "الرصيد المستحق"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "الرصيد معادل"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contact_general_details_documents
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "الرقم"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "العملة"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "العنوان"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "الهاتف"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contact_general_details_documents
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "تقرير أرصدة الزبائن"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contact_general_details_documents
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "شيكات راجعة"
+msgstr ""
+
+#. module: f_cont_report
+#: model_terms:ir.ui.view,arch_db:f_cont_report.report_contactdetails_documents
+msgid "شيكات غير محصلة"
+msgstr ""

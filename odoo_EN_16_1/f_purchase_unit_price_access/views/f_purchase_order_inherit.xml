@@ -1,0 +1,98 @@
+<odoo>
+	<data>
+		<record id="f_purchase_order_inherit_form" model="ir.ui.view">
+			<field name="name">f.purchase.order.inherit.form</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id"
+				ref="purchase.purchase_order_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//form//header//button[@name='action_create_invoice'][1]"
+                       position="attributes">
+                    <attribute name="groups">f_purchase_unit_price_access.f_po_account_access</attribute>
+                </xpath>
+
+				<xpath expr="//form//header//button[@name='action_create_invoice'][2]"
+                       position="attributes">
+                    <attribute name="groups">f_purchase_unit_price_access.f_po_account_access</attribute>
+                </xpath>
+
+				<xpath expr="//form//sheet//div[@name='button_box']//button[@name='action_view_invoice']"
+                       position="attributes">
+                    <attribute name="groups">f_purchase_unit_price_access.f_po_account_access</attribute>
+                </xpath>
+
+				<xpath expr="//field[@name='order_line']"
+                       position="before">
+                    <field name="f_unit_price_access" invisible="1"/>
+                </xpath>
+
+				<xpath expr="//field[@name='order_line']/tree//field[@name='price_unit']"
+                       position="attributes">
+                    <attribute name="attrs">{'readonly': [('qty_invoiced', '!=', 0)],'column_invisible': [('parent.f_unit_price_access','=', False)]}</attribute>
+                </xpath>
+
+				<xpath expr="//field[@name='order_line']/tree//button[@name='action_purchase_history']"
+                       position="attributes">
+                    <attribute name="groups">f_purchase_unit_price_access.f_po_account_access</attribute>
+                </xpath>
+
+				<xpath expr="//field[@name='order_line']/tree//field[@name='price_subtotal']"
+                       position="attributes">
+                    <attribute name="groups">f_purchase_unit_price_access.f_po_account_access</attribute>
+                </xpath>
+
+				<xpath expr="//form//div[@class='oe_chatter']"
+                       position="attributes">
+                    <attribute name="groups">f_purchase_unit_price_access.f_po_account_access</attribute>
+                </xpath>
+
+				<xpath expr="//field[@name='tax_totals']"
+                       position="attributes">
+                    <attribute name="groups">f_purchase_unit_price_access.f_po_account_access</attribute>
+                </xpath>
+
+				<xpath expr="//field[@name='order_line']//tree//button[@name='f_open_price_history'][1]"
+					   position="attributes">
+					<attribute name="groups">f_purchase_unit_price_access.f_po_account_access</attribute>
+				</xpath>
+
+				<xpath expr="//field[@name='order_line']//tree//button[@name='f_open_price_history'][2]"
+					   position="attributes">
+					<attribute name="groups">f_purchase_unit_price_access.f_po_account_access</attribute>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="f_purchase_order_inherit_tree" model="ir.ui.view">
+			<field name="name">f.purchase.order.inherit.tree</field>
+			<field name="model">purchase.order</field>
+			<field name="inherit_id"
+				ref="purchase.purchase_order_kpis_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//field[@name='amount_untaxed']"
+                       position="attributes">
+                    <attribute name="groups">f_purchase_unit_price_access.f_po_account_access</attribute>
+                </xpath>
+
+				<xpath expr="//field[@name='amount_total']"
+                       position="attributes">
+                    <attribute name="groups">f_purchase_unit_price_access.f_po_account_access</attribute>
+                </xpath>
+			</field>
+		</record>
+
+		<record id="purchase.action_report_purchase_order" model="ir.actions.report">
+			<field name="name">Purchase Order</field>
+			<field name="model">purchase.order</field>
+			<field name="report_type">qweb-pdf</field>
+			<field name="report_name">purchase.report_purchaseorder</field>
+			<field name="report_file">purchase.report_purchaseorder</field>
+			<field name="print_report_name">
+				(object.state in ('draft', 'sent') and 'Request for Quotation - %s' % (object.name) or
+				'Purchase Order - %s' % (object.name))</field>
+			<field name="binding_model_id" ref="purchase.model_purchase_order"/>
+			<field name="binding_type">report</field>
+			<field name="groups_id" eval="[(4, ref('f_purchase_unit_price_access.f_po_account_access'))]"/>
+		</record>
+	</data>
+</odoo>

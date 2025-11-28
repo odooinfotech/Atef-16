@@ -1,0 +1,16 @@
+<odoo>
+
+
+
+
+
+
+     	 <record id="f_custstatdetaild_report_xls" model="ir.actions.report">
+        <field name="name">Customer Statement XLS Details</field>
+        <field name="model">f.detailed.customer</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">f_statament_payment_report_xlsx_ex.freport_detial_xls</field>
+             	<field name="report_file">f_detailed_customer</field>
+    </record>
+
+</odoo>

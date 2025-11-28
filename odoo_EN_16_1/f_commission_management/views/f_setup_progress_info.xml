@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="f_setup_progress_info_tree_view" model="ir.ui.view">
+        <field name="name">f.setup.progress.info.tree.view</field>
+        <field name="model">f.setup.progress.info</field>
+        <field name="arch" type="xml">
+            <tree string="Setup Progress Info">
+                <field name="f_commission_setup_id" />
+                <field name="f_commission_period" optional="hide"/>
+                <field name="f_commission_role" optional="hide"/>
+                <field name="f_commission_type" optional="show"/>
+                <field name="f_commission_value_type" optional="show"/>
+                <field name="f_commission_value" optional="show"/>
+                <field name="f_commission_target" optional="show"/>
+                <field name="f_total_amount" />
+                <field name="f_commission_amount" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="f_setup_progress_info_kanban_view" model="ir.ui.view">
+        <field name="name">f.setup.progress.info.kanban.view</field>
+        <field name="model">f.setup.progress.info</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_example">
+                <field name="f_commission_setup_id" />
+                <field name="f_commission_period" />
+                <field name="f_commission_role" />
+                <field name="f_commission_type" />
+                <field name="f_commission_value_type" />
+                <field name="f_commission_value" />
+                <field name="f_commission_target" />
+                <field name="f_notes" />
+                <field name="f_total_amount" />
+                <field name="f_commission_amount" />
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click o_kanban_record ">
+                            <div class="o_kanban_card">
+                                <!-- Title Section -->
+                                <div class="o_kanban_title">
+                                    <h4 class="o_kanban_record_title">
+                                        <field name="f_commission_setup_id" class="o_text_overflow"/>
+                                    </h4>
+                                </div>
+
+                                <!-- Body Section -->
+                                <div class="o_kanban_body">
+                                    <div class="o_kanban_body_row">
+                                        <strong><t>Commission Type:</t></strong> <field name="f_commission_type"/>
+                                    </div>
+                                    <div class="o_kanban_body_row">
+                                        <strong><t>Commission Value Type:</t></strong> <field name="f_commission_value_type"/>
+                                    </div>
+                                    <div class="o_kanban_body_row">
+                                        <strong><t>Commission Value:</t></strong> <field name="f_commission_value"/>
+                                    </div>
+                                    <div class="o_kanban_body_row">
+                                        <strong><t>Target:</t></strong> <field name="f_commission_target"/>
+                                    </div>
+
+                                    <div class="o_kanban_body_row">
+                                        <strong><t>Progress Amount:</t></strong> <field name="f_total_amount"/>
+                                    </div>
+                                    <div class="o_kanban_body_row">
+                                        <strong><t>Commission Amount:</t></strong> <field name="f_commission_amount" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="f_setup_progress_info_action" model="ir.actions.act_window">
+        <field name="name">Setup Progress Info</field>
+        <field name="res_model">f.setup.progress.info</field>
+        <field name="view_mode">kanban,tree</field>
+    </record>
+</odoo>

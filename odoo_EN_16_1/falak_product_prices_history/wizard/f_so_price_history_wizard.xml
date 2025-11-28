@@ -1,0 +1,55 @@
+<odoo>
+
+
+   
+    
+    <record id="f_sale_order_line_price_history_view_tree"
+            model="ir.ui.view">
+        <field name="name">f.sale.order.line.price.history.view.tree</field>
+        <field name="model">f.sale.order.line.price.history.s</field>
+        <field name="arch" type="xml">
+	        <tree create="false" default_order="source_order_date_order desc">
+	            <field name="source" readonly="1"/>
+	            <field name="order_id" readonly="1"/>
+	            <field name="partner_id" readonly="1"/>
+	            <field name="source_order_date_order" readonly="1"/>
+	            <field name="product_uom_qty" readonly="1"/>
+	            <field name="price_unit" widget="monetary"
+	                   options="{'currency_field': 'currency_id'}" readonly="1"/>
+	            <field name="price_after_disc" readonly="1"/>
+	            <field name="currency_id" readonly="1"/>
+	            <field name="tax_id" widget="many2many_tags" readonly="1"/>
+				<button string="Set" type="object" name="f_set_price" />
+				
+				
+	        </tree>
+        </field>
+    </record>
+    
+    <record id="f_sale_order_line_price_history_view_search" model="ir.ui.view">
+			<field name="name">f.sale.order.line.price.history.view.search</field>
+			<field name="model">f.sale.order.line.price.history.s</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="partner_id" string="Partner"
+						filter_domain="[('partner_id', 'ilike', self)]" />
+					
+					<filter name="partner_id_filter" string="Partner"
+						domain="[('partner_id', '=', context.get('partner_id'))]" />
+					
+					<field name="source_order_date_order" string="Date"
+						filter_domain="[('source_order_date_order', 'ilike', self)]" />
+					<group string="Group By">
+
+
+						<filter string="Partner" name="partner_id_group" domain="[]"
+							context="{'group_by':'partner_id'}" />
+						<filter string="Date" name="source_order_date_order"
+							context="{'group_by':'source_order_date_order'}" />
+					</group>
+				</search>
+			</field>
+		</record>
+
+    
+</odoo>

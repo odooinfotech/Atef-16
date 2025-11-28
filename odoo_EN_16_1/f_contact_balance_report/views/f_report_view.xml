@@ -1,0 +1,41 @@
+<odoo>
+	<record id="view_report_contact_balance_ar_ap_search" model="ir.ui.view">
+		<field name="name">f.contatc.balance.report_search</field>
+		<field name="model">f.contatc.balance.report</field>
+		<field name="arch" type="xml">
+			<search string="Contacts Balances" >
+				<field name="partner_id" />
+				<field name="ref" />
+				<field name="city" />
+				<field name="mobile" />
+				<field name="tags_ids" />
+				<field name="user_id" />
+			</search>
+		</field>
+	</record>
+
+	<record id="view_report_contact_balance_ar_ap_tree" model="ir.ui.view">
+		<field name="name">f.contatc.balance.report_tree</field>
+		<field name="model">f.contatc.balance.report</field>
+		<field name="arch" type="xml">
+			<tree string="Contacts Balances" create="0">
+				<field name="company_currency_id" invisible="1" />
+				<field name="id" optional="hide"/>
+				<field name="partner_id" widget="many2onebutton" />
+				<field name="ref" />
+				<field name="city" optional="show" />
+				<field name="city_id" optional="hide"/>
+				<field name="mobile" />
+				<field name="user_id" optional="show"/>
+				<field name="tags_ids" widget="many2many_tags"/>
+				<field name="balance" sum="total"/>
+				<field name="check_bounce" sum="total_bc" optional="hide"/>
+				<field name="balance_check_bounce" sum="total_cbc" optional="hide"/>
+			</tree>
+		</field>
+	</record>
+
+
+	
+
+</odoo>
